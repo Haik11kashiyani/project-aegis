@@ -1,0 +1,40 @@
+# ================================================
+# PROJECT AEGIS — Weekly Backtest
+# ================================================
+# Runs every Sunday at midnight IST.
+# Validates that the strategy still works on
+# historical data before the new trading week.
+# ================================================
+
+name: "\U0001F4CA Weekly Backtest"
+
+on:
+  schedule:
+    # Sunday 12:00 AM IST = Saturday 18:30 UTC
+    - cron: '30 18 * * 6'
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: "\U0001F4E5 Checkout Code"
+        uses: actions/checkout@v4
+
+      - name: "\U0001F40D Setup Python 3.10"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: "\U0001F4E6 Install Dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "\U0001F9EA Run Backtest (RF + XGBoost)"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
+        run: python src/backtest.py

@@ -1,0 +1,102 @@
+# ================================================
+# PROJECT AEGIS — Full Pipeline
+# ================================================
+# Runs Mon-Fri:
+#   1. Scholar trains RF + LSTM at 8:45 AM IST
+#   2. Sniper paper-trades 9:15 AM → 3:15 PM IST
+# ================================================
+
+name: "\U0001F6E1\uFE0F Aegis Protocol"
+
+on:
+  schedule:
+    # 8:45 AM IST = 03:15 UTC
+    - cron: '15 3 * * 1-5'
+  workflow_dispatch:  # Manual trigger button
+
+permissions:
+  contents: write   # Needed to commit artifacts
+
+jobs:
+  # ─────────────────────────────────────────────
+  #  JOB 1: THE SCHOLAR (Night/Pre-Market Training)
+  # ─────────────────────────────────────────────
+  scholar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: "\U0001F4E5 Checkout Code"
+        uses: actions/checkout@v4
+
+      - name: "\U0001F40D Setup Python 3.10"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: "\U0001F4E6 Install Dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "\U0001F3A8 Train AI Models (4-Model Ensemble)"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
+        run: python src/scholar.py
+
+      - name: "\U0001F4BE Upload Brains (Secure Artifact)"
+        uses: actions/upload-artifact@v4
+        with:
+          name: aegis-brain
+          path: |
+            models/
+            data/daily_ranking.csv
+          retention-days: 7
+
+  # ─────────────────────────────────────────────
+  #  JOB 2: THE SNIPER (Live Paper-Trading)
+  # ─────────────────────────────────────────────
+  sniper:
+    needs: scholar          # Waits for training to finish
+    runs-on: ubuntu-latest
+    timeout-minutes: 390    # 6.5 hours (covers full market session)
+
+    steps:
+      - name: "\U0001F4E5 Checkout Code"
+        uses: actions/checkout@v4
+
+      - name: "\U0001F40D Setup Python 3.10"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: "\U0001F4E6 Install Dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "\U0001F9E0 Download Brain from Scholar"
+        uses: actions/download-artifact@v4
+        with:
+          name: aegis-brain
+          path: models/
+
+      - name: "\U0001F52B Start Sniper (4-Model Ensemble)"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
+          DAILY_TARGET: ${{ secrets.DAILY_TARGET }}
+          MAX_BULLETS:  ${{ secrets.MAX_BULLETS }}
+          TIME_GAP:     ${{ secrets.TIME_GAP }}
+          CAPITAL:      ${{ secrets.CAPITAL }}
+        run: python src/sniper.py
+
+      - name: "\U0001F4CA Commit Trade Logs"
+        if: always()     # Runs even if sniper errors out
+        run: |
+          git config --global user.name "Aegis Bot"
+          git config --global user.email "aegis-bot@github.com"
+          git add data/ || true
+          git commit -m "📊 Aegis Trade Log: $(date '+%Y-%m-%d')" || echo "No changes"
+          git push || echo "Push failed (maybe no changes)"

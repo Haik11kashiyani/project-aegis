@@ -1,0 +1,40 @@
+# ============================
+# 🛡️ PROJECT AEGIS - PRIVACY SHIELD
+# ============================
+# This file prevents sensitive data from reaching the public repo.
+
+# AI Models (Brain Files - Never Expose)
+models/
+*.pkl
+*.h5
+*.keras
+*.pt
+
+# Trading Data & Logs
+data/
+*.csv
+*.xlsx
+*.json
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment Variables (Local Dev)
+.env
+.env.local
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Virtual Environments
+venv/
+.venv/
+env/
