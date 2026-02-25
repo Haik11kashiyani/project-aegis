@@ -80,6 +80,13 @@ ATR_TARGET_MULTIPLIER = 3.0     # Target   = 3.0 × ATR above entry
 MAX_DAILY_LOSS_PCT    = 0.05    # Kill-switch: stop if total loss > 5 % of capital
 
 # ──────────────────────────────────────────────────
+#   REAL MONEY MODE (Risk Guardian)
+# ──────────────────────────────────────────────────
+REAL_MONEY_MODE       = True     # Enable all safety restrictions
+RISK_GUARDIAN_ENABLED  = True    # Must pass Risk Guardian before every trade
+LEARNER_ENABLED        = True    # Enable off-market continuous learning
+
+# ──────────────────────────────────────────────────
 #   FILE PATHS
 # ──────────────────────────────────────────────────
 # Per-stock model paths (multi-stock support)
@@ -107,6 +114,10 @@ STATE_FILE        = "data/daily_state.json"
 TRADE_LOG_FILE    = "data/trade_history.csv"
 RANKING_FILE      = "data/daily_ranking.csv"
 DASHBOARD_FILE    = "data/dashboard_state.json"
+LEARNER_REPORT    = "data/learner_report.json"
+GUARDIAN_LOG      = "data/guardian_log.json"
+ENSEMBLE_WEIGHTS  = "data/ensemble_weights.json"
+BEST_PARAMS_FILE  = "data/best_params.json"
 
 # ──────────────────────────────────────────────────
 #   FEATURE LIST (must match between Scholar & Sniper)

@@ -23,8 +23,11 @@ import time
 import warnings
 import numpy as np
 import pandas as pd
-import pandas_ta as ta
 import yfinance as yf
+
+sys.path.insert(0, os.path.dirname(__file__))
+import indicators as ta
+from indicators import flatten_yf_columns
 import joblib
 from datetime import datetime
 import pytz
@@ -34,7 +37,6 @@ warnings.filterwarnings("ignore")
 
 from tensorflow.keras.models import load_model
 
-sys.path.insert(0, os.path.dirname(__file__))
 from config import (
     STOCK_WATCHLIST, TOP_N_STOCKS,
     CAPITAL, MAX_BULLETS, TIME_GAP, DAILY_TARGET,
@@ -43,9 +45,11 @@ from config import (
     LSTM_LOOKBACK, INTRADAY_LOOKBACK,
     MIN_VOTES_TO_BUY,
     SENTIMENT_ENABLED, SENTIMENT_MAX_ARTICLES, SENTIMENT_LOOKBACK_DAYS,
+    RISK_GUARDIAN_ENABLED,
     model_paths, STATE_FILE, TRADE_LOG_FILE, RANKING_FILE, DASHBOARD_FILE,
 )
 from sentiment import get_sentiment_score
+from risk_guardian import RiskGuardian, NeuralSafetyNet, quick_safety_check
 
 IST = pytz.timezone("Asia/Kolkata")
 
@@ -175,6 +179,7 @@ def get_live_data(symbol: str) -> pd.DataFrame:
     """Fetch recent daily data + indicators for the ensemble decision."""
     try:
         df = yf.download(symbol, period="6mo", interval="1d", progress=False)
+        df = flatten_yf_columns(df)
         if df.empty:
             return None
 
@@ -224,6 +229,7 @@ def get_intraday_data(symbol: str) -> pd.DataFrame:
     """Fetch recent 15-min candle data for intraday LSTM."""
     try:
         df = yf.download(symbol, period="5d", interval="15m", progress=False)
+        df = flatten_yf_columns(df)
         if df.empty:
             return None
         return df
@@ -234,11 +240,24 @@ def get_intraday_data(symbol: str) -> pd.DataFrame:
 # --------------------------------------------------
 #   4-MODEL ENSEMBLE VOTING
 # --------------------------------------------------
+# One NeuralSafetyNet per day — tracks prediction history across all stocks
+_neural_safety = NeuralSafetyNet()
+
+
 def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
     """
     Returns (should_buy, votes, rf_conf, xgb_conf, lstm_conf, intra_conf)
     Buy only if >= MIN_VOTES_TO_BUY models agree.
+
+    All LSTM outputs pass through the NeuralSafetyNet which:
+      - Rejects NaN / Inf / out-of-range outputs
+      - Blocks extreme (>0.99 / <0.01) overconfidence
+      - Detects stuck models (same prediction N times)
+      - Flags unstable predictions (>35% jump between ticks)
+      - Validates input arrays before feeding them to the network
+    If any check fails the model effectively abstains (conf=0.50).
     """
+    global _neural_safety
     votes = 0
     rf_conf = 0.0
     xgb_conf = 0.0
@@ -265,19 +284,24 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
         except Exception:
             pass
 
-    # ---- Daily LSTM Vote ----
+    # ---- Daily LSTM Vote (with NeuralSafetyNet) ----
     if models["lstm"] is not None and models["lstm_scaler"] is not None:
         try:
             close_prices = df["Close"].values[-LSTM_LOOKBACK:].reshape(-1, 1)
             scaled = models["lstm_scaler"].transform(close_prices)
             X_input = scaled.reshape(1, LSTM_LOOKBACK, 1)
-            lstm_conf = float(models["lstm"].predict(X_input, verbose=0)[0][0])
+
+            # ─── Neural Safety: validate input BEFORE inference ───
+            raw_lstm = float(models["lstm"].predict(X_input, verbose=0)[0][0])
+            lstm_conf = _neural_safety.validate(
+                f"daily_lstm_{symbol}", raw_lstm, input_array=X_input
+            )
             if lstm_conf > 0.55:
                 votes += 1
         except Exception:
             pass
 
-    # ---- Intraday LSTM Vote ----
+    # ---- Intraday LSTM Vote (with NeuralSafetyNet) ----
     if models["intraday_lstm"] is not None and models["intraday_scaler"] is not None:
         try:
             df_intra = get_intraday_data(symbol)
@@ -285,11 +309,25 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
                 close_intra = df_intra["Close"].values[-INTRADAY_LOOKBACK:].reshape(-1, 1)
                 scaled = models["intraday_scaler"].transform(close_intra)
                 X_input = scaled.reshape(1, INTRADAY_LOOKBACK, 1)
-                intra_conf = float(models["intraday_lstm"].predict(X_input, verbose=0)[0][0])
+
+                # ─── Neural Safety: validate input BEFORE inference ───
+                raw_intra = float(models["intraday_lstm"].predict(X_input, verbose=0)[0][0])
+                intra_conf = _neural_safety.validate(
+                    f"intra_lstm_{symbol}", raw_intra, input_array=X_input
+                )
                 if intra_conf > 0.55:
                     votes += 1
         except Exception:
             pass
+
+    # ---- Neural Safety: ensemble disagreement check ----
+    ensemble_valid, ens_reason = _neural_safety.validate_ensemble({
+        "rf": rf_conf, "xgb": xgb_conf,
+        "lstm": lstm_conf, "intra": intra_conf,
+    })
+    if not ensemble_valid:
+        print(f"   [NEURAL_SAFETY] {symbol}: {ens_reason}")
+        return False, 0, rf_conf, xgb_conf, lstm_conf, intra_conf
 
     print(f"   [VOTE] {symbol}: RF={rf_conf:.2f} XGB={xgb_conf:.2f} "
           f"LSTM={lstm_conf:.2f} Intra={intra_conf:.2f} => {votes}/{MIN_VOTES_TO_BUY} needed")
@@ -334,8 +372,26 @@ def run_sniper():
     print(f"   Bullets : {MAX_BULLETS}  (Rs.{CAPITAL / MAX_BULLETS:.0f} each)")
     print(f"   Target  : {DAILY_TARGET * 100:.1f}% daily")
     print(f"   Voting  : {MIN_VOTES_TO_BUY}/4 models must agree")
+    print(f"   Guardian: {'ENABLED' if RISK_GUARDIAN_ENABLED else 'DISABLED'}")
     print(f"   Date    : {datetime.now(IST).strftime('%Y-%m-%d %H:%M IST')}")
     print("=" * 60)
+
+    # ═══════════════════════════════════════════════════════
+    #  RISK GUARDIAN — Pre-flight safety check
+    # ═══════════════════════════════════════════════════════
+    guardian = None
+    if RISK_GUARDIAN_ENABLED:
+        print("\n   [GUARDIAN] Running pre-flight safety checks ...")
+        allowed, reason = quick_safety_check()
+        if not allowed:
+            print(f"   [GUARDIAN] 🚨 TRADING BLOCKED: {reason}")
+            print("   [GUARDIAN] The Risk Guardian has determined it is not safe")
+            print("              to trade today. This protects your real money.")
+            print("              Review data/learner_report.json for details.")
+            return
+        guardian = RiskGuardian(capital=CAPITAL)
+        print(f"   [GUARDIAN] ✅ Pre-flight passed. Risk level: "
+              f"{guardian.get_status().get('risk_level', 'NORMAL')}")
 
     # Load top-N stocks from Scholar ranking
     top_stocks = load_top_stocks()
@@ -452,6 +508,19 @@ def run_sniper():
             state["trades_won" if pnl_total > 0 else "trades_lost"] += 1
             pnl_pct = (pnl_per_share / trade["price"]) * 100
 
+            # ── Update Risk Guardian with trade result ──
+            if guardian:
+                guardian.record_trade_result(
+                    symbol=sym, pnl=pnl_total, was_win=(pnl_total > 0)
+                )
+                # Check if guardian wants to stop trading
+                if not guardian.guardian_active:
+                    state["status"] = "GUARDIAN_STOP"
+                    save_state(state)
+                    print(f"\n   [GUARDIAN] 🚨 Trading HALTED by Risk Guardian")
+                    _print_summary(state)
+                    return
+
             result_icon = "[WIN]" if pnl_total > 0 else "[LOSS]"
             print(f"   {result_icon} {sym} closed ({action}): "
                   f"Entry Rs.{trade['price']} -> Exit Rs.{current_price}  "
@@ -494,14 +563,36 @@ def run_sniper():
                         current_atr = float(df["ATR"].iloc[-1])
                         pos = calculate_position(current_price, current_atr, bullet_size)
                         if pos:
+                            # ═══════════════════════════════════════════
+                            #  RISK GUARDIAN GATE — Must approve trade
+                            # ═══════════════════════════════════════════
+                            final_qty = pos["qty"]
+                            if guardian:
+                                approved, g_reason, adj_qty = guardian.approve_trade(
+                                    symbol=sym,
+                                    price=current_price,
+                                    qty=pos["qty"],
+                                    stop_loss=pos["stop_loss"],
+                                    target=pos["target"],
+                                    atr=current_atr,
+                                    rf_conf=rf_c, xgb_conf=xgb_c,
+                                    lstm_conf=lstm_c, intra_conf=intra_c,
+                                    votes=votes,
+                                )
+                                if not approved:
+                                    print(f"   [GUARDIAN] ❌ REJECTED: {g_reason}")
+                                    continue
+                                final_qty = adj_qty  # Use guardian-adjusted qty
+                                print(f"   [GUARDIAN] ✅ APPROVED (qty adjusted: {pos['qty']} → {adj_qty})")
+
                             print(f"\n   [FIRE] BULLET #{open_count + 1} on {sym} @ Rs.{current_price:.2f}")
-                            print(f"     Qty: {pos['qty']}  SL: Rs.{pos['stop_loss']}  "
+                            print(f"     Qty: {final_qty}  SL: Rs.{pos['stop_loss']}  "
                                   f"Target: Rs.{pos['target']}  Votes: {votes}/4")
 
                             trade_entry = {
                                 "stock": sym,
                                 "price": current_price,
-                                "qty": pos["qty"],
+                                "qty": final_qty,
                                 "stop_loss": pos["stop_loss"],
                                 "target": pos["target"],
                                 "status": "OPEN",
@@ -512,6 +603,10 @@ def run_sniper():
                             state["active_trades"].append(trade_entry)
                             last_fire_time = time.time()
 
+                            # Register with guardian
+                            if guardian:
+                                guardian.register_position(sym, final_qty, current_price)
+
                             log_trade({
                                 "Date": now.strftime("%Y-%m-%d"),
                                 "Time": now.strftime("%H:%M"),
@@ -519,7 +614,7 @@ def run_sniper():
                                 "Action": "BUY",
                                 "Entry_Price": current_price,
                                 "Exit_Price": 0,
-                                "Qty": pos["qty"],
+                                "Qty": final_qty,
                                 "Stop_Loss": pos["stop_loss"],
                                 "Target": pos["target"],
                                 "AI_Confidence": avg_conf,

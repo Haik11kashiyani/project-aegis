@@ -1,0 +1,70 @@
+# ================================================
+# PROJECT AEGIS — Off-Market Learner
+# ================================================
+# Runs Mon-Fri at 4:30 PM IST (after market close)
+# + Saturday morning for weekend deep learning.
+#
+# While the market is closed, the bot:
+#   1. Reviews every past trade to find patterns
+#   2. Tunes hyperparameters (finds best model config)
+#   3. Trains a market regime detector (trending/ranging)
+#   4. Calibrates model confidence vs real outcomes
+#   5. Optimises ensemble weights per stock
+#   6. Adapts risk parameters based on recent results
+#   7. Generates a health report for tomorrow's Sniper
+#
+# This is the "brain that improves the brain".
+# ================================================
+
+name: "🧠 Off-Market Learner"
+
+on:
+  schedule:
+    # 4:30 PM IST = 11:00 UTC (after market close, Mon-Fri)
+    - cron: '0 11 * * 1-5'
+    # Saturday 10:00 AM IST = 4:30 UTC (weekend deep learning)
+    - cron: '30 4 * * 6'
+  workflow_dispatch:  # Manual trigger button
+
+permissions:
+  contents: write
+
+jobs:
+  learner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: "📥 Checkout Code"
+        uses: actions/checkout@v4
+
+      - name: "🐍 Setup Python 3.10"
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: "📦 Install Dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "🧠 Run Continuous Learner"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
+          CAPITAL: ${{ secrets.CAPITAL }}
+        run: python src/learner.py
+
+      - name: "🛡️ Run Risk Guardian Self-Test"
+        env:
+          CAPITAL: ${{ secrets.CAPITAL }}
+        run: python src/risk_guardian.py
+
+      - name: "💾 Commit Learner Reports"
+        if: always()
+        run: |
+          git config --global user.name "Aegis Bot"
+          git config --global user.email "aegis-bot@github.com"
+          git add data/ models/ || true
+          git commit -m "🧠 Learner Report: $(date '+%Y-%m-%d %H:%M')" || echo "No changes"
+          git push || echo "Push failed"

@@ -21,8 +21,11 @@ import sys
 import warnings
 import numpy as np
 import pandas as pd
-import pandas_ta as ta
 import yfinance as yf
+
+sys.path.insert(0, os.path.dirname(__file__))
+import indicators as ta
+from indicators import flatten_yf_columns
 import joblib
 from datetime import datetime
 
@@ -41,7 +44,6 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 
 # Local config
-sys.path.insert(0, os.path.dirname(__file__))
 from config import (
     STOCK_WATCHLIST, TOP_N_STOCKS, DATA_PERIOD,
     RF_ESTIMATORS, RF_MIN_SPLIT, RF_MAX_DEPTH, RF_FEATURES,
@@ -64,6 +66,7 @@ def fetch_and_engineer(symbol: str, period: str = DATA_PERIOD) -> pd.DataFrame:
     """Download daily OHLCV data and compute 12 features (incl. sentiment)."""
     print(f"\n[DOWN] Downloading {symbol} ({period}) ...")
     df = yf.download(symbol, period=period, interval="1d", progress=False)
+    df = flatten_yf_columns(df)
 
     if df.empty:
         raise RuntimeError(f"No data returned for {symbol}.")
@@ -116,6 +119,7 @@ def fetch_intraday(symbol: str) -> pd.DataFrame:
     """Download 15-minute candle data for intraday LSTM."""
     print(f"   [DOWN] Downloading {symbol} (15m, {INTRADAY_PERIOD}) ...")
     df = yf.download(symbol, period=INTRADAY_PERIOD, interval="15m", progress=False)
+    df = flatten_yf_columns(df)
     if df.empty:
         raise RuntimeError(f"No intraday data for {symbol}.")
     print(f"   [OK] {len(df)} intraday candles.")

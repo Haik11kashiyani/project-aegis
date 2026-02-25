@@ -18,8 +18,11 @@ import sys
 import warnings
 import numpy as np
 import pandas as pd
-import pandas_ta as ta
 import yfinance as yf
+
+sys.path.insert(0, os.path.dirname(__file__))
+import indicators as ta
+from indicators import flatten_yf_columns
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import TimeSeriesSplit
@@ -30,7 +33,6 @@ from xgboost import XGBClassifier
 
 warnings.filterwarnings("ignore")
 
-sys.path.insert(0, os.path.dirname(__file__))
 from config import (
     STOCK_WATCHLIST, TOP_N_STOCKS, DATA_PERIOD,
     RF_ESTIMATORS, RF_MIN_SPLIT, RF_MAX_DEPTH, RF_FEATURES,
@@ -44,6 +46,7 @@ from config import (
 def fetch_and_engineer(symbol: str, period: str) -> pd.DataFrame:
     """Same feature engineering as scholar.py -- must stay in sync."""
     df = yf.download(symbol, period=period, interval="1d", progress=False)
+    df = flatten_yf_columns(df)
     if df.empty:
         raise RuntimeError(f"No data for {symbol}")
 

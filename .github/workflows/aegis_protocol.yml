@@ -29,10 +29,10 @@ jobs:
       - name: "\U0001F4E5 Checkout Code"
         uses: actions/checkout@v4
 
-      - name: "\U0001F40D Setup Python 3.10"
+      - name: "\U0001F40D Setup Python 3.11"
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: "\U0001F4E6 Install Dependencies"
         run: |
@@ -52,6 +52,9 @@ jobs:
           path: |
             models/
             data/daily_ranking.csv
+            data/learner_report.json
+            data/ensemble_weights.json
+            data/best_params.json
           retention-days: 7
 
   # ─────────────────────────────────────────────
@@ -66,10 +69,10 @@ jobs:
       - name: "\U0001F4E5 Checkout Code"
         uses: actions/checkout@v4
 
-      - name: "\U0001F40D Setup Python 3.10"
+      - name: "\U0001F40D Setup Python 3.11"
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: "\U0001F4E6 Install Dependencies"
         run: |
