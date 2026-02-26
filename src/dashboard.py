@@ -115,91 +115,104 @@ except ImportError:
 #  Premium CSS Design System
 # ──────────────────────────────────────────────────
 st.markdown("""<style>
-/* ── HYPER-MINIMALIST TRUE BLACK THEME (Linear / Vercel style) ── */
+/* ── HYPER-MINIMALIST TRUE BLACK THEME ── */
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
-/* ── Hide Streamlit Default Cruft ── */
+/* ── Hide Streamlit Default Cruft Safely ── */
 #MainMenu {visibility: hidden;}
 header {visibility: hidden;}
 footer {visibility: hidden;}
 .stApp { background-color: #000000 !important; }
-.block-container { max-width: 1400px; padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
+/* Remove block-container padding overrides that cause horizontal scroll/overlap, let Streamlit handle the grid */
+.block-container { max-width: 1200px; padding-top: 1rem !important; }
 
 /* ── Base Typography ── */
-html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #ededed; }
-h1, h2, h3, h4, h5, h6 { letter-spacing: -0.04em !important; font-weight: 600 !important; color: #ffffff !important; }
+html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #e4e4e7; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.03em !important; font-weight: 600 !important; color: #ffffff !important; }
 
 /* ── Material Icon Helper ── */
 .mi { font-family: 'Material Icons Round'; font-size: 16px; vertical-align: middle;
-      margin-right: 8px; opacity: 0.6; }
+      margin-right: 6px; opacity: 0.6; }
 .mi-sm { font-size: 14px; } .mi-lg { font-size: 20px; opacity: 0.8; margin-right: 12px; }
 
 /* ── Minimalist Metric Cards ── */
+/* Target the inner container of metrics to avoid breaking column flexbox */
 div[data-testid="stMetric"] {
     background: transparent;
-    border: 1px solid #1f1f1f;
-    border-radius: 6px; padding: 16px 20px;
-    box-shadow: none;
+    border: 1px solid #27272a;
+    border-radius: 6px; padding: 12px 16px;
     transition: border-color 0.2s ease;
+    width: 100%;
+    margin-bottom: 8px;
 }
-div[data-testid="stMetric"]:hover { border-color: #333333; }
-div[data-testid="stMetric"] label { color: #888888 !important;
-    font-weight: 500 !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; }
+div[data-testid="stMetric"]:hover { border-color: #52525b; }
+div[data-testid="stMetric"] label { 
+    color: #a1a1aa !important;
+    font-weight: 500 !important; font-size: 0.75rem !important; 
+    letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px; 
+}
 div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: #ffffff !important; font-weight: 500 !important; font-size: 1.8rem !important; letter-spacing: -0.03em; }
+    color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; letter-spacing: -0.02em; }
 
 /* ── Flat Hero Banner ── */
 .hero-banner { 
     background: transparent;
-    border-bottom: 1px solid #1f1f1f;
-    padding: 24px 0 24px 0; margin-bottom: 32px; 
+    border-bottom: 1px solid #27272a;
+    padding: 16px 0 24px 0; margin-bottom: 24px; 
 }
 .hero-title { font-size: 1.5rem; font-weight: 600; color: #ffffff;
     letter-spacing: -0.04em; margin: 0; display: flex; align-items: center; }
-.hero-sub { font-size: 0.85rem; color: #888888;
+.hero-sub { font-size: 0.85rem; color: #a1a1aa;
     margin-top: 8px; letter-spacing: 0.01em; font-weight: 400; }
 
 /* ── Sharp Status Badges ── */
 .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px;
-    border-radius: 3px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid transparent; }
-.badge-green { background: #052e16; color: #34d399; border-color: #064e3b; }
-.badge-red { background: #450a0a; color: #f87171; border-color: #7f1d1d; }
-.badge-blue { background: #172554; color: #60a5fa; border-color: #1e3a8a; }
+    border-radius: 4px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
+.badge-green { background: #052e16; color: #34d399; border: 1px solid #064e3b; }
+.badge-red { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
+.badge-blue { background: #172554; color: #60a5fa; border: 1px solid #1e3a8a; }
 
 /* ── Section Headers ── */
-.section-header { display: flex; align-items: center; margin: 40px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #1f1f1f; }
-.section-header .mi { color: #888888; }
-.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #ededed; letter-spacing: -0.02em; }
+.section-header { display: flex; align-items: center; margin: 32px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #27272a; }
+.section-header .mi { color: #a1a1aa; }
+.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #f4f4f5; letter-spacing: -0.01em; }
 
 /* ── True Black Sidebar ── */
-section[data-testid="stSidebar"] { background: #000000 !important; border-right: 1px solid #1f1f1f; }
+section[data-testid="stSidebar"] { background: #09090b !important; border-right: 1px solid #27272a; }
 section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: #a1a1aa; }
 
 /* ── Tab Styling (Quiet underline) ── */
-button[data-baseweb="tab"] { font-family: 'Geist', 'Inter', sans-serif !important;
+div[role="tablist"] { gap: 16px; border-bottom: 1px solid #27272a; padding-bottom: 0px; margin-bottom: 16px; }
+button[role="tab"] { 
+    font-family: 'Geist', 'Inter', sans-serif !important;
     font-weight: 500 !important; font-size: 0.85rem !important;
-    letter-spacing: 0.01em; padding: 12px 16px !important; color: #71717a !important; background: transparent !important; }
-button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; font-weight: 500 !important; border-bottom-color: #ffffff !important; }
+    padding: 8px 4px !important; color: #71717a !important; background: transparent !important; 
+    border: none !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; }
+button[role="tab"][aria-selected="true"] { color: #ffffff !important; border-bottom-color: #ffffff !important; }
 
 /* ── Dataframes & Tables ── */
-[data-testid="stDataFrame"] { border: 1px solid #1f1f1f; border-radius: 4px; overflow: hidden; background: #000000; }
+[data-testid="stDataFrame"] { border: 1px solid #27272a; border-radius: 6px; overflow: hidden; background: #000000; }
 [data-testid="stTable"] { background: transparent; }
-th { border-bottom: 1px solid #1f1f1f !important; color: #a1a1aa !important; font-weight: 500 !important; font-size: 0.75rem !important; text-transform: uppercase; letter-spacing: 0.05em; }
-td { border-bottom: 1px solid #1f1f1f !important; color: #ededed !important; font-size: 0.85rem !important; }
+/* Fix table overlaps by enforcing word break and relative width */
+table { width: 100% !important; table-layout: auto; }
+th { border-bottom: 1px solid #27272a !important; color: #a1a1aa !important; font-weight: 500 !important; font-size: 0.75rem !important; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 12px !important; }
+td { border-bottom: 1px solid #27272a !important; color: #e4e4e7 !important; font-size: 0.85rem !important; padding: 8px 12px !important; }
 
 /* ── Expander (Logs) ── */
-[data-testid="stExpander"] { border: 1px solid #1f1f1f !important; border-radius: 4px !important; background: transparent !important; }
-[data-testid="stExpanderDetails"] { border-top: 1px solid #1f1f1f; padding: 16px !important; }
+[data-testid="stExpander"] { border: 1px solid #27272a !important; border-radius: 6px !important; background: transparent !important; box-shadow: none !important; }
+[data-testid="stExpanderDetails"] { border-top: 1px solid #27272a; padding: 16px !important; }
+summary { font-weight: 500 !important; color: #e4e4e7 !important; }
 
 /* ── Code Blocks (Console output) ── */
-pre, code { background: #09090b !important; border: 1px solid #1f1f1f; border-radius: 4px; font-family: 'JetBrains Mono', monospace !important; font-size: 0.8rem !important; color: #d4d4d8 !important; }
+pre, code { background: #09090b !important; border: 1px solid #27272a !important; border-radius: 4px; font-family: 'JetBrains Mono', monospace !important; font-size: 0.75rem !important; color: #d4d4d8 !important; padding: 12px !important; }
 
 /* ── Subtle Scrollbar ── */
-::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
 
 /* ── Live Dot (Subtle pulse) ── */
 .live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981;
@@ -207,10 +220,13 @@ pre, code { background: #09090b !important; border: 1px solid #1f1f1f; border-ra
 @keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 /* ── Buttons ── */
-button[kind="secondary"] { background: transparent !important; border: 1px solid #27272a !important; color: #ededed !important; border-radius: 4px !important; transition: border-color 0.2s ease; }
-button[kind="secondary"]:hover { border-color: #52525b !important; color: #ffffff !important; }
-button[kind="primary"] { background: #ededed !important; border: 1px solid #ededed !important; color: #000000 !important; border-radius: 4px !important; font-weight: 500 !important; }
-button[kind="primary"]:hover { background: #ffffff !important; }
+button[kind="secondary"] { background: #09090b !important; border: 1px solid #3f3f46 !important; color: #e4e4e7 !important; border-radius: 6px !important; transition: all 0.2s ease; padding: 4px 16px !important; height: auto !important; min-height: 36px; }
+button[kind="secondary"]:hover { border-color: #71717a !important; color: #ffffff !important; background: #18181b !important; }
+button[kind="primary"] { background: #ffffff !important; border: 1px solid #ffffff !important; color: #000000 !important; border-radius: 6px !important; font-weight: 500 !important; padding: 4px 16px !important; height: auto !important; min-height: 36px; }
+button[kind="primary"]:hover { opacity: 0.9; }
+
+/* Fix column spacing overlaps */
+[data-testid="column"] { padding: 0 8px; }
 
 </style>
 """, unsafe_allow_html=True)
