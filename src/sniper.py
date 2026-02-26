@@ -1,4 +1,4 @@
-﻿"""
+"""
 ====================================================
 PROJECT AEGIS - The Sniper v2 (Live Paper-Trading)
 ====================================================
@@ -397,13 +397,13 @@ def run_sniper():
         print("\n   [GUARDIAN] Running pre-flight safety checks ...")
         allowed, reason = quick_safety_check()
         if not allowed:
-            print(f"   [GUARDIAN] 🚨 TRADING BLOCKED: {reason}")
+            print(f"   [GUARDIAN] TRADING BLOCKED: {reason}")
             print("   [GUARDIAN] The Risk Guardian has determined it is not safe")
             print("              to trade today. This protects your real money.")
             print("              Review data/learner_report.json for details.")
             return
         guardian = RiskGuardian(capital=CAPITAL)
-        print(f"   [GUARDIAN] ✅ Pre-flight passed. Risk level: "
+        print(f"   [GUARDIAN] Pre-flight passed. Risk level: "
               f"{guardian.get_status().get('risk_level', 'NORMAL')}")
 
     # Load top-N stocks from Scholar ranking
