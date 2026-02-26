@@ -115,86 +115,103 @@ except ImportError:
 #  Premium CSS Design System
 # ──────────────────────────────────────────────────
 st.markdown("""<style>
-/* ── Modern Minimalist Fintech Theme ── */
+/* ── HYPER-MINIMALIST TRUE BLACK THEME (Linear / Vercel style) ── */
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
+/* ── Hide Streamlit Default Cruft ── */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+.stApp { background-color: #000000 !important; }
+.block-container { max-width: 1400px; padding-top: 2rem !important; padding-bottom: 2rem !important; }
+
 /* ── Base Typography ── */
-html, body, [class*="css"] { font-family: 'Geist', 'Inter', sans-serif !important; }
-h1, h2, h3, h4, h5, h6 { letter-spacing: -0.03em !important; font-weight: 600 !important; }
+html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #ededed; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.04em !important; font-weight: 600 !important; color: #ffffff !important; }
 
 /* ── Material Icon Helper ── */
-.mi { font-family: 'Material Icons Round'; font-size: 18px; vertical-align: middle;
-      margin-right: 8px; font-weight: normal; font-style: normal; opacity: 0.8; }
-.mi-sm { font-size: 15px; } .mi-lg { font-size: 24px; opacity: 1; margin-right: 12px; }
+.mi { font-family: 'Material Icons Round'; font-size: 16px; vertical-align: middle;
+      margin-right: 8px; opacity: 0.6; }
+.mi-sm { font-size: 14px; } .mi-lg { font-size: 20px; opacity: 0.8; margin-right: 12px; }
 
 /* ── Minimalist Metric Cards ── */
 div[data-testid="stMetric"] {
-    background: #0d0e12;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 8px; padding: 16px 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    transition: all 0.2s ease;
+    background: transparent;
+    border: 1px solid #1f1f1f;
+    border-radius: 6px; padding: 16px 20px;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
 }
-div[data-testid="stMetric"]:hover {
-    background: #12141a;
-    border-color: rgba(255,255,255,0.12);
-}
-div[data-testid="stMetric"] label { color: rgba(255,255,255,0.5) !important;
+div[data-testid="stMetric"]:hover { border-color: #333333; }
+div[data-testid="stMetric"] label { color: #888888 !important;
     font-weight: 500 !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; }
 div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: #e2e8f0 !important; font-weight: 600 !important; font-size: 1.5rem !important; letter-spacing: -0.02em; }
+    color: #ffffff !important; font-weight: 500 !important; font-size: 1.8rem !important; letter-spacing: -0.03em; }
 
-/* ── Refined Hero Header (No glow) ── */
+/* ── Flat Hero Banner ── */
 .hero-banner { 
-    background: #090a0f;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 32px 0 24px 0; margin-bottom: 24px; 
+    background: transparent;
+    border-bottom: 1px solid #1f1f1f;
+    padding: 24px 0 24px 0; margin-bottom: 32px; 
 }
-.hero-title { font-size: 1.7rem; font-weight: 600; color: #f8fafc;
-    letter-spacing: -0.03em; margin: 0; display: flex; align-items: center; }
-.hero-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4);
+.hero-title { font-size: 1.5rem; font-weight: 600; color: #ffffff;
+    letter-spacing: -0.04em; margin: 0; display: flex; align-items: center; }
+.hero-sub { font-size: 0.85rem; color: #888888;
     margin-top: 8px; letter-spacing: 0.01em; font-weight: 400; }
 
-/* ── Minimalist Status Badges ── */
-.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
-    border-radius: 4px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
-.badge-green { background: rgba(16, 185, 129, 0.1); color: #34d399; }
-.badge-red { background: rgba(239, 68, 68, 0.1); color: #f87171; }
-.badge-blue { background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
+/* ── Sharp Status Badges ── */
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px;
+    border-radius: 3px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid transparent; }
+.badge-green { background: #052e16; color: #34d399; border-color: #064e3b; }
+.badge-red { background: #450a0a; color: #f87171; border-color: #7f1d1d; }
+.badge-blue { background: #172554; color: #60a5fa; border-color: #1e3a8a; }
 
 /* ── Section Headers ── */
-.section-header { display: flex; align-items: center; margin: 32px 0 16px 0; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.section-header .mi { color: rgba(255,255,255,0.7); }
-.section-header h3 { margin: 0; font-weight: 500; font-size: 1.1rem; color: #f1f5f9; letter-spacing: -0.01em; }
+.section-header { display: flex; align-items: center; margin: 40px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #1f1f1f; }
+.section-header .mi { color: #888888; }
+.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #ededed; letter-spacing: -0.02em; }
 
-/* ── Clean Sidebar ── */
-section[data-testid="stSidebar"] { background: #07080b !important; border-right: 1px solid rgba(255,255,255,0.05); }
-section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: rgba(255,255,255,0.6); }
+/* ── True Black Sidebar ── */
+section[data-testid="stSidebar"] { background: #000000 !important; border-right: 1px solid #1f1f1f; }
+section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: #a1a1aa; }
 
-/* ── Tab Styling (Underline only) ── */
+/* ── Tab Styling (Quiet underline) ── */
 button[data-baseweb="tab"] { font-family: 'Geist', 'Inter', sans-serif !important;
     font-weight: 500 !important; font-size: 0.85rem !important;
-    letter-spacing: 0.01em; padding: 12px 16px !important; color: rgba(255,255,255,0.5) !important; }
-button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; font-weight: 600 !important; }
+    letter-spacing: 0.01em; padding: 12px 16px !important; color: #71717a !important; background: transparent !important; }
+button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; font-weight: 500 !important; border-bottom-color: #ffffff !important; }
 
 /* ── Dataframes & Tables ── */
-[data-testid="stDataFrame"] { border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; }
+[data-testid="stDataFrame"] { border: 1px solid #1f1f1f; border-radius: 4px; overflow: hidden; background: #000000; }
+[data-testid="stTable"] { background: transparent; }
+th { border-bottom: 1px solid #1f1f1f !important; color: #a1a1aa !important; font-weight: 500 !important; font-size: 0.75rem !important; text-transform: uppercase; letter-spacing: 0.05em; }
+td { border-bottom: 1px solid #1f1f1f !important; color: #ededed !important; font-size: 0.85rem !important; }
+
+/* ── Expander (Logs) ── */
+[data-testid="stExpander"] { border: 1px solid #1f1f1f !important; border-radius: 4px !important; background: transparent !important; }
+[data-testid="stExpanderDetails"] { border-top: 1px solid #1f1f1f; padding: 16px !important; }
+
+/* ── Code Blocks (Console output) ── */
+pre, code { background: #09090b !important; border: 1px solid #1f1f1f; border-radius: 4px; font-family: 'JetBrains Mono', monospace !important; font-size: 0.8rem !important; color: #d4d4d8 !important; }
 
 /* ── Subtle Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
 
 /* ── Live Dot (Subtle pulse) ── */
-.live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
+.live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981;
     margin-right: 8px; animation: gentle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-@keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-/* ── Footer ── */
-.footer { text-align: left; padding: 24px 0; font-size: 0.75rem;
-    color: rgba(255,255,255,0.3); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 48px; }
+/* ── Buttons ── */
+button[kind="secondary"] { background: transparent !important; border: 1px solid #27272a !important; color: #ededed !important; border-radius: 4px !important; transition: border-color 0.2s ease; }
+button[kind="secondary"]:hover { border-color: #52525b !important; color: #ffffff !important; }
+button[kind="primary"] { background: #ededed !important; border: 1px solid #ededed !important; color: #000000 !important; border-radius: 4px !important; font-weight: 500 !important; }
+button[kind="primary"]:hover { background: #ffffff !important; }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -373,12 +390,12 @@ def make_chart(df, symbol, style="candlestick"):
         xaxis_rangeslider_visible=False,
         showlegend=False,
         paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(14,17,23,0.9)",
+        plot_bgcolor="rgba(0,0,0,0)",
         title=dict(text=f"  {name}", x=0, font=dict(size=14, color="#e0e0e0")),
-        yaxis=dict(gridcolor="rgba(128,128,128,0.08)"),
-        yaxis2=dict(gridcolor="rgba(128,128,128,0.08)"),
-        xaxis=dict(gridcolor="rgba(128,128,128,0.08)"),
-        xaxis2=dict(gridcolor="rgba(128,128,128,0.08)"),
+        yaxis=dict(gridcolor="rgba(255,255,255,0.05)"),
+        yaxis2=dict(gridcolor="rgba(255,255,255,0.05)"),
+        xaxis=dict(gridcolor="rgba(255,255,255,0.05)"),
+        xaxis2=dict(gridcolor="rgba(255,255,255,0.05)"),
     )
     return fig
 
