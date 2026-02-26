@@ -125,109 +125,60 @@ header {visibility: hidden;}
 footer {visibility: hidden;}
 .stApp { background-color: #000000 !important; }
 
-/* Remove block-container padding overrides that cause horizontal scroll/overlap, let Streamlit handle the grid */
-.block-container { max-width: 1200px; padding-top: 1rem !important; }
-
 /* ── Base Typography ── */
 html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #e4e4e7; }
 h1, h2, h3, h4, h5, h6 { letter-spacing: -0.03em !important; font-weight: 600 !important; color: #ffffff !important; }
 
 /* ── Material Icon Helper ── */
-.mi { font-family: 'Material Icons Round'; font-size: 16px; vertical-align: middle;
-      margin-right: 6px; opacity: 0.6; }
-.mi-sm { font-size: 14px; } .mi-lg { font-size: 20px; opacity: 0.8; margin-right: 12px; }
+.mi { font-family: 'Material Icons Round'; font-size: 16px; vertical-align: middle; margin-right: 6px; opacity: 0.6; }
 
 /* ── Minimalist Metric Cards ── */
-/* Target the inner container of metrics to avoid breaking column flexbox */
 div[data-testid="stMetric"] {
     background: transparent;
     border: 1px solid #27272a;
     border-radius: 6px; padding: 12px 16px;
-    transition: border-color 0.2s ease;
-    width: 100%;
     margin-bottom: 8px;
 }
-div[data-testid="stMetric"]:hover { border-color: #52525b; }
-div[data-testid="stMetric"] label { 
-    color: #a1a1aa !important;
-    font-weight: 500 !important; font-size: 0.75rem !important; 
-    letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px; 
-}
-div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; letter-spacing: -0.02em; }
+div[data-testid="stMetric"] label { color: #a1a1aa !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; }
+div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; }
 
 /* ── Flat Hero Banner ── */
-.hero-banner { 
-    background: transparent;
-    border-bottom: 1px solid #27272a;
-    padding: 16px 0 24px 0; margin-bottom: 24px; 
-}
-.hero-title { font-size: 1.5rem; font-weight: 600; color: #ffffff;
-    letter-spacing: -0.04em; margin: 0; display: flex; align-items: center; }
-.hero-sub { font-size: 0.85rem; color: #a1a1aa;
-    margin-top: 8px; letter-spacing: 0.01em; font-weight: 400; }
+.hero-banner { border-bottom: 1px solid #27272a; padding: 16px 0 24px 0; margin-bottom: 24px; }
+.hero-title { font-size: 1.5rem; font-weight: 600; color: #ffffff; letter-spacing: -0.04em; margin: 0; display: flex; align-items: center; }
+.hero-sub { font-size: 0.85rem; color: #a1a1aa; margin-top: 8px; font-weight: 400; }
 
 /* ── Sharp Status Badges ── */
-.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px;
-    border-radius: 4px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; }
 .badge-green { background: #052e16; color: #34d399; border: 1px solid #064e3b; }
 .badge-red { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
-.badge-blue { background: #172554; color: #60a5fa; border: 1px solid #1e3a8a; }
 
 /* ── Section Headers ── */
 .section-header { display: flex; align-items: center; margin: 32px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #27272a; }
-.section-header .mi { color: #a1a1aa; }
-.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #f4f4f5; letter-spacing: -0.01em; }
+.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #f4f4f5; }
 
 /* ── True Black Sidebar ── */
 section[data-testid="stSidebar"] { background: #09090b !important; border-right: 1px solid #27272a; }
-section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: #a1a1aa; }
-
-/* ── Tab Styling (Quiet underline) ── */
-div[role="tablist"] { gap: 16px; border-bottom: 1px solid #27272a; padding-bottom: 0px; margin-bottom: 16px; }
-button[role="tab"] { 
-    font-family: 'Geist', 'Inter', sans-serif !important;
-    font-weight: 500 !important; font-size: 0.85rem !important;
-    padding: 8px 4px !important; color: #71717a !important; background: transparent !important; 
-    border: none !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; }
-button[role="tab"][aria-selected="true"] { color: #ffffff !important; border-bottom-color: #ffffff !important; }
 
 /* ── Dataframes & Tables ── */
 [data-testid="stDataFrame"] { border: 1px solid #27272a; border-radius: 6px; overflow: hidden; background: #000000; }
-[data-testid="stTable"] { background: transparent; }
-/* Fix table overlaps by enforcing word break and relative width */
-table { width: 100% !important; table-layout: auto; }
-th { border-bottom: 1px solid #27272a !important; color: #a1a1aa !important; font-weight: 500 !important; font-size: 0.75rem !important; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 12px !important; }
-td { border-bottom: 1px solid #27272a !important; color: #e4e4e7 !important; font-size: 0.85rem !important; padding: 8px 12px !important; }
+th { color: #a1a1aa !important; font-size: 0.75rem !important; text-transform: uppercase; }
+td { color: #e4e4e7 !important; font-size: 0.85rem !important; }
 
-/* ── Expander (Logs) ── */
-[data-testid="stExpander"] { border: 1px solid #27272a !important; border-radius: 6px !important; background: transparent !important; box-shadow: none !important; }
-[data-testid="stExpanderDetails"] { border-top: 1px solid #27272a; padding: 16px !important; }
-summary { font-weight: 500 !important; color: #e4e4e7 !important; }
+/* ── Expander Background Override ── */
+[data-testid="stExpander"] { border: 1px solid #27272a !important; background: transparent !important; }
 
 /* ── Code Blocks (Console output) ── */
 pre, code { background: #09090b !important; border: 1px solid #27272a !important; border-radius: 4px; font-family: 'JetBrains Mono', monospace !important; font-size: 0.75rem !important; color: #d4d4d8 !important; padding: 12px !important; }
 
 /* ── Subtle Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 6px; }
-::-webkit-scrollbar-thumb:hover { background: #52525b; }
 
-/* ── Live Dot (Subtle pulse) ── */
-.live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981;
-    margin-right: 8px; animation: gentle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+/* ── Live Dot ── */
+.live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981; margin-right: 8px; animation: gentle-pulse 2s infinite; }
 @keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-/* ── Buttons ── */
-button[kind="secondary"] { background: #09090b !important; border: 1px solid #3f3f46 !important; color: #e4e4e7 !important; border-radius: 6px !important; transition: all 0.2s ease; padding: 4px 16px !important; height: auto !important; min-height: 36px; }
-button[kind="secondary"]:hover { border-color: #71717a !important; color: #ffffff !important; background: #18181b !important; }
-button[kind="primary"] { background: #ffffff !important; border: 1px solid #ffffff !important; color: #000000 !important; border-radius: 6px !important; font-weight: 500 !important; padding: 4px 16px !important; height: auto !important; min-height: 36px; }
-button[kind="primary"]:hover { opacity: 0.9; }
-
-/* Fix column spacing overlaps */
-[data-testid="column"] { padding: 0 8px; }
-
+/* ── Safety: Let Streamlit handle buttons & tabs to prevent overlap ── */
 </style>
 """, unsafe_allow_html=True)
 
@@ -717,44 +668,49 @@ with tab1:
             if st.button("🛑 Stop Sniper", type="primary", use_container_width=True, key="stop_sniper"):
                 _stop_sniper()
                 st.rerun()
-        # Show live log tail
-        with st.expander("📜 Sniper Live Output (last 25 lines)", expanded=False):
-            st.code(_get_sniper_log_tail(25), language="text")
-    elif _mkt_open:
-        st.warning("🔴 Sniper is **STOPPED** — market is open but sniper is not trading.")
-        bc1, bc2 = st.columns([1, 5])
-        with bc1:
-            if st.button("▶️ Start Sniper", type="primary", use_container_width=True, key="start_sniper"):
-                _start_sniper()
-                st.rerun()
-        # Show log from previous run if any
-        if os.path.exists(FILE_SNIPER_LOG):
-            with st.expander("📜 Last Sniper Output", expanded=False):
-                st.code(_get_sniper_log_tail(25), language="text")
+    # ── Live Trades Ledger ──
+    st.markdown('<div class="section-header"><span class="mi">receipt_long</span><h3>Today\'s Live Trades</h3></div>', unsafe_allow_html=True)
+    
+    trades_df = load_csv(FILE_TRADES)
+    today_str = datetime.now(IST).strftime("%Y-%m-%d")
+    
+    if trades_df.empty:
+        st.info("No trades executed yet today.")
     else:
-        st.info("⏳ Market closed. Sniper auto-starts at **9:15 AM IST** on weekdays.")
-        if os.path.exists(FILE_SNIPER_LOG):
-            with st.expander("📜 Last Sniper Output", expanded=False):
-                st.code(_get_sniper_log_tail(25), language="text")
+        # Filter for today's trades only
+        today_trades = trades_df[trades_df["Date"].str.startswith(today_str, na=False)]
+        
+        if today_trades.empty:
+            st.info("No trades executed yet today.")
+        else:
+            # Format the ledger for display
+            ledger = today_trades[["Date", "Stock", "Action", "Price", "Qty", "AI_Confidence", "Votes"]].copy()
+            ledger.rename(columns={"AI_Confidence": "Confidence", "Date": "Time"}, inplace=True)
+            
+            # Extract just the time from the Date column
+            ledger["Time"] = ledger["Time"].apply(lambda x: x.split(" ")[1] if " " in x else x)
+            ledger["Stock"] = ledger["Stock"].str.replace(".NS", "")
+            ledger["Price"] = ledger["Price"].apply(lambda x: f"₹{x:,.2f}")
+            ledger["Confidence"] = ledger["Confidence"].apply(lambda x: f"{x:.2f}")
+            ledger["Votes"] = ledger["Votes"].apply(lambda x: f"{int(x)}/4")
+            
+            # Add a colored pill for Action
+            def format_action(val):
+                if val == "BUY": return "🟢 BUY"
+                if val == "SELL": return "🔴 SELL"
+                if "EXIT" in str(val): return "⚪ EXIT"
+                return val
+            ledger["Action"] = ledger["Action"].apply(format_action)
+            
+            st.dataframe(ledger, use_container_width=True, hide_index=True)
 
-    # Active positions
-    if _state and "active_trades" in _state:
-        open_t = [t for t in _state["active_trades"] if t.get("status") == "OPEN"]
-        if open_t:
-            st.markdown("#### Open Positions")
-            orows = []
-            for t in open_t:
-                orows.append({
-                    "Stock": t.get("stock", "").replace(".NS", ""),
-                    "Entry ₹": f"{t.get('price', 0):,.2f}",
-                    "Qty": t.get("qty", 0),
-                    "SL ₹": f"{t.get('stop_loss', 0):,.2f}",
-                    "Target ₹": f"{t.get('target', 0):,.2f}",
-                    "Votes": f"{t.get('votes', 0)}/4",
-                })
-            st.dataframe(pd.DataFrame(orows), use_container_width=True, hide_index=True)
+    # ── Technical Logs Expander ──
+    if os.path.exists(FILE_SNIPER_LOG):
+        with st.expander("🛠️ Raw Sniper Console (For debugging)", expanded=False):
+            st.code(_get_sniper_log_tail(15), language="text")
 
-    st.divider()
+    st.divider()    
+
 
     # ── SYSTEM HEALTH ──
     st.markdown('<div class="section-header"><span class="mi">monitor_heart</span><h3>System Health</h3></div>', unsafe_allow_html=True)
