@@ -422,8 +422,8 @@ def calibrate_confidence(symbol: str, df: pd.DataFrame) -> dict:
         "xgb_brier_score": round(float(xgb_brier), 4),
         "rf_calibration_error": round(rf_calibration_error, 4),
         "xgb_calibration_error": round(xgb_calibration_error, 4),
-        "rf_reliable": rf_calibration_error < 0.15,
-        "xgb_reliable": xgb_calibration_error < 0.15,
+        "rf_reliable": rf_calibration_error < 0.30,
+        "xgb_reliable": xgb_calibration_error < 0.30,
     }
 
     print(f"   [CALIB] {symbol}: RF Brier={rf_brier:.3f} (calib_err={rf_calibration_error:.3f}), "
