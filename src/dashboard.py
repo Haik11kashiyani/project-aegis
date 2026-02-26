@@ -228,8 +228,9 @@ def _start_sniper():
     log_fh.flush()
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"       # Prevent cp1252 emoji crash on Windows
+    env["PYTHONUNBUFFERED"] = "1"            # Disable output buffering for live log
     proc = subprocess.Popen(
-        [sys.executable, os.path.join(BASE, "src", "sniper.py")],
+        [sys.executable, "-u", os.path.join(BASE, "src", "sniper.py")],
         stdout=log_fh,
         stderr=subprocess.STDOUT,
         cwd=BASE,
