@@ -226,11 +226,14 @@ def _start_sniper():
     log_fh.write(f"  Sniper started at {datetime.now(IST).strftime('%Y-%m-%d %H:%M:%S IST')}\n")
     log_fh.write(f"{'='*60}\n")
     log_fh.flush()
+    env = os.environ.copy()
+    env["PYTHONIOENCODING"] = "utf-8"       # Prevent cp1252 emoji crash on Windows
     proc = subprocess.Popen(
         [sys.executable, os.path.join(BASE, "src", "sniper.py")],
         stdout=log_fh,
         stderr=subprocess.STDOUT,
         cwd=BASE,
+        env=env,
         # On Windows use CREATE_NEW_PROCESS_GROUP; on Unix use preexec_fn
         creationflags=subprocess.CREATE_NEW_PROCESS_GROUP if os.name == "nt" else 0,
     )
