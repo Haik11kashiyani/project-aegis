@@ -21,10 +21,10 @@ name: "🧠 Off-Market Learner"
 on:
   schedule:
     # 4:30 PM IST = 11:00 UTC (after market close, Mon-Fri)
-    - cron: '0 11 * * 1-5'
+    - cron: "0 11 * * 1-5"
     # Saturday 10:00 AM IST = 4:30 UTC (weekend deep learning)
-    - cron: '30 4 * * 6'
-  workflow_dispatch:  # Manual trigger button
+    - cron: "30 4 * * 6"
+  workflow_dispatch: # Manual trigger button
 
 permissions:
   contents: write
@@ -41,7 +41,7 @@ jobs:
       - name: "🐍 Setup Python 3.10"
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: "📦 Install Dependencies"
         run: |
@@ -65,6 +65,7 @@ jobs:
         run: |
           git config --global user.name "Aegis Bot"
           git config --global user.email "aegis-bot@github.com"
-          git add data/ models/ || true
+          git add -f data/learner_report.json data/ensemble_weights.json data/best_params.json data/daily_ranking.csv || true
           git commit -m "🧠 Learner Report: $(date '+%Y-%m-%d %H:%M')" || echo "No changes"
+          git pull --rebase || true
           git push || echo "Push failed"
