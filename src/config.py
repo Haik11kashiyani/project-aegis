@@ -60,10 +60,10 @@ INTRADAY_DROPOUT    = 0.20
 INTRADAY_PERIOD     = "60d"      # Max period for 15-min data on Yahoo
 
 DATA_PERIOD         = "5y"       # Historical data period for training
-CONFIDENCE_THRESHOLD = 0.75      # Minimum confidence to fire a bullet
+CONFIDENCE_THRESHOLD = 0.60      # Minimum confidence for RF/XGB to vote BUY
 
 # Ensemble voting: require at least N out of 4 models to agree
-MIN_VOTES_TO_BUY    = 3          # 3-out-of-4 consensus (RF, XGB, daily LSTM, intraday LSTM)
+MIN_VOTES_TO_BUY    = 2          # 2-out-of-4 consensus (RF+XGB enough when LSTMs are weak)
 
 # ──────────────────────────────────────────────────
 #   SENTIMENT ANALYSIS

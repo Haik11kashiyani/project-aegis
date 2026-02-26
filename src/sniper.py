@@ -178,9 +178,11 @@ def load_models(symbol: str) -> dict:
 def get_live_data(symbol: str) -> pd.DataFrame:
     """Fetch recent daily data + indicators for the ensemble decision."""
     try:
-        df = yf.download(symbol, period="6mo", interval="1d", progress=False)
+        # Need at least 200+ trading days for SMA_200 — use 2 years
+        df = yf.download(symbol, period="2y", interval="1d", progress=False)
         df = flatten_yf_columns(df)
         if df.empty:
+            print(f"   [WARN] No data downloaded for {symbol}")
             return None
 
         df["RSI"]         = ta.rsi(df["Close"], length=14)
@@ -215,7 +217,18 @@ def get_live_data(symbol: str) -> pd.DataFrame:
         else:
             df["Sentiment_Score"] = 0.0
 
-        df.dropna(inplace=True)
+        # Fill NaN from indicator warm-up (forward-fill then back-fill)
+        df.ffill(inplace=True)
+        df.bfill(inplace=True)
+
+        # Safety: if the last row still has NaN, drop those rows only
+        if df.iloc[-1].isna().any():
+            df.dropna(inplace=True)
+
+        if df.empty:
+            print(f"   [WARN] {symbol}: All rows NaN after indicators — data too short")
+            return None
+
         return df
     except Exception as e:
         print(f"   [WARN] Data fetch error for {symbol}: {e}")
@@ -272,8 +285,8 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
             rf_conf = float(models["rf"].predict_proba(last_row[RF_FEATURES])[0][1])
             if rf_conf > CONFIDENCE_THRESHOLD:
                 votes += 1
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"   [WARN] {symbol} RF prediction failed: {e}")
 
     # ---- XGBoost Vote ----
     if models["xgb"] is not None:
@@ -281,8 +294,8 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
             xgb_conf = float(models["xgb"].predict_proba(last_row[RF_FEATURES])[0][1])
             if xgb_conf > CONFIDENCE_THRESHOLD:
                 votes += 1
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"   [WARN] {symbol} XGB prediction failed: {e}")
 
     # ---- Daily LSTM Vote (with NeuralSafetyNet) ----
     if models["lstm"] is not None and models["lstm_scaler"] is not None:
@@ -298,8 +311,8 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
             )
             if lstm_conf > 0.55:
                 votes += 1
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"   [WARN] {symbol} Daily LSTM prediction failed: {e}")
 
     # ---- Intraday LSTM Vote (with NeuralSafetyNet) ----
     if models["intraday_lstm"] is not None and models["intraday_scaler"] is not None:
@@ -317,8 +330,8 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
                 )
                 if intra_conf > 0.55:
                     votes += 1
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"   [WARN] {symbol} Intraday LSTM prediction failed: {e}")
 
     # ---- Neural Safety: ensemble disagreement check ----
     ensemble_valid, ens_reason = _neural_safety.validate_ensemble({
