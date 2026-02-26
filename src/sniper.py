@@ -18,6 +18,16 @@ Runs during Indian market hours (9:15 AM - 3:15 PM IST).
 
 import os
 import sys
+
+# Suppress all TensorFlow and ABSL warnings before loading any TF modules
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+if "ABSL_LOG_LEVEL" not in os.environ:
+    os.environ["ABSL_LOG_LEVEL"] = "3"
+    
+import logging
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
+logging.getLogger('absl').setLevel(logging.ERROR)
+
 import json
 import time
 import warnings

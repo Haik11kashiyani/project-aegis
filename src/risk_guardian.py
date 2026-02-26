@@ -291,7 +291,7 @@ class RiskGuardian:
             health = self.learner_report.get("model_health", "UNKNOWN")
             if health == "DEGRADED":
                 self._log("WARNING", f"Model health is DEGRADED — reducing position sizes",
-                          severity="HIGH")
+                          severity="HIGH", print_out=False)
 
         # ── Check 2: Weekly loss cap ──
         weekly_loss_pct = abs(self._weekly_pnl) / self.capital if self._weekly_pnl < 0 else 0
@@ -311,8 +311,9 @@ class RiskGuardian:
                        severity="CRITICAL")
             return
 
-        print(f"   [GUARDIAN] Active. Weekly P&L: Rs.{self._weekly_pnl:.2f}, "
-              f"Monthly P&L: Rs.{self._monthly_pnl:.2f}")
+        self._log("STARTUP", f"Active. Weekly P&L: Rs.{self._weekly_pnl:.2f}, "
+                             f"Monthly P&L: Rs.{self._monthly_pnl:.2f}",
+                  severity="INFO", print_out=False)
 
     def approve_trade(self, symbol: str, price: float, qty: int,
                       stop_loss: float, target: float, atr: float,
@@ -546,7 +547,7 @@ class RiskGuardian:
             "risk_level": self.learner_report.get("risk_params", {}).get("risk_level", "NORMAL"),
         }
 
-    def _log(self, action: str, message: str, severity: str = "INFO"):
+    def _log(self, action: str, message: str, severity: str = "INFO", print_out: bool = True):
         """Log guardian decisions."""
         entry = {
             "time": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
@@ -556,8 +557,9 @@ class RiskGuardian:
         }
         self._log_entries.append(entry)
 
-        icon = {"INFO": "[i]", "HIGH": "[!]", "CRITICAL": "[!!]"}.get(severity, "[*]")
-        print(f"   [GUARDIAN] {icon} {action}: {message}")
+        if print_out:
+            icon = {"INFO": "[i]", "HIGH": "[!]", "CRITICAL": "[!!]"}.get(severity, "[*]")
+            print(f"   [GUARDIAN] {icon} {action}: {message}")
 
         # Persist log
         try:
