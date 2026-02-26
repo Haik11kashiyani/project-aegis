@@ -114,7 +114,7 @@ except ImportError:
 # ──────────────────────────────────────────────────
 #  Premium CSS Design System
 # ──────────────────────────────────────────────────
-st.markdown("""
+st.markdown("""<div style="display: none;">
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 <style>
@@ -181,6 +181,7 @@ pre, code { background: #09090b !important; border: 1px solid #27272a !important
 
 /* ── Safety: Let Streamlit handle buttons & tabs to prevent overlap ── */
 </style>
+</div>
 """, unsafe_allow_html=True)
 
 
