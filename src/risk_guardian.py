@@ -205,7 +205,7 @@ class NeuralSafetyNet:
     def _flag(self, model: str, msg: str):
         tag = f"[NEURAL_SAFETY/{model}] {msg}"
         self._flags.append(tag)
-        print(f"   ⚠️  {tag}")
+        print(f"   [NEURAL_SAFETY] {tag}")
 
     def get_flags(self) -> list[str]:
         """Return all flags raised this session (for logging)."""
@@ -556,7 +556,7 @@ class RiskGuardian:
         }
         self._log_entries.append(entry)
 
-        icon = {"INFO": "ℹ️", "HIGH": "⚠️", "CRITICAL": "🚨"}.get(severity, "•")
+        icon = {"INFO": "[i]", "HIGH": "[!]", "CRITICAL": "[!!]"}.get(severity, "[*]")
         print(f"   [GUARDIAN] {icon} {action}: {message}")
 
         # Persist log
