@@ -115,90 +115,86 @@ except ImportError:
 #  Premium CSS Design System
 # ──────────────────────────────────────────────────
 st.markdown("""<style>
-/* ── Font Imports (must be @import inside style, Streamlit strips link tags) ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* ── Modern Minimalist Fintech Theme ── */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
 /* ── Base Typography ── */
-html, body, [class*="css"] { font-family: 'Inter', sans-serif !important; }
+html, body, [class*="css"] { font-family: 'Geist', 'Inter', sans-serif !important; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.03em !important; font-weight: 600 !important; }
 
 /* ── Material Icon Helper ── */
-.mi { font-family: 'Material Icons Round'; font-size: 20px; vertical-align: middle;
-      margin-right: 6px; font-weight: normal; font-style: normal; }
-.mi-sm { font-size: 16px; } .mi-lg { font-size: 28px; }
+.mi { font-family: 'Material Icons Round'; font-size: 18px; vertical-align: middle;
+      margin-right: 8px; font-weight: normal; font-style: normal; opacity: 0.8; }
+.mi-sm { font-size: 15px; } .mi-lg { font-size: 24px; opacity: 1; margin-right: 12px; }
 
-/* ── Animated Live Dot ── */
-.live-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
-    background: #00e676; vertical-align: middle; margin-right: 8px;
-    box-shadow: 0 0 8px #00e676, 0 0 20px rgba(0,230,118,0.3);
-    animation: glow-pulse 1.5s ease-in-out infinite; }
-@keyframes glow-pulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 8px #00e676, 0 0 20px rgba(0,230,118,0.3); }
-    50% { opacity: 0.4; box-shadow: 0 0 4px #00e676; }
-}
-
-/* ── Glassmorphism Metric Cards ── */
+/* ── Minimalist Metric Cards ── */
 div[data-testid="stMetric"] {
-    background: linear-gradient(135deg, rgba(15,20,40,0.85) 0%, rgba(22,33,62,0.85) 100%);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(99,145,255,0.15);
-    border-radius: 14px; padding: 16px 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #0d0e12;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px; padding: 16px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    transition: all 0.2s ease;
 }
 div[data-testid="stMetric"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
-    border-color: rgba(99,145,255,0.3);
+    background: #12141a;
+    border-color: rgba(255,255,255,0.12);
 }
-div[data-testid="stMetric"] label { color: rgba(200,210,230,0.7) !important;
-    font-weight: 500 !important; font-size: 0.78rem !important; letter-spacing: 0.02em; }
+div[data-testid="stMetric"] label { color: rgba(255,255,255,0.5) !important;
+    font-weight: 500 !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; }
 div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    font-weight: 700 !important; font-size: 1.4rem !important; }
+    color: #e2e8f0 !important; font-weight: 600 !important; font-size: 1.5rem !important; letter-spacing: -0.02em; }
 
-/* ── Hero Header Banner ── */
-.hero-banner { background: linear-gradient(135deg, #0a0e27 0%, #131b3a 40%, #0d1f4d 100%);
-    border: 1px solid rgba(99,145,255,0.12); border-radius: 16px;
-    padding: 28px 36px; margin-bottom: 16px; position: relative; overflow: hidden; }
-.hero-banner::before { content: ''; position: absolute; top: -50%; right: -20%;
-    width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(99,145,255,0.08) 0%, transparent 70%);
-    pointer-events: none; }
-.hero-title { font-size: 1.9rem; font-weight: 700; color: #e8ecf4;
-    letter-spacing: -0.02em; margin: 0; }
-.hero-sub { font-size: 0.85rem; color: rgba(180,195,220,0.65);
-    margin-top: 4px; letter-spacing: 0.03em; }
+/* ── Refined Hero Header (No glow) ── */
+.hero-banner { 
+    background: #090a0f;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 32px 0 24px 0; margin-bottom: 24px; 
+}
+.hero-title { font-size: 1.7rem; font-weight: 600; color: #f8fafc;
+    letter-spacing: -0.03em; margin: 0; display: flex; align-items: center; }
+.hero-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4);
+    margin-top: 8px; letter-spacing: 0.01em; font-weight: 400; }
 
-/* ── Status Badges ── */
-.badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px;
-    border-radius: 20px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; }
-.badge-green { background: rgba(0,230,118,0.12); color: #69f0ae; border: 1px solid rgba(0,230,118,0.25); }
-.badge-red { background: rgba(244,67,54,0.12); color: #ef9a9a; border: 1px solid rgba(244,67,54,0.25); }
-.badge-blue { background: rgba(66,165,245,0.12); color: #90caf9; border: 1px solid rgba(66,165,245,0.25); }
+/* ── Minimalist Status Badges ── */
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px;
+    border-radius: 4px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
+.badge-green { background: rgba(16, 185, 129, 0.1); color: #34d399; }
+.badge-red { background: rgba(239, 68, 68, 0.1); color: #f87171; }
+.badge-blue { background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
 
 /* ── Section Headers ── */
-.section-header { display: flex; align-items: center; gap: 10px; margin: 20px 0 10px 0; }
-.section-header .mi { font-size: 24px; color: #6391ff; }
-.section-header h3 { margin: 0; font-weight: 600; font-size: 1.15rem; color: #d4daf0; }
+.section-header { display: flex; align-items: center; margin: 32px 0 16px 0; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.section-header .mi { color: rgba(255,255,255,0.7); }
+.section-header h3 { margin: 0; font-weight: 500; font-size: 1.1rem; color: #f1f5f9; letter-spacing: -0.01em; }
 
-/* ── Sidebar Polish ── */
-section[data-testid="stSidebar"] { background: linear-gradient(180deg, #0a0e27 0%, #0d1530 100%) !important; }
-section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: rgba(200,210,230,0.85); }
+/* ── Clean Sidebar ── */
+section[data-testid="stSidebar"] { background: #07080b !important; border-right: 1px solid rgba(255,255,255,0.05); }
+section[data-testid="stSidebar"] [data-testid="stMarkdown"] { color: rgba(255,255,255,0.6); }
 
-/* ── Tab Styling ── */
-button[data-baseweb="tab"] { font-family: 'Inter', sans-serif !important;
-    font-weight: 500 !important; font-size: 0.82rem !important;
-    letter-spacing: 0.02em; padding: 10px 18px !important; }
+/* ── Tab Styling (Underline only) ── */
+button[data-baseweb="tab"] { font-family: 'Geist', 'Inter', sans-serif !important;
+    font-weight: 500 !important; font-size: 0.85rem !important;
+    letter-spacing: 0.01em; padding: 12px 16px !important; color: rgba(255,255,255,0.5) !important; }
+button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; font-weight: 600 !important; }
 
-/* ── Custom Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(10,14,39,0.5); }
-::-webkit-scrollbar-thumb { background: rgba(99,145,255,0.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(99,145,255,0.5); }
+/* ── Dataframes & Tables ── */
+[data-testid="stDataFrame"] { border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; }
+
+/* ── Subtle Scrollbar ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* ── Live Dot (Subtle pulse) ── */
+.live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
+    margin-right: 8px; animation: gentle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 /* ── Footer ── */
-.footer { text-align: center; padding: 24px 0; font-size: 0.72rem;
-    color: rgba(150,160,190,0.5); letter-spacing: 0.05em; }
+.footer { text-align: left; padding: 24px 0; font-size: 0.75rem;
+    color: rgba(255,255,255,0.3); border-top: 1px solid rgba(255,255,255,0.05); margin-top: 48px; }
 </style>
 """, unsafe_allow_html=True)
 
