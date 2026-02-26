@@ -422,7 +422,7 @@ ALL_SYMS = (
 #  SIDEBAR
 # ══════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">tune</span><h3>Configuration</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">⚙️ <h3>Configuration</h3></div>', unsafe_allow_html=True)
     st.markdown(f"""
 - **Watchlist:** {len(STOCK_WATCHLIST)} stocks
 - **Top-N:** {TOP_N_STOCKS}
@@ -438,7 +438,7 @@ with st.sidebar:
     """)
 
     st.divider()
-    st.markdown('<div class="section-header"><span class="mi">psychology</span><h3>Model Config</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🧠 <h3>Model Config</h3></div>', unsafe_allow_html=True)
     st.markdown(f"""
 | Model | Config |
 |-------|--------|
@@ -454,9 +454,9 @@ with st.sidebar:
     """)
 
     st.divider()
-    st.markdown('<span class="mi mi-sm">lock</span> **100% Local** — No data leaves your PC', unsafe_allow_html=True)
+    st.markdown('🔒 **100% Local** — No data leaves your PC', unsafe_allow_html=True)
 
-    if st.button("Refresh All Data", use_container_width=True, icon=":material/refresh:"):
+    if st.button("Refresh All Data", use_container_width=True, icon="🔄"):
         st.cache_data.clear()
         st.rerun()
 
@@ -466,7 +466,7 @@ with st.sidebar:
 # ══════════════════════════════════════════════════
 st.markdown("""
 <div class="hero-banner">
-    <div class="hero-title"><span class="mi mi-lg">shield</span> Project Aegis</div>
+    <div class="hero-title">🛡️ Project Aegis</div>
     <div class="hero-sub">4-Model AI Ensemble · Real-Time Charts · Plotly · 100% Local</div>
 </div>
 """, unsafe_allow_html=True)
@@ -483,18 +483,18 @@ def _live_clock():
     c1, c2, c3 = st.columns([2, 1, 2])
     with c1:
         st.markdown(
-            f'<span class="live-dot"></span>'
-            f' **{n.strftime("%Y-%m-%d %H:%M:%S")} IST**',
+            f'<div style="display: flex; align-items: center;"><span class="live-dot"></span>'
+            f' <strong>{n.strftime("%Y-%m-%d %H:%M:%S")} IST</strong></div>',
             unsafe_allow_html=True,
         )
     with c2:
         if is_open:
-            st.markdown('<span class="badge badge-green"><span class="mi mi-sm">trending_up</span>MARKET OPEN</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge badge-green">🟢 MARKET OPEN</span>', unsafe_allow_html=True)
         else:
-            st.markdown('<span class="badge badge-red"><span class="mi mi-sm">do_not_disturb</span>MARKET CLOSED</span>', unsafe_allow_html=True)
+            st.markdown('<span class="badge badge-red">🔴 MARKET CLOSED</span>', unsafe_allow_html=True)
     with c3:
         mc = len(os.listdir(MDLS)) if os.path.isdir(MDLS) else 0
-        st.markdown(f'<span class="badge badge-blue"><span class="mi mi-sm">memory</span>{mc} models</span>', unsafe_allow_html=True)
+        st.markdown(f'<span class="badge badge-blue">💾 {mc} models</span>', unsafe_allow_html=True)
 
 
 _live_clock()
@@ -522,7 +522,7 @@ with tab1:
     # ── LIVE PRICES (auto-refresh every 10s, no page reload) ──
     @st.fragment(run_every=10)
     def _live_prices():
-        st.markdown('<div class="section-header"><span class="mi">candlestick_chart</span><h3>Live Stock Prices</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">📈 <h3>Live Stock Prices</h3></div>', unsafe_allow_html=True)
         st.caption("Auto-refreshing every 10 seconds — no page reload")
 
         prices, changes, highs, lows, vols = fetch_prices_live(ALL_SYMS)
@@ -572,7 +572,7 @@ with tab1:
     st.divider()
 
     # ── STOCK CHARTS (interactive Plotly) ──
-    st.markdown('<div class="section-header"><span class="mi">show_chart</span><h3>Live Stock Market Charts</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📈 <h3>Live Stock Market Charts</h3></div>', unsafe_allow_html=True)
     st.caption("Interactive candlestick & line charts — zoom, pan, hover for details")
 
     cc1, cc2, cc3 = st.columns([1, 1, 2])
@@ -627,7 +627,7 @@ with tab1:
     st.divider()
 
     # ── SNIPER STATUS (with auto-start) ──
-    st.markdown('<div class="section-header"><span class="mi">gps_fixed</span><h3>Sniper Status</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🎯 <h3>Sniper Status</h3></div>', unsafe_allow_html=True)
     _dash = load_json(FILE_DASHBOARD)
     _state = load_json(FILE_STATE)
 
@@ -671,7 +671,7 @@ with tab1:
                 _stop_sniper()
                 st.rerun()
     # ── Live Trades Ledger ──
-    st.markdown('<div class="section-header"><span class="mi">receipt_long</span><h3>Today\'s Live Trades</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🧾 <h3>Today\'s Live Trades</h3></div>', unsafe_allow_html=True)
     
     trades_df = load_csv(FILE_TRADES)
     today_str = datetime.now(IST).strftime("%Y-%m-%d")
@@ -715,7 +715,7 @@ with tab1:
 
 
     # ── SYSTEM HEALTH ──
-    st.markdown('<div class="section-header"><span class="mi">monitor_heart</span><h3>System Health</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">❤️‍🩹 <h3>System Health</h3></div>', unsafe_allow_html=True)
     h1, h2, h3, h4 = st.columns(4)
     _mf = get_model_files_info()
     with h1:
@@ -741,7 +741,7 @@ with tab1:
 #  TAB 2 — BACKTEST P&L ANALYSIS
 # ══════════════════════════════════════════════════
 with tab2:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">analytics</span><h3>Backtest P&L Analysis — Full Report</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">📊 <h3>Backtest P&L Analysis — Full Report</h3></div>', unsafe_allow_html=True)
 
     bt = load_csv(FILE_BACKTEST)
 
@@ -812,7 +812,7 @@ with tab2:
         st.divider()
 
         # Portfolio Summary
-        st.markdown('<div class="section-header"><span class="mi">account_balance_wallet</span><h3>Portfolio Summary</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">💼 <h3>Portfolio Summary</h3></div>', unsafe_allow_html=True)
         c1, c2, c3, c4 = st.columns(4)
         with c1:
             st.metric("Starting Capital", f"₹{cap0:,.2f}")
@@ -826,7 +826,7 @@ with tab2:
         st.divider()
 
         # Trade Stats
-        st.markdown('<div class="section-header"><span class="mi">bar_chart</span><h3>Trade Statistics</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">📉 <h3>Trade Statistics</h3></div>', unsafe_allow_html=True)
         c1, c2, c3, c4, c5 = st.columns(5)
         with c1:
             st.metric("Total Trades", n_trades)
@@ -851,7 +851,7 @@ with tab2:
 
         # Equity Curve (Plotly)
         if not trades.empty and "Cumulative_PnL" in trades.columns:
-            st.markdown('<div class="section-header"><span class="mi">timeline</span><h3>Equity Curve</h3></div>', unsafe_allow_html=True)
+            st.markdown('<div class="section-header">📉 <h3>Equity Curve</h3></div>', unsafe_allow_html=True)
             trades["Cumulative_PnL"] = pd.to_numeric(trades["Cumulative_PnL"], errors="coerce")
             edf = trades[["Date", "Cumulative_PnL"]].dropna()
             if not edf.empty:
@@ -878,7 +878,7 @@ with tab2:
 
         # P&L by Stock
         if not trades.empty and "Stock" in trades.columns:
-            st.markdown('<div class="section-header"><span class="mi">corporate_fare</span><h3>P&L Breakdown by Stock</h3></div>', unsafe_allow_html=True)
+            st.markdown('<div class="section-header">🏢 <h3>P&L Breakdown by Stock</h3></div>', unsafe_allow_html=True)
             trades["PnL"] = pd.to_numeric(trades["PnL"], errors="coerce")
 
             ss = trades.groupby("Stock").agg(
@@ -976,21 +976,21 @@ with tab2:
 #  TAB 3 — RANKING & SIGNALS
 # ══════════════════════════════════════════════════
 with tab3:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">leaderboard</span><h3>Stock Ranking & AI Signals</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🏆 <h3>Stock Ranking & AI Signals</h3></div>', unsafe_allow_html=True)
 
     ranking_df = load_csv(FILE_RANKING)
 
     if ranking_df.empty:
         st.warning("⚠️ No ranking data. Run `python src/scholar.py` first.")
     else:
-        st.markdown('<div class="section-header"><span class="mi">emoji_events</span><h3>Today\'s Stock Ranking</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🥇 <h3>Today\'s Stock Ranking</h3></div>', unsafe_allow_html=True)
         st.caption("Scholar scans all stocks, trains 4 models each, ranks by average confidence.")
 
         # Top picks
         if "rank" in ranking_df.columns:
             top = ranking_df[ranking_df["rank"] <= TOP_N_STOCKS]
             if not top.empty:
-                st.markdown(f'<div class="section-header"><span class="mi">target</span><h3>Top {TOP_N_STOCKS} Picks (Will Be Traded)</h3></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="section-header">🎯 <h3>Top {TOP_N_STOCKS} Picks (Will Be Traded)</h3></div>', unsafe_allow_html=True)
                 pcols = st.columns(min(len(top), 3))
                 for i, (_, row) in enumerate(top.iterrows()):
                     with pcols[i % 3]:
@@ -1005,7 +1005,7 @@ with tab3:
                 st.divider()
 
         # Full ranking table
-        st.markdown('<div class="section-header"><span class="mi">table_chart</span><h3>Full Ranking Table</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">📊 <h3>Full Ranking Table</h3></div>', unsafe_allow_html=True)
         dcols = [
             c
             for c in [
@@ -1028,7 +1028,7 @@ with tab3:
                 if c in ranking_df.columns
             ]
             if prob_cols:
-                st.markdown('<div class="section-header"><span class="mi">equalizer</span><h3>Model Confidence Comparison</h3></div>', unsafe_allow_html=True)
+                st.markdown('<div class="section-header">⚖️ <h3>Model Confidence Comparison</h3></div>', unsafe_allow_html=True)
                 import plotly.graph_objects as go
 
                 fig = go.Figure()
@@ -1053,7 +1053,7 @@ with tab3:
 
         # Votes chart
         if "votes" in ranking_df.columns and "symbol" in ranking_df.columns:
-            st.markdown('<div class="section-header"><span class="mi">how_to_vote</span><h3>Model Agreement (Votes out of 4)</h3></div>', unsafe_allow_html=True)
+            st.markdown('<div class="section-header">🗳️ <h3>Model Agreement (Votes out of 4)</h3></div>', unsafe_allow_html=True)
             import plotly.express as px
 
             vdf = ranking_df.copy()
@@ -1075,19 +1075,19 @@ with tab3:
 #  TAB 4 — MODEL DETAILS & HEALTH
 # ══════════════════════════════════════════════════
 with tab4:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">smart_toy</span><h3>Model Details & Health</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🤖 <h3>Model Details & Health</h3></div>', unsafe_allow_html=True)
 
     model_files = get_model_files_info()
 
     if not model_files:
         st.warning("⚠️ No models trained yet. Run `python src/scholar.py`")
     else:
-        st.markdown('<div class="section-header"><span class="mi">folder_open</span><h3>Trained Model Files</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">📁 <h3>Trained Model Files</h3></div>', unsafe_allow_html=True)
         mf_df = pd.DataFrame(model_files)
         st.dataframe(mf_df, use_container_width=True, hide_index=True)
 
         # Per-stock summary
-        st.markdown('<div class="section-header"><span class="mi">corporate_fare</span><h3>Models Per Stock</h3></div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">🏢 <h3>Models Per Stock</h3></div>', unsafe_allow_html=True)
         if "Stock" in mf_df.columns:
             sm = mf_df.groupby("Stock").agg(
                 Count=("Type", "count"),
@@ -1102,7 +1102,7 @@ with tab4:
     st.divider()
 
     # Features
-    st.markdown('<div class="section-header"><span class="mi">search</span><h3>Features Used by AI Models</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🔍 <h3>Features Used by AI Models</h3></div>', unsafe_allow_html=True)
     if RF_FEATURES:
         descriptions = [
             "Relative Strength Index (momentum oscillator)",
@@ -1127,7 +1127,7 @@ with tab4:
     st.divider()
 
     # Ensemble Weights
-    st.markdown('<div class="section-header"><span class="mi">balance</span><h3>Ensemble Model Weights</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">⚖️ <h3>Ensemble Model Weights</h3></div>', unsafe_allow_html=True)
     weights = load_json(FILE_WEIGHTS)
     if weights:
         st.caption("Learner optimises trust level for each model per stock:")
@@ -1149,7 +1149,7 @@ with tab4:
     st.divider()
 
     # Best Params
-    st.markdown('<div class="section-header"><span class="mi">tune</span><h3>Auto-Tuned Hyperparameters</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">⚙️ <h3>Auto-Tuned Hyperparameters</h3></div>', unsafe_allow_html=True)
     best_params = load_json(FILE_PARAMS)
     if best_params:
         if isinstance(best_params, list):
@@ -1169,7 +1169,7 @@ with tab4:
 #  TAB 5 — TRADE HISTORY (Live Sniper)
 # ══════════════════════════════════════════════════
 with tab5:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">receipt_long</span><h3>Live Trade History (from Sniper)</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🧾 <h3>Live Trade History (from Sniper)</h3></div>', unsafe_allow_html=True)
 
     trades_df = load_csv(FILE_TRADES)
 
@@ -1262,7 +1262,7 @@ with tab5:
 #  TAB 6 — LEARNER & GUARDIAN REPORT
 # ══════════════════════════════════════════════════
 with tab6:
-    st.markdown('<div class="section-header"><span class="mi mi-lg">psychology</span><h3>Learner Report — What the AI Learned</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🧠 <h3>Learner Report — What the AI Learned</h3></div>', unsafe_allow_html=True)
 
     learner = load_json(FILE_LEARNER)
 
@@ -1400,7 +1400,7 @@ with tab6:
     st.divider()
 
     # Risk Guardian
-    st.markdown('<div class="section-header"><span class="mi">security</span><h3>Risk Guardian — 10 Safety Layers</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🛡️ <h3>Risk Guardian — 10 Safety Layers</h3></div>', unsafe_allow_html=True)
     guardian = load_json(FILE_GUARDIAN)
 
     if guardian:
@@ -1437,7 +1437,7 @@ with tab6:
 st.divider()
 st.markdown(
     '<div class="footer">'
-    '<span class="mi mi-sm">shield</span> '
+    '🛡️ '
     'Project Aegis v4.0 · Live Dashboard · '
     'Plotly Charts · Streamlit Fragments · '
     '100% Local — No data leaves your PC'
