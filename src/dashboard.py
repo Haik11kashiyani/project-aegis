@@ -114,10 +114,11 @@ except ImportError:
 # ──────────────────────────────────────────────────
 #  Premium CSS Design System
 # ──────────────────────────────────────────────────
-st.markdown("""<style>
+st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<style>
 /* ── HYPER-MINIMALIST TRUE BLACK THEME ── */
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 
 /* ── Hide Streamlit Default Cruft Safely ── */
 #MainMenu {visibility: hidden;}
@@ -139,8 +140,8 @@ div[data-testid="stMetric"] {
     border-radius: 6px; padding: 12px 16px;
     margin-bottom: 8px;
 }
-div[data-testid="stMetric"] label { color: #a1a1aa !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; }
-div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; }
+div[data-testid="stMetric"] label { color: #a1a1aa !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ── Flat Hero Banner ── */
 .hero-banner { border-bottom: 1px solid #27272a; padding: 16px 0 24px 0; margin-bottom: 24px; }
@@ -148,7 +149,7 @@ div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !impo
 .hero-sub { font-size: 0.85rem; color: #a1a1aa; margin-top: 8px; font-weight: 400; }
 
 /* ── Sharp Status Badges ── */
-.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 500; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .badge-green { background: #052e16; color: #34d399; border: 1px solid #064e3b; }
 .badge-red { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
 
