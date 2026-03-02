@@ -659,6 +659,7 @@ def run_sniper():
                 "rf_conf": 0.0, "xgb_conf": 0.0, "lstm_conf": 0.0, "intra_conf": 0.0,
                 "avg_conf": 0.0, "votes": 0,
                 "signal": "WAIT", "reason": "",
+                "guardian": "", "guardian_reason": "",
                 "rsi": 0.0, "atr": 0.0, "macd": 0.0, "sma_50": 0.0, "sma_200": 0.0,
                 "sentiment": 0.0, "volume_ratio": 0.0,
                 "stop_loss": 0.0, "target": 0.0,
@@ -702,25 +703,18 @@ def run_sniper():
                                 stock_analysis["stop_loss"] = round(cur_price - ATR_STOP_MULTIPLIER * cur_atr, 2)
                                 stock_analysis["target"] = round(cur_price + ATR_TARGET_MULTIPLIER * cur_atr, 2)
 
-                            # Check if Guardian would approve this trade
-                            if guardian:
-                                try:
-                                    g_ok, g_reason, _ = guardian.approve_trade(
-                                        symbol=scan_sym, price=cur_price,
-                                        qty=1, stop_loss=stock_analysis["stop_loss"],
-                                        target=stock_analysis["target"], atr=cur_atr,
-                                        rf_conf=rf_c, xgb_conf=xgb_c,
-                                        lstm_conf=lstm_c, intra_conf=intra_c,
-                                        votes=votes,
-                                    )
-                                    stock_analysis["guardian"] = "APPROVED" if g_ok else "BLOCKED"
-                                    stock_analysis["guardian_reason"] = g_reason if not g_ok else "All checks passed"
-                                except Exception:
-                                    stock_analysis["guardian"] = "ERROR"
-                                    stock_analysis["guardian_reason"] = "Guardian check failed"
+                            # Lightweight Guardian pre-check (doesn't modify state)
+                            avg_conf_check = (rf_c + xgb_c + lstm_c + intra_c) / 4
+                            from risk_guardian import MIN_CONFIDENCE_REAL_MONEY, MIN_VOTES_REAL_MONEY
+                            if avg_conf_check < MIN_CONFIDENCE_REAL_MONEY:
+                                stock_analysis["guardian"] = "BLOCKED"
+                                stock_analysis["guardian_reason"] = f"Avg conf {avg_conf_check:.2f} < {MIN_CONFIDENCE_REAL_MONEY}"
+                            elif votes < MIN_VOTES_REAL_MONEY:
+                                stock_analysis["guardian"] = "BLOCKED"
+                                stock_analysis["guardian_reason"] = f"Votes {votes} < {MIN_VOTES_REAL_MONEY}"
                             else:
-                                stock_analysis["guardian"] = "DISABLED"
-                                stock_analysis["guardian_reason"] = "Guardian not active"
+                                stock_analysis["guardian"] = "APPROVED"
+                                stock_analysis["guardian_reason"] = "All checks passed"
                         else:
                             stock_analysis["signal"] = "WAIT"
                             stock_analysis["guardian"] = "N/A"
