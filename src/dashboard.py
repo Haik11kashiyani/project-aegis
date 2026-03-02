@@ -771,6 +771,22 @@ with tab1:
                     </div>
                     """
 
+                # Guardian gate status
+                g_status = s.get("guardian", "")
+                g_reason = s.get("guardian_reason", "")
+                if g_status == "APPROVED":
+                    tech_html += f"""
+                    <div style="margin-top: 8px; padding: 6px 10px; background: #052e16; border: 1px solid #064e3b; border-radius: 4px;">
+                        <span style="font-size: 0.72rem; color: #34d399; font-weight: 500;">✅ Guardian: APPROVED — {g_reason}</span>
+                    </div>
+                    """
+                elif g_status == "BLOCKED":
+                    tech_html += f"""
+                    <div style="margin-top: 8px; padding: 6px 10px; background: #450a0a; border: 1px solid #7f1d1d; border-radius: 4px;">
+                        <span style="font-size: 0.72rem; color: #f87171; font-weight: 500;">🛡️ Guardian: BLOCKED — {g_reason}</span>
+                    </div>
+                    """
+
                 st.markdown(tech_html + "</div>", unsafe_allow_html=True)
 
                 # Reason for this stock

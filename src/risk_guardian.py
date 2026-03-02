@@ -75,8 +75,8 @@ MAX_WEEKLY_LOSS_PCT = 0.08       # Stop for the week if -8%
 MAX_MONTHLY_LOSS_PCT = 0.15      # Stop for the month if -15%
 
 # --- Minimum Model Agreement ---
-# NOTE: 0.65 for paper trading (₹1,000). Increase to 0.78 when using real money.
-MIN_CONFIDENCE_REAL_MONEY = 0.65  # Paper trading threshold (raise to 0.78 for real money)
+# NOTE: 0.60 for paper trading (₹1,000). Increase to 0.78 when using real money.
+MIN_CONFIDENCE_REAL_MONEY = 0.60  # Paper trading threshold (raise to 0.78 for real money)
 MIN_VOTES_REAL_MONEY = 2          # 2/4 consensus for paper trading (raise to 3 for real money)
 
 # --- Volatility Guard ---

@@ -701,12 +701,35 @@ def run_sniper():
                             if cur_atr > 0:
                                 stock_analysis["stop_loss"] = round(cur_price - ATR_STOP_MULTIPLIER * cur_atr, 2)
                                 stock_analysis["target"] = round(cur_price + ATR_TARGET_MULTIPLIER * cur_atr, 2)
+
+                            # Check if Guardian would approve this trade
+                            if guardian:
+                                try:
+                                    g_ok, g_reason, _ = guardian.approve_trade(
+                                        symbol=scan_sym, price=cur_price,
+                                        qty=1, stop_loss=stock_analysis["stop_loss"],
+                                        target=stock_analysis["target"], atr=cur_atr,
+                                        rf_conf=rf_c, xgb_conf=xgb_c,
+                                        lstm_conf=lstm_c, intra_conf=intra_c,
+                                        votes=votes,
+                                    )
+                                    stock_analysis["guardian"] = "APPROVED" if g_ok else "BLOCKED"
+                                    stock_analysis["guardian_reason"] = g_reason if not g_ok else "All checks passed"
+                                except Exception:
+                                    stock_analysis["guardian"] = "ERROR"
+                                    stock_analysis["guardian_reason"] = "Guardian check failed"
+                            else:
+                                stock_analysis["guardian"] = "DISABLED"
+                                stock_analysis["guardian_reason"] = "Guardian not active"
                         else:
                             stock_analysis["signal"] = "WAIT"
+                            stock_analysis["guardian"] = "N/A"
                             if votes < MIN_VOTES_TO_BUY:
                                 stock_analysis["reason"] = f"Only {votes}/{MIN_VOTES_TO_BUY} votes"
+                                stock_analysis["guardian_reason"] = "Not enough model consensus"
                             else:
                                 stock_analysis["reason"] = "Below confidence threshold"
+                                stock_analysis["guardian_reason"] = "Confidence too low"
             except Exception as e:
                 stock_analysis["reason"] = f"Error: {str(e)[:50]}"
 
