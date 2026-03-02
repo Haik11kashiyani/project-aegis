@@ -60,6 +60,7 @@ FILE_BACKTEST  = os.path.join(DATA, "backtest_results.csv")
 FILE_LEARNER   = os.path.join(DATA, "learner_report.json")
 FILE_GUARDIAN  = os.path.join(DATA, "guardian_log.json")
 FILE_SNIPER_LOG = os.path.join(DATA, "sniper_output.log")
+FILE_ANALYSIS  = os.path.join(DATA, "live_analysis.json")
 FILE_WEIGHTS   = os.path.join(DATA, "ensemble_weights.json")
 FILE_PARAMS    = os.path.join(DATA, "best_params.json")
 
@@ -670,6 +671,128 @@ with tab1:
             if st.button("🛑 Stop Sniper", type="primary", use_container_width=True, key="stop_sniper"):
                 _stop_sniper()
                 st.rerun()
+
+    st.divider()
+
+    # ══════════════════════════════════════════════
+    #  LIVE AI ANALYSIS — Auto-refreshing section
+    # ══════════════════════════════════════════════
+    st.markdown('<div class="section-header">🧠 <h3>Live AI Analysis</h3></div>', unsafe_allow_html=True)
+
+    _analysis = load_json(FILE_ANALYSIS)
+    if not _analysis or "stocks" not in _analysis:
+        st.info("⏳ Waiting for first scan cycle... Start the Sniper to see live AI analysis.")
+    else:
+        # Header row: last scan time, scan number, day P&L
+        ac1, ac2, ac3, ac4 = st.columns(4)
+        with ac1:
+            st.metric("Last Scan", _analysis.get("timestamp", "N/A").split(" ")[-2] if " " in _analysis.get("timestamp", "") else _analysis.get("timestamp", "N/A"))
+        with ac2:
+            st.metric("Scan #", _analysis.get("scan_number", 0))
+        with ac3:
+            _apnl = _analysis.get("day_pnl", 0)
+            st.metric("Day P&L", f"₹{_apnl:,.2f}", f"{_analysis.get('day_pnl_pct', 0):+.2f}%")
+        with ac4:
+            st.metric("Open / Bullets", f"{_analysis.get('open_positions', 0)} / {_analysis.get('bullets_left', 0)}")
+
+        # Per-stock analysis cards
+        stocks_data = _analysis.get("stocks", [])
+        if stocks_data:
+            for s in stocks_data:
+                signal = s.get("signal", "WAIT")
+                signal_color = "#10b981" if signal == "BUY" else "#f59e0b"
+                signal_icon = "🟢" if signal == "BUY" else "🟡"
+                name = s.get("name", "???")
+                price = s.get("price", 0)
+                change = s.get("change_pct", 0)
+                change_color = "#10b981" if change >= 0 else "#ef4444"
+
+                # Card header
+                st.markdown(f"""
+                <div style="border: 1px solid #27272a; border-radius: 8px; padding: 16px; margin-bottom: 12px; background: #09090b;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <div>
+                            <span style="font-size: 1.15rem; font-weight: 600; color: #ffffff;">{name}</span>
+                            <span style="font-size: 0.85rem; color: #a1a1aa; margin-left: 10px;">₹{price:,.2f}</span>
+                            <span style="font-size: 0.8rem; color: {change_color}; margin-left: 6px;">({change:+.2f}%)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.75rem; background: {'#052e16' if signal=='BUY' else '#451a03'}; color: {signal_color}; padding: 4px 10px; border-radius: 4px; font-weight: 600; border: 1px solid {'#064e3b' if signal=='BUY' else '#78350f'};">{signal_icon} {signal}</span>
+                            <span style="font-size: 0.75rem; color: #a1a1aa; background: #18181b; padding: 4px 8px; border-radius: 4px; border: 1px solid #27272a;">{s.get('votes', 0)}/4 Votes</span>
+                        </div>
+                    </div>
+                """, unsafe_allow_html=True)
+
+                # Model confidence bars
+                models = [
+                    ("Random Forest", s.get("rf_conf", 0), "#3b82f6"),
+                    ("XGBoost", s.get("xgb_conf", 0), "#8b5cf6"),
+                    ("LSTM (Daily)", s.get("lstm_conf", 0), "#06b6d4"),
+                    ("LSTM (Intraday)", s.get("intra_conf", 0), "#f59e0b"),
+                ]
+                bars_html = ""
+                for mname, mconf, mcolor in models:
+                    pct = min(max(mconf * 100, 0), 100)
+                    vote_icon = "✅" if mconf >= 0.5 else "❌"
+                    bars_html += f"""
+                    <div style="display: flex; align-items: center; margin-bottom: 6px;">
+                        <div style="width: 110px; font-size: 0.72rem; color: #a1a1aa;">{mname}</div>
+                        <div style="flex: 1; background: #18181b; border-radius: 3px; height: 14px; margin: 0 8px; border: 1px solid #27272a; overflow: hidden;">
+                            <div style="width: {pct:.0f}%; height: 100%; background: {mcolor}; border-radius: 3px; transition: width 0.5s;"></div>
+                        </div>
+                        <div style="width: 55px; font-size: 0.72rem; color: #e4e4e7; text-align: right;">{mconf:.2%}</div>
+                        <div style="width: 20px; text-align: center; font-size: 0.7rem;">{vote_icon}</div>
+                    </div>
+                    """
+
+                st.markdown(bars_html, unsafe_allow_html=True)
+
+                # Technical indicators row
+                rsi = s.get("rsi", 0)
+                rsi_color = "#ef4444" if rsi > 70 else ("#10b981" if rsi < 30 else "#a1a1aa")
+                sent = s.get("sentiment", 0)
+                sent_label = "Bullish" if sent > 0.1 else ("Bearish" if sent < -0.1 else "Neutral")
+                sent_color = "#10b981" if sent > 0.1 else ("#ef4444" if sent < -0.1 else "#a1a1aa")
+
+                tech_html = f"""
+                    <div style="display: flex; gap: 16px; margin-top: 8px; flex-wrap: wrap;">
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">RSI: <span style="color: {rsi_color}; font-weight: 500;">{rsi:.1f}</span></span>
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">ATR: <span style="color: #e4e4e7;">{s.get('atr', 0):.2f}</span></span>
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">MACD: <span style="color: #e4e4e7;">{s.get('macd', 0):.4f}</span></span>
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">Sentiment: <span style="color: {sent_color};">{sent_label} ({sent:.3f})</span></span>
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">Vol Ratio: <span style="color: #e4e4e7;">{s.get('volume_ratio', 0):.2f}x</span></span>
+                    </div>
+                """
+                if signal == "BUY" and s.get("stop_loss", 0) > 0:
+                    tech_html += f"""
+                    <div style="display: flex; gap: 16px; margin-top: 6px;">
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">SL: <span style="color: #ef4444; font-weight: 500;">₹{s.get('stop_loss', 0):,.2f}</span></span>
+                        <span style="font-size: 0.7rem; color: #a1a1aa;">Target: <span style="color: #10b981; font-weight: 500;">₹{s.get('target', 0):,.2f}</span></span>
+                    </div>
+                    """
+
+                st.markdown(tech_html + "</div>", unsafe_allow_html=True)
+
+                # Reason for this stock
+                reason_text = s.get("reason", "")
+                if reason_text:
+                    st.caption(f"   ↳ {reason_text}")
+
+        # Summary bar
+        buy_count = sum(1 for s in stocks_data if s.get("signal") == "BUY")
+        wait_count = len(stocks_data) - buy_count
+        avg_conf = sum(s.get("avg_conf", 0) for s in stocks_data) / max(len(stocks_data), 1)
+        st.markdown(f"""
+        <div style="border: 1px solid #27272a; border-radius: 6px; padding: 10px 16px; margin-top: 10px; background: #09090b; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; color: #a1a1aa;">Scanning <b style="color: #fff;">{len(stocks_data)}</b> stocks</span>
+            <span style="font-size: 0.8rem; color: #10b981;">🟢 {buy_count} BUY</span>
+            <span style="font-size: 0.8rem; color: #f59e0b;">🟡 {wait_count} WAIT</span>
+            <span style="font-size: 0.8rem; color: #a1a1aa;">Avg Confidence: <b style="color: #fff;">{avg_conf:.2%}</b></span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.divider()
+
     # ── Live Trades Ledger ──
     st.markdown('<div class="section-header">🧾 <h3>Today\'s Live Trades</h3></div>', unsafe_allow_html=True)
     

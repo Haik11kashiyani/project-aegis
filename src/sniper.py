@@ -60,6 +60,7 @@ from config import (
     SENTIMENT_ENABLED, SENTIMENT_MAX_ARTICLES, SENTIMENT_LOOKBACK_DAYS,
     RISK_GUARDIAN_ENABLED,
     model_paths, STATE_FILE, TRADE_LOG_FILE, RANKING_FILE, DASHBOARD_FILE,
+    ANALYSIS_FILE,
 )
 from sentiment import get_sentiment_score
 from risk_guardian import RiskGuardian, NeuralSafetyNet, quick_safety_check
@@ -172,6 +173,19 @@ def log_trade(entry: dict):
         df_new.to_csv(TRADE_LOG_FILE, mode="a", header=False, index=False)
     else:
         df_new.to_csv(TRADE_LOG_FILE, index=False)
+
+
+# --------------------------------------------------
+#   LIVE ANALYSIS OUTPUT (for dashboard)
+# --------------------------------------------------
+def save_analysis(analysis_data: dict):
+    """Write live analysis JSON so the dashboard can show real-time AI signals."""
+    os.makedirs(os.path.dirname(ANALYSIS_FILE) or ".", exist_ok=True)
+    try:
+        with open(ANALYSIS_FILE, "w") as f:
+            json.dump(analysis_data, f, indent=2, default=str)
+    except Exception:
+        pass
 
 
 # --------------------------------------------------
@@ -623,6 +637,82 @@ def run_sniper():
                 "Actual_Profit": round(pnl_total, 2),
                 "Status": action,
             })
+
+        # ---- Scan ALL stocks & write LIVE ANALYSIS ----
+        analysis = {
+            "timestamp": now.strftime("%Y-%m-%d %H:%M:%S IST"),
+            "scan_number": getattr(run_sniper, '_scan_count', 0) + 1,
+            "status": state["status"],
+            "day_pnl": round(state["total_profit"], 2),
+            "day_pnl_pct": round((state["total_profit"] / CAPITAL) * 100, 2),
+            "open_positions": sum(1 for t in state["active_trades"] if t.get("status") == "OPEN"),
+            "bullets_left": MAX_BULLETS - sum(1 for t in state["active_trades"] if t.get("status") == "OPEN"),
+            "stocks": [],
+        }
+        run_sniper._scan_count = analysis["scan_number"]
+
+        for scan_sym in top_stocks:
+            stock_analysis = {
+                "symbol": scan_sym,
+                "name": scan_sym.replace(".NS", "").replace(".BO", ""),
+                "price": 0.0, "change_pct": 0.0,
+                "rf_conf": 0.0, "xgb_conf": 0.0, "lstm_conf": 0.0, "intra_conf": 0.0,
+                "avg_conf": 0.0, "votes": 0,
+                "signal": "WAIT", "reason": "",
+                "rsi": 0.0, "atr": 0.0, "macd": 0.0, "sma_50": 0.0, "sma_200": 0.0,
+                "sentiment": 0.0, "volume_ratio": 0.0,
+                "stop_loss": 0.0, "target": 0.0,
+            }
+            try:
+                scan_df = get_live_data(scan_sym)
+                if scan_df is not None and not scan_df.empty:
+                    cur_price = float(scan_df["Close"].iloc[-1])
+                    prev_price = float(scan_df["Close"].iloc[-2]) if len(scan_df) > 1 else cur_price
+                    stock_analysis["price"] = round(cur_price, 2)
+                    stock_analysis["change_pct"] = round(((cur_price - prev_price) / prev_price) * 100, 2) if prev_price > 0 else 0.0
+
+                    # Technical indicators from latest row
+                    last = scan_df.iloc[-1]
+                    stock_analysis["rsi"] = round(float(last.get("RSI", 0)), 2)
+                    stock_analysis["atr"] = round(float(last.get("ATR", 0)), 2)
+                    stock_analysis["macd"] = round(float(last.get("MACD", 0)), 4)
+                    stock_analysis["sma_50"] = round(float(last.get("SMA_50", 0)), 2)
+                    stock_analysis["sma_200"] = round(float(last.get("SMA_200", 0)), 2)
+                    stock_analysis["sentiment"] = round(float(last.get("Sentiment_Score", 0)), 3)
+                    stock_analysis["volume_ratio"] = round(float(last.get("Volume_Ratio", 0)), 2)
+
+                    # Run ensemble (only if models loaded)
+                    if scan_sym in all_models:
+                        should_buy, votes, rf_c, xgb_c, lstm_c, intra_c = get_ensemble_signal(
+                            scan_sym, scan_df, all_models[scan_sym]
+                        )
+                        stock_analysis["rf_conf"] = round(rf_c, 4)
+                        stock_analysis["xgb_conf"] = round(xgb_c, 4)
+                        stock_analysis["lstm_conf"] = round(lstm_c, 4)
+                        stock_analysis["intra_conf"] = round(intra_c, 4)
+                        stock_analysis["avg_conf"] = round((rf_c + xgb_c + lstm_c + intra_c) / 4, 4)
+                        stock_analysis["votes"] = votes
+
+                        if should_buy:
+                            stock_analysis["signal"] = "BUY"
+                            stock_analysis["reason"] = f"{votes}/4 models agree"
+                            # Calculate stop/target for display
+                            cur_atr = float(last.get("ATR", 0))
+                            if cur_atr > 0:
+                                stock_analysis["stop_loss"] = round(cur_price - ATR_STOP_MULTIPLIER * cur_atr, 2)
+                                stock_analysis["target"] = round(cur_price + ATR_TARGET_MULTIPLIER * cur_atr, 2)
+                        else:
+                            stock_analysis["signal"] = "WAIT"
+                            if votes < MIN_VOTES_TO_BUY:
+                                stock_analysis["reason"] = f"Only {votes}/{MIN_VOTES_TO_BUY} votes"
+                            else:
+                                stock_analysis["reason"] = "Below confidence threshold"
+            except Exception as e:
+                stock_analysis["reason"] = f"Error: {str(e)[:50]}"
+
+            analysis["stocks"].append(stock_analysis)
+
+        save_analysis(analysis)
 
         # ---- Fire New Bullet (round-robin through stocks) ----
         open_count = sum(1 for t in state["active_trades"] if t["status"] == "OPEN")
