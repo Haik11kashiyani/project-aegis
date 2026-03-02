@@ -128,8 +128,14 @@ footer {visibility: hidden;}
 .stApp { background-color: #000000 !important; }
 
 /* ── Base Typography ── */
-html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #e4e4e7; }
+html, body, [class*="css"], p, span, div { font-family: 'Geist', 'Inter', sans-serif !important; color: #f0f0f3 !important; }
 h1, h2, h3, h4, h5, h6 { letter-spacing: -0.03em !important; font-weight: 600 !important; color: #ffffff !important; }
+
+/* ── Improved Text Visibility ── */
+.stMarkdown, .stMarkdown p, .stMarkdown span { color: #f0f0f3 !important; }
+.stCaption, .stCaption p { color: #b0b0b8 !important; font-size: 0.82rem !important; }
+li, ul, ol { color: #e8e8ec !important; }
+.stAlert p, .stAlert span { color: #e8e8ec !important; }
 
 /* ── Material Icon Helper ── */
 .mi { font-family: 'Material Icons Round'; font-size: 16px; vertical-align: middle; margin-right: 6px; opacity: 0.6; }
@@ -141,8 +147,9 @@ div[data-testid="stMetric"] {
     border-radius: 6px; padding: 12px 16px;
     margin-bottom: 8px;
 }
-div[data-testid="stMetric"] label { color: #a1a1aa !important; font-size: 0.75rem !important; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+div[data-testid="stMetric"] label { color: #c0c0c8 !important; font-size: 0.78rem !important; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !important; font-weight: 500 !important; font-size: 1.6rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+div[data-testid="stMetric"] [data-testid="stMetricDelta"] { font-size: 0.85rem !important; }
 
 /* ── Flat Hero Banner ── */
 .hero-banner { border-bottom: 1px solid #27272a; padding: 16px 0 24px 0; margin-bottom: 24px; }
@@ -156,15 +163,17 @@ div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #ffffff !impo
 
 /* ── Section Headers ── */
 .section-header { display: flex; align-items: center; margin: 32px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #27272a; }
-.section-header h3 { margin: 0; font-weight: 500; font-size: 1.05rem; color: #f4f4f5; }
+.section-header h3 { margin: 0; font-weight: 600; font-size: 1.1rem; color: #ffffff !important; }
 
 /* ── True Black Sidebar ── */
 section[data-testid="stSidebar"] { background: #09090b !important; border-right: 1px solid #27272a; }
+section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] li, section[data-testid="stSidebar"] span { color: #d8d8e0 !important; }
+section[data-testid="stSidebar"] strong, section[data-testid="stSidebar"] b { color: #ffffff !important; }
 
 /* ── Dataframes & Tables ── */
-[data-testid="stDataFrame"] { border: 1px solid #27272a; border-radius: 6px; overflow: hidden; background: #000000; }
-th { color: #a1a1aa !important; font-size: 0.75rem !important; text-transform: uppercase; }
-td { color: #e4e4e7 !important; font-size: 0.85rem !important; }
+[data-testid="stDataFrame"] { border: 1px solid #27272a; border-radius: 6px; overflow: hidden; background: #0a0a0c; }
+th { color: #d0d0d8 !important; font-size: 0.78rem !important; text-transform: uppercase; font-weight: 600 !important; }
+td { color: #f0f0f3 !important; font-size: 0.85rem !important; }
 
 /* ── Expander Background Override ── */
 [data-testid="stExpander"] { border: 1px solid #27272a !important; background: transparent !important; }
@@ -179,6 +188,16 @@ pre, code { background: #09090b !important; border: 1px solid #27272a !important
 /* ── Live Dot ── */
 .live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981; margin-right: 8px; animation: gentle-pulse 2s infinite; }
 @keyframes gentle-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* ── Footer ── */
+.footer { text-align: center; font-size: 0.8rem; color: #b0b0b8; padding: 12px 0; }
+
+/* ── Tab text visibility ── */
+button[data-baseweb="tab"] { color: #d0d0d8 !important; font-size: 0.85rem !important; font-weight: 500 !important; }
+button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; font-weight: 600 !important; }
+
+/* ── Info / Warning / Success / Error box text ── */
+div[data-testid="stAlert"] p { color: #f0f0f3 !important; }
 
 /* ── Safety: Let Streamlit handle buttons & tabs to prevent overlap ── */
 </style>
@@ -809,7 +828,7 @@ with tab1:
 
     st.divider()
 
-    # ── Live Trades Ledger ──
+    # ── Live Trades Ledger (Enhanced with Outcomes) ──
     st.markdown('<div class="section-header">🧾 <h3>Today\'s Live Trades</h3></div>', unsafe_allow_html=True)
     
     trades_df = load_csv(FILE_TRADES)
@@ -818,31 +837,172 @@ with tab1:
     if trades_df.empty:
         st.info("No trades executed yet today.")
     else:
+        # Ensure numeric columns
+        for _nc in ["Entry_Price", "Exit_Price", "Qty", "AI_Confidence", "Votes", "Actual_Profit", "Stop_Loss", "Target"]:
+            if _nc in trades_df.columns:
+                trades_df[_nc] = pd.to_numeric(trades_df[_nc], errors="coerce").fillna(0)
+
         # Filter for today's trades only
-        today_trades = trades_df[trades_df["Date"].str.startswith(today_str, na=False)]
+        today_trades = trades_df[trades_df["Date"].str.startswith(today_str, na=False)].copy()
         
         if today_trades.empty:
             st.info("No trades executed yet today.")
         else:
-            # Format the ledger for display
-            ledger = today_trades[["Date", "Stock", "Action", "Price", "Qty", "AI_Confidence", "Votes"]].copy()
-            ledger.rename(columns={"AI_Confidence": "Confidence", "Date": "Time"}, inplace=True)
-            
-            # Extract just the time from the Date column
-            ledger["Time"] = ledger["Time"].apply(lambda x: x.split(" ")[1] if " " in x else x)
-            ledger["Stock"] = ledger["Stock"].str.replace(".NS", "")
-            ledger["Price"] = ledger["Price"].apply(lambda x: f"₹{x:,.2f}")
-            ledger["Confidence"] = ledger["Confidence"].apply(lambda x: f"{x:.2f}")
-            ledger["Votes"] = ledger["Votes"].apply(lambda x: f"{int(x)}/4")
-            
-            # Add a colored pill for Action
+            # ── Summary Stats Bar ──
+            total_today = len(today_trades)
+            buys_today = len(today_trades[today_trades["Action"] == "BUY"])
+            sells_today = total_today - buys_today
+            open_trades = len(today_trades[today_trades["Status"] == "OPEN"]) if "Status" in today_trades.columns else 0
+            closed_trades = total_today - open_trades
+            day_realized_pnl = today_trades["Actual_Profit"].sum() if "Actual_Profit" in today_trades.columns else 0
+            wins_today = len(today_trades[today_trades["Actual_Profit"] > 0]) if "Actual_Profit" in today_trades.columns else 0
+            losses_today = len(today_trades[today_trades["Actual_Profit"] < 0]) if "Actual_Profit" in today_trades.columns else 0
+
+            # Compute unrealized P&L for open positions from live state
+            _live_state = load_json(FILE_STATE)
+            unrealized_pnl = 0
+            active_trades_info = []
+            if _live_state and "active_trades" in _live_state:
+                for _at in _live_state["active_trades"]:
+                    if _at.get("status") == "OPEN":
+                        active_trades_info.append(_at)
+
+            pnl_color = "#10b981" if day_realized_pnl >= 0 else "#ef4444"
+            st.markdown(f"""
+            <div style="border: 1px solid #27272a; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; background: #09090b;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase; letter-spacing: 0.05em;">Total Trades</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #fff;">{total_today}</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase;">Buys</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #10b981;">🟢 {buys_today}</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase;">Sells / Exits</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #ef4444;">🔴 {sells_today}</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase;">Open</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #f59e0b;">{open_trades}</div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase;">Wins / Losses</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: #fff;">
+                            <span style="color: #10b981;">{wins_today}W</span> / <span style="color: #ef4444;">{losses_today}L</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.75rem; color: #a1a1aa; text-transform: uppercase;">Realized P&L</span>
+                        <div style="font-size: 1.3rem; font-weight: 600; color: {pnl_color};">₹{day_realized_pnl:,.2f}</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # ── Open Positions Monitor ──
+            open_pos_df = today_trades[today_trades.get("Status", pd.Series(dtype=str)).eq("OPEN")] if "Status" in today_trades.columns else pd.DataFrame()
+            if not open_pos_df.empty:
+                st.markdown("**🔓 Open Positions:**")
+                for _, orow in open_pos_df.iterrows():
+                    _sym_name = str(orow.get('Stock', '')).replace('.NS', '')
+                    _entry = orow.get('Entry_Price', 0)
+                    _sl = orow.get('Stop_Loss', 0)
+                    _tgt = orow.get('Target', 0)
+                    _qty = int(orow.get('Qty', 0))
+                    _conf = orow.get('AI_Confidence', 0)
+                    _risk = (_entry - _sl) * _qty if _sl > 0 else 0
+                    _reward = (_tgt - _entry) * _qty if _tgt > 0 else 0
+                    _rr = _reward / _risk if _risk > 0 else 0
+
+                    st.markdown(f"""
+                    <div style="border: 1px solid #27272a; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; background: #0c0c10; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <div>
+                            <span style="font-size: 1rem; font-weight: 600; color: #fff;">{_sym_name}</span>
+                            <span style="font-size: 0.7rem; background: #052e16; color: #34d399; padding: 2px 6px; border-radius: 3px; margin-left: 8px; border: 1px solid #064e3b;">OPEN</span>
+                        </div>
+                        <span style="font-size: 0.8rem; color: #e4e4e7;">Entry: <b style="color: #fff;">₹{_entry:,.2f}</b></span>
+                        <span style="font-size: 0.8rem; color: #ef4444;">SL: ₹{_sl:,.2f}</span>
+                        <span style="font-size: 0.8rem; color: #10b981;">Target: ₹{_tgt:,.2f}</span>
+                        <span style="font-size: 0.8rem; color: #a1a1aa;">Qty: {_qty} | Conf: {_conf:.2f} | R:R {_rr:.1f}x</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            # ── Closed Trades with P&L ──
+            closed_df = today_trades[today_trades.get("Status", pd.Series(dtype=str)).ne("OPEN")] if "Status" in today_trades.columns else pd.DataFrame()
+            if not closed_df.empty:
+                st.markdown("**🔒 Closed Trades:**")
+                for _, crow in closed_df.iterrows():
+                    _sym_name = str(crow.get('Stock', '')).replace('.NS', '')
+                    _entry = crow.get('Entry_Price', 0)
+                    _exit = crow.get('Exit_Price', 0)
+                    _pnl = crow.get('Actual_Profit', 0)
+                    _qty = int(crow.get('Qty', 0))
+                    _action = str(crow.get('Action', ''))
+                    _is_win = _pnl > 0
+                    _pnl_color = '#10b981' if _is_win else '#ef4444'
+                    _badge = '✅ WIN' if _is_win else ('❌ LOSS' if _pnl < 0 else '⚪ EVEN')
+                    _badge_bg = '#052e16' if _is_win else ('#450a0a' if _pnl < 0 else '#27272a')
+                    _badge_border = '#064e3b' if _is_win else ('#7f1d1d' if _pnl < 0 else '#3f3f46')
+                    _badge_txt = '#34d399' if _is_win else ('#f87171' if _pnl < 0 else '#a1a1aa')
+
+                    st.markdown(f"""
+                    <div style="border: 1px solid #27272a; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; background: #0c0c10; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <span style="font-size: 1rem; font-weight: 600; color: #fff;">{_sym_name}</span>
+                        <span style="font-size: 0.8rem; color: #a1a1aa;">{_action}</span>
+                        <span style="font-size: 0.8rem; color: #e4e4e7;">₹{_entry:,.2f} → ₹{_exit:,.2f}</span>
+                        <span style="font-size: 0.8rem; color: {_pnl_color}; font-weight: 600;">P&L: ₹{_pnl:,.2f}</span>
+                        <span style="font-size: 0.7rem; background: {_badge_bg}; color: {_badge_txt}; padding: 3px 8px; border-radius: 4px; border: 1px solid {_badge_border}; font-weight: 600;">{_badge}</span>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            # ── Full Trades Table ──
+            st.markdown("**📋 All Today's Trades (Table):**")
+            _display_cols = [c for c in ["Time", "Stock", "Action", "Entry_Price", "Exit_Price", "Qty", "Stop_Loss", "Target", "AI_Confidence", "Votes", "Actual_Profit", "Status"] if c in today_trades.columns]
+            ledger = today_trades[_display_cols].copy()
+
+            # Format for display
+            if "Time" in ledger.columns:
+                pass  # Time column already has just time
+            ledger["Stock"] = ledger["Stock"].str.replace(".NS", "", regex=False)
+            if "Entry_Price" in ledger.columns:
+                ledger["Entry_Price"] = ledger["Entry_Price"].apply(lambda x: f"₹{x:,.2f}")
+            if "Exit_Price" in ledger.columns:
+                ledger["Exit_Price"] = ledger["Exit_Price"].apply(lambda x: f"₹{x:,.2f}" if x > 0 else "—")
+            if "Stop_Loss" in ledger.columns:
+                ledger["Stop_Loss"] = ledger["Stop_Loss"].apply(lambda x: f"₹{x:,.2f}")
+            if "Target" in ledger.columns:
+                ledger["Target"] = ledger["Target"].apply(lambda x: f"₹{x:,.2f}")
+            if "AI_Confidence" in ledger.columns:
+                ledger.rename(columns={"AI_Confidence": "Confidence"}, inplace=True)
+                ledger["Confidence"] = ledger["Confidence"].apply(lambda x: f"{x:.2f}")
+            if "Votes" in ledger.columns:
+                ledger["Votes"] = ledger["Votes"].apply(lambda x: f"{int(x)}/4")
+            if "Actual_Profit" in ledger.columns:
+                ledger.rename(columns={"Actual_Profit": "P&L"}, inplace=True)
+                ledger["P&L"] = ledger["P&L"].apply(lambda x: f"₹{x:,.2f}" if x != 0 else "—")
+
+            # Action formatting
             def format_action(val):
                 if val == "BUY": return "🟢 BUY"
                 if val == "SELL": return "🔴 SELL"
                 if "EXIT" in str(val): return "⚪ EXIT"
+                if "FORCE" in str(val): return "🟠 FORCE_CLOSE"
                 return val
-            ledger["Action"] = ledger["Action"].apply(format_action)
-            
+            if "Action" in ledger.columns:
+                ledger["Action"] = ledger["Action"].apply(format_action)
+
+            # Status formatting
+            def format_status(val):
+                if val == "OPEN": return "🟢 OPEN"
+                if "HIT_TARGET" in str(val): return "🎯 TARGET"
+                if "HIT_SL" in str(val): return "🛑 STOP LOSS"
+                if "FORCE" in str(val): return "🟠 FORCED"
+                return str(val)
+            if "Status" in ledger.columns:
+                ledger["Status"] = ledger["Status"].apply(format_status)
+
             st.dataframe(ledger, use_container_width=True, hide_index=True)
 
     # ── Technical Logs Expander ──
