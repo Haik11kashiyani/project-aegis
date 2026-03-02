@@ -45,6 +45,9 @@ import pytz
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 warnings.filterwarnings("ignore")
 
+import absl.logging
+absl.logging.set_verbosity(absl.logging.ERROR)
+
 from tensorflow.keras.models import load_model
 
 from config import (
@@ -62,6 +65,51 @@ from sentiment import get_sentiment_score
 from risk_guardian import RiskGuardian, NeuralSafetyNet, quick_safety_check
 
 IST = pytz.timezone("Asia/Kolkata")
+
+# --------------------------------------------------
+#   PREMIUM CONSOLE LOGGING (ANSI)
+# --------------------------------------------------
+class Log:
+    CYAN = "\033[96m"
+    MAGENTA = "\033[95m"
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    BOLD = "\033[1m"
+    RESET = "\033[0m"
+    DIM = "\033[2m"
+
+    @staticmethod
+    def info(msg):
+        print(f"{Log.BLUE}[INFO]{Log.RESET} {msg}")
+
+    @staticmethod
+    def success(msg):
+        print(f"{Log.GREEN}[OK]{Log.RESET} {msg}")
+
+    @staticmethod
+    def warn(msg):
+        print(f"{Log.YELLOW}[WARN]{Log.RESET} {msg}")
+
+    @staticmethod
+    def error(msg):
+        print(f"{Log.RED}[ERROR]{Log.RESET} {msg}")
+
+    @staticmethod
+    def vote(symbol, rf, xgb, lstm, intra, votes, needed):
+        color = Log.GREEN if votes >= needed else (Log.RED if votes == 0 else Log.YELLOW)
+        print(f"   {Log.DIM}»{Log.RESET} {Log.BOLD}{symbol:12}{Log.RESET} | RF={rf:.2f} XGB={xgb:.2f} LSTM={lstm:.2f} Intra={intra:.2f} | {color}Votes: {votes}/{needed}{Log.RESET}")
+
+    @staticmethod
+    def highlight(msg):
+        print(f"{Log.CYAN}{Log.BOLD}{msg}{Log.RESET}")
+
+    @staticmethod
+    def section(title):
+        print(f"\n{Log.MAGENTA}╔{'═' * 58}╗{Log.RESET}")
+        print(f"{Log.MAGENTA}║ {Log.BOLD}{title.center(56)}{Log.RESET} {Log.MAGENTA}║{Log.RESET}")
+        print(f"{Log.MAGENTA}╚{'═' * 58}╝{Log.RESET}")
 
 
 # --------------------------------------------------
@@ -141,7 +189,7 @@ def load_top_stocks() -> list:
             # Fallback: use whatever ranking exists
             return df.head(TOP_N_STOCKS)["symbol"].tolist()
         except Exception as e:
-            print(f"   [WARN] Could not load ranking: {e}")
+            Log.warn(f"Could not load ranking: {e}")
     # Fallback: use first N from watchlist
     return STOCK_WATCHLIST[:TOP_N_STOCKS]
 
@@ -178,19 +226,37 @@ def load_models(symbol: str) -> dict:
         print(f"   [WARN] No intraday LSTM for {symbol}")
 
     loaded = sum(1 for k in ["rf", "xgb", "lstm", "intraday_lstm"] if models[k] is not None)
-    print(f"   [OK] {symbol}: {loaded}/4 models loaded")
+    Log.success(f"{symbol:10} | {loaded}/4 models loaded")
     return models
 
 
 # --------------------------------------------------
 #   DATA FETCHER (daily + indicators + sentiment)
 # --------------------------------------------------
+def _yf_download_with_retry(symbol: str, period: str, interval: str, max_retries: int = 3) -> pd.DataFrame:
+    """Download from yfinance with retry logic for intermittent API failures."""
+    for attempt in range(1, max_retries + 1):
+        try:
+            df = yf.download(symbol, period=period, interval=interval, progress=False)
+            df = flatten_yf_columns(df)
+            if df is not None and not df.empty:
+                return df
+            if attempt < max_retries:
+                time.sleep(2 * attempt)  # Backoff: 2s, 4s
+        except Exception as e:
+            if attempt < max_retries:
+                Log.warn(f"{symbol} download attempt {attempt}/{max_retries} failed: {e}. Retrying...")
+                time.sleep(2 * attempt)
+            else:
+                Log.warn(f"{symbol} download failed after {max_retries} attempts: {e}")
+    return pd.DataFrame()
+
+
 def get_live_data(symbol: str) -> pd.DataFrame:
     """Fetch recent daily data + indicators for the ensemble decision."""
     try:
         # Need at least 200+ trading days for SMA_200 — use 2 years
-        df = yf.download(symbol, period="2y", interval="1d", progress=False)
-        df = flatten_yf_columns(df)
+        df = _yf_download_with_retry(symbol, period="2y", interval="1d")
         if df.empty:
             print(f"   [WARN] No data downloaded for {symbol}")
             return None
@@ -251,8 +317,7 @@ def get_live_data(symbol: str) -> pd.DataFrame:
 def get_intraday_data(symbol: str) -> pd.DataFrame:
     """Fetch recent 15-min candle data for intraday LSTM."""
     try:
-        df = yf.download(symbol, period="5d", interval="15m", progress=False)
-        df = flatten_yf_columns(df)
+        df = _yf_download_with_retry(symbol, period="5d", interval="15m")
         if df.empty:
             return None
         return df
@@ -352,8 +417,7 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
         print(f"   [NEURAL_SAFETY] {symbol}: {ens_reason}")
         return False, 0, rf_conf, xgb_conf, lstm_conf, intra_conf
 
-    print(f"   [VOTE] {symbol}: RF={rf_conf:.2f} XGB={xgb_conf:.2f} "
-          f"LSTM={lstm_conf:.2f} Intra={intra_conf:.2f} => {votes}/{MIN_VOTES_TO_BUY} needed")
+    Log.vote(symbol, rf_conf, xgb_conf, lstm_conf, intra_conf, votes, MIN_VOTES_TO_BUY)
 
     should_buy = (votes >= MIN_VOTES_TO_BUY)
     return should_buy, votes, rf_conf, xgb_conf, lstm_conf, intra_conf
@@ -389,14 +453,13 @@ def calculate_position(price: float, atr: float, bullet_size: float) -> dict:
 #   MAIN SNIPER LOOP
 # --------------------------------------------------
 def run_sniper():
-    print("=" * 60)
-    print("  PROJECT AEGIS - THE SNIPER v2 (Live Paper-Trading)")
-    print(f"   Capital : Rs.{CAPITAL}")
-    print(f"   Bullets : {MAX_BULLETS}  (Rs.{CAPITAL / MAX_BULLETS:.0f} each)")
-    print(f"   Target  : {DAILY_TARGET * 100:.1f}% daily")
-    print(f"   Voting  : {MIN_VOTES_TO_BUY}/4 models must agree")
-    print(f"   Guardian: {'ENABLED' if RISK_GUARDIAN_ENABLED else 'DISABLED'}")
-    print(f"   Date    : {datetime.now(IST).strftime('%Y-%m-%d %H:%M IST')}")
+    Log.section("PROJECT AEGIS - THE SNIPER v2")
+    print(f"   {Log.DIM}Capital  :{Log.RESET} {Log.BOLD}Rs.{CAPITAL:,}{Log.RESET}")
+    print(f"   {Log.DIM}Bullets  :{Log.RESET} {MAX_BULLETS} (Rs.{CAPITAL/MAX_BULLETS:,.0f} ea.)")
+    print(f"   {Log.DIM}Target   :{Log.RESET} {Log.GREEN}{DAILY_TARGET*100:.1f}% daily{Log.RESET}")
+    print(f"   {Log.DIM}Voting   :{Log.RESET} {MIN_VOTES_TO_BUY}/4 agreement")
+    print(f"   {Log.DIM}Guardian :{Log.RESET} {'✅ ENABLED' if RISK_GUARDIAN_ENABLED else '❌ DISABLED'}")
+    print(f"   {Log.DIM}Time     :{Log.RESET} {datetime.now(IST).strftime('%Y-%m-%d %H:%M IST')}")
     print("=" * 60)
 
     # ═══════════════════════════════════════════════════════
@@ -404,13 +467,10 @@ def run_sniper():
     # ═══════════════════════════════════════════════════════
     guardian = None
     if RISK_GUARDIAN_ENABLED:
-        print("\n   [GUARDIAN] Running pre-flight safety checks ...")
+        Log.info("Running pre-flight safety checks ...")
         allowed, reason = quick_safety_check()
         if not allowed:
-            print(f"   [GUARDIAN] TRADING BLOCKED: {reason}")
-            print("   [GUARDIAN] The Risk Guardian has determined it is not safe")
-            print("              to trade today. This protects your real money.")
-            print("              Review data/learner_report.json for details.")
+            Log.error(f"TRADING BLOCKED: {reason}")
             return
         guardian = RiskGuardian(capital=CAPITAL)
         print(f"   [GUARDIAN] Pre-flight passed. Risk level: "
@@ -418,7 +478,7 @@ def run_sniper():
 
     # Load top-N stocks from Scholar ranking
     top_stocks = load_top_stocks()
-    print(f"\n   Today's stocks: {', '.join(top_stocks)}")
+    Log.highlight(f"Targeting: {', '.join(top_stocks)}")
 
     # Load models for each stock
     all_models = {}
@@ -437,13 +497,13 @@ def run_sniper():
 
         # ---- Market Window Check ----
         if now.hour < 9 or (now.hour == 9 and now.minute < 15):
-            print(f"   [WAIT] Market not open yet ({now.strftime('%H:%M IST')})")
+            print(f"   {Log.DIM}[WAIT]{Log.RESET} Market not open yet ({now.strftime('%H:%M IST')})", end="\r")
             time.sleep(60)
             continue
 
         # ---- Force-close before market close ----
         if (now.hour == 15 and now.minute >= 10) or now.hour >= 16:
-            print("\n   [CLOSE] Market closing. Force-exiting all open positions.")
+            Log.highlight("MARKET CLOSING. FORCE-EXITING ALL POSITIONS.")
             for trade in state["active_trades"]:
                 if trade["status"] != "OPEN":
                     continue
@@ -536,18 +596,17 @@ def run_sniper():
                 guardian.record_trade_result(
                     symbol=sym, pnl=pnl_total, was_win=(pnl_total > 0)
                 )
-                # Check if guardian wants to stop trading
                 if not guardian.guardian_active:
                     state["status"] = "GUARDIAN_STOP"
                     save_state(state)
-                    print(f"\n   [GUARDIAN] 🚨 Trading HALTED by Risk Guardian")
+                    Log.error("🚨 Trading HALTED by Risk Guardian")
                     _print_summary(state)
                     return
 
-            result_icon = "[WIN]" if pnl_total > 0 else "[LOSS]"
-            print(f"   {result_icon} {sym} closed ({action}): "
-                  f"Entry Rs.{trade['price']} -> Exit Rs.{current_price}  "
-                  f"P&L: Rs.{pnl_total:.2f} ({pnl_pct:.2f}%)")
+            result_icon = f"{Log.GREEN}WIN{Log.RESET}" if pnl_total > 0 else f"{Log.RED}LOSS{Log.RESET}"
+            print(f"   {Log.DIM}«{Log.RESET} [{result_icon}] {Log.BOLD}{sym:10}{Log.RESET} | "
+                  f"Exit: Rs.{current_price:,.2f} | P&L: {Log.BOLD}Rs.{pnl_total:,.2f}{Log.RESET} "
+                  f"({Log.GREEN if pnl_total > 0 else Log.RED}{pnl_pct:+.2f}%{Log.RESET})")
 
             log_trade({
                 "Date": now.strftime("%Y-%m-%d"),
@@ -603,14 +662,13 @@ def run_sniper():
                                     votes=votes,
                                 )
                                 if not approved:
-                                    print(f"   [GUARDIAN] ❌ REJECTED: {g_reason}")
+                                    Log.error(f"{sym}: REJECTED by Guardian - {g_reason}")
                                     continue
-                                final_qty = adj_qty  # Use guardian-adjusted qty
-                                print(f"   [GUARDIAN] ✅ APPROVED (qty adjusted: {pos['qty']} → {adj_qty})")
+                                final_qty = adj_qty
+                                Log.success(f"{sym}: APPROVED (qty adjusted: {pos['qty']} → {adj_qty})")
 
-                            print(f"\n   [FIRE] BULLET #{open_count + 1} on {sym} @ Rs.{current_price:.2f}")
-                            print(f"     Qty: {final_qty}  SL: Rs.{pos['stop_loss']}  "
-                                  f"Target: Rs.{pos['target']}  Votes: {votes}/4")
+                            Log.highlight(f"FIRE BULLET on {sym} @ Rs.{current_price:,.2f}")
+                            print(f"     {Log.DIM}Qty: {final_qty} | SL: {pos['stop_loss']} | Target: {pos['target']} | Votes: {votes}/4{Log.RESET}")
 
                             trade_entry = {
                                 "stock": sym,
@@ -648,8 +706,8 @@ def run_sniper():
 
         # ---- Periodic Status ----
         total_pnl_pct = round((state["total_profit"] / CAPITAL) * 100, 2)
-        print(f"   [SCAN] {now.strftime('%H:%M IST')}  Day P&L: Rs.{state['total_profit']:.2f} "
-              f"({total_pnl_pct}%)  Open: {open_count}/{MAX_BULLETS}")
+        pnl_color = Log.GREEN if state['total_profit'] >= 0 else Log.RED
+        print(f"   {Log.DIM}[SCAN] {now.strftime('%H:%M IST')} | Day P&L: {pnl_color}Rs.{state['total_profit']:,.2f} ({total_pnl_pct}%){Log.RESET} | Open: {open_count}/{MAX_BULLETS}", end="\r")
 
         save_state(state)
         time.sleep(scan_interval)
@@ -659,22 +717,19 @@ def run_sniper():
 #   END-OF-DAY SUMMARY
 # --------------------------------------------------
 def _print_summary(state: dict):
-    print("\n" + "=" * 60)
-    print("  END-OF-DAY SUMMARY")
-    print("=" * 60)
-    print(f"   Status       : {state['status']}")
-    print(f"   Stocks       : {', '.join(state.get('stocks_traded', []))}")
-    print(f"   Total Trades : {state['trades_taken']}")
-    print(f"   Won          : {state['trades_won']}")
-    print(f"   Lost         : {state['trades_lost']}")
-    win_rate = (
-        (state["trades_won"] / state["trades_taken"] * 100)
-        if state["trades_taken"] > 0 else 0
-    )
-    print(f"   Win Rate     : {win_rate:.1f}%")
-    print(f"   Total P&L    : Rs.{state['total_profit']:.2f}  "
-          f"({state.get('total_profit_pct', 0):.2f}%)")
-    print("=" * 60)
+    Log.section("END-OF-DAY SUMMARY")
+    print(f"   {Log.DIM}Status       :{Log.RESET} {Log.BOLD}{state['status']}{Log.RESET}")
+    print(f"   {Log.DIM}Stocks       :{Log.RESET} {', '.join(state.get('stocks_traded', []))}")
+    print(f"   {Log.DIM}Total Trades :{Log.RESET} {state['trades_taken']}")
+    print(f"   {Log.DIM}Wins         :{Log.RESET} {Log.GREEN}{state['trades_won']}{Log.RESET}")
+    print(f"   {Log.DIM}Losses       :{Log.RESET} {Log.RED}{state['trades_lost']}{Log.RESET}")
+    
+    win_rate = (state["trades_won"] / state["trades_taken"] * 100) if state["trades_taken"] > 0 else 0
+    pnl_color = Log.GREEN if state['total_profit'] >= 0 else Log.RED
+    
+    print(f"   {Log.DIM}Win Rate     :{Log.RESET} {Log.BOLD}{win_rate:.1f}%{Log.RESET}")
+    print(f"   {Log.DIM}Total P&L    :{Log.RESET} {pnl_color}{Log.BOLD}Rs.{state['total_profit']:,.2f}{Log.RESET} ({state.get('total_profit_pct', 0):.2f}%)")
+    print(f"{Log.MAGENTA}╚{'═' * 58}╝{Log.RESET}")
 
 
 if __name__ == "__main__":

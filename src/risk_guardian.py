@@ -74,9 +74,10 @@ LOSS_COOLDOWN_MINUTES = 60       # Wait 1 hour after consecutive losses
 MAX_WEEKLY_LOSS_PCT = 0.08       # Stop for the week if -8%
 MAX_MONTHLY_LOSS_PCT = 0.15      # Stop for the month if -15%
 
-# --- Minimum Model Agreement (real money = stricter) ---
-MIN_CONFIDENCE_REAL_MONEY = 0.78  # Higher than paper trading threshold
-MIN_VOTES_REAL_MONEY = 3          # Still need 3/4 consensus
+# --- Minimum Model Agreement ---
+# NOTE: 0.65 for paper trading (₹1,000). Increase to 0.78 when using real money.
+MIN_CONFIDENCE_REAL_MONEY = 0.65  # Paper trading threshold (raise to 0.78 for real money)
+MIN_VOTES_REAL_MONEY = 2          # 2/4 consensus for paper trading (raise to 3 for real money)
 
 # --- Volatility Guard ---
 MAX_ATR_PCT_OF_PRICE = 0.05     # Reject if ATR > 5% of price (too volatile)
@@ -102,9 +103,9 @@ GUARDIAN_LOG_FILE = "data/guardian_log.json"
 
 NEURAL_MIN_OUTPUT = 0.01        # Anything below → stuck/dead neuron
 NEURAL_MAX_OUTPUT = 0.99        # Anything above → overconfident / memorised
-NEURAL_STABILITY_DELTA = 0.35   # If prediction changes >35% between ticks → unstable
+NEURAL_STABILITY_DELTA = 0.45   # If prediction changes >45% between ticks → unstable (relaxed for paper)
 NEURAL_STUCK_WINDOW = 5         # Flag if last N predictions are identical
-NEURAL_ENSEMBLE_MAX_SPREAD = 0.60  # If all-model max-min conf > 60pp → disagreement
+NEURAL_ENSEMBLE_MAX_SPREAD = 0.80  # If all-model max-min conf > 80pp → disagreement (relaxed for paper trading)
 
 
 class NeuralSafetyNet:

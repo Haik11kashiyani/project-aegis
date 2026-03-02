@@ -39,6 +39,56 @@ from indicators import flatten_yf_columns
 import joblib
 from datetime import datetime, timedelta
 from pathlib import Path
+import absl.logging
+import logging
+
+# --------------------------------------------------
+#   PREMIUM CONSOLE LOGGING (ANSI)
+# --------------------------------------------------
+class Log:
+    CYAN = "\033[96m"
+    MAGENTA = "\033[95m"
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    BOLD = "\033[1m"
+    RESET = "\033[0m"
+    DIM = "\033[2m"
+
+    @staticmethod
+    def info(msg):
+        print(f"{Log.BLUE}[INFO]{Log.RESET} {msg}")
+
+    @staticmethod
+    def success(msg):
+        print(f"{Log.GREEN}[OK]{Log.RESET} {msg}")
+
+    @staticmethod
+    def warn(msg):
+        print(f"{Log.YELLOW}[WARN]{Log.RESET} {msg}")
+
+    @staticmethod
+    def error(msg):
+        print(f"{Log.RED}[ERROR]{Log.RESET} {msg}")
+
+    @staticmethod
+    def highlight(msg):
+        print(f"{Log.CYAN}{Log.BOLD}{msg}{Log.RESET}")
+
+    @staticmethod
+    def section(title):
+        print(f"\n{Log.MAGENTA}╔{'═' * 58}╗{Log.RESET}")
+        print(f"{Log.MAGENTA}║ {Log.BOLD}{title.center(56)}{Log.RESET} {Log.MAGENTA}║{Log.RESET}")
+        print(f"{Log.MAGENTA}╚{'═' * 58}╝{Log.RESET}")
+
+# Suppress all TensorFlow and ABSL warnings
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+if "ABSL_LOG_LEVEL" not in os.environ:
+    os.environ["ABSL_LOG_LEVEL"] = "3"
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
+logging.getLogger('absl').setLevel(logging.ERROR)
+absl.logging.set_verbosity(absl.logging.ERROR)
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import TimeSeriesSplit
@@ -98,13 +148,13 @@ def review_past_trades() -> dict:
     }
 
     if not os.path.exists(TRADE_LOG_FILE):
-        print("   [LEARN] No trade history found. Skipping review.")
+        Log.warn("No trade history found. Skipping review.")
         return report
 
     try:
         df = pd.read_csv(TRADE_LOG_FILE)
     except Exception as e:
-        print(f"   [LEARN] Could not read trade log: {e}")
+        Log.error(f"Could not read trade log: {e}")
         return report
 
     closed = df[df["Status"].isin(["TARGET_HIT", "STOP_LOSS", "FORCE_CLOSED", "HOLD_CLOSE"])]
@@ -153,10 +203,9 @@ def review_past_trades() -> dict:
                 best_pf = pf
                 best_thresh = round(thresh, 2)
         report["optimal_confidence"] = best_thresh
-        print(f"   [LEARN] Optimal confidence threshold: {best_thresh} (PF={best_pf:.2f})")
+        Log.info(f"Optimal confidence threshold: {best_thresh} (PF={best_pf:.2f})")
 
-    print(f"   [LEARN] Trade Review: {report['total_trades']} trades, "
-          f"WR={report['win_rate']}%, PF={report['profit_factor']}")
+    Log.success(f"Trade Review: {report['total_trades']} trades | WR={report['win_rate']}% | PF={report['profit_factor']}")
     return report
 
 
@@ -168,7 +217,7 @@ def tune_hyperparameters(symbol: str, df: pd.DataFrame) -> dict:
     Random search over hyperparameter space with walk-forward CV.
     Returns the best params found for this stock.
     """
-    print(f"   [TUNE] Hyperparameter tuning for {symbol} ...")
+    Log.info(f"Hyperparameter tuning for {symbol} ...")
 
     X = df[RF_FEATURES]
     y = df["Target"]
@@ -655,10 +704,14 @@ def generate_health_report(trade_review: dict, calibrations: list,
     with open(LEARNER_REPORT_FILE, "w") as f:
         json.dump(report, f, indent=2, default=str)
 
-    print(f"\n   [REPORT] Health: {model_health} | Trading: {'ALLOWED' if trading_allowed else 'PAUSED'}")
+    Log.section("HEALTH REPORT")
+    status_clr = Log.GREEN if trading_allowed else Log.RED
+    print(f"   {Log.DIM}Model Health :{Log.RESET} {Log.BOLD}{model_health}{Log.RESET}")
+    print(f"   {Log.DIM}Trading Status:{Log.RESET} {status_clr}{'ALLOWED' if trading_allowed else 'PAUSED'}{Log.RESET}")
+
     if unhealthy_reasons:
         for reason in unhealthy_reasons:
-            print(f"   [WARN] {reason}")
+            Log.warn(reason)
 
     return report
 
@@ -707,26 +760,21 @@ def fetch_and_engineer(symbol: str, period: str = DATA_PERIOD) -> pd.DataFrame:
 #  MAIN — ORCHESTRATOR
 # ══════════════════════════════════════════════════
 def main():
-    print("=" * 60)
-    print("  PROJECT AEGIS - THE LEARNER (Off-Market Learning)")
-    print(f"   Watchlist : {len(STOCK_WATCHLIST)} stocks")
-    print(f"   Mode      : Continuous Learning & Adaptation")
-    print(f"   Date      : {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    Log.section("PROJECT AEGIS - THE LEARNER")
+    print(f"   {Log.DIM}Watchlist :{Log.RESET} {len(STOCK_WATCHLIST)} stocks")
+    print(f"   {Log.DIM}Mode      :{Log.RESET} Continuous Learning & Adaptation")
+    print(f"   {Log.DIM}Date      :{Log.RESET} {datetime.now(IST).strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
     os.makedirs("models", exist_ok=True)
     os.makedirs("data", exist_ok=True)
 
     # ── Step 1: Review past trades ──
-    print(f"\n{'─' * 50}")
-    print("  STEP 1: Trade Review")
-    print(f"{'─' * 50}")
+    Log.highlight("STEP 1: Trade Review")
     trade_review = review_past_trades()
 
     # ── Step 2: Hyperparameter tuning for each stock ──
-    print(f"\n{'─' * 50}")
-    print("  STEP 2: Hyperparameter Tuning")
-    print(f"{'─' * 50}")
+    Log.highlight("STEP 2: Hyperparameter Tuning")
     tuned_params = []
     for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
         try:
@@ -734,7 +782,7 @@ def main():
             params = tune_hyperparameters(sym, df)
             tuned_params.append(params)
         except Exception as e:
-            print(f"   [FAIL] Tuning failed for {sym}: {e}")
+            Log.error(f"Tuning failed for {sym}: {e}")
 
     # Save best params
     if tuned_params:
@@ -742,16 +790,14 @@ def main():
             json.dump(tuned_params, f, indent=2)
 
     # ── Step 3: Market regime detection ──
-    print(f"\n{'─' * 50}")
-    print("  STEP 3: Market Regime Detection")
-    print(f"{'─' * 50}")
+    Log.highlight("STEP 3: Market Regime Detection")
     regimes = {}
     # Use NIFTY 50 as overall market indicator
     try:
         regime = train_regime_detector("^NSEI")
         regimes["NIFTY50"] = regime
     except Exception as e:
-        print(f"   [FAIL] Regime detection failed: {e}")
+        Log.error(f"Regime detection failed: {e}")
         regimes["NIFTY50"] = "UNKNOWN"
 
     # Per-stock regime
@@ -763,9 +809,7 @@ def main():
             regimes[sym] = "UNKNOWN"
 
     # ── Step 4: Confidence calibration ──
-    print(f"\n{'─' * 50}")
-    print("  STEP 4: Confidence Calibration")
-    print(f"{'─' * 50}")
+    Log.highlight("STEP 4: Confidence Calibration")
     calibrations = []
     for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
         try:
