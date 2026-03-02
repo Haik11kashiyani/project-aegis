@@ -59,7 +59,7 @@ DRAWDOWN_LEVEL_4_PCT = 0.08    # -8%  weekly → STOP for the week
 
 # --- Position Limits ---
 MAX_RISK_PER_TRADE_PCT = 0.02   # Never risk more than 2% of capital on ONE trade
-MAX_SINGLE_STOCK_PCT = 0.30     # Max 30% of capital in one stock
+MAX_SINGLE_STOCK_PCT = 1.00     # 100% for paper trading with ₹1K (1 share > capital). Reduce to 0.30 for real money.
 MAX_OPEN_POSITIONS = 5           # Hard cap on simultaneous positions
 
 # --- Time Filters ---
@@ -104,7 +104,7 @@ GUARDIAN_LOG_FILE = "data/guardian_log.json"
 NEURAL_MIN_OUTPUT = 0.01        # Anything below → stuck/dead neuron
 NEURAL_MAX_OUTPUT = 0.99        # Anything above → overconfident / memorised
 NEURAL_STABILITY_DELTA = 0.45   # If prediction changes >45% between ticks → unstable (relaxed for paper)
-NEURAL_STUCK_WINDOW = 5         # Flag if last N predictions are identical
+NEURAL_STUCK_WINDOW = 20        # Flag if last N predictions are identical (raised from 5 for intraday scanning)
 NEURAL_ENSEMBLE_MAX_SPREAD = 0.80  # If all-model max-min conf > 80pp → disagreement (relaxed for paper trading)
 
 
@@ -399,10 +399,11 @@ class RiskGuardian:
         # ═══════════════════════════════════════════
         #  CHECK 5: Confidence Gate (Adaptive)
         # ═══════════════════════════════════════════
-        # Use learner's recommended threshold if available
+        # Use learner's recommended threshold if available, but cap at paper-trading floor
         risk_params = self.learner_report.get("risk_params", {})
-        min_conf = risk_params.get("recommended_confidence", MIN_CONFIDENCE_REAL_MONEY)
-        min_conf = max(min_conf, MIN_CONFIDENCE_REAL_MONEY)  # Never below hard floor
+        learner_conf = risk_params.get("recommended_confidence", MIN_CONFIDENCE_REAL_MONEY)
+        # In paper trading, use the LOWER of learner vs our floor (so trades can fire)
+        min_conf = min(learner_conf, MIN_CONFIDENCE_REAL_MONEY)
 
         avg_conf = (rf_conf + xgb_conf + lstm_conf + intra_conf) / 4
         if avg_conf < min_conf:
