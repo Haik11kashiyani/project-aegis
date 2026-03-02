@@ -430,13 +430,14 @@ class RiskGuardian:
             else:
                 return False, "POSITION: Risk per share is zero/negative", 0
 
-        # Max exposure to single stock
+        # Max exposure to single stock (skipped for paper trading with small capital)
         existing_exposure = 0
         if symbol in self.open_positions:
             existing_exposure = self.open_positions[symbol].get("invested", 0)
         total_exposure = existing_exposure + trade_value
 
-        if total_exposure > self.capital * MAX_SINGLE_STOCK_PCT:
+        # Paper trading: skip concentration check when capital < stock price
+        if total_exposure > self.capital * MAX_SINGLE_STOCK_PCT and price <= self.capital:
             return False, f"CONCENTRATION: {symbol} exposure Rs.{total_exposure:.0f} > {MAX_SINGLE_STOCK_PCT*100:.0f}% cap", 0
 
         # Max open positions
