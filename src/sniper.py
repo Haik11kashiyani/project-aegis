@@ -61,6 +61,13 @@ from config import (
     RISK_GUARDIAN_ENABLED,
     model_paths, STATE_FILE, TRADE_LOG_FILE, RANKING_FILE, DASHBOARD_FILE,
     ANALYSIS_FILE,
+    # Strategy filters
+    STRATEGY_FILTERS_ENABLED,
+    FILTER_TREND_ENABLED, FILTER_RSI_ENABLED, FILTER_RSI_MAX, FILTER_RSI_MIN,
+    FILTER_MACD_ENABLED, FILTER_VOLUME_ENABLED, FILTER_VOLUME_MIN_RATIO,
+    FILTER_BB_ENABLED, FILTER_BB_UPPER_PCT,
+    MAX_BULLETS_PER_STOCK,
+    PARTIAL_EXIT_ENABLED, PARTIAL_EXIT_ATR_MULT, PARTIAL_EXIT_PCT,
 )
 from sentiment import get_sentiment_score
 from risk_guardian import RiskGuardian, NeuralSafetyNet, quick_safety_check
@@ -464,6 +471,93 @@ def calculate_position(price: float, atr: float, bullet_size: float) -> dict:
 
 
 # --------------------------------------------------
+#   STRATEGY FILTERS (7 Technical Entry Gates)
+# --------------------------------------------------
+def check_strategy_filters(symbol: str, df: pd.DataFrame) -> tuple:
+    """
+    Run all 7 technical filters on the latest data.
+    Returns (passed: bool, reason: str, filter_details: dict)
+    
+    Filters:
+    1. Trend: Price > EMA_20 > SMA_50  (uptrend confirmation)
+    2. RSI: Not overbought (>70) or in freefall (<25)
+    3. MACD: MACD line > Signal line  (positive momentum)
+    4. Volume: Above-average volume   (institutional participation)
+    5. Bollinger: Not near upper band  (not at resistance)
+    6. Per-stock cooldown (checked externally)
+    7. Partial exit (managed in trade monitoring)
+    """
+    if not STRATEGY_FILTERS_ENABLED:
+        return True, "Filters disabled", {}
+
+    last = df.iloc[-1]
+    details = {}
+    reasons_blocked = []
+
+    # ── Filter 1: Trend ──
+    if FILTER_TREND_ENABLED:
+        price = float(last.get("Close", 0))
+        ema20 = float(last.get("EMA_20", 0))
+        sma50 = float(last.get("SMA_50", 0))
+        trend_ok = (price > ema20) and (ema20 > sma50) if ema20 > 0 and sma50 > 0 else False
+        details["trend"] = {"price": round(price, 2), "ema20": round(ema20, 2), "sma50": round(sma50, 2), "ok": trend_ok}
+        if not trend_ok:
+            reasons_blocked.append(f"Trend: Price({price:.0f}) > EMA20({ema20:.0f}) > SMA50({sma50:.0f}) FAILED")
+
+    # ── Filter 2: RSI ──
+    if FILTER_RSI_ENABLED:
+        rsi = float(last.get("RSI", 50))
+        rsi_ok = FILTER_RSI_MIN <= rsi <= FILTER_RSI_MAX
+        details["rsi"] = {"value": round(rsi, 1), "min": FILTER_RSI_MIN, "max": FILTER_RSI_MAX, "ok": rsi_ok}
+        if not rsi_ok:
+            if rsi > FILTER_RSI_MAX:
+                reasons_blocked.append(f"RSI: {rsi:.1f} > {FILTER_RSI_MAX} (overbought)")
+            else:
+                reasons_blocked.append(f"RSI: {rsi:.1f} < {FILTER_RSI_MIN} (freefall)")
+
+    # ── Filter 3: MACD ──
+    if FILTER_MACD_ENABLED:
+        macd_val = float(last.get("MACD", 0))
+        macd_sig = float(last.get("MACD_Signal", 0))
+        macd_ok = macd_val > macd_sig
+        details["macd"] = {"macd": round(macd_val, 4), "signal": round(macd_sig, 4), "ok": macd_ok}
+        if not macd_ok:
+            reasons_blocked.append(f"MACD: {macd_val:.4f} < Signal {macd_sig:.4f} (bearish momentum)")
+
+    # ── Filter 4: Volume ──
+    if FILTER_VOLUME_ENABLED:
+        vol_ratio = float(last.get("Volume_Ratio", 0))
+        vol_ok = vol_ratio >= FILTER_VOLUME_MIN_RATIO
+        details["volume"] = {"ratio": round(vol_ratio, 2), "min": FILTER_VOLUME_MIN_RATIO, "ok": vol_ok}
+        if not vol_ok:
+            reasons_blocked.append(f"Volume: {vol_ratio:.2f}x < {FILTER_VOLUME_MIN_RATIO}x (low participation)")
+
+    # ── Filter 5: Bollinger Band Resistance ──
+    if FILTER_BB_ENABLED:
+        price = float(last.get("Close", 0))
+        bb_upper = float(last.get("BB_Upper", 0))
+        bb_lower = float(last.get("BB_Lower", 0))
+        bb_range = bb_upper - bb_lower if bb_upper > bb_lower else 1
+        bb_position = (price - bb_lower) / bb_range  # 0.0 = at lower, 1.0 = at upper
+        bb_ok = bb_position < FILTER_BB_UPPER_PCT
+        details["bb"] = {"position": round(bb_position, 3), "limit": FILTER_BB_UPPER_PCT, "ok": bb_ok}
+        if not bb_ok:
+            reasons_blocked.append(f"BB: Price at {bb_position:.0%} of band (near resistance)")
+
+    if reasons_blocked:
+        return False, " | ".join(reasons_blocked), details
+    return True, "All filters passed", details
+
+
+def count_stock_bullets_today(state: dict, symbol: str) -> int:
+    """Count how many bullets have been fired for a specific stock today."""
+    return sum(
+        1 for t in state.get("active_trades", [])
+        if t.get("stock") == symbol
+    )
+
+
+# --------------------------------------------------
 #   MAIN SNIPER LOOP
 # --------------------------------------------------
 def run_sniper():
@@ -571,7 +665,7 @@ def run_sniper():
             _print_summary(state)
             break
 
-        # ---- Monitor Active Trades ----
+        # ---- Monitor Active Trades (with partial profit taking) ----
         for trade in state["active_trades"]:
             if trade["status"] != "OPEN":
                 continue
@@ -589,6 +683,46 @@ def run_sniper():
             new_stop = current_price - (ATR_STOP_MULTIPLIER * current_atr)
             if new_stop > trade["stop_loss"]:
                 trade["stop_loss"] = round(new_stop, 2)
+
+            # ── PARTIAL PROFIT TAKING ──
+            # If price moved 1.5×ATR in our favor and we haven't taken partial yet
+            partial_target = trade["price"] + (PARTIAL_EXIT_ATR_MULT * current_atr)
+            if (PARTIAL_EXIT_ENABLED
+                and current_price >= partial_target
+                and not trade.get("partial_taken", False)
+                and trade["qty"] > 1):
+                # Take partial profit (exit ~50% of position)
+                partial_qty = max(1, int(trade["qty"] * PARTIAL_EXIT_PCT))
+                remaining_qty = trade["qty"] - partial_qty
+                partial_pnl = pnl_per_share * partial_qty
+
+                state["total_profit"] += partial_pnl
+                trade["qty"] = remaining_qty
+                trade["partial_taken"] = True
+                # After partial, move stop to breakeven (entry price)
+                trade["stop_loss"] = max(trade["stop_loss"], trade["price"])
+
+                state["trades_taken"] += 1
+                state["trades_won"] += 1
+
+                Log.success(f"PARTIAL EXIT {sym}: {partial_qty} shares @ ₹{current_price:,.2f} | P&L: ₹{partial_pnl:,.2f}")
+
+                log_trade({
+                    "Date": now.strftime("%Y-%m-%d"),
+                    "Time": now.strftime("%H:%M"),
+                    "Stock": sym,
+                    "Action": "PARTIAL_EXIT",
+                    "Entry_Price": trade["price"],
+                    "Exit_Price": current_price,
+                    "Qty": partial_qty,
+                    "Stop_Loss": trade["stop_loss"],
+                    "Target": trade["target"],
+                    "AI_Confidence": trade.get("confidence", 0),
+                    "Votes": trade.get("votes", 0),
+                    "Actual_Profit": round(partial_pnl, 2),
+                    "Status": "PARTIAL_EXIT",
+                })
+                continue  # Check full exit next cycle
 
             if current_price >= trade["target"]:
                 action = "TARGET_HIT"
@@ -663,6 +797,7 @@ def run_sniper():
                 "rsi": 0.0, "atr": 0.0, "macd": 0.0, "sma_50": 0.0, "sma_200": 0.0,
                 "sentiment": 0.0, "volume_ratio": 0.0,
                 "stop_loss": 0.0, "target": 0.0,
+                "filters": {},  # Strategy filter details
             }
             try:
                 scan_df = get_live_data(scan_sym)
@@ -739,7 +874,11 @@ def run_sniper():
             sym = top_stocks[stock_idx % len(top_stocks)]
             stock_idx += 1
 
-            if sym in all_models:
+            # ── Per-Stock Cooldown: max N bullets per stock per day ──
+            stock_bullets = count_stock_bullets_today(state, sym)
+            if stock_bullets >= MAX_BULLETS_PER_STOCK:
+                Log.warn(f"{sym}: Already {stock_bullets}/{MAX_BULLETS_PER_STOCK} bullets today. Skipping.")
+            elif sym in all_models:
                 df = get_live_data(sym)
                 if df is not None and not df.empty:
                     should_buy, votes, rf_c, xgb_c, lstm_c, intra_c = get_ensemble_signal(
@@ -750,6 +889,22 @@ def run_sniper():
                     if should_buy:
                         current_price = float(df["Close"].iloc[-1])
                         current_atr = float(df["ATR"].iloc[-1])
+
+                        # ═══════════════════════════════════════════
+                        #  STRATEGY FILTER GATE — 7 Technical checks
+                        # ═══════════════════════════════════════════
+                        filters_ok, filter_reason, filter_details = check_strategy_filters(sym, df)
+                        if not filters_ok:
+                            Log.warn(f"{sym}: BLOCKED by Strategy Filters — {filter_reason}")
+                            # Update analysis data with filter rejection
+                            for s_entry in analysis.get("stocks", []):
+                                if s_entry.get("symbol") == sym:
+                                    s_entry["guardian"] = "BLOCKED"
+                                    s_entry["guardian_reason"] = f"Strategy: {filter_reason}"
+                            continue
+
+                        Log.info(f"{sym}: Strategy filters PASSED ✅")
+
                         pos = calculate_position(current_price, current_atr, bullet_size)
                         if pos:
                             # ═══════════════════════════════════════════

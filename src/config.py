@@ -73,6 +73,43 @@ SENTIMENT_MAX_ARTICLES = 10       # Max headlines to analyse per stock
 SENTIMENT_LOOKBACK_DAYS = 3       # How many days of news to consider
 
 # ──────────────────────────────────────────────────
+#   STRATEGY FILTERS (Technical Entry Gates)
+# ──────────────────────────────────────────────────
+STRATEGY_FILTERS_ENABLED = True  # Master switch for all filters below
+
+# Trend Filter: Only buy when price is above key moving averages
+FILTER_TREND_ENABLED     = True  # Price > EMA_20 > SMA_50 required
+
+# RSI Filter: Skip overbought / freefall stocks
+FILTER_RSI_ENABLED       = True
+FILTER_RSI_MAX           = 70    # Don't buy if RSI above this (overbought)
+FILTER_RSI_MIN           = 25    # Don't buy if RSI below this (freefall)
+
+# MACD Confirmation: Momentum must be positive
+FILTER_MACD_ENABLED      = True  # MACD > MACD_Signal required
+
+# Volume Confirmation: Need above-average volume
+FILTER_VOLUME_ENABLED    = True
+FILTER_VOLUME_MIN_RATIO  = 0.8   # Volume must be >= 80% of 20-day average
+
+# Bollinger Band Resistance: Don't buy near upper band
+FILTER_BB_ENABLED        = True
+FILTER_BB_UPPER_PCT      = 0.98  # Don't buy if price > 98% toward BB upper
+
+# Per-Stock Cooldown: Max bullets per stock per day
+MAX_BULLETS_PER_STOCK    = 1     # No more averaging down blindly
+
+# Partial Profit Taking (scale-out strategy)
+PARTIAL_EXIT_ENABLED     = True
+PARTIAL_EXIT_ATR_MULT    = 1.5   # Take partial at 1.5× ATR profit
+PARTIAL_EXIT_PCT         = 0.50  # Exit 50% of position at partial target
+
+# Prefer cheaper stocks (better position sizing with small capital)
+PREFER_CHEAP_STOCKS      = True
+MAX_PRICE_FOR_PREFERENCE = 800   # Stocks under this get ranking boost
+CHEAP_STOCK_BOOST        = 0.10  # +10% boost to ranking score for cheap stocks
+
+# ──────────────────────────────────────────────────
 #   RISK MANAGEMENT
 # ──────────────────────────────────────────────────
 ATR_STOP_MULTIPLIER   = 1.5     # Stop loss = 1.5 × ATR below entry
