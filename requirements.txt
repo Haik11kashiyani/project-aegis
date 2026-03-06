@@ -20,6 +20,7 @@ textblob>=0.18.0
 
 # Dashboard
 streamlit>=1.32.0
+plotly>=5.18.0
 
 # Excel/Data Export
 openpyxl>=3.1.2
@@ -29,3 +30,16 @@ pytz>=2024.1
 
 # Notifications (Optional - for Telegram alerts)
 # python-telegram-bot>=21.0
+
+# Hyperparameter Tuning (Optional - auto_tuner.py)
+optuna>=3.5.0
+
+# Broker SDKs (Optional - install only if using that broker)
+# kiteconnect>=5.0.0       # Zerodha
+# smartapi-python>=1.4.0   # Angel One
+# pyotp>=2.9.0             # Angel One TOTP
+# requests>=2.31.0         # Groww (already installed via other deps)
+
+# PDF Report Generation (Optional - falls back to HTML)
+# weasyprint>=60.0
+# pdfkit>=1.0.0

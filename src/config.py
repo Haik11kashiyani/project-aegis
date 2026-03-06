@@ -30,7 +30,7 @@ TARGET_STOCK = os.getenv("TARGET_STOCK", STOCK_WATCHLIST[0])
 DAILY_TARGET = float(os.getenv("DAILY_TARGET", "0.02"))       # 2 % daily target
 MAX_BULLETS  = int(os.getenv("MAX_BULLETS", "5"))              # Split capital into 5 shots
 TIME_GAP     = int(os.getenv("TIME_GAP", "600"))               # 10 min between bullets
-CAPITAL      = float(os.getenv("CAPITAL", "1000"))              # Starting capital ₹
+CAPITAL      = float(os.getenv("CAPITAL", "wwwwwwwwwwwww"))              # Starting capital ₹
 
 # ──────────────────────────────────────────────────
 #   MODEL / TRAINING PARAMETERS
@@ -158,8 +158,106 @@ ENSEMBLE_WEIGHTS  = "data/ensemble_weights.json"
 BEST_PARAMS_FILE  = "data/best_params.json"
 
 # ──────────────────────────────────────────────────
+#   TRADING BRAIN (Human-Like Intelligence)
+# ──────────────────────────────────────────────────
+# Choose your trading personality:
+#   AGGRESSIVE   — More trades, wider stops, lower confidence bar
+#   MODERATE     — Balanced (recommended for most users)
+#   CONSERVATIVE — Fewer trades, tighter stops, higher confidence needed
+TRADING_PERSONALITY = os.getenv("TRADING_PERSONALITY", "MODERATE")
+
+# Smart exit system (the fix for "never sells")
+SMART_EXIT_ENABLED     = True   # Enable human-like exit logic (momentum, RSI, volume, time)
+SMART_ENTRY_ENABLED    = True   # Enable market-context-aware entries
+
+# Global market mood check (VIX, S&P500, crude oil, USD/INR)
+GLOBAL_MOOD_ENABLED    = True   # Check global indicators before trading
+
+# ──────────────────────────────────────────────────
 #   FEATURE LIST (must match between Scholar & Sniper)
 # ──────────────────────────────────────────────────
 RF_FEATURES = ["RSI", "SMA_50", "SMA_200", "EMA_20", "ATR",
                "MACD", "MACD_Signal", "BB_Upper", "BB_Lower",
                "Volume_Ratio", "OBV", "Sentiment_Score"]
+
+# ──────────────────────────────────────────────────
+#   BROKER BRIDGE (Paper-to-Live Trading)
+# ──────────────────────────────────────────────────
+# TRADE_MODE: PAPER (default) | DRY_RUN (shows orders but doesn't send) | LIVE
+BROKER_MODE = os.getenv("AEGIS_TRADE_MODE", "PAPER")
+# BROKER: PAPER | ZERODHA | ANGEL_ONE | GROWW
+BROKER_NAME = os.getenv("AEGIS_BROKER", "PAPER")
+
+# ──────────────────────────────────────────────────
+#   NEW MODULE TOGGLES (Phase 6 Features)
+# ──────────────────────────────────────────────────
+SECTOR_ROTATION_ENABLED    = True   # Adjust rankings by sector momentum
+MARKET_BREADTH_ENABLED     = True   # Macro breadth filter for position sizing
+CORRELATION_GUARD_ENABLED  = True   # Block correlated positions
+INTRADAY_PATTERNS_ENABLED  = True   # Time-of-day entry optimisation
+CONFIDENCE_DECAY_ENABLED   = True   # Auto-penalise bad voters in learner
+REPORT_AUTO_GENERATE       = True   # Generate daily HTML report at EOD
+
+# ──────────────────────────────────────────────────
+#   NEW MODULE TOGGLES (Phase 7 Features)
+# ──────────────────────────────────────────────────
+KELLY_SIZING_ENABLED       = True   # Adaptive position sizing (Kelly Criterion)
+EARNINGS_GUARD_ENABLED     = True   # Block/reduce trades near quarterly results
+MODEL_DRIFT_ENABLED        = True   # Monitor prediction drift & flag retraining
+TELEGRAM_BOT_ENABLED       = True   # Two-way Telegram bot (needs TELEGRAM_BOT_TOKEN)
+WALK_FORWARD_ENABLED       = True   # Walk-forward simulator (manual / scheduled)
+
+# ──────────────────────────────────────────────────
+#   NEW MODULE TOGGLES (Phase 8 Features)
+# ──────────────────────────────────────────────────
+OPTIONS_HEDGE_ENABLED      = True   # Auto protective-put calculator & exposure gate
+MULTI_TIMEFRAME_ENABLED    = True   # Weekly + monthly trend consensus gate
+NEWS_DETECTOR_ENABLED      = True   # NLP news event detector (M&A, regulatory, etc.)
+REBALANCER_ENABLED         = True   # Weekly portfolio rebalancing engine
+RISK_PARITY_ENABLED        = True   # Inverse-volatility position sizing
+AB_BACKTEST_ENABLED        = True   # A/B strategy comparison framework
+
+# ──────────────────────────────────────────────────
+#   NEW MODULE TOGGLES (Phase 9 Features)
+# ──────────────────────────────────────────────────
+REGIME_DETECTOR_ENABLED    = True   # HMM-based bull/bear/sideways regime detection
+VAR_STRESS_ENABLED         = True   # VaR & stress testing (Monte Carlo, historical)
+FINBERT_ENABLED            = True   # FinBERT transformer sentiment (falls back to keyword)
+EXECUTION_QUALITY_ENABLED  = True   # Trade execution grading & slippage tracking
+OPTION_CHAIN_ENABLED       = True   # Live NSE option chain (falls back to BS)
+VOLUME_PROFILE_ENABLED     = True   # Volume-at-price & order flow analysis
+SMART_ALERTS_ENABLED       = True   # Graduated tiered Telegram alerts
+TRADE_JOURNAL_ENABLED      = True   # Auto weekly HTML trade journal
+
+# ──────────────────────────────────────────────────
+#   NEW MODULE TOGGLES (Phase 10 Features)
+# ──────────────────────────────────────────────────
+RL_SIZER_ENABLED           = True   # Q-learning adaptive position sizing
+INTERMARKET_ENABLED        = True   # Gold/USD/Crude/US10Y correlation engine
+LIQUIDITY_FILTER_ENABLED   = True   # Corwin-Schultz spread + volume filter
+GREEKS_HEATMAP_ENABLED     = True   # Portfolio-level Greeks heat map
+BAYESIAN_FUSION_ENABLED    = True   # Bayesian posterior signal fusion
+INTRADAY_SCALPER_ENABLED   = True   # Sub-15-min VWAP-cross scalp overlay
+AUTO_TUNER_ENABLED         = True   # Optuna-based hyper-parameter sweep
+
+# ── Phase 11 Toggles ─────────────────────────────
+TRANSFORMER_ENABLED        = True   # Attention-based portfolio transformer
+ORDERBOOK_SIM_ENABLED      = True   # Tick-level order-book impact simulator
+DYNAMIC_STOPLOSS_ENABLED   = True   # Trailing ATR + Chandelier Exit stops
+PAIR_TRADING_ENABLED       = True   # Co-integration pair-trading engine
+ANOMALY_DETECTOR_ENABLED   = True   # Isolation Forest anomaly guard
+MODEL_VERSIONING_ENABLED   = True   # Shadow A/B model deployment
+
+# ── Phase 12 Toggles ─────────────────────────────
+ADAPTIVE_EXECUTOR_ENABLED  = True   # VWAP/TWAP order slicing engine
+RL_REBALANCER_ENABLED      = True   # RL-based portfolio rebalancer
+OPTIONS_SYNTH_ENABLED      = True   # Auto options strategy synthesizer
+CAUSAL_ENGINE_ENABLED      = True   # Causal inference feature filter
+
+# ── Phase 13 Toggles ─────────────────────────────
+GA_EVOLVER_ENABLED         = True   # Genetic Algorithm strategy evolver
+DEBATE_SYSTEM_ENABLED      = True   # Multi-Agent Debate consensus gate
+
+# ── Phase 14 Toggles ─────────────────────────────
+RL_TRADE_AGENT_ENABLED     = True   # Deep Q-Network entry/exit agent
+SENTIMENT_MOMENTUM_ENABLED = True   # Composite sentiment momentum index

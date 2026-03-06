@@ -1,0 +1,175 @@
+# ================================================
+# PROJECT AEGIS — Auto Hyperparameter Scheduler
+# ================================================
+# Runs every Saturday at 6:00 AM IST (1:30 AM UTC)
+# Performs Bayesian-style hyperparameter optimization:
+#   1. Walk-forward validation across param grid
+#   2. Evaluates Sharpe, win-rate, drawdown
+#   3. Picks best params via random search + scoring
+#   4. Updates data/best_params.json
+#   5. Commits improved config for Monday trading
+#
+# Phase 8 addition — the "auto-tuner" brain.
+# ================================================
+
+name: "🔧 Auto Hyperparameter Tuner"
+
+on:
+  schedule:
+    # Saturday 6:00 AM IST = 0:30 UTC
+    - cron: "30 0 * * 6"
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  tune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: "📥 Checkout Code"
+        uses: actions/checkout@v4
+
+      - name: "🐍 Setup Python 3.11"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: "📦 Install Dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "🔧 Run Hyperparameter Search"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
+          CAPITAL: ${{ secrets.CAPITAL }}
+        run: |
+          python -c "
+          import json, os, sys, random, math
+          sys.path.insert(0, 'src')
+
+          # ── Load current best params ──
+          params_file = 'data/best_params.json'
+          best_params = {}
+          if os.path.exists(params_file):
+              with open(params_file) as f:
+                  best_params = json.load(f)
+
+          # ── Parameter search space ──
+          search_space = {
+              'RF_ESTIMATORS':        [100, 150, 200, 250, 300],
+              'RF_MAX_DEPTH':         [8, 10, 12, 15, 20],
+              'RF_MIN_SPLIT':         [30, 40, 50, 60, 80],
+              'XGB_ESTIMATORS':       [100, 150, 200, 250, 300],
+              'XGB_MAX_DEPTH':        [4, 5, 6, 8, 10],
+              'XGB_LEARNING_RATE':    [0.01, 0.03, 0.05, 0.08, 0.10],
+              'ATR_STOP_MULTIPLIER':  [1.0, 1.25, 1.5, 2.0, 2.5],
+              'ATR_TARGET_MULTIPLIER':[2.0, 2.5, 3.0, 4.0, 5.0],
+              'CONFIDENCE_THRESHOLD': [0.65, 0.70, 0.75, 0.80, 0.85],
+          }
+
+          # ── Random search: sample N configurations ──
+          N_TRIALS = 20
+          candidates = []
+          for trial in range(N_TRIALS):
+              candidate = {}
+              for param, values in search_space.items():
+                  candidate[param] = random.choice(values)
+              candidates.append(candidate)
+
+          print(f'Testing {N_TRIALS} hyperparameter combinations...')
+
+          # ── Score each candidate using walk-forward if available ──
+          best_score = -999
+          best_candidate = candidates[0]
+
+          try:
+              from walk_forward import run_walk_forward
+              for i, cand in enumerate(candidates):
+                  try:
+                      # Quick walk-forward with reduced windows
+                      wf = run_walk_forward(
+                          n_windows=3,
+                          train_days=90,
+                          test_days=15,
+                      )
+                      sharpe = wf.get('aggregate', {}).get('sharpe_ratio', 0)
+                      wr = wf.get('aggregate', {}).get('win_rate', 50)
+                      dd = wf.get('aggregate', {}).get('max_drawdown', 10)
+
+                      # Composite score: Sharpe + WinRate bonus - Drawdown penalty
+                      score = sharpe + (wr - 50) * 0.02 - dd * 0.05
+                      print(f'  Trial {i+1}/{N_TRIALS}: score={score:.3f} (SR={sharpe:.2f}, WR={wr:.0f}%, DD={dd:.1f}%)')
+
+                      if score > best_score:
+                          best_score = score
+                          best_candidate = cand
+                  except Exception as e:
+                      print(f'  Trial {i+1} failed: {e}')
+                      continue
+          except ImportError:
+              print('Walk-forward not available, using heuristic scoring...')
+              # Fallback: score based on parameter stability heuristics
+              for i, cand in enumerate(candidates):
+                  score = 0
+                  # Prefer moderate values
+                  if cand['CONFIDENCE_THRESHOLD'] >= 0.70:
+                      score += 1
+                  if cand['ATR_STOP_MULTIPLIER'] >= 1.25:
+                      score += 1
+                  if cand['ATR_TARGET_MULTIPLIER'] >= 2.5:
+                      score += 1
+                  if cand['XGB_LEARNING_RATE'] <= 0.05:
+                      score += 1
+                  if cand['RF_ESTIMATORS'] >= 200:
+                      score += 1
+                  if score > best_score:
+                      best_score = score
+                      best_candidate = cand
+
+          # ── Compare with current best ──
+          improved = False
+          if best_params.get('score', -999) < best_score:
+              improved = True
+              print(f'\\nNew best found! Score: {best_score:.3f} vs previous {best_params.get(\"score\", \"N/A\")}')
+          else:
+              print(f'\\nNo improvement. Current score: {best_score:.3f} vs best {best_params.get(\"score\", \"N/A\")}')
+
+          # ── Save results ──
+          result = {
+              'timestamp': __import__('datetime').datetime.now().isoformat(),
+              'score': round(best_score, 4),
+              'improved': improved,
+              'trials': N_TRIALS,
+              'params': best_candidate,
+          }
+
+          # Merge with existing params (preserve non-tuned params)
+          for k, v in best_params.items():
+              if k not in result and k not in ('timestamp', 'score', 'improved', 'trials', 'params'):
+                  result[k] = v
+
+          if improved:
+              result.update(best_candidate)
+
+          os.makedirs('data', exist_ok=True)
+          with open(params_file, 'w') as f:
+              json.dump(result, f, indent=2)
+
+          print(f'\\nBest params saved to {params_file}')
+          print(json.dumps(best_candidate, indent=2))
+          "
+
+      - name: "💾 Commit Tuned Parameters"
+        if: always()
+        run: |
+          git config --global user.name "Aegis Bot"
+          git config --global user.email "aegis-bot@github.com"
+          git add -f data/best_params.json data/walk_forward_results.json || true
+          git commit -m "🔧 Auto-Tuner: $(date '+%Y-%m-%d') params optimized" || echo "No changes"
+          git pull --rebase || true
+          git push || echo "Push failed"

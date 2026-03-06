@@ -39,8 +39,11 @@ from indicators import flatten_yf_columns
 import joblib
 from datetime import datetime, timedelta
 from pathlib import Path
+import pytz
 import absl.logging
 import logging
+
+IST = pytz.timezone("Asia/Kolkata")
 
 # --------------------------------------------------
 #   PREMIUM CONSOLE LOGGING (ANSI)
@@ -569,6 +572,355 @@ def optimize_ensemble_weights(symbol: str, df: pd.DataFrame) -> dict:
 
 
 # ══════════════════════════════════════════════════
+#  5b. NEURO-VOTER ACCURACY TRACKING & ADAPTIVE WEIGHTS
+# ══════════════════════════════════════════════════
+VOTER_HISTORY_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "voter_history.json"
+)
+VOTER_ACCURACY_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "voter_accuracy.json"
+)
+
+def analyse_voter_accuracy() -> dict:
+    """
+    Analyses each NeuroVoter's decisions against actual trade outcomes.
+    Computes per-voter accuracy, precision, and recommends weight adjustments.
+    
+    Logic:
+    - Match voter BUY decisions with actual trade P&L outcomes
+    - A voter is "correct" if their BUY led to a WIN, or their SELL/SKIP
+      avoided a loss
+    - Weight recommendations: shift toward more accurate voters
+    """
+    print("   [VOTER] Analysing NeuroVoter accuracy ...")
+    
+    result = {
+        "voter_stats": {},
+        "recommended_weights": {},
+        "total_decisions_analysed": 0,
+        "analysis_date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+    }
+
+    # Load voter history
+    if not os.path.exists(VOTER_HISTORY_FILE):
+        print("   [VOTER] No voter history found. Run sniper first.")
+        return result
+
+    try:
+        with open(VOTER_HISTORY_FILE, "r") as f:
+            voter_history = json.load(f)
+    except Exception:
+        print("   [VOTER] Could not read voter history.")
+        return result
+
+    if not voter_history:
+        print("   [VOTER] Empty voter history.")
+        return result
+
+    # Load trade results
+    if not os.path.exists(TRADE_LOG_FILE):
+        print("   [VOTER] No trade history to correlate with.")
+        return result
+
+    try:
+        trades = pd.read_csv(TRADE_LOG_FILE)
+    except Exception:
+        return result
+
+    # Get closed trades with outcomes
+    exit_statuses = [
+        "TARGET_HIT", "STOP_LOSS", "FORCE_CLOSED", "MOMENTUM_EXIT",
+        "RSI_EXIT", "VOLUME_EXIT", "TIME_DECAY", "SENTIMENT_EXIT", "MAX_HOLD",
+    ]
+    closed = trades[trades["Status"].isin(exit_statuses)] if "Status" in trades.columns else pd.DataFrame()
+    
+    if closed.empty:
+        print("   [VOTER] No closed trades to evaluate accuracy against.")
+        return result
+
+    # Build outcome map: stock+date → win/loss
+    outcomes = {}
+    for _, row in closed.iterrows():
+        key = f"{row.get('Stock', '')}_{row.get('Date', '')}"
+        pnl = float(row.get("Actual_Profit", 0))
+        outcomes[key] = "WIN" if pnl > 0 else ("LOSS" if pnl < 0 else "EVEN")
+
+    # Analyse each voter's performance
+    voter_stats = {}  # name → {correct, incorrect, total, buy_correct, skip_correct}
+    
+    for entry in voter_history:
+        symbol = entry.get("symbol", "")
+        ts = entry.get("timestamp", "")
+        date_str = ts[:10] if len(ts) >= 10 else ""
+        action = entry.get("action", "")
+        key = f"{symbol}_{date_str}"
+        
+        # Only evaluate if we have an outcome for this stock+date
+        actual_outcome = outcomes.get(key)
+        
+        for v in entry.get("voters", []):
+            vname = v.get("name", "?")
+            vote = v.get("vote", 0)
+            
+            if vname not in voter_stats:
+                voter_stats[vname] = {
+                    "total": 0, "correct": 0, "incorrect": 0,
+                    "buy_votes": 0, "sell_votes": 0, "hold_votes": 0,
+                    "avg_conviction": 0, "total_conviction": 0,
+                }
+            
+            vs = voter_stats[vname]
+            vs["total"] += 1
+            vs["total_conviction"] += v.get("conviction", 0)
+            
+            if vote > 0.1:
+                vs["buy_votes"] += 1
+            elif vote < -0.1:
+                vs["sell_votes"] += 1
+            else:
+                vs["hold_votes"] += 1
+            
+            # Score voter correctness (only if we have the outcome)
+            if actual_outcome:
+                voter_said_buy = vote > 0.1
+                stock_was_good = actual_outcome == "WIN"
+                
+                if (voter_said_buy and stock_was_good) or (not voter_said_buy and not stock_was_good):
+                    vs["correct"] += 1
+                else:
+                    vs["incorrect"] += 1
+
+    # Compute accuracy and recommended weights
+    voter_accuracies = {}
+    for vname, vs in voter_stats.items():
+        evaluated = vs["correct"] + vs["incorrect"]
+        accuracy = (vs["correct"] / evaluated) if evaluated > 0 else 0.5
+        vs["accuracy"] = round(accuracy, 4)
+        vs["avg_conviction"] = round(vs["total_conviction"] / vs["total"], 3) if vs["total"] > 0 else 0
+        vs["evaluated"] = evaluated
+        voter_accuracies[vname] = accuracy
+
+    result["voter_stats"] = voter_stats
+    result["total_decisions_analysed"] = len(voter_history)
+
+    # Compute adaptive weights (proportional to accuracy, softmax-style)
+    if voter_accuracies:
+        accs = np.array(list(voter_accuracies.values()))
+        accs = np.clip(accs, 0.1, 1.0)
+        weights = accs / accs.sum()
+        
+        for i, vname in enumerate(voter_accuracies.keys()):
+            result["recommended_weights"][vname] = round(float(weights[i]), 4)
+        
+        # Print summary
+        for vname, vs in voter_stats.items():
+            acc = vs.get("accuracy", 0.5)
+            rw = result["recommended_weights"].get(vname, 0)
+            icon = "✅" if acc >= 0.55 else ("⚠️" if acc >= 0.45 else "❌")
+            print(f"   {icon} {vname}: accuracy={acc:.1%} | "
+                  f"buy={vs['buy_votes']} sell={vs['sell_votes']} hold={vs['hold_votes']} | "
+                  f"recommended_weight={rw:.2%}")
+
+    # Save voter accuracy report
+    try:
+        os.makedirs(os.path.dirname(VOTER_ACCURACY_FILE), exist_ok=True)
+        with open(VOTER_ACCURACY_FILE, "w") as f:
+            json.dump(result, f, indent=2, default=str)
+        print(f"   [VOTER] Accuracy report saved to {VOTER_ACCURACY_FILE}")
+    except Exception:
+        pass
+
+    return result
+
+
+# ══════════════════════════════════════════════════
+#  5b. AI CONFIDENCE DECAY — Auto-Penalise Bad Voters
+# ══════════════════════════════════════════════════
+CONFIDENCE_DECAY_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "confidence_decay.json"
+)
+
+# Thresholds
+DECAY_MIN_TRADES       = 10     # Don't judge until N evaluated trades
+DECAY_BAD_ACCURACY     = 0.40   # Below 40% accuracy → begin decay
+DECAY_CRITICAL_ACCURACY = 0.30  # Below 30% accuracy → severe decay
+DECAY_RECOVERY_ACCURACY = 0.55  # Above 55% → eligible for weight recovery
+DECAY_FACTOR_MILD      = 0.75   # Mild penalisation (25% weight reduction)
+DECAY_FACTOR_SEVERE    = 0.40   # Severe penalisation (60% weight reduction)
+DECAY_RECOVERY_FACTOR  = 1.15   # Recovery boost (15% weight increase per cycle)
+DECAY_MAX_WEIGHT       = 0.25   # No single voter can exceed 25% of total
+DECAY_MIN_WEIGHT       = 0.02   # Voters never drop below 2% (keeps them in the game)
+
+
+def apply_confidence_decay() -> dict:
+    """
+    AI Confidence Decay — automatically penalises voters with consistently
+    poor accuracy and rewards those improving.
+
+    Mechanism:
+      1. Load voter accuracy from analyse_voter_accuracy()
+      2. For each voter with >= N evaluated trades:
+         - If accuracy < 30% → SEVERE decay (multiply weight by 0.40)
+         - If accuracy < 40% → MILD decay (multiply weight by 0.75)
+         - If accuracy > 55% → RECOVERY boost (multiply weight by 1.15)
+      3. Normalise weights to sum to 1.0
+      4. Flag voters needing retraining (3+ consecutive decay cycles)
+      5. Save decay state for dashboard and sniper to read
+
+    Returns dict with decay_applied, voter_states, retrain_flags.
+    """
+    print("   [DECAY] Applying AI Confidence Decay ...")
+
+    result = {
+        "decay_applied": False,
+        "voter_states": {},       # name → {weight, accuracy, status, streak}
+        "retrain_flags": [],      # voters flagged for retraining
+        "weight_changes": {},     # name → {old, new, delta}
+        "analysis_date": datetime.now().strftime("%Y-%m-%d %H:%M"),
+    }
+
+    # Load existing decay history for streak tracking
+    decay_history = {}
+    if os.path.exists(CONFIDENCE_DECAY_FILE):
+        try:
+            with open(CONFIDENCE_DECAY_FILE, "r") as f:
+                decay_history = json.load(f)
+        except Exception:
+            pass
+
+    prev_states = decay_history.get("voter_states", {})
+
+    # Load current voter accuracy
+    if not os.path.exists(VOTER_ACCURACY_FILE):
+        print("   [DECAY] No voter accuracy data yet. Skipping decay.")
+        return result
+
+    try:
+        with open(VOTER_ACCURACY_FILE, "r") as f:
+            accuracy_data = json.load(f)
+    except Exception:
+        print("   [DECAY] Could not read voter accuracy.")
+        return result
+
+    voter_stats = accuracy_data.get("voter_stats", {})
+    recommended = accuracy_data.get("recommended_weights", {})
+
+    if not voter_stats:
+        print("   [DECAY] No voter stats available.")
+        return result
+
+    # Process each voter
+    new_weights = {}
+    any_decay = False
+
+    for vname, vs in voter_stats.items():
+        evaluated = vs.get("evaluated", 0)
+        accuracy = vs.get("accuracy", 0.5)
+        base_weight = recommended.get(vname, 1.0 / max(len(voter_stats), 1))
+
+        # Retrieve previous streak (consecutive decay cycles)
+        prev = prev_states.get(vname, {})
+        decay_streak = prev.get("decay_streak", 0)
+        recovery_streak = prev.get("recovery_streak", 0)
+
+        status = "STABLE"
+        factor = 1.0
+
+        if evaluated < DECAY_MIN_TRADES:
+            # Not enough data — keep default weight, reset streaks
+            status = "INSUFFICIENT_DATA"
+            decay_streak = 0
+            recovery_streak = 0
+        elif accuracy < DECAY_CRITICAL_ACCURACY:
+            # SEVERE DECAY
+            status = "SEVERE_DECAY"
+            factor = DECAY_FACTOR_SEVERE
+            decay_streak += 1
+            recovery_streak = 0
+            any_decay = True
+            print(f"   🔴 {vname}: SEVERE DECAY (acc={accuracy:.1%}, streak={decay_streak})")
+        elif accuracy < DECAY_BAD_ACCURACY:
+            # MILD DECAY
+            status = "MILD_DECAY"
+            factor = DECAY_FACTOR_MILD
+            decay_streak += 1
+            recovery_streak = 0
+            any_decay = True
+            print(f"   🟡 {vname}: MILD DECAY (acc={accuracy:.1%}, streak={decay_streak})")
+        elif accuracy >= DECAY_RECOVERY_ACCURACY:
+            # RECOVERY
+            status = "RECOVERING"
+            factor = DECAY_RECOVERY_FACTOR
+            recovery_streak += 1
+            decay_streak = max(0, decay_streak - 1)  # Slowly forgive past
+            print(f"   🟢 {vname}: RECOVERING (acc={accuracy:.1%}, rec_streak={recovery_streak})")
+        else:
+            # Neutral zone (40-55%) — no change
+            status = "STABLE"
+            decay_streak = max(0, decay_streak - 1)
+
+        adjusted_weight = base_weight * factor
+        adjusted_weight = max(DECAY_MIN_WEIGHT, min(DECAY_MAX_WEIGHT, adjusted_weight))
+        new_weights[vname] = adjusted_weight
+
+        result["voter_states"][vname] = {
+            "weight": round(adjusted_weight, 4),
+            "accuracy": round(accuracy, 4),
+            "evaluated": evaluated,
+            "status": status,
+            "decay_streak": decay_streak,
+            "recovery_streak": recovery_streak,
+            "factor_applied": round(factor, 2),
+        }
+
+        result["weight_changes"][vname] = {
+            "old": round(base_weight, 4),
+            "new": round(adjusted_weight, 4),
+            "delta": round(adjusted_weight - base_weight, 4),
+        }
+
+        # Flag for retraining if 3+ consecutive decay cycles
+        if decay_streak >= 3:
+            result["retrain_flags"].append({
+                "voter": vname,
+                "accuracy": round(accuracy, 4),
+                "decay_streak": decay_streak,
+                "reason": f"Decay streak {decay_streak} — accuracy {accuracy:.1%} over "
+                          f"{evaluated} trades. Consider retraining underlying model.",
+            })
+            print(f"   ⚠️  {vname}: FLAGGED FOR RETRAINING (streak={decay_streak})")
+
+    # Normalise weights to sum to 1.0
+    total_w = sum(new_weights.values()) if new_weights else 1.0
+    if total_w > 0:
+        for vname in new_weights:
+            new_weights[vname] = round(new_weights[vname] / total_w, 4)
+            result["voter_states"][vname]["weight"] = new_weights[vname]
+
+    result["decay_applied"] = any_decay
+    result["normalised_weights"] = new_weights
+
+    # Save decay state
+    try:
+        os.makedirs(os.path.dirname(CONFIDENCE_DECAY_FILE), exist_ok=True)
+        with open(CONFIDENCE_DECAY_FILE, "w") as f:
+            json.dump(result, f, indent=2, default=str)
+        print(f"   [DECAY] Saved to {CONFIDENCE_DECAY_FILE}")
+    except Exception as e:
+        print(f"   [DECAY] Save failed: {e}")
+
+    # Summary
+    if result["retrain_flags"]:
+        print(f"   [DECAY] ⚠️  {len(result['retrain_flags'])} voter(s) flagged for retraining")
+    if any_decay:
+        print(f"   [DECAY] Weight adjustments applied to underperforming voters")
+    else:
+        print(f"   [DECAY] All voters within acceptable accuracy range")
+
+    return result
+
+
+# ══════════════════════════════════════════════════
 #  6. RISK PARAMETER ADAPTATION
 # ══════════════════════════════════════════════════
 def adapt_risk_parameters() -> dict:
@@ -843,6 +1195,18 @@ def main():
     print(f"{'─' * 50}")
     risk_params = adapt_risk_parameters()
 
+    # ── Step 6b: NeuroVoter accuracy tracking & adaptive weights ──
+    print(f"\n{'─' * 50}")
+    print("  STEP 6b: NeuroVoter Accuracy Analysis")
+    print(f"{'─' * 50}")
+    voter_accuracy = analyse_voter_accuracy()
+
+    # ── Step 6c: AI Confidence Decay ──
+    print(f"\n{'─' * 50}")
+    print("  STEP 6c: AI Confidence Decay")
+    print(f"{'─' * 50}")
+    decay_result = apply_confidence_decay()
+
     # ── Step 7: Generate health report ──
     print(f"\n{'─' * 50}")
     print("  STEP 7: Health Report Generation")
@@ -850,6 +1214,10 @@ def main():
     report = generate_health_report(
         trade_review, calibrations, all_weights, risk_params, regimes, tuned_params
     )
+
+    # Merge voter accuracy into report
+    report["voter_accuracy"] = voter_accuracy
+    report["confidence_decay"] = decay_result
 
     print(f"\n{'=' * 60}")
     print("  LEARNER COMPLETE — Brain is now smarter!")
