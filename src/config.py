@@ -30,7 +30,7 @@ TARGET_STOCK = os.getenv("TARGET_STOCK", STOCK_WATCHLIST[0])
 DAILY_TARGET = float(os.getenv("DAILY_TARGET", "0.02"))       # 2 % daily target
 MAX_BULLETS  = int(os.getenv("MAX_BULLETS", "5"))              # Split capital into 5 shots
 TIME_GAP     = int(os.getenv("TIME_GAP", "600"))               # 10 min between bullets
-CAPITAL      = float(os.getenv("CAPITAL", "wwwwwwwwwwwww"))              # Starting capital ₹
+CAPITAL      = float(os.getenv("CAPITAL", "1000"))                       # Starting capital ₹
 
 # ──────────────────────────────────────────────────
 #   MODEL / TRAINING PARAMETERS

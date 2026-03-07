@@ -519,7 +519,7 @@ with st.sidebar:
 
     st.divider()
     st.markdown('<div class="section-header">🧠 <h3>AI Brain Config</h3></div>', unsafe_allow_html=True)
-    _pers_icon = {{"AGGRESSIVE": "🔴", "MODERATE": "🟡", "CONSERVATIVE": "🟢"}}.get(TRADING_PERSONALITY, "⚪")
+    _pers_icon = {"AGGRESSIVE": "🔴", "MODERATE": "🟡", "CONSERVATIVE": "🟢"}.get(TRADING_PERSONALITY, "⚪")
     st.markdown(f"""
 - **Personality:** {_pers_icon} {TRADING_PERSONALITY}
 - **Smart Exit:** {"✅ ON" if SMART_EXIT_ENABLED else "❌ OFF"}
