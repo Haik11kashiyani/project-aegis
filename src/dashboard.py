@@ -258,6 +258,19 @@ button[data-baseweb="tab"][aria-selected="true"] { color: #ffffff !important; fo
 /* ── Info / Warning / Success / Error box text ── */
 div[data-testid="stAlert"] p { color: #f0f0f3 !important; }
 
+/* ── Sidebar Navigation Radio Styling ── */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
+    padding: 6px 12px !important; border-radius: 6px; cursor: pointer;
+    transition: background 0.15s ease;
+}
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:hover {
+    background: #1a1a2e !important;
+}
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-checked="true"],
+section[data-testid="stSidebar"] div[role="radiogroup"] label[aria-checked="true"] {
+    background: #162040 !important; border-left: 3px solid #3b82f6;
+}
+
 /* ── Safety: Let Streamlit handle buttons & tabs to prevent overlap ── */
 </style>
 </div>
@@ -498,9 +511,66 @@ ALL_SYMS = (
 
 
 # ══════════════════════════════════════════════════
-#  SIDEBAR
+#  SIDEBAR — NAVIGATION + CONFIG
 # ══════════════════════════════════════════════════
+_NAV = {
+    "📊 Core Trading": [
+        "Live Trading",
+        "AI Brain & Voters",
+        "Performance & Alerts",
+    ],
+    "📈 Analysis": [
+        "Backtest P&L",
+        "Ranking & Signals",
+        "Model Details",
+        "Trade History",
+    ],
+    "🧠 Intelligence": [
+        "Learner & Guardian",
+        "Market Intelligence",
+        "Broker & Reports",
+    ],
+    "💼 Portfolio": [
+        "Portfolio Treemap",
+        "Walk-Forward & Drift",
+        "Risk Parity & A/B",
+        "News & Rebalancer",
+    ],
+    "⚠️ Risk & Regime": [
+        "Regime & VaR",
+        "Volume & Options",
+        "Execution & Journal",
+    ],
+    "🤖 ML & Sizing": [
+        "RL Sizer & Bayesian",
+        "Intermarket & Liquidity",
+        "Greeks Heat Map",
+        "Scalper & Tuner",
+    ],
+    "🔬 Advanced Models": [
+        "Transformer & Anomaly",
+        "Order Book & Pairs",
+        "Dynamic Stops",
+        "Model Versioning",
+    ],
+    "🚀 Phase 12-14": [
+        "Adaptive Executor",
+        "RL Rebalancer",
+        "Options Synthesizer",
+        "Causal Engine",
+        "GA Strategy Evolver",
+        "Multi-Agent Debate",
+        "RL Trade Agent",
+        "Sentiment Momentum",
+    ],
+}
+
 with st.sidebar:
+    st.markdown('<div class="section-header">🧭 <h3>Navigation</h3></div>', unsafe_allow_html=True)
+    _cat = st.selectbox("Category", list(_NAV.keys()), label_visibility="collapsed")
+    page = st.radio("Page", _NAV[_cat], label_visibility="collapsed")
+
+    st.divider()
     st.markdown('<div class="section-header">⚙️ <h3>Configuration</h3></div>', unsafe_allow_html=True)
     st.markdown(f"""
 - **Watchlist:** {len(STOCK_WATCHLIST)} stocks
@@ -602,49 +672,14 @@ st.divider()
 
 
 # ══════════════════════════════════════════════════
-#  TABS
+#  PAGE ROUTING (sidebar-driven)
 # ══════════════════════════════════════════════════
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11, tab12, tab13, tab14, tab15, tab16, tab17, tab18, tab19, tab20, tab21, tab22, tab23, tab24, tab25, tab26, tab27, tab28, tab29, tab30, tab31, tab32, tab33 = st.tabs([
-    "Live Trading",
-    "AI Brain & Voters",
-    "Performance & Alerts",
-    "Backtest P&L",
-    "Ranking & Signals",
-    "Model Details",
-    "Trade History",
-    "Learner & Guardian",
-    "Market Intelligence",
-    "Broker & Reports",
-    "Portfolio Treemap",
-    "Walk-Forward & Drift",
-    "Risk Parity & A/B",
-    "News & Rebalancer",
-    "Regime & VaR",
-    "Volume & Options",
-    "Execution & Journal",
-    "RL Sizer & Bayesian",
-    "Intermarket & Liquidity",
-    "Greeks Heat Map",
-    "Scalper & Tuner",
-    "Transformer & Anomaly",
-    "Order Book & Pairs",
-    "Dynamic Stops",
-    "Model Versioning",
-    "Adaptive Executor",
-    "RL Rebalancer",
-    "Options Synthesizer",
-    "Causal Engine",
-    "GA Strategy Evolver",
-    "Multi-Agent Debate",
-    "RL Trade Agent",
-    "Sentiment Momentum",
-])
 
 
 # ══════════════════════════════════════════════════
 #  TAB 1 — LIVE TRADING & CHARTS
 # ══════════════════════════════════════════════════
-with tab1:
+if page == "Live Trading":
 
     # ── LIVE PRICES (auto-refresh every 10s, no page reload) ──
     @st.fragment(run_every=10)
@@ -1330,7 +1365,7 @@ with tab1:
 # ══════════════════════════════════════════════════
 #  TAB 2 — AI BRAIN & VOTERS
 # ══════════════════════════════════════════════════
-with tab2:
+if page == "AI Brain & Voters":
     st.markdown('<div class="section-header">🧠 <h3>AI Brain & NeuroVoter System — Full Architecture</h3></div>', unsafe_allow_html=True)
 
     # ── System Architecture Overview ──
@@ -1747,7 +1782,7 @@ with tab2:
 # ══════════════════════════════════════════════════
 #  TAB 3 — PERFORMANCE & ALERTS
 # ══════════════════════════════════════════════════
-with tab3:
+if page == "Performance & Alerts":
     st.markdown('<div class="section-header">📈 <h3>Performance Dashboard & Alert Centre</h3></div>', unsafe_allow_html=True)
 
     # ── Section 1: Multi-Day Equity Curve ──────────────────
@@ -2117,7 +2152,7 @@ with tab3:
 # ══════════════════════════════════════════════════
 #  TAB 4 — BACKTEST P&L ANALYSIS
 # ══════════════════════════════════════════════════
-with tab4:
+if page == "Backtest P&L":
     st.markdown('<div class="section-header">📊 <h3>Backtest P&L Analysis — Full Report</h3></div>', unsafe_allow_html=True)
 
     bt = load_csv(FILE_BACKTEST)
@@ -2352,7 +2387,7 @@ with tab4:
 # ══════════════════════════════════════════════════
 #  TAB 5 — RANKING & SIGNALS
 # ══════════════════════════════════════════════════
-with tab5:
+if page == "Ranking & Signals":
     st.markdown('<div class="section-header">🏆 <h3>Stock Ranking & AI Signals</h3></div>', unsafe_allow_html=True)
 
     ranking_df = load_csv(FILE_RANKING)
@@ -2451,7 +2486,7 @@ with tab5:
 # ══════════════════════════════════════════════════
 #  TAB 6 — MODEL DETAILS & HEALTH
 # ══════════════════════════════════════════════════
-with tab6:
+if page == "Model Details":
     st.markdown('<div class="section-header">🤖 <h3>Model Details & Health</h3></div>', unsafe_allow_html=True)
 
     model_files = get_model_files_info()
@@ -2545,7 +2580,7 @@ with tab6:
 # ══════════════════════════════════════════════════
 #  TAB 7 — TRADE HISTORY (Live Sniper)
 # ══════════════════════════════════════════════════
-with tab7:
+if page == "Trade History":
     st.markdown('<div class="section-header">🧾 <h3>Live Trade History (from Sniper)</h3></div>', unsafe_allow_html=True)
 
     trades_df = load_csv(FILE_TRADES)
@@ -2666,7 +2701,7 @@ with tab7:
 # ══════════════════════════════════════════════════
 #  TAB 8 — LEARNER & GUARDIAN REPORT
 # ══════════════════════════════════════════════════
-with tab8:
+if page == "Learner & Guardian":
     st.markdown('<div class="section-header">🧠 <h3>Learner Report — What the AI Learned</h3></div>', unsafe_allow_html=True)
 
     learner = load_json(FILE_LEARNER)
@@ -2839,7 +2874,7 @@ with tab8:
 # ══════════════════════════════════════════════════
 #  TAB 9 — MARKET INTELLIGENCE
 # ══════════════════════════════════════════════════
-with tab9:
+if page == "Market Intelligence":
     st.markdown('<div class="section-header">🌐 <h3>Market Intelligence — Breadth, Sectors, Correlation & Timing</h3></div>', unsafe_allow_html=True)
 
     # ── A) Market Breadth ──
@@ -3104,7 +3139,7 @@ with tab9:
 # ══════════════════════════════════════════════════
 #  TAB 10 — BROKER & REPORTS
 # ══════════════════════════════════════════════════
-with tab10:
+if page == "Broker & Reports":
     st.markdown('<div class="section-header">🏦 <h3>Broker Bridge & Daily Reports</h3></div>', unsafe_allow_html=True)
 
     # ── A) Broker Status ──
@@ -3246,7 +3281,7 @@ pip install smartapi-python pyotp  # Angel One
 # ══════════════════════════════════════════════════
 #  TAB 11 — PORTFOLIO TREEMAP & KELLY SIZING
 # ══════════════════════════════════════════════════
-with tab11:
+if page == "Portfolio Treemap":
     st.markdown('<div class="section-header">🗺️ <h3>Portfolio Treemap & Kelly Sizing</h3></div>', unsafe_allow_html=True)
 
     # ── A) Portfolio Treemap ──
@@ -3383,7 +3418,7 @@ with tab11:
 # ══════════════════════════════════════════════════
 #  TAB 12 — WALK-FORWARD SIMULATOR & MODEL DRIFT
 # ══════════════════════════════════════════════════
-with tab12:
+if page == "Walk-Forward & Drift":
     st.markdown('<div class="section-header">🔄 <h3>Walk-Forward Simulator & Model Drift</h3></div>', unsafe_allow_html=True)
 
     # ── A) Walk-Forward Results ──
@@ -3579,7 +3614,7 @@ with tab12:
 # ══════════════════════════════════════════════════
 #  TAB 13 — RISK PARITY & A/B BACKTEST
 # ══════════════════════════════════════════════════
-with tab13:
+if page == "Risk Parity & A/B":
     st.markdown('<div class="section-header">⚖️ <h3>Risk Parity Allocator & A/B Backtest</h3></div>', unsafe_allow_html=True)
 
     # ── A) Risk Parity ──
@@ -3711,7 +3746,7 @@ with tab13:
 # ══════════════════════════════════════════════════
 #  TAB 14 — NEWS EVENTS & PORTFOLIO REBALANCER
 # ══════════════════════════════════════════════════
-with tab14:
+if page == "News & Rebalancer":
     st.markdown('<div class="section-header">📰 <h3>News Events & Portfolio Rebalancer</h3></div>', unsafe_allow_html=True)
 
     # ── A) News Event Detector ──
@@ -3867,7 +3902,7 @@ with tab14:
 # ══════════════════════════════════════════════════
 #  TAB 15 — REGIME DETECTION & VaR / STRESS TESTING
 # ══════════════════════════════════════════════════
-with tab15:
+if page == "Regime & VaR":
     st.markdown('<div class="section-header"><h3>🎯 Market Regime Detection (HMM)</h3></div>', unsafe_allow_html=True)
 
     regime_data = load_json(FILE_REGIME)
@@ -4035,7 +4070,7 @@ with tab15:
 # ══════════════════════════════════════════════════
 #  TAB 16 — VOLUME PROFILE & OPTIONS CHAIN
 # ══════════════════════════════════════════════════
-with tab16:
+if page == "Volume & Options":
     st.markdown('<div class="section-header"><h3>📊 Volume Profile & Order Flow</h3></div>', unsafe_allow_html=True)
 
     vp_data = load_json(FILE_VP)
@@ -4135,7 +4170,7 @@ with tab16:
 # ══════════════════════════════════════════════════
 #  TAB 17 — EXECUTION QUALITY & TRADE JOURNAL
 # ══════════════════════════════════════════════════
-with tab17:
+if page == "Execution & Journal":
     st.markdown('<div class="section-header"><h3>🎯 Execution Quality Analytics</h3></div>', unsafe_allow_html=True)
 
     eq_data = load_json(FILE_EQ)
@@ -4279,7 +4314,7 @@ with tab17:
 # ══════════════════════════════════════════════════
 #  TAB 18 — RL SIZER & BAYESIAN FUSION
 # ══════════════════════════════════════════════════
-with tab18:
+if page == "RL Sizer & Bayesian":
     st.markdown('<div class="section-header"><h3>🎲 RL Position Sizer & Bayesian Fusion</h3></div>', unsafe_allow_html=True)
 
     col_rl, col_bay = st.columns(2)
@@ -4372,7 +4407,7 @@ with tab18:
 # ══════════════════════════════════════════════════
 #  TAB 19 — INTERMARKET & LIQUIDITY
 # ══════════════════════════════════════════════════
-with tab19:
+if page == "Intermarket & Liquidity":
     st.markdown('<div class="section-header"><h3>🌍 Intermarket Engine & Liquidity Filter</h3></div>', unsafe_allow_html=True)
 
     col_im, col_lq = st.columns(2)
@@ -4440,7 +4475,7 @@ with tab19:
 # ══════════════════════════════════════════════════
 #  TAB 20 — GREEKS HEAT MAP
 # ══════════════════════════════════════════════════
-with tab20:
+if page == "Greeks Heat Map":
     st.markdown('<div class="section-header"><h3>📊 Portfolio Greeks Heat Map</h3></div>', unsafe_allow_html=True)
 
     greeks_data = load_json(FILE_GREEKS)
@@ -4511,7 +4546,7 @@ with tab20:
 # ══════════════════════════════════════════════════
 #  TAB 21 — SCALPER & AUTO TUNER
 # ══════════════════════════════════════════════════
-with tab21:
+if page == "Scalper & Tuner":
     st.markdown('<div class="section-header"><h3>⚡ Intraday Scalper & Auto Tuner</h3></div>', unsafe_allow_html=True)
 
     col_sc, col_tu = st.columns(2)
@@ -4571,7 +4606,7 @@ with tab21:
 # ══════════════════════════════════════════════════
 #  TAB 22 — TRANSFORMER & ANOMALY (Phase 11)
 # ══════════════════════════════════════════════════
-with tab22:
+if page == "Transformer & Anomaly":
     col_tf, col_an = st.columns(2)
 
     with col_tf:
@@ -4663,7 +4698,7 @@ with tab22:
 # ══════════════════════════════════════════════════
 #  TAB 23 — ORDER BOOK & PAIRS (Phase 11)
 # ══════════════════════════════════════════════════
-with tab23:
+if page == "Order Book & Pairs":
     col_ob, col_pt = st.columns(2)
 
     with col_ob:
@@ -4776,7 +4811,7 @@ with tab23:
 # ══════════════════════════════════════════════════
 #  TAB 24 — DYNAMIC STOPS (Phase 11)
 # ══════════════════════════════════════════════════
-with tab24:
+if page == "Dynamic Stops":
     st.subheader("Dynamic Trailing Stop-Loss (Chandelier Exit)")
     sl_data = load_json(FILE_DYN_SL)
     if sl_data:
@@ -4840,7 +4875,7 @@ with tab24:
 # ══════════════════════════════════════════════════
 #  TAB 25 — MODEL VERSIONING (Phase 11)
 # ══════════════════════════════════════════════════
-with tab25:
+if page == "Model Versioning":
     st.subheader("Federated Model Versioning & A/B Deployment")
     vs_data = load_json(FILE_VERSIONING)
     if vs_data:
@@ -4920,7 +4955,7 @@ with tab25:
 # ══════════════════════════════════════════════════
 #  TAB 26 — ADAPTIVE EXECUTOR
 # ══════════════════════════════════════════════════
-with tab26:
+if page == "Adaptive Executor":
     st.markdown('<div class="section-header">⚡ <h3>Adaptive Execution Engine (VWAP / TWAP)</h3></div>', unsafe_allow_html=True)
     ex_data = load_json(FILE_EXECUTOR)
     if ex_data:
@@ -4958,7 +4993,7 @@ with tab26:
 # ══════════════════════════════════════════════════
 #  TAB 27 — RL REBALANCER
 # ══════════════════════════════════════════════════
-with tab27:
+if page == "RL Rebalancer":
     st.markdown('<div class="section-header">🤖 <h3>RL Portfolio Rebalancer</h3></div>', unsafe_allow_html=True)
     rl_rb = load_json(FILE_RL_REBAL)
     if rl_rb:
@@ -4992,7 +5027,7 @@ with tab27:
 # ══════════════════════════════════════════════════
 #  TAB 28 — OPTIONS SYNTHESIZER
 # ══════════════════════════════════════════════════
-with tab28:
+if page == "Options Synthesizer":
     st.markdown('<div class="section-header">🛡️ <h3>Options Strategy Synthesizer</h3></div>', unsafe_allow_html=True)
     synth = load_json(FILE_OPT_SYNTH)
     if synth and synth.get("recommendation") not in (None, "NO_DATA"):
@@ -5041,7 +5076,7 @@ with tab28:
 # ══════════════════════════════════════════════════
 #  TAB 29 — CAUSAL ENGINE
 # ══════════════════════════════════════════════════
-with tab29:
+if page == "Causal Engine":
     st.markdown('<div class="section-header">🔬 <h3>Causal Inference Engine</h3></div>', unsafe_allow_html=True)
     causal = load_json(FILE_CAUSAL)
     if causal and causal.get("total_tested"):
@@ -5089,7 +5124,7 @@ with tab29:
 # ══════════════════════════════════════════════════
 #  TAB 30 — GA STRATEGY EVOLVER
 # ══════════════════════════════════════════════════
-with tab30:
+if page == "GA Strategy Evolver":
     st.markdown('<div class="section-header">🧬 <h3>Genetic Algorithm Strategy Evolver</h3></div>', unsafe_allow_html=True)
     ga = load_json(FILE_GA_EVOLVER)
     if ga and ga.get("generation"):
@@ -5157,7 +5192,7 @@ with tab30:
 # ══════════════════════════════════════════════════
 #  TAB 31 — MULTI-AGENT DEBATE
 # ══════════════════════════════════════════════════
-with tab31:
+if page == "Multi-Agent Debate":
     st.markdown('<div class="section-header">🗣️ <h3>Multi-Agent Debate System</h3></div>', unsafe_allow_html=True)
     debate = load_json(FILE_DEBATE)
     if debate and debate.get("total_debates"):
@@ -5235,7 +5270,7 @@ with tab31:
 # ══════════════════════════════════════════════════
 #  TAB 32 — RL TRADE AGENT
 # ══════════════════════════════════════════════════
-with tab32:
+if page == "RL Trade Agent":
     st.markdown('<div class="section-header">🤖 <h3>RL Trade Agent (Deep Q-Network)</h3></div>', unsafe_allow_html=True)
     rl_agent = load_json(FILE_RL_AGENT)
     if rl_agent and rl_agent.get("train_steps", 0) > 0:
@@ -5315,7 +5350,7 @@ with tab32:
 # ══════════════════════════════════════════════════
 #  TAB 33 — SENTIMENT MOMENTUM INDEX
 # ══════════════════════════════════════════════════
-with tab33:
+if page == "Sentiment Momentum":
     st.markdown('<div class="section-header">📊 <h3>Sentiment Momentum Index (SMI)</h3></div>', unsafe_allow_html=True)
     smi = load_json(FILE_SMI)
     if smi and smi.get("market_smi") is not None:
