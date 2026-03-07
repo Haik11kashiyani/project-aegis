@@ -45,6 +45,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# Force sidebar open on every load
+if "sidebar_opened" not in st.session_state:
+    st.session_state["sidebar_opened"] = True
+
 # ──────────────────────────────────────────────────
 #  Paths
 # ──────────────────────────────────────────────────
