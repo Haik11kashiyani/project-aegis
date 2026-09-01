@@ -279,6 +279,94 @@ class RiskGuardian:
         except Exception:
             return 0.0
 
+    def weekly_loss_check(self) -> bool:
+        """
+        Track weekly P&L (Monday to Friday)
+        If weekly loss exceeds 5% of capital, block all trading until next Monday
+        """
+        weekly_loss_pct = abs(self._weekly_pnl) / self.capital if self._weekly_pnl < 0 else 0
+        if weekly_loss_pct >= 0.05:  # 5%
+            try:
+                with open("data/weekly_risk_state.json", "w") as f:
+                    json.dump({"blocked": True, "reason": "Weekly loss exceeded 5%", "timestamp": datetime.now(IST).isoformat()}, f)
+            except:
+                pass
+            self.guardian_active = False
+            self._log("BLOCKED", "Weekly loss exceeded 5%. Trading blocked until next week.", severity="CRITICAL")
+            return False
+        return True
+
+    def monthly_loss_check(self) -> bool:
+        """
+        Track monthly P&L
+        If monthly loss exceeds 10% of capital, switch to paper-only mode
+        """
+        monthly_loss_pct = abs(self._monthly_pnl) / self.capital if self._monthly_pnl < 0 else 0
+        if monthly_loss_pct >= 0.10:  # 10%
+            self._log("WARNING", "Monthly loss exceeded 10%. Switch to paper-only mode and retrain models.", severity="CRITICAL")
+            # This logic can be integrated into the main trading loop
+            return False
+        return True
+
+    def drawdown_circuit_breaker(self, current_equity: float, peak_equity: float) -> bool:
+        """
+        Track peak equity value
+        If current equity drops 15% from peak, HALT all trading
+        """
+        if peak_equity > 0:
+            drawdown = (peak_equity - current_equity) / peak_equity
+            if drawdown >= 0.15:  # 15%
+                self.guardian_active = False
+                self._log("BLOCKED", "Drawdown circuit breaker triggered! >15% drop from peak. Manual intervention required.", severity="CRITICAL")
+                return False
+        return True
+
+    def capital_tier_check(self, current_capital: float) -> dict:
+        """
+        Returns allowed parameters based on capital tier:
+        - < 25K: max_bullets=3, max_strategies=2, kelly_fraction=0.20
+        - 25K-50K: max_bullets=4, max_strategies=4, kelly_fraction=0.25
+        - > 50K: max_bullets=5, max_strategies=6, kelly_fraction=0.35
+        """
+        if current_capital < 25000:
+            return {"max_bullets": 3, "max_strategies": 2, "kelly_fraction": 0.20, "tier": "CONSERVATIVE"}
+        elif current_capital <= 50000:
+            return {"max_bullets": 4, "max_strategies": 4, "kelly_fraction": 0.25, "tier": "MODERATE"}
+        else:
+            return {"max_bullets": 5, "max_strategies": 6, "kelly_fraction": 0.35, "tier": "FULL"}
+
+    def correlation_guard(self, symbol: str) -> bool:
+        """
+        Check if proposed new trade is in same sector as existing positions
+        Block if already 2 positions in same sector
+        """
+        # A basic map, can be expanded or loaded dynamically
+        SECTOR_MAP = {
+            "TATASTEEL.NS": "METALS", "HINDALCO.NS": "METALS",
+            "SBIN.NS": "BANKING", "HDFCBANK.NS": "BANKING", "ICICIBANK.NS": "BANKING",
+            "NTPC.NS": "ENERGY", "POWERGRID.NS": "ENERGY", "TATAPOWER.NS": "ENERGY",
+            "ONGC.NS": "ENERGY", "BPCL.NS": "ENERGY", "GAIL.NS": "ENERGY",
+            "COALINDIA.NS": "MINING",
+            "ITC.NS": "FMCG"
+        }
+        
+        target_sector = SECTOR_MAP.get(symbol, "UNKNOWN")
+        if target_sector == "UNKNOWN":
+            return True  # If we don't know the sector, allow it
+            
+        sector_count = 0
+        for pos_symbol, pos_data in self.open_positions.items():
+            if pos_data.get("active"):
+                pos_sector = SECTOR_MAP.get(pos_symbol, "UNKNOWN")
+                if pos_sector == target_sector:
+                    sector_count += 1
+                    
+        if sector_count >= 2:
+            self._log("REJECTED", f"Correlation Guard: Already have {sector_count} positions in {target_sector} sector.", severity="WARNING")
+            return False
+            
+        return True
+
     def _check_startup_safety(self):
         """Run one-time checks at the start of the trading day."""
         # ── Check 1: Learner health ──

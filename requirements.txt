@@ -28,17 +28,27 @@ openpyxl>=3.1.2
 # Timezone
 pytz>=2024.1
 
+# News & RSS Scraping (Market Intelligence + YouTube)
+feedparser>=6.0.0
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# FinBERT Sentiment (Optional - falls back to keyword matching)
+# transformers>=4.36.0
+# torch>=2.1.0
+
 # Notifications (Optional - for Telegram alerts)
 # python-telegram-bot>=21.0
 
 # Hyperparameter Tuning (Optional - auto_tuner.py)
 optuna>=3.5.0
 
-# Broker SDKs (Optional - install only if using that broker)
-# kiteconnect>=5.0.0       # Zerodha
-# smartapi-python>=1.4.0   # Angel One
-# pyotp>=2.9.0             # Angel One TOTP
-# requests>=2.31.0         # Groww (already installed via other deps)
+# Broker SDKs (install the one you use)
+# NorenRestApiPy            # Shoonya (Finvasia) — RECOMMENDED for ₹0 brokerage
+# dhanhq>=2.0.0             # DhanHQ — Free API
+# kiteconnect>=5.0.0        # Zerodha — ₹500/mo data fee
+# smartapi-python>=1.4.0    # Angel One — Free
+pyotp>=2.9.0                # TOTP for broker 2FA (SEBI 2026 requirement)
 
 # PDF Report Generation (Optional - falls back to HTML)
 # weasyprint>=60.0

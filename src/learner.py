@@ -27,6 +27,14 @@ This is the "brain that improves the brain" — meta-learning.
 
 import os
 import sys
+
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import json
 import warnings
 import numpy as np
@@ -331,8 +339,8 @@ def train_regime_detector(symbol: str) -> str:
     adx_df = ta.adx(df["High"], df["Low"], df["Close"], length=14)
     df["ADX"] = adx_df["ADX_14"] if adx_df is not None else 0
     df["Range_Pct"] = (df["High"] - df["Low"]) / df["Close"]
-    df["Volume_Change"] = df["Volume"].pct_change(5)
-
+    df["Volume_Change"] = df["Volume"].pct_change(5).replace([np.inf, -np.inf], 0).fillna(0)
+    df.replace([np.inf, -np.inf], np.nan, inplace=True)
     df.dropna(inplace=True)
     if len(df) < 100:
         return "UNKNOWN"
@@ -420,6 +428,123 @@ def train_regime_detector(symbol: str) -> str:
 
 
 # ══════════════════════════════════════════════════
+#  NEW: STRATEGY PERFORMANCE ANALYSIS
+# ══════════════════════════════════════════════════
+def analyze_strategy_performance() -> dict:
+    """
+    Reads trade history and evaluates performance per strategy.
+    Writes recommended strategy weights to data/strategy_weights.json.
+    """
+    Log.info("Analyzing strategy performance...")
+    report = {}
+    trade_file = "data/trade_history.csv"
+    if not os.path.exists(trade_file):
+        trade_file = TRADE_LOG_FILE # fallback
+        if not os.path.exists(trade_file):
+            Log.warn("No trade history found for strategy analysis.")
+            return report
+
+    try:
+        df = pd.read_csv(trade_file)
+    except Exception as e:
+        Log.error(f"Could not read trade log: {e}")
+        return report
+
+    closed = df[df["Status"].isin(["TARGET_HIT", "STOP_LOSS", "FORCE_CLOSED", "HOLD_CLOSE", "MOMENTUM_EXIT", "RSI_EXIT", "VOLUME_EXIT", "TIME_DECAY", "SENTIMENT_EXIT", "MAX_HOLD"])]
+    if closed.empty:
+        Log.warn("No closed trades to analyze strategies.")
+        return report
+
+    if "Strategy" not in closed.columns and "strategy" not in closed.columns:
+        closed["strategy"] = "MLEnsemble"
+    else:
+        if "Strategy" in closed.columns:
+            closed.rename(columns={"Strategy": "strategy"}, inplace=True)
+
+    weights = {}
+    for strategy, group in closed.groupby("strategy"):
+        trades = len(group)
+        wins = group[group["Actual_Profit"] > 0]
+        losses = group[group["Actual_Profit"] <= 0]
+        
+        win_rate = len(wins) / trades * 100 if trades > 0 else 0
+        avg_pnl = group["Actual_Profit"].mean()
+        
+        gross_wins = wins["Actual_Profit"].sum()
+        gross_losses = abs(losses["Actual_Profit"].sum()) + 0.0001
+        profit_factor = gross_wins / gross_losses
+
+        # Sharpe approx
+        returns = group["Actual_Profit"] / CAPITAL  # rough proxy
+        sharpe = (returns.mean() / returns.std()) * np.sqrt(252) if trades > 5 and returns.std() != 0 else 0
+
+        report[strategy] = {
+            "trades": trades,
+            "win_rate": round(win_rate, 2),
+            "avg_pnl": round(float(avg_pnl), 2),
+            "profit_factor": round(float(profit_factor), 2),
+            "sharpe_ratio": round(float(sharpe), 2)
+        }
+
+        # Weight logic
+        if trades < 10:
+            weights[strategy] = {"weight": 1.0, "enabled": True}
+        elif profit_factor > 1.3:
+            w = 1.0 + (profit_factor - 1.3) * 0.5
+            weights[strategy] = {"weight": round(min(w, 2.0), 2), "enabled": True}
+        elif profit_factor >= 1.0:
+            weights[strategy] = {"weight": 1.0, "enabled": True}
+        else:
+            if trades > 20:
+                weights[strategy] = {"weight": 0.5, "enabled": False}
+            else:
+                weights[strategy] = {"weight": 1.0, "enabled": True}
+
+    try:
+        os.makedirs("data", exist_ok=True)
+        with open("data/strategy_weights.json", "w") as f:
+            json.dump(weights, f, indent=2)
+        Log.success("Strategy weights saved to data/strategy_weights.json")
+    except Exception as e:
+        Log.error(f"Failed to save strategy weights: {e}")
+
+    for s, stats in report.items():
+        print(f"   [STRATEGY] {s}: {stats['trades']} trades | WR={stats['win_rate']}% | PF={stats['profit_factor']} | Sharpe={stats['sharpe_ratio']}")
+
+    return report
+
+def get_regime_strategy_weights(regime: str) -> dict:
+    """
+    Returns recommended strategy weights based on market regime.
+    """
+    base_weights = {
+        "MomentumBreakout": 1.0,
+        "Gap": 1.0,
+        "ORB": 1.0,
+        "MeanReversion": 1.0,
+        "VWAPReversion": 1.0,
+        "MLEnsemble": 1.0
+    }
+    
+    if regime == "TRENDING_UP": # BULL
+        base_weights["MomentumBreakout"] = 1.5
+        base_weights["Gap"] = 1.3
+        base_weights["ORB"] = 1.2
+        base_weights["MeanReversion"] = 0.7
+    elif regime == "TRENDING_DOWN": # BEAR
+        base_weights["MeanReversion"] = 1.5
+        base_weights["MomentumBreakout"] = 0.5
+        base_weights["Gap"] = 0.5
+        base_weights["ORB"] = 0.5
+    elif regime == "RANGING": # SIDEWAYS
+        base_weights["MeanReversion"] = 1.3
+        base_weights["VWAPReversion"] = 1.3
+        base_weights["MomentumBreakout"] = 0.7
+        
+    return base_weights
+
+
+# ══════════════════════════════════════════════════
 #  4. CONFIDENCE CALIBRATION
 # ══════════════════════════════════════════════════
 def calibrate_confidence(symbol: str, df: pd.DataFrame) -> dict:
@@ -480,6 +605,26 @@ def calibrate_confidence(symbol: str, df: pd.DataFrame) -> dict:
 
     print(f"   [CALIB] {symbol}: RF Brier={rf_brier:.3f} (calib_err={rf_calibration_error:.3f}), "
           f"XGB Brier={xgb_brier:.3f} (calib_err={xgb_calibration_error:.3f})")
+
+    # Expected Calibration Error (ECE) and weight reduction for high confidence but low win rate
+    # Check actual win rate when confidence was high (>80%) in test set
+    high_conf_rf = rf_probs > 0.8
+    if np.sum(high_conf_rf) > 0:
+        rf_high_conf_wr = np.mean(y_test[high_conf_rf])
+        if rf_high_conf_wr < 0.5:
+            print(f"   [CALIB-WARN] RF reports >80% confidence but only wins {rf_high_conf_wr*100:.1f}%. Reducing weight.")
+            result["rf_weight_penalty"] = 0.5
+            
+    high_conf_xgb = xgb_probs > 0.8
+    if np.sum(high_conf_xgb) > 0:
+        xgb_high_conf_wr = np.mean(y_test[high_conf_xgb])
+        if xgb_high_conf_wr < 0.5:
+            print(f"   [CALIB-WARN] XGB reports >80% confidence but only wins {xgb_high_conf_wr*100:.1f}%. Reducing weight.")
+            result["xgb_weight_penalty"] = 0.5
+
+    result["rf_ece"] = round(float(rf_calibration_error), 4)
+    result["xgb_ece"] = round(float(xgb_calibration_error), 4)
+
     return result
 
 
@@ -1124,6 +1269,10 @@ def main():
     # ── Step 1: Review past trades ──
     Log.highlight("STEP 1: Trade Review")
     trade_review = review_past_trades()
+
+    # ── Step 1b: Strategy Performance ──
+    Log.highlight("STEP 1b: Strategy Performance Analysis")
+    strat_perf = analyze_strategy_performance()
 
     # ── Step 2: Hyperparameter tuning for each stock ──
     Log.highlight("STEP 2: Hyperparameter Tuning")

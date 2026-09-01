@@ -65,7 +65,7 @@ jobs:
         run: |
           git config --global user.name "Aegis Bot"
           git config --global user.email "aegis-bot@github.com"
-          git add -f data/learner_report.json data/ensemble_weights.json data/best_params.json data/daily_ranking.csv || true
+          git add -f data/learner_report.json data/ensemble_weights.json data/best_params.json data/daily_ranking.csv data/strategy_weights.json data/ga_evolver_state.json || true
           git commit -m "🧠 Learner Report: $(date '+%Y-%m-%d %H:%M')" || echo "No changes"
           git pull --rebase || true
           git push || echo "Push failed"

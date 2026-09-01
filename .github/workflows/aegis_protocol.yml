@@ -93,14 +93,24 @@ jobs:
           MAX_BULLETS: ${{ secrets.MAX_BULLETS }}
           TIME_GAP: ${{ secrets.TIME_GAP }}
           CAPITAL: ${{ secrets.CAPITAL }}
+          BROKER_NAME: ${{ secrets.BROKER_NAME }}
+          REAL_MONEY_MODE: ${{ secrets.REAL_MONEY_MODE }}
+          SHOONYA_USER: ${{ secrets.SHOONYA_USER }}
+          SHOONYA_PASSWORD: ${{ secrets.SHOONYA_PASSWORD }}
+          SHOONYA_API_KEY: ${{ secrets.SHOONYA_API_KEY }}
+          SHOONYA_TOTP_KEY: ${{ secrets.SHOONYA_TOTP_KEY }}
+          DHAN_CLIENT_ID: ${{ secrets.DHAN_CLIENT_ID }}
+          DHAN_ACCESS_TOKEN: ${{ secrets.DHAN_ACCESS_TOKEN }}
+          AEGIS_TELEGRAM_TOKEN: ${{ secrets.AEGIS_TELEGRAM_TOKEN }}
+          AEGIS_TELEGRAM_CHAT_ID: ${{ secrets.AEGIS_TELEGRAM_CHAT_ID }}
         run: python src/sniper.py
 
-      - name: "\U0001F4CA Commit Trade Logs"
+      - name: "📊 Commit Trade Logs & State"
         if: always() # Runs even if sniper errors out
         run: |
           git config --global user.name "Aegis Bot"
           git config --global user.email "aegis-bot@github.com"
-          git add -f data/aegis_trades.csv data/dashboard_state.json || true
-          git commit -m "📊 Aegis Trade Log: $(date '+%Y-%m-%d')" || echo "No changes"
+          git add -f data/trade_history.csv data/strategy_weights.json data/ga_evolver_state.json data/dashboard_state.json || true
+          git commit -m "📊 Aegis Trade & State Log: $(date '+%Y-%m-%d')" || echo "No changes"
           git pull --rebase || true
           git push || echo "Push failed (maybe no changes)"

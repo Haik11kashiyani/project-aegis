@@ -19,6 +19,14 @@ Usage:
 
 import os
 import sys
+
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import json
 import warnings
 import numpy as np
@@ -67,7 +75,9 @@ WF_TRADES_FILE = os.path.join(
 def fetch_historical_data(symbol: str, days: int = DEFAULT_DAYS) -> pd.DataFrame:
     """Fetch and engineer features for historical simulation."""
     try:
-        period = f"{days}d" if days <= 730 else f"{days // 365}y"
+        # Need at least 250 days of history to compute 200-day SMA
+        total_days = max(days + 260, 500)
+        period = f"{total_days}d" if total_days <= 730 else f"{max(2, total_days // 365)}y"
         raw = yf.download(symbol, period=period, interval="1d", progress=False)
         if raw is None or raw.empty:
             return pd.DataFrame()
@@ -81,12 +91,17 @@ def fetch_historical_data(symbol: str, days: int = DEFAULT_DAYS) -> pd.DataFrame
         df["SMA_200"]      = ta.sma(df["Close"], 200)
         df["EMA_20"]       = ta.ema(df["Close"], 20)
         df["ATR"]          = ta.atr(df["High"], df["Low"], df["Close"])
-        df["MACD"], df["MACD_Signal"] = ta.macd(df["Close"])
-        df["BB_Upper"], df["BB_Lower"] = ta.bollinger_bands(df["Close"])
+        macd_df = ta.macd(df["Close"])
+        df["MACD"] = macd_df.iloc[:, 0]
+        df["MACD_Signal"] = macd_df.iloc[:, 2]
+        bb_df = ta.bbands(df["Close"])
+        df["BB_Lower"] = bb_df.iloc[:, 0]
+        df["BB_Upper"] = bb_df.iloc[:, 2]
         df["Volume_Ratio"] = df["Volume"] / df["Volume"].rolling(20).mean()
         df["OBV"]          = ta.obv(df["Close"], df["Volume"])
-        df["Sentiment_Score"] = 0.0
         df.dropna(inplace=True)
+        if len(df) > days:
+            df = df.tail(days)
         return df
     except Exception as e:
         print(f"  [WF] Data fetch failed for {symbol}: {e}")

@@ -1,4 +1,4 @@
-﻿"""
+"""
 ====================================================
 PROJECT AEGIS - The Scholar (Night Training) v2
 ====================================================
@@ -18,6 +18,14 @@ Runs every night AFTER market close.
 
 import os
 import sys
+
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import warnings
 import numpy as np
 import pandas as pd

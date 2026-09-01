@@ -19,6 +19,13 @@ Runs during Indian market hours (9:15 AM - 3:15 PM IST).
 import os
 import sys
 
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 # Suppress all TensorFlow and ABSL warnings before loading any TF modules
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 if "ABSL_LOG_LEVEL" not in os.environ:
@@ -41,6 +48,7 @@ from indicators import flatten_yf_columns
 import joblib
 from datetime import datetime
 import pytz
+import config
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 warnings.filterwarnings("ignore")
@@ -162,6 +170,30 @@ from genetic_evolver import evolve_strategies, get_best_strategy, get_evolver_st
 from debate_system import run_debate, get_debate_verdict, record_debate_result, get_debate_status, save_debate_state, load_debate_state
 from rl_trade_agent import get_rl_action, record_rl_experience, batch_train_agent, record_rl_trade, get_agent_status, save_agent_state, load_agent_state
 from sentiment_momentum import compute_smi, compute_market_smi, check_smi_gate, get_smi_sizing_factor, get_smi_status, record_smi_snapshot, save_smi_state, load_smi_state
+
+try:
+    from strategy_engine import StrategyEngine
+    STRATEGY_ENGINE_AVAILABLE = True
+except ImportError:
+    STRATEGY_ENGINE_AVAILABLE = False
+
+try:
+    from market_intelligence import MarketIntelligence
+    MARKET_INTELLIGENCE_AVAILABLE = True
+except ImportError:
+    MARKET_INTELLIGENCE_AVAILABLE = False
+
+try:
+    from youtube_scraper import YouTubeSentimentScraper
+    YOUTUBE_AVAILABLE = True
+except ImportError:
+    YOUTUBE_AVAILABLE = False
+
+try:
+    from performance_tracker import PerformanceTracker
+    PERFORMANCE_TRACKER_AVAILABLE = True
+except ImportError:
+    PERFORMANCE_TRACKER_AVAILABLE = False
 
 IST = pytz.timezone("Asia/Kolkata")
 
@@ -743,6 +775,21 @@ def run_sniper():
     print(f"   [BROKER] Mode: {broker.mode.value} | Broker: {broker.broker.__class__.__name__}")
 
     # ═══════════════════════════════════════════════════════
+    #  MULTI-STRATEGY & MARKET INTEL (New Additions)
+    # ═══════════════════════════════════════════════════════
+    # Multi-Strategy Engine
+    strategy_engine = StrategyEngine() if STRATEGY_ENGINE_AVAILABLE and getattr(config, 'STRATEGY_ENGINE_ENABLED', False) else None
+    
+    # Market Intelligence
+    market_intel = MarketIntelligence() if MARKET_INTELLIGENCE_AVAILABLE and getattr(config, 'MARKET_INTELLIGENCE_ENABLED', False) else None
+    
+    # YouTube Sentiment
+    youtube_scraper = YouTubeSentimentScraper() if YOUTUBE_AVAILABLE and getattr(config, 'YOUTUBE_SCRAPING_ENABLED', False) else None
+    
+    # Performance Tracker
+    perf_tracker = PerformanceTracker() if PERFORMANCE_TRACKER_AVAILABLE else None
+
+    # ═══════════════════════════════════════════════════════
     #  MARKET BREADTH — Macro Health (refreshed every 15 min)
     # ═══════════════════════════════════════════════════════
     breadth_cache = {"data": {}, "last_update": 0, "size_factor": 1.0}
@@ -1258,6 +1305,19 @@ def run_sniper():
     stock_idx = 0  # Round-robin through stocks
     market_mood_cache = {"mood": {}, "last_update": 0}  # Cache global mood (refresh every 5 min)
 
+    # YouTube Sentiment (supplementary signal)
+    if youtube_scraper:
+        try:
+            videos = youtube_scraper.get_recent_videos(hours=48)
+            yt_mood = youtube_scraper.get_youtube_mood()
+            yt_score = yt_mood.get('overall_mood', 0.0)
+            Log.info(f"YouTube Sentiment: {yt_mood.get('channel_consensus', 'mixed')} (score={yt_score:.2f})")
+            # Use as contrarian indicator if extreme
+            if yt_mood.get('contrarian_signal', False):
+                Log.warn("YouTube CONTRARIAN signal detected - all channels agree (potential reversal)")
+        except Exception as e:
+            Log.warn(f"YouTube scraper error: {e}")
+
     while True:
         now = datetime.now(IST)
 
@@ -1299,11 +1359,42 @@ def run_sniper():
                         "Status": "FORCE_CLOSED",
                         "Exit_Type": "FORCE_CLOSE",
                     })
+                    if perf_tracker:
+                        try:
+                            perf_tracker.update_from_trade({
+                                'symbol': sym,
+                                'entry_price': trade["price"],
+                                'exit_price': current_price,
+                                'quantity': trade["qty"],
+                                'pnl': pnl,
+                                'strategy': trade.get('strategy', 'MLEnsemble'),
+                                'entry_time': trade.get('time', ''),
+                                'exit_time': datetime.now(IST).isoformat(),
+                                'confidence': trade.get('confidence', 0.0)
+                            })
+                            if strategy_engine and 'strategy' in trade:
+                                strategy_engine.update_weights(trade['strategy'], win=(pnl > 0), pnl=pnl)
+                        except Exception as e:
+                            Log.error(f"Performance tracking error: {e}")
+                            
                     alert_trade_exit(sym, trade["price"], current_price, round(pnl, 2), "FORCE_CLOSE")
                     try:
-                        broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
-                    except Exception:
-                        pass
+                        result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
+                        if result:
+                            logger.info(f"Sell order executed: {result}")
+                        else:
+                            logger.warning(f"Sell order returned None for {sym}")
+                    except Exception as e:
+                        logger.error(f"CRITICAL: Sell order FAILED for {sym}: {e}")
+                        # Retry once after 2 seconds
+                        try:
+                            import time
+                            time.sleep(2)
+                            result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
+                            logger.info(f"Sell retry succeeded: {result}")
+                        except Exception as retry_e:
+                            logger.error(f"CRITICAL: Sell RETRY also FAILED for {sym}: {retry_e}")
+                            # TODO: Send emergency alert via Telegram
 
             state["status"] = "MARKET_CLOSED"
             state["total_profit_pct"] = round((state["total_profit"] / CAPITAL) * 100, 2)
@@ -1342,6 +1433,36 @@ def run_sniper():
                          f"VIX: {market_mood_cache['mood'].get('india_vix', 'N/A')}")
             except Exception as e:
                 Log.warn(f"[MOOD] Failed to refresh: {e}")
+
+        # ═══════════════════════════════════════════════════════
+        #  MARKET INTELLIGENCE — Multi-dimensional state (New Addition)
+        # ═══════════════════════════════════════════════════════
+        confidence_boost = 0.0
+        if market_intel and (time.time() - getattr(market_intel, 'last_update', 0) > 300):
+            try:
+                intel = market_intel.get_full_intelligence()
+                market_mood_score = intel.get('market_mood_score', 0.0)
+                vix_data = intel.get('vix_analysis', {})
+                fii_data = intel.get('fii_dii', {})
+                
+                # Block trading if VIX is extreme
+                if vix_data.get('level', '') == 'EXTREME':
+                    Log.warn(f"VIX EXTREME ({vix_data.get('value', 'N/A')}) - Halting new trades")
+                    # Optionally skip new buys this cycle (handled by setting confidence_boost heavily negative)
+                    confidence_boost -= 2.0
+                    
+                # Boost/reduce confidence based on FII flow
+                fii_signal = fii_data.get('signal', 'neutral')
+                if fii_signal == 'bullish':
+                    confidence_boost += 0.05
+                elif fii_signal == 'bearish':
+                    confidence_boost -= 0.05
+                    
+                Log.info(f"Market Intel: Mood={market_mood_score:.2f}, FII={fii_signal}, VIX={vix_data.get('level', 'N/A')}")
+                market_intel.last_update = time.time()
+            except Exception as e:
+                Log.warn(f"Market intelligence failed: {e}")
+                confidence_boost = 0.0
 
         # Monitor Active Trades (with partial profit taking + SMART EXIT) ----
         for trade in state["active_trades"]:
@@ -1439,8 +1560,8 @@ def run_sniper():
                 trade_sentiment = 0.0
                 try:
                     trade_sentiment = float(last.get("Sentiment_Score", 0))
-                except Exception:
-                    pass
+                except Exception as e:
+                    logger.warning(f"Could not parse Sentiment_Score for {trade['symbol']}: {e}")
 
                 should_exit, exit_type, exit_reason = brain.should_exit(
                     entry_price=trade["price"],
@@ -1502,6 +1623,24 @@ def run_sniper():
                 "Status": action,
                 "Exit_Type": action,
             })
+            
+            if perf_tracker:
+                try:
+                    perf_tracker.update_from_trade({
+                        'symbol': sym,
+                        'entry_price': trade["price"],
+                        'exit_price': current_price,
+                        'quantity': trade["qty"],
+                        'pnl': pnl_total,
+                        'strategy': trade.get('strategy', 'MLEnsemble'),
+                        'entry_time': trade.get('time', ''),
+                        'exit_time': datetime.now(IST).isoformat(),
+                        'confidence': trade.get('confidence', 0.0)
+                    })
+                    if strategy_engine and 'strategy' in trade:
+                        strategy_engine.update_weights(trade['strategy'], win=(pnl_total > 0), pnl=pnl_total)
+                except Exception as e:
+                    Log.error(f"Performance tracking error: {e}")
 
             # Send exit alert
             alert_trade_exit(
@@ -1512,16 +1651,29 @@ def run_sniper():
 
             # Route SELL through broker bridge
             try:
-                broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
-            except Exception:
-                pass
+                result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
+                if result:
+                    logger.info(f"Sell order executed: {result}")
+                else:
+                    logger.warning(f"Sell order returned None for {sym}")
+            except Exception as e:
+                logger.error(f"CRITICAL: Sell order FAILED for {sym}: {e}")
+                # Retry once after 2 seconds
+                try:
+                    import time
+                    time.sleep(2)
+                    result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
+                    logger.info(f"Sell retry succeeded: {result}")
+                except Exception as retry_e:
+                    logger.error(f"CRITICAL: Sell RETRY also FAILED for {sym}: {retry_e}")
+                    # TODO: Send emergency alert via Telegram
 
             # Update model drift actuals (Phase 7)
             if MODEL_DRIFT_ENABLED:
                 try:
                     update_prediction_actuals(sym, pnl_total > 0)
-                except Exception:
-                    pass
+                except Exception as e:
+                    logger.error(f"Failed to update prediction actuals for {sym}: {e}")
 
         # ---- Scan ALL stocks & write LIVE ANALYSIS ----
         analysis = {
@@ -1698,8 +1850,8 @@ def run_sniper():
                     fire_sentiment = 0.0
                     try:
                         fire_sentiment = float(df.iloc[-1].get("Sentiment_Score", 0))
-                    except Exception:
-                        pass
+                    except Exception as e:
+                        logger.warning(f"Could not parse Sentiment_Score for {sym}: {e}")
                     fire_mood_score = market_mood_cache.get("mood", {}).get("overall_mood", 0)
                     fire_mood_details = market_mood_cache.get("mood", {})
 
@@ -1716,8 +1868,74 @@ def run_sniper():
                         mood_details=fire_mood_details,
                     )
 
-                    should_buy = fire_decision.should_buy
+                    # Multi-Strategy Evaluation
+                    strategy_signal = None
+                    if strategy_engine:
+                        try:
+                            last_row = df.iloc[-1]
+                            current_data = {
+                                'price': float(last_row.get("Close", 0)),
+                                'rsi': float(last_row.get("RSI", 50)),
+                                'sma_50': float(last_row.get("SMA_50", 0)),
+                                'sma_200': float(last_row.get("SMA_200", 0)),
+                                'ema_20': float(last_row.get("EMA_20", 0)),
+                                'atr': float(last_row.get("ATR", 0)),
+                                'macd': float(last_row.get("MACD", 0)),
+                                'macd_signal': float(last_row.get("MACD_Signal", 0)),
+                                'bb_upper': float(last_row.get("BB_Upper", 0)),
+                                'bb_lower': float(last_row.get("BB_Lower", 0)),
+                                'bb_middle': float(last_row.get("EMA_20", 0)),  # BB middle is typically SMA20
+                                'volume_ratio': float(last_row.get("Volume_Ratio", 1.0)),
+                                'obv': float(last_row.get("OBV", 0)) if "OBV" in last_row else 0,
+                                'high_20': float(last_row.get("High_20", 0)) if "High_20" in last_row else 0,
+                                'adx': float(last_row.get("ADX", 0)) if "ADX" in last_row else 0,
+                                'prev_close': float(df["Close"].iloc[-2]) if len(df) > 1 else float(last_row.get("Close", 0)),
+                                'open': float(last_row.get("Open", 0)) if "Open" in last_row else 0,
+                            }
+                            
+                            model_preds = {
+                                'rf': rf_c,
+                                'xgb': xgb_c,
+                                'lstm': lstm_c,
+                                'intraday': intra_c
+                            }
+                            
+                            # Safely fetch intraday df if needed, but since it could be slow we might pass an empty df if not strictly required, 
+                            # or just use get_intraday_data(sym)
+                            strategy_signal = strategy_engine.evaluate_all(
+                                symbol=sym,
+                                current_data=current_data,
+                                intraday_data=get_intraday_data(sym) if 'get_intraday_data' in globals() else pd.DataFrame(),
+                                model_predictions=model_preds,
+                                sentiment_score=fire_sentiment,
+                                market_mood=fire_mood_score
+                            )
+                            
+                            Log.info(f"Strategy Engine: {sym} -> {strategy_signal['action']} "
+                                     f"(confidence={strategy_signal['confidence']:.2f}, "
+                                     f"strategies_agree={strategy_signal['strategies_agree']})")
+                        except Exception as e:
+                            Log.error(f"Strategy engine error for {sym}: {e}")
 
+                    neuro_buy = fire_decision.should_buy
+                    strategy_buy = False
+                    if strategy_signal and strategy_signal.get('action') == 'BUY' and strategy_signal.get('strategies_agree', 0) >= 2:
+                        strategy_buy = True
+
+                    if strategy_engine:
+                        if neuro_buy and strategy_buy:
+                            should_buy = True
+                            fire_decision.reasoning += " [High Conf: Neuro+Strategy]"
+                        elif strategy_buy:
+                            should_buy = True
+                            fire_decision.reasoning += " [Mod Conf: Strategy Only]"
+                        elif neuro_buy:
+                            should_buy = True
+                            fire_decision.reasoning += " [Mod Conf: Neuro Only]"
+                        else:
+                            should_buy = False
+                    else:
+                        should_buy = neuro_buy
                     # Log NeuroVoter decision
                     voter_line = " | ".join(
                         f"{vr.name}:{vr.vote:+.1f}" for vr in fire_decision.voter_results

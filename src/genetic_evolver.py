@@ -68,7 +68,7 @@ TOURNAMENT_K     = 3        # Tournament selection size
 CROSSOVER_PROB   = 0.85     # Probability of crossover
 MUTATION_PROB    = 0.15     # Per-gene mutation probability
 ELITE_SIZE       = 4        # Number of elites preserved per generation
-LOOKBACK_DAYS    = 180      # Historical data for fitness eval
+LOOKBACK_DAYS    = 500      # Historical data for fitness eval (approx 2 years)
 WALK_FWD_SPLIT   = 0.7      # 70% train, 30% test (walk-forward)
 
 
@@ -187,14 +187,14 @@ def _compute_indicators(df: pd.DataFrame, chrom: Dict) -> pd.DataFrame:
     df["RSI"] = 100 - (100 / (1 + rs))
 
     # MACD
-    fast_ema = pd.Series(close).ewm(span=chrom["macd_fast"], adjust=False).mean()
-    slow_ema = pd.Series(close).ewm(span=chrom["macd_slow"], adjust=False).mean()
+    fast_ema = pd.Series(close).ewm(span=chrom["macd_fast"], adjust=False).mean().values
+    slow_ema = pd.Series(close).ewm(span=chrom["macd_slow"], adjust=False).mean().values
     df["MACD"] = fast_ema - slow_ema
-    df["MACD_Signal"] = df["MACD"].ewm(span=chrom["macd_signal"], adjust=False).mean()
+    df["MACD_Signal"] = pd.Series(df["MACD"].values).ewm(span=chrom["macd_signal"], adjust=False).mean().values
 
     # EMA crossover
-    df["EMA_Short"] = pd.Series(close).ewm(span=chrom["ema_short"], adjust=False).mean()
-    df["EMA_Long"] = pd.Series(close).ewm(span=chrom["ema_long"], adjust=False).mean()
+    df["EMA_Short"] = pd.Series(close).ewm(span=chrom["ema_short"], adjust=False).mean().values
+    df["EMA_Long"] = pd.Series(close).ewm(span=chrom["ema_long"], adjust=False).mean().values
 
     # ATR
     high = df["High"].values.astype(float)
@@ -205,14 +205,15 @@ def _compute_indicators(df: pd.DataFrame, chrom: Dict) -> pd.DataFrame:
     df["ATR"] = pd.Series(tr).rolling(14).mean().values
 
     # Bollinger Bands
-    df["BB_Mid"] = pd.Series(close).rolling(chrom["bb_period"]).mean()
-    bb_std = pd.Series(close).rolling(chrom["bb_period"]).std()
+    df["BB_Mid"] = pd.Series(close).rolling(chrom["bb_period"]).mean().values
+    bb_std = pd.Series(close).rolling(chrom["bb_period"]).std().values
     df["BB_Lower"] = df["BB_Mid"] - chrom["bb_std"] * bb_std
 
     # Volume spike
     if "Volume" in df.columns:
-        df["Vol_MA"] = df["Volume"].rolling(20).mean()
-        df["Vol_Spike"] = df["Volume"] / df["Vol_MA"].replace(0, 1)
+        vol = df["Volume"].values.astype(float)
+        vol_ma = pd.Series(vol).rolling(20).mean().values
+        df["Vol_Spike"] = np.where(vol_ma > 0, vol / np.where(vol_ma == 0, 1, vol_ma), 1.0)
     else:
         df["Vol_Spike"] = 1.0
 
@@ -244,11 +245,9 @@ def _simulate_strategy(df: pd.DataFrame, chrom: Dict) -> Dict:
     for i in range(1, len(close)):
         if not in_position:
             buy_signal = (
-                rsi[i] < chrom["rsi_buy"]
-                and macd[i] > macd_sig[i]
-                and ema_s[i] > ema_l[i]
-                and close[i] < bb_lower[i] * 1.02  # near lower band
-                and vol_spike[i] > chrom["volume_spike"]
+                ema_s[i] > ema_l[i]  # Trend filter
+                and (rsi[i] < chrom["rsi_buy"] or close[i] < bb_lower[i] * 1.02)  # Pullback or BB test
+                and macd[i] > macd_sig[i]  # Reversal confirmation
             )
             if buy_signal:
                 entry_price = close[i]
@@ -271,7 +270,13 @@ def _simulate_strategy(df: pd.DataFrame, chrom: Dict) -> Dict:
         elif in_position:
             daily_returns.append((close[i] - close[i - 1]) / close[i - 1])
 
-    if not daily_returns:
+    # Close open position at end of simulation to record trade
+    if in_position:
+        pnl_pct = (close[-1] - entry_price) / entry_price
+        trades.append(pnl_pct)
+        in_position = False
+
+    if not trades or not daily_returns:
         return {"sharpe": -999, "total_return": 0, "win_rate": 0, "n_trades": 0}
 
     returns = np.array(daily_returns)
@@ -295,13 +300,16 @@ def evaluate_fitness(chrom: Dict, price_data: Dict[str, pd.DataFrame]) -> float:
     Uses REAL price data. Returns average Sharpe across all symbols."""
     sharpes = []
     for sym, df in price_data.items():
-        split_idx = int(len(df) * WALK_FWD_SPLIT)
-        test_df = df.iloc[split_idx:]
-        if len(test_df) < 20:
+        if len(df) < 50:
             continue
-        ind_df = _compute_indicators(test_df, chrom)
-        result = _simulate_strategy(ind_df, chrom)
-        sharpes.append(result["sharpe"])
+        ind_df = _compute_indicators(df, chrom)
+        split_idx = int(len(ind_df) * WALK_FWD_SPLIT)
+        test_df = ind_df.iloc[split_idx:].reset_index(drop=True)
+        if len(test_df) < 10:
+            continue
+        result = _simulate_strategy(test_df, chrom)
+        if result["n_trades"] > 0:
+            sharpes.append(result["sharpe"])
     if not sharpes:
         return -999.0
     return float(np.mean(sharpes))
@@ -337,7 +345,7 @@ def evolve_strategies(symbols: List[str],
         population = [create_random_chromosome() for _ in range(pop_size)]
         gen_start = 0
 
-    best_ever = None
+    best_ever = population[0].copy() if population else create_random_chromosome()
     best_ever_fitness = -999.0
     fitness_history = existing_state.get("fitness_history", []) if existing_state else []
     gen_stats = []
@@ -352,7 +360,7 @@ def evolve_strategies(symbols: List[str],
         gen_mean = float(np.mean(fitnesses))
         gen_std = float(np.std(fitnesses))
 
-        if gen_best > best_ever_fitness:
+        if gen_best > best_ever_fitness or best_ever is None:
             best_ever_fitness = gen_best
             best_ever = population[gen_best_idx].copy()
 
@@ -391,12 +399,12 @@ def evolve_strategies(symbols: List[str],
     # Detailed backtest of best chromosome
     best_results = {}
     for sym, df in price_data.items():
-        split_idx = int(len(df) * WALK_FWD_SPLIT)
-        test_df = df.iloc[split_idx:]
-        if len(test_df) < 20:
+        if len(df) < 50:
             continue
-        ind_df = _compute_indicators(test_df, best_ever)
-        best_results[sym] = _simulate_strategy(ind_df, best_ever)
+        ind_df = _compute_indicators(df, best_ever)
+        split_idx = int(len(ind_df) * WALK_FWD_SPLIT)
+        test_df = ind_df.iloc[split_idx:].reset_index(drop=True)
+        best_results[sym] = _simulate_strategy(test_df, best_ever)
 
     state = {
         "status": "EVOLVED",

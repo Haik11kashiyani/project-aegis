@@ -18,8 +18,7 @@ import os
 # Scholar scans ALL of them, ranks by AI probability, and picks the top N.
 _RAW_WATCHLIST = os.getenv(
     "STOCK_WATCHLIST",
-    "TATASTEEL.NS,SBIN.NS,RELIANCE.NS,HDFCBANK.NS,ICICIBANK.NS,"
-    "NTPC.NS,POWERGRID.NS,COALINDIA.NS,INFY.NS,TCS.NS"
+    "TATASTEEL.NS,SBIN.NS,NTPC.NS,POWERGRID.NS,COALINDIA.NS,ITC.NS,NIFTYBEES.NS,BANKBEES.NS,NHPC.NS,IRFC.NS,TATAPOWER.NS,BPCL.NS,ONGC.NS,GAIL.NS,HINDALCO.NS"
 )
 STOCK_WATCHLIST: list[str] = [s.strip() for s in _RAW_WATCHLIST.split(",") if s.strip()]
 TOP_N_STOCKS   = int(os.getenv("TOP_N_STOCKS", "3"))           # Trade only top-N ranked stocks
@@ -30,7 +29,51 @@ TARGET_STOCK = os.getenv("TARGET_STOCK", STOCK_WATCHLIST[0])
 DAILY_TARGET = float(os.getenv("DAILY_TARGET", "0.02"))       # 2 % daily target
 MAX_BULLETS  = int(os.getenv("MAX_BULLETS", "5"))              # Split capital into 5 shots
 TIME_GAP     = int(os.getenv("TIME_GAP", "600"))               # 10 min between bullets
-CAPITAL      = float(os.getenv("CAPITAL", "1000"))                       # Starting capital ₹
+CAPITAL      = float(os.getenv("CAPITAL", "15000"))                       # Starting capital ₹
+
+# ₹15K Capital Management
+MAX_PRICE_PER_SHARE = int(os.environ.get('MAX_PRICE_PER_SHARE', '1000'))
+MIN_SHARES_PER_BULLET = int(os.environ.get('MIN_SHARES_PER_BULLET', '3'))
+PREFER_CHEAP_STOCKS = True
+
+# Multi-Strategy Engine
+STRATEGY_ENGINE_ENABLED = True
+ENABLED_STRATEGIES = os.environ.get('ENABLED_STRATEGIES', 'ml_ensemble,mean_reversion,momentum_breakout,vwap_reversion,orb,gap').split(',')
+STRATEGY_MIN_AGREEMENT = int(os.environ.get('STRATEGY_MIN_AGREEMENT', '2'))  # Min strategies agreeing
+STRATEGY_MIN_CONFIDENCE = float(os.environ.get('STRATEGY_MIN_CONFIDENCE', '0.55'))
+
+# Tightened Risk for Small Capital
+MAX_DAILY_LOSS_PCT = float(os.environ.get('MAX_DAILY_LOSS_PCT', '0.02'))  # 2% not 5%
+MAX_WEEKLY_LOSS_PCT = float(os.environ.get('MAX_WEEKLY_LOSS_PCT', '0.05'))  # 5% weekly
+MAX_MONTHLY_LOSS_PCT = float(os.environ.get('MAX_MONTHLY_LOSS_PCT', '0.10'))  # 10% monthly
+DRAWDOWN_CIRCUIT_BREAKER = float(os.environ.get('DRAWDOWN_CIRCUIT_BREAKER', '0.15'))  # Halt at 15% from peak
+
+# Capital Growth Tiers
+CAPITAL_TIER_CONSERVATIVE = 25000  # Below this: conservative mode
+CAPITAL_TIER_MODERATE = 50000      # Below this: moderate mode
+# Above 50K: full mode
+
+# Market Intelligence
+MARKET_INTELLIGENCE_ENABLED = True
+YOUTUBE_SCRAPING_ENABLED = True
+FII_DII_TRACKING_ENABLED = True
+EARNINGS_GUARD_DAYS = 3  # Block trading N days before/after results
+
+# Broker Settings
+BROKER_NAME = os.environ.get('BROKER_NAME', 'PAPER')  # PAPER, SHOONYA, DHAN, ANGELONE
+SHOONYA_USER = os.environ.get('SHOONYA_USER', '')
+SHOONYA_PASSWORD = os.environ.get('SHOONYA_PASSWORD', '')
+SHOONYA_TOTP_KEY = os.environ.get('SHOONYA_TOTP_KEY', '')
+SHOONYA_VENDOR_CODE = os.environ.get('SHOONYA_VENDOR_CODE', '')
+SHOONYA_API_KEY = os.environ.get('SHOONYA_API_KEY', '')
+SHOONYA_IMEI = os.environ.get('SHOONYA_IMEI', 'abc1234')
+DHAN_CLIENT_ID = os.environ.get('DHAN_CLIENT_ID', '')
+DHAN_ACCESS_TOKEN = os.environ.get('DHAN_ACCESS_TOKEN', '')
+
+# Kelly Sizing for Small Capital
+KELLY_FRACTION = float(os.environ.get('KELLY_FRACTION', '0.25'))  # Quarter-Kelly
+MIN_POSITION_SIZE = 1000  # Minimum ₹1000 per trade
+MAX_POSITION_PCT = 0.33   # Max 33% of capital in one position
 
 # ──────────────────────────────────────────────────
 #   MODEL / TRAINING PARAMETERS
@@ -60,7 +103,7 @@ INTRADAY_DROPOUT    = 0.20
 INTRADAY_PERIOD     = "60d"      # Max period for 15-min data on Yahoo
 
 DATA_PERIOD         = "5y"       # Historical data period for training
-CONFIDENCE_THRESHOLD = 0.60      # Minimum confidence for RF/XGB to vote BUY
+CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.65"))  # Minimum confidence for RF/XGB to vote BUY (0.65 filters out noise)
 
 # Ensemble voting: require at least N out of 4 models to agree
 MIN_VOTES_TO_BUY    = 2          # 2-out-of-4 consensus (RF+XGB enough when LSTMs are weak)

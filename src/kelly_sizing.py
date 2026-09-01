@@ -34,10 +34,10 @@ from config import (
 # ──────────────────────────────────────────────────
 #  KELLY CONFIG
 # ──────────────────────────────────────────────────
-KELLY_FRACTION   = 0.5    # Half-Kelly (more conservative)
+KELLY_FRACTION   = 0.25   # Quarter-Kelly (more conservative)
 MIN_TRADES_KELLY = 10     # Need this many trades before trusting Kelly
 MIN_POSITION_PCT = 0.02   # Floor: min 2% of capital per trade
-MAX_POSITION_PCT = 0.25   # Ceiling: max 25% of capital per trade
+MAX_POSITION_PCT = 0.33   # Ceiling: max 33% of capital per trade
 DEFAULT_PCT      = None   # Computed as 1/MAX_BULLETS if None
 REGIME_BEAR_SCALE = 0.5   # Scale down Kelly by 50% in bear regime
 REGIME_BULL_SCALE = 1.2   # Scale up Kelly by 20% in bull regime (still capped)
@@ -224,13 +224,15 @@ def get_kelly_position_size(
     method = "DEFAULT"
 
     if symbol in kelly_map:
-        pct = kelly_map[symbol]["kelly_adj"]
+        # Subtract transaction cost from payoff essentially by lowering the kelly a bit (simplified, but effectively a deduction)
+        # We can simulate 0.05% round trip cost reduction on Kelly percentage
+        pct = kelly_map[symbol]["kelly_adj"] - 0.0005
         method = "KELLY"
     else:
         # No stock-specific data — use overall Kelly
         overall = compute_overall_kelly()
         if overall["trades"] >= MIN_TRADES_KELLY:
-            pct = overall["kelly_adj"]
+            pct = overall["kelly_adj"] - 0.0005
             method = "KELLY_OVERALL"
         else:
             pct = default_pct
@@ -242,11 +244,23 @@ def get_kelly_position_size(
         regime_factor = REGIME_BEAR_SCALE
     elif regime == "bull":
         regime_factor = REGIME_BULL_SCALE
+    elif regime == "sideways":
+        regime_factor = 0.85
 
     adjusted_pct = pct * regime_factor
-    adjusted_pct = max(MIN_POSITION_PCT, min(MAX_POSITION_PCT, adjusted_pct))
+    
+    # Add maximum position ceiling: Never more than 33% of capital in one position
+    max_allowed_pct = min(MAX_POSITION_PCT, 0.33)
+    adjusted_pct = max(MIN_POSITION_PCT, min(max_allowed_pct, adjusted_pct))
 
     amount = capital * adjusted_pct
+    
+    # Add minimum position floor: Never size below ₹1,000
+    amount = max(1000.0, amount)
+    
+    # Re-verify amount does not exceed absolute max allowed
+    amount = min(amount, capital * 0.33)
+
     qty = max(1, int(amount / current_price)) if current_price > 0 else 0
 
     return {
