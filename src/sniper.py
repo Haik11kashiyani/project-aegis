@@ -796,6 +796,29 @@ def run_sniper():
     perf_tracker = PerformanceTracker() if PERFORMANCE_TRACKER_AVAILABLE else None
 
     # ═══════════════════════════════════════════════════════
+    #  LEARNER INTELLIGENCE — Load overnight brain adaptations
+    # ═══════════════════════════════════════════════════════
+    learner_report = {}
+    try:
+        report_path = os.path.join("data", "learner_report.json")
+        if os.path.exists(report_path):
+            with open(report_path, "r") as f:
+                learner_report = json.load(f)
+            health = learner_report.get("model_health", "UNKNOWN")
+            trading_ok = learner_report.get("trading_allowed", True)
+            regime = learner_report.get("market_regimes", {}).get("NIFTY50", "UNKNOWN")
+            risk_lvl = learner_report.get("risk_params", {}).get("risk_level", "NORMAL")
+            print(f"   [BRAIN] Learner Report: Health={health} | Regime={regime} | Risk={risk_lvl}")
+            if not trading_ok:
+                Log.error("LEARNER BLOCKED TRADING — Models degraded + emergency risk. Switching to paper mode.")
+                # Override to paper mode if learner says models are too unhealthy
+                broker.mode = "PAPER"
+        else:
+            print(f"   [BRAIN] No learner report found — using default settings")
+    except Exception as e:
+        print(f"   [BRAIN] Failed to load learner report: {e}")
+
+    # ═══════════════════════════════════════════════════════
     #  MARKET BREADTH — Macro Health (refreshed every 15 min)
     # ═══════════════════════════════════════════════════════
     breadth_cache = {"data": {}, "last_update": 0, "size_factor": 1.0}

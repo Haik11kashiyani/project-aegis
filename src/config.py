@@ -91,18 +91,18 @@ XGB_COLSAMPLE       = 0.8        # Feature sampling (anti-overfit)
 
 # Daily LSTM parameters
 LSTM_LOOKBACK       = 60         # Days of history the daily LSTM "sees"
-LSTM_EPOCHS         = 10         # Training epochs (keep low to avoid overfit)
+LSTM_EPOCHS         = 50         # Training epochs (EarlyStopping halts when converged)
 LSTM_BATCH_SIZE     = 32
 LSTM_DROPOUT        = 0.25       # Dropout rate (anti-overfit)
 
 # Intraday LSTM parameters (15-minute candles)
 INTRADAY_LOOKBACK   = 48         # 48 × 15min = 12 hours of candle history
-INTRADAY_EPOCHS     = 8
+INTRADAY_EPOCHS     = 30         # More epochs for proper convergence (EarlyStopping protects)
 INTRADAY_BATCH_SIZE = 32
 INTRADAY_DROPOUT    = 0.20
 INTRADAY_PERIOD     = "60d"      # Max period for 15-min data on Yahoo
 
-DATA_PERIOD         = "5y"       # Historical data period for training
+DATA_PERIOD         = "6y"       # 6 years to compensate for SMA_200 eating first 200 rows
 CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.65"))  # Minimum confidence for RF/XGB to vote BUY (0.65 filters out noise)
 
 # Ensemble voting: require at least N out of 4 models to agree

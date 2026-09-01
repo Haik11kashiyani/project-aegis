@@ -1155,7 +1155,8 @@ def adapt_risk_parameters() -> dict:
 # ══════════════════════════════════════════════════
 def generate_health_report(trade_review: dict, calibrations: list,
                            weights: dict, risk_params: dict,
-                           regimes: dict, tuned_params: list) -> dict:
+                           regimes: dict, tuned_params: list,
+                           extra_data: dict = None) -> dict:
     """
     Create a comprehensive JSON report that the Sniper reads
     every morning to adjust its behaviour.
@@ -1196,6 +1197,10 @@ def generate_health_report(trade_review: dict, calibrations: list,
         "calibrations": calibrations,
         "tuned_params": tuned_params,
     }
+
+    # Merge any extra data (voter accuracy, confidence decay, etc.)
+    if extra_data:
+        report.update(extra_data)
 
     os.makedirs("data", exist_ok=True)
     with open(LEARNER_REPORT_FILE, "w") as f:

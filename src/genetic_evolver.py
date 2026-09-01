@@ -303,11 +303,10 @@ def evaluate_fitness(chrom: Dict, price_data: Dict[str, pd.DataFrame]) -> float:
         if len(df) < 50:
             continue
         ind_df = _compute_indicators(df, chrom)
-        split_idx = int(len(ind_df) * WALK_FWD_SPLIT)
-        test_df = ind_df.iloc[split_idx:].reset_index(drop=True)
-        if len(test_df) < 10:
+        if len(ind_df) < 10:
             continue
-        result = _simulate_strategy(test_df, chrom)
+        # Evaluate on the FULL dataset to prevent overfitting to the recent 30% (anti-hallucination)
+        result = _simulate_strategy(ind_df, chrom)
         if result["n_trades"] > 0:
             sharpes.append(result["sharpe"])
     if not sharpes:
