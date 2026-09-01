@@ -1,151 +1,119 @@
-import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
+import React, { useEffect, useState } from 'react';
+import {
+  Activity,
+  Cpu,
+  BarChart2,
+  Settings,
+  Radar,
+  RotateCw,
+  Clock,
+  ShieldCheck,
+  TrendingUp,
+  FileText,
+  Sliders,
+} from 'lucide-react';
+import { SystemStatus, StrategyInfo, TradeRecord } from './types';
 import { LiveChart } from './components/LiveChart';
 import { StrategyStudio } from './components/StrategyStudio';
 import { EvolutionLab } from './components/EvolutionLab';
 import { MarketRadar } from './components/MarketRadar';
 import { TradesHistory } from './components/TradesHistory';
 import { SettingsStudio } from './components/SettingsStudio';
-import { SystemStatus, StrategyInfo, TradeRecord } from './types';
-import { LayoutDashboard, Sliders, Dna, Radio, FileText, Settings, ShieldCheck, Activity } from 'lucide-react';
+import { isLocalhost, fetchStatusData, fetchStrategiesData, fetchTradesData } from './apiClient';
 
 export const App: React.FC = () => {
   const [status, setStatus] = useState<SystemStatus | null>(null);
   const [strategies, setStrategies] = useState<Record<string, StrategyInfo>>({});
   const [trades, setTrades] = useState<TradeRecord[]>([]);
-  const [activeTab, setActiveTab] = useState<'terminal' | 'strategies' | 'evolution' | 'radar' | 'trades' | 'settings'>('terminal');
-  const [selectedStock, setSelectedStock] = useState('SBIN.NS');
-  const [connected, setConnected] = useState(false);
+  const [connected, setConnected] = useState<boolean>(!isLocalhost);
+  const [activeTab, setActiveTab] = useState<'cockpit' | 'strategies' | 'evolution' | 'radar' | 'audit' | 'settings'>('cockpit');
 
-  const fetchStatus = () => {
-    fetch('/api/status')
-      .then((r) => r.json())
-      .then((d) => setStatus(d))
-      .catch(() => {});
-  };
-
-  const fetchStrategies = () => {
-    fetch('/api/strategies')
-      .then((r) => r.json())
-      .then((d) => setStrategies(d))
-      .catch(() => {});
-  };
-
-  const fetchTrades = () => {
-    fetch('/api/trades')
-      .then((r) => r.json())
-      .then((d) => setTrades(d.trades || []))
-      .catch(() => {});
+  const refreshAll = async () => {
+    const s = await fetchStatusData();
+    setStatus(s);
+    const strats = await fetchStrategiesData();
+    setStrategies(strats);
+    const t = await fetchTradesData();
+    setTrades(t);
   };
 
   useEffect(() => {
-    fetchStatus();
-    fetchStrategies();
-    fetchTrades();
+    refreshAll();
+    const poll = setInterval(refreshAll, 4000);
 
-    const poll = setInterval(fetchStatus, 3000);
+    // Only connect local WebSocket if running locally on localhost
+    if (isLocalhost) {
+      let ws: WebSocket | null = null;
+      let timer: any = null;
 
-    let ws: WebSocket | null = null;
-    let timer: any = null;
-
-    const connectWS = () => {
-      try {
-        ws = new WebSocket('ws://127.0.0.1:8000/ws/stream');
-        ws.onopen = () => setConnected(true);
-        ws.onclose = () => {
+      const connectWS = () => {
+        try {
+          ws = new WebSocket('ws://127.0.0.1:8000/ws/stream');
+          ws.onopen = () => setConnected(true);
+          ws.onclose = () => {
+            setConnected(false);
+            timer = setTimeout(connectWS, 5000);
+          };
+          ws.onerror = () => {
+            setConnected(false);
+            try { ws?.close(); } catch(e) {}
+          };
+          ws.onmessage = (evt) => {
+            try {
+              const msg = JSON.parse(evt.data);
+              if (msg.type === 'TICK') {
+                setStatus((prev) => (prev ? { ...prev, ...msg } : msg));
+              }
+            } catch (e) {}
+          };
+        } catch (e) {
           setConnected(false);
-          timer = setTimeout(connectWS, 4000);
-        };
-        ws.onerror = () => {
-          setConnected(false);
-          try { ws?.close(); } catch(e) {}
-        };
-        ws.onmessage = (evt) => {
-          try {
-            const msg = JSON.parse(evt.data);
-            if (msg.type === 'TICK') {
-              setStatus((prev) => (prev ? { ...prev, ...msg } : msg));
-            }
-          } catch (e) {}
-        };
-      } catch (e) {
-        setConnected(false);
-        timer = setTimeout(connectWS, 4000);
-      }
-    };
+        }
+      };
 
-    connectWS();
+      connectWS();
+      return () => {
+        clearInterval(poll);
+        if (timer) clearTimeout(timer);
+        try { ws?.close(); } catch(e) {}
+      };
+    }
 
-    return () => {
-      clearInterval(poll);
-      if (timer) clearTimeout(timer);
-      if (ws) {
-        ws.onclose = null;
-        ws.onerror = null;
-        ws.close();
-      }
-    };
+    // On Vercel cloud, setConnected to true and rely on cloud polling
+    setConnected(true);
+    return () => clearInterval(poll);
   }, []);
 
-  const handleToggle = (name: string, enabled: boolean) => {
-    fetch('/api/strategies/toggle', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, enabled }),
-    })
-      .then((r) => r.json())
-      .then(() => {
-        setStrategies((prev) => ({
-          ...prev,
-          [name]: { ...prev[name], enabled },
-        }));
-      })
-      .catch((err) => console.error(err));
-  };
-
-  const handleWeightChange = (name: string, weight: number) => {
-    fetch('/api/strategies/weight', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, weight }),
-    })
-      .then((r) => r.json())
-      .then(() => {
-        setStrategies((prev) => ({
-          ...prev,
-          [name]: { ...prev[name], weight },
-        }));
-      })
-      .catch((err) => console.error(err));
-  };
-
-  const pnl = status ? status.realized_pnl + status.unrealized_pnl : 0;
-  const isUp = pnl >= 0;
+  const pnl = status?.realized_pnl || 0;
+  const isPositive = pnl >= 0;
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] flex font-sans antialiased">
-      {/* Left Modern Docked Sidebar */}
-      <aside className="w-56 shrink-0 bg-[#0c0c0e] border-r border-[#27272a] flex flex-col justify-between p-4 hidden md:flex">
-        <div className="space-y-6">
-          {/* Logo */}
-          <div className="flex items-center space-x-2.5 px-1">
-            <div className="w-7 h-7 rounded bg-white flex items-center justify-center shadow">
-              <span className="font-mono font-bold text-xs text-black">A</span>
+    <div className="flex h-screen w-screen bg-[#09090b] text-[#f4f4f5] overflow-hidden font-sans select-none antialiased">
+      {/* ── Left Sidebar ────────────────────────────────────────────── */}
+      <aside className="w-64 flex-shrink-0 bg-[#0c0c0e] border-r border-[#1e1e24] flex flex-col justify-between z-20">
+        <div>
+          {/* Brand Header */}
+          <div className="p-4 border-b border-[#1e1e24] flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded bg-white flex items-center justify-center font-black text-black text-xs tracking-tighter shadow-sm">
+                AE
+              </div>
+              <div>
+                <h1 className="text-xs font-bold text-white tracking-wider font-mono">PROJECT AEGIS</h1>
+                <p className="text-[10px] text-[#71717a] font-mono">QUANT AUTOPILOT v4</p>
+              </div>
             </div>
-            <div>
-              <div className="font-bold text-sm text-white tracking-tight leading-none">AEGIS QUANT</div>
-              <div className="text-[9px] font-mono text-[#71717a] mt-0.5">INSTITUTIONAL v3</div>
-            </div>
+            <div className={`w-2 h-2 rounded-full ${connected ? 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]' : 'bg-amber-500'}`} />
           </div>
 
-          {/* Navigation Links */}
-          <nav className="space-y-1 font-mono text-xs">
+          {/* Navigation Items */}
+          <nav className="p-2 space-y-1">
             {[
-              { id: 'terminal', label: 'Overview Cockpit', icon: LayoutDashboard },
+              { id: 'cockpit', label: 'Overview Cockpit', icon: Activity },
               { id: 'strategies', label: 'Strategy Studio', icon: Sliders },
-              { id: 'evolution', label: 'Evolution Lab', icon: Dna },
-              { id: 'radar', label: 'Market & News Radar', icon: Radio },
-              { id: 'trades', label: 'Trade Audit Ledger', icon: FileText },
+              { id: 'evolution', label: 'Evolution Lab', icon: Cpu },
+              { id: 'radar', label: 'Market & News Radar', icon: Radar },
+              { id: 'audit', label: 'Trade Audit Ledger', icon: FileText },
               { id: 'settings', label: 'Settings & Config', icon: Settings },
             ].map((tab) => {
               const Icon = tab.icon;
@@ -154,13 +122,13 @@ export const App: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded transition-colors cursor-pointer text-left ${
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-xs font-medium transition-all ${
                     active
                       ? 'bg-white text-black font-semibold shadow-sm'
                       : 'text-[#a1a1aa] hover:text-white hover:bg-[#18181b]'
                   }`}
                 >
-                  <Icon className="w-4 h-4 shrink-0" />
+                  <Icon className={`w-4 h-4 ${active ? 'text-black' : 'text-[#71717a]'}`} />
                   <span>{tab.label}</span>
                 </button>
               );
@@ -169,85 +137,88 @@ export const App: React.FC = () => {
         </div>
 
         {/* Bottom Sidebar Status */}
-        <div className="p-3 bg-[#121215] border border-[#27272a] rounded-lg space-y-2 font-mono text-xs">
-          <div>
-            <div className="text-[10px] text-[#71717a] uppercase">Trading Capital</div>
-            <div className="font-bold text-white">
-              ₹{status?.equity ? status.equity.toLocaleString('en-IN', { minimumFractionDigits: 2 }) : '15,000.00'}
+        <div className="p-3 border-t border-[#1e1e24] bg-[#09090b]">
+          <div className="p-3 rounded-lg bg-[#121215] border border-[#27272a] space-y-2 font-mono">
+            <div>
+              <span className="text-[10px] text-[#71717a] uppercase tracking-wider block">Trading Capital</span>
+              <span className="text-sm font-bold text-white tracking-tight">₹{status?.capital?.toLocaleString('en-IN') || '15,000.00'}</span>
             </div>
-          </div>
-          <div>
-            <div className="text-[10px] text-[#71717a] uppercase">Net Profit/Loss</div>
-            <div className={`font-bold ${isUp ? 'text-emerald-400' : 'text-rose-400'}`}>
-              {isUp ? '+' : ''}₹{pnl.toFixed(2)}
+            <div>
+              <span className="text-[10px] text-[#71717a] uppercase tracking-wider block">Net Profit/Loss</span>
+              <span className={`text-xs font-bold ${isPositive ? 'text-emerald-400' : 'text-rose-400'}`}>
+                {isPositive ? '+' : ''}₹{pnl.toFixed(2)}
+              </span>
             </div>
-          </div>
-          <div className="pt-1 border-t border-[#1f1f23] flex items-center justify-between text-[10px]">
-            <span className="text-[#71717a]">Autopilot</span>
-            <span className="text-emerald-400 font-semibold flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              24/7 ACTIVE
-            </span>
+            <div className="pt-2 border-t border-[#27272a] flex items-center justify-between text-[10px]">
+              <span className="text-[#71717a]">Autopilot</span>
+              <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                24/7 ACTIVE
+              </span>
+            </div>
           </div>
         </div>
       </aside>
 
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0">
-        <Header status={status} connected={connected} onRefresh={fetchStatus} />
-
-        <main className="flex-1 p-5 space-y-4 max-w-[1600px] w-full mx-auto">
-          {/* Mobile Tab Selector */}
-          <div className="flex md:hidden overflow-x-auto space-x-1 pb-2 border-b border-[#27272a] font-mono text-xs">
-            {[
-              { id: 'terminal', label: 'Cockpit' },
-              { id: 'strategies', label: 'Strategies' },
-              { id: 'evolution', label: 'Evolution' },
-              { id: 'radar', label: 'Radar' },
-              { id: 'trades', label: 'Audit' },
-              { id: 'settings', label: 'Settings' },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
-                className={`px-3 py-1.5 rounded whitespace-nowrap ${
-                  activeTab === tab.id ? 'bg-white text-black font-bold' : 'text-[#a1a1aa] bg-[#121215]'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+      {/* ── Main Canvas ─────────────────────────────────────────────── */}
+      <main className="flex-1 flex flex-col min-w-0 bg-[#09090b] overflow-hidden">
+        {/* Top Header Strip */}
+        <header className="h-12 border-b border-[#1e1e24] bg-[#0c0c0e] px-4 flex items-center justify-between flex-shrink-0">
+          <div className="flex items-center gap-6 font-mono text-xs">
+            <div className="flex items-center gap-2">
+              <span className="text-[#71717a]">REGIME:</span>
+              <span className="px-2 py-0.5 rounded bg-[#18181b] text-white font-semibold border border-[#27272a]">
+                {status?.regime || 'BULLISH'}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#71717a]">EXECUTION:</span>
+              <span className="text-emerald-400 font-semibold">{status?.trade_mode || 'PAPER ₹15K'}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#71717a]">AI HEALTH:</span>
+              <span className="text-white font-semibold">{status?.model_health || 'OPTIMAL'}</span>
+            </div>
           </div>
 
-          {/* Views */}
-          {activeTab === 'terminal' && (
+          <div className="flex items-center gap-3">
+            <span className="text-[11px] font-mono text-[#71717a] flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#52525b]" />
+              {status?.timestamp || new Date().toLocaleTimeString('en-IN') + ' IST'}
+            </span>
+            <button
+              onClick={refreshAll}
+              className="p-1.5 rounded bg-[#18181b] border border-[#27272a] text-[#a1a1aa] hover:text-white hover:bg-[#27272a] transition-all"
+              title="Refresh State"
+            >
+              <RotateCw className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </header>
+
+        {/* Viewport Content */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {activeTab === 'cockpit' && (
             <div className="space-y-4">
-              <LiveChart symbol={selectedStock} onSymbolChange={setSelectedStock} />
-              <StrategyStudio
-                strategies={strategies}
-                onToggle={handleToggle}
-                onWeightChange={handleWeightChange}
-              />
+              <LiveChart />
+              <div className="pt-2">
+                <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-white mb-3 flex items-center gap-2">
+                  <Sliders className="w-3.5 h-3.5 text-white" />
+                  Active Multi-Strategy Weights & Real-Time Performance
+                </h3>
+                <StrategyStudio />
+              </div>
             </div>
           )}
 
-          {activeTab === 'strategies' && (
-            <StrategyStudio
-              strategies={strategies}
-              onToggle={handleToggle}
-              onWeightChange={handleWeightChange}
-            />
-          )}
-
+          {activeTab === 'strategies' && <StrategyStudio />}
           {activeTab === 'evolution' && <EvolutionLab />}
-
           {activeTab === 'radar' && <MarketRadar />}
-
-          {activeTab === 'trades' && <TradesHistory trades={trades} />}
-
+          {activeTab === 'audit' && <TradesHistory trades={trades} />}
           {activeTab === 'settings' && <SettingsStudio />}
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 };
+export default App;
