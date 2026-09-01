@@ -1,0 +1,262 @@
+{
+  "simulation_date": "2026-09-01 12:16",
+  "config": {
+    "symbols": [
+      "TATASTEEL.NS",
+      "SBIN.NS",
+      "NTPC.NS"
+    ],
+    "days": 30,
+    "capital": 15000.0,
+    "max_bullets": 5,
+    "slippage_bps": 5,
+    "latency_candles": 1,
+    "commission": 0.0
+  },
+  "summary": {
+    "total_return": -29.02,
+    "total_return_pct": -0.19,
+    "final_equity": 14970.98,
+    "total_trades": 3,
+    "wins": 1,
+    "losses": 2,
+    "win_rate": 33.3,
+    "avg_win": 26.28,
+    "avg_loss": -27.65,
+    "profit_factor": 0.48,
+    "max_drawdown_pct": 0.77,
+    "sharpe_ratio": -0.7,
+    "avg_hold_days": 7.7
+  },
+  "stock_stats": {
+    "SBIN.NS": {
+      "trades": 3,
+      "wins": 1,
+      "pnl": -29.02,
+      "win_rate": 33.3
+    }
+  },
+  "equity_curve": [
+    {
+      "date": "2026-07-22",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-23",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-24",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-27",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-28",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-29",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-30",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-07-31",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-03",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-04",
+      "equity": 15000.0,
+      "cash": 15000.0,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-05",
+      "equity": 15023.8,
+      "cash": 12913.8,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-06",
+      "equity": 15083.8,
+      "cash": 12913.8,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-07",
+      "equity": 15026.28,
+      "cash": 15026.28,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-10",
+      "equity": 15026.28,
+      "cash": 15026.28,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-11",
+      "equity": 15015.36,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-12",
+      "equity": 15047.36,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-13",
+      "equity": 15049.36,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-14",
+      "equity": 15018.76,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-17",
+      "equity": 15005.76,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-18",
+      "equity": 14989.36,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-19",
+      "equity": 14980.56,
+      "cash": 12883.36,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-20",
+      "equity": 14985.56,
+      "cash": 14985.56,
+      "positions": 0
+    },
+    {
+      "date": "2026-08-21",
+      "equity": 14986.4,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-24",
+      "equity": 14968.0,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-25",
+      "equity": 14985.0,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-26",
+      "equity": 14993.0,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-27",
+      "equity": 14974.8,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-28",
+      "equity": 14984.0,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-08-31",
+      "equity": 15009.0,
+      "cash": 12889.0,
+      "positions": 1
+    },
+    {
+      "date": "2026-09-01",
+      "equity": 14971.8,
+      "cash": 12889.0,
+      "positions": 1
+    }
+  ],
+  "trades": [
+    {
+      "date": "2026-08-06",
+      "symbol": "SBIN.NS",
+      "side": "SELL",
+      "entry_price": 1043.1,
+      "exit_price": 1056.24,
+      "qty": 2,
+      "pnl": 26.28,
+      "pnl_pct": 1.26,
+      "exit_type": "STOP_LOSS",
+      "hold_days": 2,
+      "entry_date": "2026-08-04"
+    },
+    {
+      "date": "2026-08-19",
+      "symbol": "SBIN.NS",
+      "side": "SELL",
+      "entry_price": 1071.46,
+      "exit_price": 1051.1,
+      "qty": 2,
+      "pnl": -40.72,
+      "pnl_pct": -1.9,
+      "exit_type": "STOP_LOSS",
+      "hold_days": 9,
+      "entry_date": "2026-08-10"
+    },
+    {
+      "date": "2026-09-01",
+      "symbol": "SBIN.NS",
+      "side": "SELL",
+      "entry_price": 1048.28,
+      "exit_price": 1040.99,
+      "qty": 2,
+      "pnl": -14.58,
+      "pnl_pct": -0.7,
+      "exit_type": "FORCE_CLOSE",
+      "hold_days": 12,
+      "entry_date": "2026-08-20"
+    }
+  ]
+}

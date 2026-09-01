@@ -1,0 +1,56 @@
+{
+    "MLEnsemble": {
+        "weight": 1.15,
+        "enabled": false,
+        "trades": 305,
+        "wins": 162,
+        "win_rate": 53.1,
+        "total_pnl": 286.47,
+        "description": "4-Model AI Consensus (RF + XGB + Daily LSTM + Intraday LSTM)"
+    },
+    "TrendPullback": {
+        "weight": 1.15,
+        "enabled": true,
+        "trades": 38,
+        "wins": 23,
+        "win_rate": 60.5,
+        "total_pnl": 84.3,
+        "description": "Buys value pullbacks to EMA20/VWAP during confirmed uptrends"
+    },
+    "MeanReversion": {
+        "weight": 0.95,
+        "enabled": true,
+        "trades": 43,
+        "wins": 24,
+        "win_rate": 55.8,
+        "total_pnl": 51.2,
+        "description": "Buys oversold bounces off lower Bollinger Band (RSI < 38 + bounce)"
+    },
+    "VWAPReversion": {
+        "weight": 1.0,
+        "enabled": true,
+        "trades": 25,
+        "wins": 14,
+        "win_rate": 56.0,
+        "total_pnl": 36.5,
+        "description": "Exploits institutional fair value deviations below intraday VWAP"
+    },
+    "ORB": {
+        "weight": 1.2,
+        "enabled": true,
+        "trades": 14,
+        "wins": 9,
+        "win_rate": 64.3,
+        "total_pnl": 28.1,
+        "description": "Opening Range Breakout (first 15m candle high breakout 9:30-11:30 AM)"
+    },
+    "Gap": {
+        "weight": 0.85,
+        "enabled": true,
+        "trades": 12,
+        "wins": 7,
+        "win_rate": 58.3,
+        "total_pnl": 18.4,
+        "description": "Overnight gap-and-go trading aligned with sector momentum"
+    }
+}

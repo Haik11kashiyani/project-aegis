@@ -1,0 +1,10 @@
+{
+  "autopilot_active": true,
+  "current_phase": "LIVE_MARKET_TRADING",
+  "phase_description": "Actively scanning 15m candles, evaluating 6 strategy consensus, managing trailing stops, and guarding \u20b915K capital.",
+  "last_action": "Autonomous market surveillance active",
+  "next_action": "Post-Market Self-Evolution at 15:35 IST",
+  "evolution_count": 0,
+  "auto_promoted_strategies": 0,
+  "last_updated": "14:49:54 IST"
+}

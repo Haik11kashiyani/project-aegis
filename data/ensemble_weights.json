@@ -1,0 +1,29 @@
+{
+  "TATASTEEL.NS": {
+    "rf_weight": 0.2524,
+    "xgb_weight": 0.2571,
+    "lstm_weight": 0.244,
+    "intraday_weight": 0.2465,
+    "rf_accuracy": 0.512,
+    "xgb_accuracy": 0.5215,
+    "lstm_accuracy": 0.4949
+  },
+  "SBIN.NS": {
+    "rf_weight": 0.2347,
+    "xgb_weight": 0.2569,
+    "lstm_weight": 0.2502,
+    "intraday_weight": 0.2582,
+    "rf_accuracy": 0.4545,
+    "xgb_accuracy": 0.4976,
+    "lstm_accuracy": 0.4847
+  },
+  "NTPC.NS": {
+    "rf_weight": 0.256,
+    "xgb_weight": 0.265,
+    "lstm_weight": 0.2443,
+    "intraday_weight": 0.2347,
+    "rf_accuracy": 0.5455,
+    "xgb_accuracy": 0.5646,
+    "lstm_accuracy": 0.5204
+  }
+}

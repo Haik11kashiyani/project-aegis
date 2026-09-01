@@ -1,0 +1,4 @@
+date,symbol,side,entry_price,exit_price,qty,pnl,pnl_pct,exit_type,hold_days,entry_date
+2026-08-06,SBIN.NS,SELL,1043.1,1056.24,2,26.28,1.26,STOP_LOSS,2,2026-08-04
+2026-08-19,SBIN.NS,SELL,1071.46,1051.1,2,-40.72,-1.9,STOP_LOSS,9,2026-08-10
+2026-09-01,SBIN.NS,SELL,1048.28,1040.99,2,-14.58,-0.7,FORCE_CLOSE,12,2026-08-20
