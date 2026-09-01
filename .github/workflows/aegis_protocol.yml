@@ -1,16 +1,16 @@
 # ================================================
-# PROJECT AEGIS — Full Pipeline
+# PROJECT AEGIS — Full Trading Pipeline v4
 # ================================================
 # Runs Mon-Fri:
-#   1. Scholar trains RF + LSTM at 8:45 AM IST
-#   2. Sniper paper-trades 9:15 AM → 3:15 PM IST
+#   1. Scholar prepares rankings at 8:45 AM IST
+#   2. Sniper trades 9:15 AM → 3:15 PM IST
 # ================================================
 
-name: "\U0001F6E1\uFE0F Aegis Protocol"
+name: "🛡️ Aegis Protocol"
 
 on:
   schedule:
-    # 8:45 AM IST = 03:15 UTC
+    # 8:45 AM IST = 03:15 UTC (Mon-Fri)
     - cron: "15 3 * * 1-5"
   workflow_dispatch: # Manual trigger button
 
@@ -19,20 +19,13 @@ permissions:
 
 jobs:
   # ─────────────────────────────────────────────
-  #  JOB 1: THE SCHOLAR (Night/Pre-Market Training)
+  #  JOB 1: THE SCHOLAR (Pre-Market Ranking)
   # ─────────────────────────────────────────────
   scholar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
-      - name: "\U0001F4E5 Checkout Code"
-        uses: actions/checkout@v4
-
-      - name: "\U0001F40D Setup Python 3.11"
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
       - name: "📥 Checkout Code"
         uses: actions/checkout@v4
 
@@ -40,6 +33,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: "📦 Install Dependencies"
         run: |
@@ -51,46 +45,33 @@ jobs:
           AEGIS_VAULT_KEY: ${{ secrets.AEGIS_VAULT_KEY }}
         run: python src/vault.py --unlock
 
-      - name: "🎨 Train AI Models (4-Model Ensemble)"
+      - name: "🎨 Train AI Models & Rank Stocks"
         env:
           STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
           TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
         run: python src/scholar.py
 
-      - name: "💾 Upload Brains (Secure Artifact)"
+      - name: "💾 Upload Brain Artifacts"
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: aegis-brain
           path: |
             models/
             data/daily_ranking.csv
-            data/learner_report.json
-            data/ensemble_weights.json
-            data/best_params.json
+          if-no-files-found: warn
           retention-days: 7
 
   # ─────────────────────────────────────────────
-  #  JOB 2: THE SNIPER (Live Paper-Trading)
+  #  JOB 2: THE SNIPER (Live Trading Session)
   # ─────────────────────────────────────────────
   sniper:
-    needs: scholar # Waits for training to finish
+    needs: scholar
+    if: always() # Sniper ALWAYS runs, even if scholar warned
     runs-on: ubuntu-latest
     timeout-minutes: 390 # 6.5 hours (covers full market session)
 
     steps:
-      - name: "\U0001F4E5 Checkout Code"
-        uses: actions/checkout@v4
-
-      - name: "\U0001F40D Setup Python 3.11"
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: "\U0001F4E6 Install Dependencies"
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-
       - name: "📥 Checkout Code"
         uses: actions/checkout@v4
 
@@ -98,6 +79,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
 
       - name: "📦 Install Dependencies"
         run: |
@@ -106,6 +88,7 @@ jobs:
 
       - name: "🧠 Download Brain from Scholar"
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           name: aegis-brain
           path: models/
@@ -115,7 +98,7 @@ jobs:
           AEGIS_VAULT_KEY: ${{ secrets.AEGIS_VAULT_KEY }}
         run: python src/vault.py --unlock
 
-      - name: "🔫 Start Sniper (4-Model Ensemble)"
+      - name: "🔫 Start Sniper (Multi-Strategy Engine)"
         env:
           STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
           TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}
