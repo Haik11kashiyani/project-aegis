@@ -35,7 +35,7 @@ class PerformanceTracker:
             except Exception as e:
                 logger.error(f"Error loading metrics: {e}")
                 
-        return {
+        initial_state = {
             'total_trades': 0,
             'wins': 0,
             'losses': 0,
@@ -45,6 +45,23 @@ class PerformanceTracker:
             'strategies': {},
             'last_updated': datetime.now(IST).isoformat()
         }
+        # Bootstrap past memory from trade_history.csv if metrics file is missing
+        if os.path.exists(self.trade_history_file) and os.path.getsize(self.trade_history_file) > 0:
+            try:
+                df = pd.read_csv(self.trade_history_file)
+                pnl_col = next((c for c in ["Actual_Profit", "pnl", "PnL", "profit"] if c in df.columns), None)
+                if pnl_col and not df.empty:
+                    pnl_vals = pd.to_numeric(df[pnl_col], errors='coerce').fillna(0)
+                    total_pnl = float(pnl_vals.sum())
+                    initial_state['total_trades'] = len(df)
+                    initial_state['wins'] = int((pnl_vals > 0).sum())
+                    initial_state['losses'] = int((pnl_vals < 0).sum())
+                    initial_state['total_pnl'] = round(total_pnl, 2)
+                    initial_state['current_equity'] = round(self.initial_capital + total_pnl, 2)
+                    initial_state['peak_equity'] = max(self.initial_capital, initial_state['current_equity'])
+            except Exception as e:
+                logger.warning(f"Failed to bootstrap metrics from history: {e}")
+        return initial_state
     
     def _save_metrics(self):
         """Persist metrics to disk"""

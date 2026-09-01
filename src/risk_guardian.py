@@ -270,12 +270,16 @@ class RiskGuardian:
             return 0.0
         try:
             df = pd.read_csv(TRADE_LOG_FILE)
-            if "Date" not in df.columns or "Actual_Profit" not in df.columns:
+            if "Date" not in df.columns or df.empty:
                 return 0.0
-            df["Date"] = pd.to_datetime(df["Date"])
+            pnl_col = next((c for c in ["Actual_Profit", "pnl", "PnL", "profit"] if c in df.columns), None)
+            if not pnl_col:
+                return 0.0
+            df["Date"] = pd.to_datetime(df["Date"], errors='coerce')
             cutoff = datetime.now() - timedelta(days=days)
             recent = df[df["Date"] >= cutoff]
-            return float(recent["Actual_Profit"].sum())
+            pnl_series = pd.to_numeric(recent[pnl_col], errors='coerce').fillna(0)
+            return float(pnl_series.sum())
         except Exception:
             return 0.0
 

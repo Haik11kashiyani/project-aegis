@@ -123,7 +123,7 @@ jobs:
         run: |
           git config --global user.name "Aegis Bot"
           git config --global user.email "aegis-bot@github.com"
-          git add -f data/trade_history.csv data/strategy_weights.json data/ga_evolver_state.json data/dashboard_state.json || true
+          git add -f data/*.csv data/*.json data/*.enc || true
           git commit -m "📊 Aegis Trade & State Log: $(date '+%Y-%m-%d')" || echo "No changes"
           git pull --rebase || true
           git push || echo "Push failed (maybe no changes)"
