@@ -43,6 +43,9 @@ requests>=2.31.0
 # Hyperparameter Tuning (Optional - auto_tuner.py)
 optuna>=3.5.0
 
+# Cryptography & Security Vault (AES-256 IP Protection)
+cryptography>=42.0.0
+
 # Broker SDKs (install the one you use)
 # NorenRestApiPy            # Shoonya (Finvasia) — RECOMMENDED for ₹0 brokerage
 # dhanhq>=2.0.0             # DhanHQ — Free API
