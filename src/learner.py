@@ -1356,6 +1356,20 @@ def main():
     print(f"{'─' * 50}")
     decay_result = apply_confidence_decay()
 
+    # ── Step 6d: Deep Genetic Evolution & Strategy Breeding ──
+    print(f"\n{'─' * 50}")
+    print("  STEP 6d: Deep Genetic Evolution & Strategy Breeding")
+    print(f"{'─' * 50}")
+    try:
+        import genetic_evolver as ga
+        active_syms = STOCK_WATCHLIST[:5]
+        Log.highlight(f"Breeding next generation chromosomes across: {', '.join(active_syms)}")
+        ga_state = ga.evolve_strategies(symbols=active_syms, n_generations=5, pop_size=15)
+        ga.save_evolver_state(ga_state)
+        Log.success(f"Genetic breeding complete! Generation #{ga_state.get('generation', 15)} (Fitness: {ga_state.get('best_fitness', 0):.3f})")
+    except Exception as e:
+        Log.warn(f"Genetic evolution step: {e}")
+
     # ── Step 7: Generate health report ──
     print(f"\n{'─' * 50}")
     print("  STEP 7: Health Report Generation")
