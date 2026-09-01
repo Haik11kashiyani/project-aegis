@@ -74,6 +74,8 @@ class SmartStockSelector:
                     continue
 
                 current_price = hist['Close'].iloc[-1]
+                if current_price <= 0:
+                    continue
                 avg_volume = hist['Volume'].tail(20).mean()
                 
                 # Calculate ATR (14 period)

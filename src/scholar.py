@@ -385,6 +385,11 @@ def train_stock(symbol: str) -> dict:
 # --------------------------------------------------
 def rank_stocks(results: list) -> pd.DataFrame:
     """Rank all stocks by average model probability. Save to CSV."""
+    if not results:
+        df = pd.DataFrame(columns=["rank", "symbol", "avg_prob", "votes", "date"])
+        os.makedirs("data", exist_ok=True)
+        df.to_csv(RANKING_FILE, index=False)
+        return df
     df = pd.DataFrame(results)
     df["avg_prob"] = (df["rf_prob"] + df["xgb_prob"] +
                       df["lstm_prob"] + df["intraday_prob"]) / 4.0

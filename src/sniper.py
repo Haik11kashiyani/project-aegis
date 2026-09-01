@@ -614,6 +614,10 @@ def get_ensemble_signal(symbol: str, df: pd.DataFrame, models: dict) -> tuple:
 #   POSITION SIZING
 # --------------------------------------------------
 def calculate_position(price: float, atr: float, bullet_size: float) -> dict:
+    # Edge case protection: cannot afford even 1 share of this stock
+    if price <= 0 or price > bullet_size:
+        return None
+
     stop_loss = price - (ATR_STOP_MULTIPLIER * atr)
     target = price + (ATR_TARGET_MULTIPLIER * atr)
     risk_per_share = price - stop_loss

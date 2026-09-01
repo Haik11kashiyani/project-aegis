@@ -29,6 +29,12 @@ PROPRIETARY_FILES = [
     "neuro_voter.py",
     "trading_brain.py",
     "genetic_evolver.py",
+    "learner.py",
+    "smart_stock_selector.py",
+    "market_intelligence.py",
+    "performance_tracker.py",
+    "kelly_sizing.py",
+    "risk_guardian.py",
 ]
 
 
