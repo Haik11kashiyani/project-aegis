@@ -1248,8 +1248,8 @@ def fetch_and_engineer(symbol: str, period: str = DATA_PERIOD) -> pd.DataFrame:
     df["Volume_Ratio"] = df["Volume"] / df["Volume"].rolling(20).mean()
     df["OBV"]          = ta.obv(df["Close"], df["Volume"])
     df["Sentiment_Score"] = 0.0
-    df["Target"] = (df["Close"].shift(-1) > df["Close"]).astype(int)
-    df.dropna(inplace=True)
+    df["Target"] = (df["Close"].shift(-1) > df["Close"]).astype(float)  # Keep NaN for last row
+    df.dropna(inplace=True)  # M7-FIX: Last row's NaN target is now properly dropped
     return df
 
 
@@ -1374,13 +1374,15 @@ def main():
     print(f"\n{'─' * 50}")
     print("  STEP 7: Health Report Generation")
     print(f"{'─' * 50}")
+    # H4-FIX: Merge voter accuracy BEFORE generating report so it's saved to disk
+    extra_data = {
+        "voter_accuracy": voter_accuracy,
+        "confidence_decay": decay_result,
+    }
     report = generate_health_report(
-        trade_review, calibrations, all_weights, risk_params, regimes, tuned_params
+        trade_review, calibrations, all_weights, risk_params, regimes, tuned_params,
+        extra_data=extra_data
     )
-
-    # Merge voter accuracy into report
-    report["voter_accuracy"] = voter_accuracy
-    report["confidence_decay"] = decay_result
 
     print(f"\n{'=' * 60}")
     print("  LEARNER COMPLETE — Brain is now smarter!")

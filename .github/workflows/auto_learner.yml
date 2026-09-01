@@ -42,6 +42,11 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: "🔓 Unlock Proprietary Vault"
+        env:
+          AEGIS_VAULT_KEY: ${{ secrets.AEGIS_VAULT_KEY }}
+        run: python src/vault.py --unlock
+
       - name: "🔧 Run Hyperparameter Search"
         env:
           STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}

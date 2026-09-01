@@ -40,3 +40,16 @@ venv/
 env/
 frontend/node_modules/
 frontend/dist/
+
+# Proprietary IP — NEVER commit decrypted source files
+src/strategy_engine.py
+src/neuro_voter.py
+src/trading_brain.py
+src/genetic_evolver.py
+src/learner.py
+src/smart_stock_selector.py
+src/market_intelligence.py
+src/performance_tracker.py
+src/kelly_sizing.py
+src/risk_guardian.py
+src/broker_bridge.py

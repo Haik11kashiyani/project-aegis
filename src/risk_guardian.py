@@ -239,6 +239,23 @@ class RiskGuardian:
         self._log_entries = []
 
         # Load trade history for weekly/monthly caps
+        # H7-FIX: Guard against zero/negative capital
+        if self.capital <= 0:
+            self._log("BLOCKED", "Capital is zero or negative! Blocking ALL trades.", severity="CRITICAL")
+            self.guardian_active = False
+            self._weekly_pnl = 0.0
+            self._monthly_pnl = 0.0
+            return
+        # M3-FIX: Reload weekly block state from disk
+        try:
+            if os.path.exists("data/weekly_risk_state.json"):
+                with open("data/weekly_risk_state.json", "r") as f:
+                    wrs = json.load(f)
+                    if wrs.get("blocked"):
+                        self._log("BLOCKED", f"Weekly block still active: {wrs.get('reason')}", severity="CRITICAL")
+                        self.guardian_active = False
+        except Exception:
+            pass
         self._weekly_pnl = self._get_recent_pnl(days=7)
         self._monthly_pnl = self._get_recent_pnl(days=30)
 

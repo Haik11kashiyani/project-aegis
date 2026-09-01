@@ -261,7 +261,9 @@ def get_kelly_position_size(
     # Re-verify amount does not exceed absolute max allowed
     amount = min(amount, capital * 0.33)
 
-    qty = max(1, int(amount / current_price)) if current_price > 0 else 0
+    qty = int(amount / current_price)
+        if qty < 1:
+            return {"amount": 0, "qty": 0, "pct": 0, "method": "kelly", "reason": "Position too small"}  # C9-FIX if current_price > 0 else 0
 
     return {
         "qty": qty,

@@ -118,7 +118,7 @@ class PerformanceTracker:
             pnl_col = 'pnl' if 'pnl' in df.columns else 'Actual_Profit'
             
             df[date_col] = pd.to_datetime(df[date_col])
-            cutoff_date = datetime.now() - timedelta(days=window_days)
+            cutoff_date = datetime.now(IST) - timedelta(days=window_days)  # M6-FIX: Use IST timezone
             
             if df[date_col].dt.tz is not None:
                 cutoff_date = pytz.UTC.localize(cutoff_date)

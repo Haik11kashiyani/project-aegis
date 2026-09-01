@@ -282,7 +282,7 @@ def get_rl_position_size(
     floor = capital * 0.02
     ceil = capital * 0.25
     amount = max(floor, min(ceil, amount))
-    sizing_pct = amount / capital
+    sizing_pct = amount / capital if capital > 0 else 0  # H7-FIX: Guard division by zero
 
     return {
         "amount": round(amount, 2),

@@ -414,7 +414,7 @@ def evolve_strategies(symbols: List[str],
         "fitness_history": fitness_history,
         "generation_stats": gen_stats,
         "best_backtest": best_results,
-        "population": population[:10],  # Keep top 10 for continuation
+        "population": population[:pop_size],  # H5-FIX: Save FULL population for proper evolutionary continuity
         "symbols_used": list(price_data.keys()),
         "data_points": {s: len(d) for s, d in price_data.items()},
         "timestamp": datetime.now().isoformat(),

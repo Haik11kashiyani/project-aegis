@@ -284,7 +284,7 @@ class TradingBrain:
             )
             minutes_held = max(0, (now - entry_t).total_seconds() / 60)
         except Exception:
-            minutes_held = 60
+            minutes_held = 999  # H10-FIX: If entry_time is unknown, assume very old to trigger timeout checks
 
         # ── 1. Hard Stop Loss ──
         if current_price <= stop_loss:

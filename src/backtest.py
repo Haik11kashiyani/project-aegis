@@ -1,4 +1,4 @@
-﻿"""
+"""
 ====================================================
 PROJECT AEGIS - Backtester v2 (Safety Check)
 ====================================================
@@ -99,7 +99,8 @@ def walk_forward_backtest(df: pd.DataFrame, symbol: str, n_splits: int = 5):
             max_depth=RF_MAX_DEPTH, random_state=42, n_jobs=-1,
         )
         model.fit(X.iloc[train_idx], y.iloc[train_idx])
-        probs = model.predict_proba(X.iloc[test_idx])[:, 1]
+        proba = model.predict_proba(X.iloc[test_idx])
+        probs = proba[:, 1] if proba.shape[1] >= 2 else np.zeros(len(test_idx))  # C11-FIX
         preds = (probs > CONFIDENCE_THRESHOLD).astype(int)
         prec = precision_score(y.iloc[test_idx], preds, zero_division=0)
         acc = accuracy_score(y.iloc[test_idx], preds)
@@ -123,7 +124,8 @@ def walk_forward_backtest(df: pd.DataFrame, symbol: str, n_splits: int = 5):
             random_state=42, use_label_encoder=False, verbosity=0,
         )
         model.fit(X.iloc[train_idx], y.iloc[train_idx])
-        probs = model.predict_proba(X.iloc[test_idx])[:, 1]
+        proba = model.predict_proba(X.iloc[test_idx])
+        probs = proba[:, 1] if proba.shape[1] >= 2 else np.zeros(len(test_idx))  # C11-FIX
         preds = (probs > CONFIDENCE_THRESHOLD).astype(int)
         prec = precision_score(y.iloc[test_idx], preds, zero_division=0)
         acc = accuracy_score(y.iloc[test_idx], preds)

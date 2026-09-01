@@ -618,7 +618,7 @@ def calculate_position(price: float, atr: float, bullet_size: float) -> dict:
     if price <= 0 or price > bullet_size:
         return None
 
-    stop_loss = price - (ATR_STOP_MULTIPLIER * atr)
+    stop_loss = max(0.05, price - (ATR_STOP_MULTIPLIER * atr))  # M1-FIX: Never negative
     target = price + (ATR_TARGET_MULTIPLIER * atr)
     risk_per_share = price - stop_loss
 
@@ -628,7 +628,9 @@ def calculate_position(price: float, atr: float, bullet_size: float) -> dict:
     qty_by_capital = int(bullet_size / price)
     max_risk = bullet_size * 0.10
     qty_by_risk = int(max_risk / risk_per_share) if risk_per_share > 0 else 0
-    qty = max(1, min(qty_by_capital, qty_by_risk))
+    qty = min(qty_by_capital, qty_by_risk)  # C9-FIX: Do NOT force min 1
+    if qty < 1:
+        return None  # Cannot safely size this trade
 
     return {
         "qty": qty,
@@ -1339,8 +1341,13 @@ def run_sniper():
                     continue
                 sym = trade.get("stock", top_stocks[0])
                 df = get_live_data(sym)
+                # C2-FIX: If API fails, use last known entry price for emergency close
                 if df is not None:
                     current_price = float(df["Close"].iloc[-1])
+                else:
+                    current_price = trade["price"]  # Emergency: close at entry (flat)
+                    Log.error(f"EMERGENCY: No live data for {sym}, closing at entry price Rs.{current_price}")
+                if True:  # Always execute force-close
                     pnl = (current_price - trade["price"]) * trade["qty"]
                     state["total_profit"] += pnl
                     trade["status"] = "FORCE_CLOSED"
@@ -1419,6 +1426,27 @@ def run_sniper():
         # ---- Kill-Switch ----
         if state["total_profit"] <= -(CAPITAL * MAX_DAILY_LOSS_PCT):
             state["status"] = "STOP_LOSS_HIT"
+            # C3-FIX: Emergency close ALL open positions before stopping
+            Log.error("KILL SWITCH ACTIVATED — Emergency closing all positions!")
+            for kill_trade in state["active_trades"]:
+                if kill_trade["status"] != "OPEN":
+                    continue
+                kill_sym = kill_trade.get("stock", "UNKNOWN")
+                try:
+                    kill_df = get_live_data(kill_sym)
+                    kill_price = float(kill_df["Close"].iloc[-1]) if kill_df is not None else kill_trade["price"]
+                    kill_pnl = (kill_price - kill_trade["price"]) * kill_trade["qty"]
+                    state["total_profit"] += kill_pnl
+                    kill_trade["status"] = "FORCE_CLOSED"
+                    kill_trade["exit_price"] = kill_price
+                    kill_trade["pnl"] = round(kill_pnl, 2)
+                    broker.sell(symbol=kill_sym, qty=kill_trade["qty"], price=kill_price, exit_type="KILL_SWITCH")
+                    log_trade({"Date": now.strftime("%Y-%m-%d"), "Time": now.strftime("%H:%M"), "Stock": kill_sym,
+                               "Action": "KILL_SWITCH", "Entry_Price": kill_trade["price"], "Exit_Price": kill_price,
+                               "Qty": kill_trade["qty"], "Actual_Profit": round(kill_pnl, 2), "Status": "FORCE_CLOSED"})
+                    Log.error(f"  EMERGENCY CLOSED {kill_sym}: Rs.{kill_pnl:,.2f}")
+                except Exception as ke:
+                    Log.error(f"  FAILED to close {kill_sym}: {ke}")
             save_state(state)
             print(f"\n   [STOP] MAX DAILY LOSS!  Rs.{state['total_profit']:.2f}")
             _print_summary(state)
@@ -1518,10 +1546,15 @@ def run_sniper():
                 # After partial, move stop to breakeven (entry price)
                 trade["stop_loss"] = max(trade["stop_loss"], trade["price"])
 
-                state["trades_taken"] += 1
-                state["trades_won"] += 1
+                # M2-FIX: Do NOT increment trade counters on partial exits (only on final)
 
-                Log.success(f"PARTIAL EXIT {sym}: {partial_qty} shares @ ₹{current_price:,.2f} | P&L: ₹{partial_pnl:,.2f}")
+                Log.success(f"PARTIAL EXIT {sym}: {partial_qty} shares @ Rs.{current_price:,.2f} | P&L: Rs.{partial_pnl:,.2f}")
+
+                # C1-FIX: Actually execute the partial sell on the broker!
+                try:
+                    broker.sell(symbol=sym, qty=partial_qty, price=current_price, exit_type="PARTIAL_EXIT")
+                except Exception as e:
+                    Log.error(f"CRITICAL: Partial SELL failed for {sym}: {e}")
 
                 log_trade({
                     "Date": now.strftime("%Y-%m-%d"),
@@ -2536,12 +2569,12 @@ def run_sniper():
                                 "qty": final_qty,
                                 "stop_loss": pos["stop_loss"],
                                 "target": pos["target"],
-                                "status": "OPEN",
+                                "status": "PENDING",  # C4-FIX: Mark PENDING until broker confirms
                                 "time": now.strftime("%H:%M"),
                                 "confidence": avg_conf,
                                 "votes": votes,
                             }
-                            state["active_trades"].append(trade_entry)
+                            # C4-FIX: Do NOT append to active_trades yet — wait for broker confirmation
                             last_fire_time = time.time()
 
                             # Register with guardian
@@ -2624,10 +2657,16 @@ def run_sniper():
                                         Log.warn(f"[BROKER] Order routing failed: {e2}")
                             else:
                                 try:
-                                    broker.buy(
+                                    buy_result = broker.buy(
                                         symbol=sym, qty=final_qty, price=current_price,
                                         stop_loss=pos["stop_loss"], target=pos["target"],
                                     )
+                                    if buy_result and buy_result.get("success"):
+                                        trade_entry["status"] = "OPEN"
+                                        state["active_trades"].append(trade_entry)
+                                        save_state(state)  # H1-FIX: Save immediately after confirmed buy
+                                    else:
+                                        Log.error(f"[BROKER] BUY rejected for {sym}: {buy_result}")
                                 except Exception as e:
                                     Log.warn(f"[BROKER] Order routing failed: {e}")
 

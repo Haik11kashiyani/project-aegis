@@ -26,6 +26,10 @@ on:
     - cron: "30 4 * * 6"
   workflow_dispatch: # Manual trigger button
 
+concurrency:
+  group: aegis-state
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -70,7 +74,9 @@ jobs:
         run: |
           git config --global user.name "Aegis Bot"
           git config --global user.email "aegis-bot@github.com"
-          git add -f data/*.csv data/*.json data/*.enc || true
+          git add -f data/*.csv 2>/dev/null || true
+              git add -f data/*.json 2>/dev/null || true
+              git add -f data/*.enc 2>/dev/null || true
           git commit -m "🧠 Learner Report: $(date '+%Y-%m-%d %H:%M')" || echo "No changes"
-          git pull --rebase || true
+          git pull --rebase -X theirs || (git rebase --abort 2>/dev/null; true)
           git push || echo "Push failed"
