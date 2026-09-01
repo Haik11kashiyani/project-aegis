@@ -17,6 +17,15 @@ All modes log to data/broker_orders.json for audit.
 """
 
 import os
+import sys
+
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import json
 import time
 from datetime import datetime
@@ -87,6 +96,16 @@ class BrokerBase(ABC):
         ...
 
     @abstractmethod
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
+
     def get_positions(self) -> list:
         """Get current open positions."""
         ...
@@ -187,6 +206,16 @@ class ZerodhaBroker(BrokerBase):
             return {"success": True, "message": "Cancelled"}
         except Exception as e:
             return {"success": False, "message": str(e)}
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
 
     def get_positions(self) -> list:
         try:
@@ -316,6 +345,16 @@ class AngelOneBroker(BrokerBase):
             return {"success": True, "message": "Cancelled"}
         except Exception as e:
             return {"success": False, "message": str(e)}
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
 
     def get_positions(self) -> list:
         try:
@@ -480,6 +519,16 @@ class GrowwBroker(BrokerBase):
         except Exception as e:
             return {"success": False, "message": str(e)}
 
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
+
     def get_positions(self) -> list:
         try:
             resp = self._api_call("stocks/v1/holdings")
@@ -513,6 +562,198 @@ class GrowwBroker(BrokerBase):
 # ══════════════════════════════════════════════════
 #  PAPER BROKER (default — no real orders)
 # ══════════════════════════════════════════════════
+
+# ══════════════════════════════════════════════════
+#  SHOONYA (FINVASIA) BROKER — 100% Free API + Rs.0 Brokerage
+# ══════════════════════════════════════════════════
+class ShoonyaBroker(BrokerBase):
+    """
+    Shoonya (Finvasia) implementation — 100% Free API + Rs.0 Brokerage!
+    Connects via NorenRestApiPy.
+    """
+    def __init__(self, credentials: dict = None):
+        super().__init__(credentials or {})
+        self.api = None
+        self.user = self.credentials.get("user", os.getenv("SHOONYA_USER", ""))
+        self.password = self.credentials.get("password", os.getenv("SHOONYA_PASSWORD", ""))
+        self.api_key = self.credentials.get("api_key", os.getenv("SHOONYA_API_KEY", ""))
+        self.totp_key = self.credentials.get("totp_key", os.getenv("SHOONYA_TOTP_KEY", ""))
+        self.vendor_code = self.credentials.get("vendor_code", os.getenv("SHOONYA_VENDOR_CODE", (self.user + "_U") if self.user else ""))
+        self.imei = self.credentials.get("imei", os.getenv("SHOONYA_IMEI", "abc1234"))
+
+    def connect(self, credentials: dict = None) -> bool:
+        if credentials:
+            self.credentials.update(credentials)
+            self.user = self.credentials.get("user", self.user)
+            self.password = self.credentials.get("password", self.password)
+            self.api_key = self.credentials.get("api_key", self.api_key)
+            self.totp_key = self.credentials.get("totp_key", self.totp_key)
+
+        if not self.user or not self.password or not self.api_key:
+            print("[SHOONYA] Missing credentials. Falling back to Paper.")
+            return False
+
+        try:
+            from NorenRestApiPy.NorenApi import NorenApi
+            import pyotp
+            
+            self.api = NorenApi()
+            totp = pyotp.TOTP(self.totp_key).now() if self.totp_key else ""
+            ret = self.api.login(
+                userid=self.user,
+                password=self.password,
+                twoFA=totp,
+                vendor_code=self.vendor_code,
+                api_secret=self.api_key,
+                imei=self.imei
+            )
+            if ret and ret.get("stat") == "Ok":
+                self.is_connected = True
+                print(f"[SHOONYA] Successfully authenticated user {self.user}!")
+                return True
+            else:
+                print(f"[SHOONYA] Login failed: {ret.get('emsg', 'Unknown error')}")
+                return False
+        except ImportError:
+            print("[SHOONYA] NorenRestApiPy or pyotp not installed. (Simulating connection)")
+            self.is_connected = True
+            return True
+        except Exception as e:
+            print(f"[SHOONYA] Connection error: {e}")
+            return False
+
+    def place_order(self, order: Order) -> dict:
+        if not self.is_connected or not self.api:
+            return {"success": True, "order_id": f"SHN_{int(time.time())}", "message": "Shoonya simulated order"}
+        try:
+            clean = order.symbol.replace(".NS", "").replace(".BO", "")
+            tradingsymbol = f"{clean}-EQ"
+            buy_or_sell = "B" if order.side.upper() == "BUY" else "S"
+            prctyp = "MKT" if order.order_type.upper() == "MARKET" else "LMT"
+            
+            res = self.api.place_order(
+                buy_or_sell=buy_or_sell,
+                product_type="I",
+                exchange="NSE",
+                tradingsymbol=tradingsymbol,
+                quantity=order.qty,
+                discloseqty=0,
+                price_type=prctyp,
+                price=order.price if prctyp == "LMT" else 0.0,
+                retention="DAY"
+            )
+            if res and res.get("stat") == "Ok":
+                return {"success": True, "order_id": res.get("norenordno"), "response": res}
+            else:
+                return {"success": False, "error": res.get("emsg", "Order failed"), "response": res}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
+
+    def get_positions(self) -> list:
+        if not self.is_connected or not self.api:
+            return []
+        try:
+            pos = self.api.get_positions()
+            return pos if isinstance(pos, list) else []
+        except Exception:
+            return []
+
+
+# ══════════════════════════════════════════════════
+#  DHAN BROKER — Free API
+# ══════════════════════════════════════════════════
+class DhanBroker(BrokerBase):
+    """
+    Dhan implementation — Free REST API.
+    """
+    def __init__(self, credentials: dict = None):
+        super().__init__(credentials or {})
+        self.dhan = None
+        self.client_id = self.credentials.get("client_id", os.getenv("DHAN_CLIENT_ID", ""))
+        self.access_token = self.credentials.get("access_token", os.getenv("DHAN_ACCESS_TOKEN", ""))
+
+    def connect(self, credentials: dict = None) -> bool:
+        if credentials:
+            self.credentials.update(credentials)
+            self.client_id = self.credentials.get("client_id", self.client_id)
+            self.access_token = self.credentials.get("access_token", self.access_token)
+
+        if not self.client_id or not self.access_token:
+            print("[DHAN] Missing Client ID or Access Token.")
+            return False
+
+        try:
+            from dhanhq import dhanhq
+            self.dhan = dhanhq(self.client_id, self.access_token)
+            profile = self.dhan.get_fund_limits()
+            if profile and profile.get("status") == "success":
+                self.is_connected = True
+                print(f"[DHAN] Connected successfully for client {self.client_id}!")
+                return True
+            else:
+                print(f"[DHAN] Auth check failed: {profile}")
+                return False
+        except ImportError:
+            print("[DHAN] dhanhq package not installed. (Simulating connection)")
+            self.is_connected = True
+            return True
+        except Exception as e:
+            print(f"[DHAN] Connection error: {e}")
+            return False
+
+    def place_order(self, order: Order) -> dict:
+        if not self.is_connected or not self.dhan:
+            return {"success": True, "order_id": f"DHN_{int(time.time())}", "message": "Dhan simulated order"}
+        try:
+            clean = order.symbol.replace(".NS", "").replace(".BO", "")
+            action = self.dhan.BUY if order.side.upper() == "BUY" else self.dhan.SELL
+            
+            res = self.dhan.place_order(
+                security_id=clean,
+                exchange_segment=self.dhan.NSE,
+                transaction_type=action,
+                quantity=order.qty,
+                order_type=self.dhan.MARKET if order.order_type.upper() == "MARKET" else self.dhan.LIMIT,
+                product_type=self.dhan.INTRA,
+                price=order.price if order.order_type.upper() == "LIMIT" else 0
+            )
+            if res and res.get("status") == "success":
+                return {"success": True, "order_id": res.get("data", {}).get("orderId"), "response": res}
+            else:
+                return {"success": False, "error": res.get("remarks", "Order failed"), "response": res}
+        except Exception as e:
+            return {"success": False, "error": str(e)}
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
+
+    def get_positions(self) -> list:
+        if not self.is_connected or not self.dhan:
+            return []
+        try:
+            res = self.dhan.get_positions()
+            return res.get("data", []) if isinstance(res, dict) else []
+        except Exception:
+            return []
+
+
 class PaperBroker(BrokerBase):
     """Simulated broker for paper trading. Always succeeds, never touches real money."""
     name = "PAPER"
@@ -525,7 +766,7 @@ class PaperBroker(BrokerBase):
     def connect(self, credentials: dict) -> bool:
         self._balance = credentials.get("capital", 1000.0)
         self._connected = True
-        print(f"[PAPER] Paper broker active. Capital: ₹{self._balance:,.2f}")
+        print(f"[PAPER] Paper broker active. Capital: Rs.{self._balance:,.2f}")
         return True
 
     def is_connected(self) -> bool:
@@ -541,6 +782,16 @@ class PaperBroker(BrokerBase):
         if order_id in self._orders:
             self._orders[order_id].status = "CANCELLED"
         return {"success": True, "message": "Paper order cancelled"}
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
 
     def get_positions(self) -> list:
         return [o.to_dict() for o in self._orders.values() if o.status == "FILLED"]
@@ -562,7 +813,10 @@ BROKER_REGISTRY = {
     "PAPER": PaperBroker,
     "ZERODHA": ZerodhaBroker,
     "ANGEL_ONE": AngelOneBroker,
+    "ANGELONE": AngelOneBroker,
     "GROWW": GrowwBroker,
+    "SHOONYA": ShoonyaBroker,
+    "DHAN": DhanBroker,
 }
 
 
@@ -627,10 +881,10 @@ class BrokerBridge:
             print(f"  Symbol : {symbol}")
             print(f"  Side   : BUY")
             print(f"  Qty    : {qty}")
-            print(f"  Price  : ₹{price:,.2f}")
-            print(f"  SL     : ₹{stop_loss:,.2f}")
-            print(f"  Target : ₹{target:,.2f}")
-            print(f"  Risk   : ₹{(price - stop_loss) * qty:,.2f}")
+            print(f"  Price  : Rs.{price:,.2f}")
+            print(f"  SL     : Rs.{stop_loss:,.2f}")
+            print(f"  Target : Rs.{target:,.2f}")
+            print(f"  Risk   : Rs.{(price - stop_loss) * qty:,.2f}")
             print(f"  AI Conf: {confidence:.2%} | NeuroScore: {neuro_score:+.3f}")
             print(f"{'='*50}")
             order.status = "DRY_RUN"
@@ -638,7 +892,7 @@ class BrokerBridge:
             return {"success": True, "order_id": order.id, "message": "DRY RUN — not placed"}
 
         # LIVE mode
-        print(f"[LIVE] Placing BUY: {qty} × {symbol} @ ₹{price:,.2f}")
+        print(f"[LIVE] Placing BUY: {qty} × {symbol} @ Rs.{price:,.2f}")
         result = self.broker.place_order(order)
         order.status = "SENT" if result["success"] else "FAILED"
         order.broker_order_id = result.get("order_id")
@@ -658,18 +912,28 @@ class BrokerBridge:
             return result
 
         if self.mode == "DRY_RUN":
-            print(f"\n🔶 DRY RUN SELL: {qty} × {symbol} @ ₹{price:,.2f} ({exit_type})")
+            print(f"\n🔶 DRY RUN SELL: {qty} × {symbol} @ Rs.{price:,.2f} ({exit_type})")
             order.status = "DRY_RUN"
             self._log_order(order, exit_type=exit_type)
             return {"success": True, "order_id": order.id, "message": "DRY RUN"}
 
         # LIVE
-        print(f"[LIVE] Placing SELL: {qty} × {symbol} @ ₹{price:,.2f} ({exit_type})")
+        print(f"[LIVE] Placing SELL: {qty} × {symbol} @ Rs.{price:,.2f} ({exit_type})")
         result = self.broker.place_order(order)
         order.status = "SENT" if result["success"] else "FAILED"
         order.broker_order_id = result.get("order_id")
         self._log_order(order, exit_type=exit_type)
         return result
+
+    def buy(self, symbol: str, qty: int, price: float = 0.0, confidence: float = 0.0, neuro_score: float = 0.0, **kwargs) -> dict:
+        """Alias called by sniper.py for BUY execution."""
+        stop_loss = kwargs.get("stop_loss", 0.0)
+        target = kwargs.get("target", 0.0)
+        return self.execute_buy(symbol=symbol, qty=qty, price=price, stop_loss=stop_loss, target=target, confidence=confidence, neuro_score=neuro_score)
+
+    def sell(self, symbol: str, qty: int, price: float = 0.0, exit_type: str = "SELL", **kwargs) -> dict:
+        """Alias called by sniper.py for SELL execution."""
+        return self.execute_sell(symbol=symbol, qty=qty, price=price, exit_type=exit_type)
 
     def get_positions(self) -> list:
         return self.broker.get_positions()
@@ -739,14 +1003,12 @@ class BrokerBridge:
 # ══════════════════════════════════════════════════
 def create_bridge(mode: str = None, broker: str = None) -> BrokerBridge:
     """
-    Create a BrokerBridge from environment variables or defaults.
-    
-    Env vars:
-      AEGIS_TRADE_MODE  = PAPER | DRY_RUN | LIVE
-      AEGIS_BROKER      = PAPER | ZERODHA | ANGEL_ONE | GROWW
+    Create a BrokerBridge from environment variables or config.py.
     """
-    mode = mode or os.getenv("AEGIS_TRADE_MODE", "PAPER").upper()
-    broker = broker or os.getenv("AEGIS_BROKER", "PAPER").upper()
+    import config
+    real_money = getattr(config, 'REAL_MONEY_MODE', False) or os.getenv("REAL_MONEY_MODE", "false").lower() == "true"
+    mode = mode or os.getenv("AEGIS_TRADE_MODE", "LIVE" if real_money else "PAPER").upper()
+    broker = broker or getattr(config, 'BROKER_NAME', None) or os.getenv("AEGIS_BROKER", "PAPER").upper()
 
     bridge = BrokerBridge(mode=mode, broker_name=broker)
     bridge.connect()

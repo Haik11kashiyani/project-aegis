@@ -35,6 +35,7 @@ PROPRIETARY_FILES = [
     "performance_tracker.py",
     "kelly_sizing.py",
     "risk_guardian.py",
+    "broker_bridge.py",
 ]
 
 
