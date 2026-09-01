@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01 12:11",
+  "generated_at": "2026-09-01 15:28",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -13,135 +13,148 @@
     "profit_factor": 0.0,
     "best_stocks": [],
     "worst_stocks": [],
-    "optimal_confidence": 0.6,
-    "analysis_date": "2026-09-01 12:08"
+    "optimal_confidence": 0.65,
+    "analysis_date": "2026-09-01 15:27"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
     "recommended_atr_target": 3.0,
     "recommended_max_bullets": 5,
-    "recommended_confidence": 0.6,
+    "recommended_confidence": 0.65,
     "risk_level": "CONSERVATIVE",
     "position_size_multiplier": 0.5
   },
   "ensemble_weights": {
     "TATASTEEL.NS": {
-      "rf_weight": 0.2524,
-      "xgb_weight": 0.2571,
-      "lstm_weight": 0.244,
-      "intraday_weight": 0.2465,
-      "rf_accuracy": 0.512,
-      "xgb_accuracy": 0.5215,
-      "lstm_accuracy": 0.4949
+      "rf_weight": 0.2495,
+      "xgb_weight": 0.2533,
+      "lstm_weight": 0.2516,
+      "intraday_weight": 0.2456,
+      "rf_accuracy": 0.5078,
+      "xgb_accuracy": 0.5155,
+      "lstm_accuracy": 0.5122
     },
     "SBIN.NS": {
-      "rf_weight": 0.2347,
-      "xgb_weight": 0.2569,
-      "lstm_weight": 0.2502,
-      "intraday_weight": 0.2582,
-      "rf_accuracy": 0.4545,
-      "xgb_accuracy": 0.4976,
-      "lstm_accuracy": 0.4847
+      "rf_weight": 0.2446,
+      "xgb_weight": 0.2487,
+      "lstm_weight": 0.2415,
+      "intraday_weight": 0.2652,
+      "rf_accuracy": 0.4612,
+      "xgb_accuracy": 0.469,
+      "lstm_accuracy": 0.4553
     },
-    "NTPC.NS": {
-      "rf_weight": 0.256,
-      "xgb_weight": 0.265,
-      "lstm_weight": 0.2443,
-      "intraday_weight": 0.2347,
-      "rf_accuracy": 0.5455,
-      "xgb_accuracy": 0.5646,
-      "lstm_accuracy": 0.5204
+    "RELIANCE.NS": {
+      "rf_weight": 0.2546,
+      "xgb_weight": 0.2546,
+      "lstm_weight": 0.2493,
+      "intraday_weight": 0.2415,
+      "rf_accuracy": 0.5271,
+      "xgb_accuracy": 0.5271,
+      "lstm_accuracy": 0.5163
     }
   },
   "market_regimes": {
-    "NIFTY50": "UNKNOWN",
-    "TATASTEEL.NS": "UNKNOWN",
-    "SBIN.NS": "UNKNOWN",
-    "NTPC.NS": "UNKNOWN"
+    "NIFTY50": "RANGING",
+    "TATASTEEL.NS": "RANGING",
+    "SBIN.NS": "TRENDING_UP",
+    "RELIANCE.NS": "RANGING"
   },
   "calibrations": [
     {
       "symbol": "TATASTEEL.NS",
-      "rf_brier_score": 0.2827,
-      "xgb_brier_score": 0.3555,
-      "rf_calibration_error": 0.1489,
-      "xgb_calibration_error": 0.2323,
+      "rf_brier_score": 0.2657,
+      "xgb_brier_score": 0.313,
+      "rf_calibration_error": 0.1164,
+      "xgb_calibration_error": 0.232,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.1489,
-      "xgb_ece": 0.2323
+      "rf_ece": 0.1164,
+      "xgb_ece": 0.232
     },
     {
       "symbol": "SBIN.NS",
-      "rf_brier_score": 0.3124,
-      "xgb_brier_score": 0.4117,
-      "rf_calibration_error": 0.1591,
-      "xgb_calibration_error": 0.3427,
-      "rf_reliable": true,
-      "xgb_reliable": false,
-      "rf_ece": 0.1591,
-      "xgb_ece": 0.3427
-    },
-    {
-      "symbol": "NTPC.NS",
-      "rf_brier_score": 0.2492,
-      "xgb_brier_score": 0.2839,
-      "rf_calibration_error": 0.0579,
-      "xgb_calibration_error": 0.1905,
+      "rf_brier_score": 0.3024,
+      "xgb_brier_score": 0.3718,
+      "rf_calibration_error": 0.1946,
+      "xgb_calibration_error": 0.241,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0579,
-      "xgb_ece": 0.1905
+      "rf_ece": 0.1946,
+      "xgb_ece": 0.241
+    },
+    {
+      "symbol": "RELIANCE.NS",
+      "rf_brier_score": 0.2495,
+      "xgb_brier_score": 0.2606,
+      "rf_calibration_error": 0.051,
+      "xgb_calibration_error": 0.1437,
+      "rf_reliable": true,
+      "xgb_reliable": true,
+      "rf_ece": 0.051,
+      "xgb_ece": 0.1437
     }
   ],
   "tuned_params": [
     {
       "symbol": "TATASTEEL.NS",
       "rf_params": {
-        "n_estimators": 250,
-        "max_depth": 12,
-        "min_samples_split": 40
+        "n_estimators": 200,
+        "max_depth": 10,
+        "min_samples_split": 50
       },
-      "rf_precision": 0.3222,
+      "rf_precision": 0,
       "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
+        "n_estimators": 250,
+        "max_depth": 5,
+        "learning_rate": 0.04,
+        "subsample": 0.85
       },
-      "xgb_precision": 0.5653
+      "xgb_precision": 0.6667
     },
     {
       "symbol": "SBIN.NS",
       "rf_params": {
-        "n_estimators": 300,
-        "max_depth": 15,
-        "min_samples_split": 60
+        "n_estimators": 150,
+        "max_depth": 8,
+        "min_samples_split": 30
       },
-      "rf_precision": 0.8464,
+      "rf_precision": 0.3333,
       "xgb_params": {
         "n_estimators": 150,
         "max_depth": 4,
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.7354
+      "xgb_precision": 0.6164
     },
     {
-      "symbol": "NTPC.NS",
+      "symbol": "RELIANCE.NS",
       "rf_params": {
         "n_estimators": 300,
         "max_depth": 15,
         "min_samples_split": 60
       },
-      "rf_precision": 0.6109,
+      "rf_precision": 0.5417,
       "xgb_params": {
-        "n_estimators": 200,
-        "max_depth": 6,
-        "learning_rate": 0.05,
-        "subsample": 0.8
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.02,
+        "subsample": 0.75
       },
-      "xgb_precision": 0.5463
+      "xgb_precision": 0.5414
     }
-  ]
+  ],
+  "voter_accuracy": {
+    "voter_stats": {},
+    "recommended_weights": {},
+    "total_decisions_analysed": 0,
+    "analysis_date": "2026-09-01 15:28"
+  },
+  "confidence_decay": {
+    "decay_applied": false,
+    "voter_states": {},
+    "retrain_flags": [],
+    "weight_changes": {},
+    "analysis_date": "2026-09-01 15:28"
+  }
 }
