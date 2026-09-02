@@ -19,6 +19,37 @@ export const fetchSafeJson = async <T>(url: string, fallback: T): Promise<T> => 
   }
 };
 
+const parseCsvTrades = (csvText: string): TradeRecord[] => {
+  try {
+    const lines = csvText.trim().split('\n');
+    if (lines.length <= 1) return [];
+    const headers = lines[0].split(',').map((h) => h.trim());
+    const records: TradeRecord[] = [];
+    for (let i = lines.length - 1; i >= 1; i--) {
+      const row = lines[i].split(',').map((c) => c.trim());
+      if (row.length < headers.length) continue;
+      const obj: any = {};
+      headers.forEach((h, idx) => { obj[h] = row[idx]; });
+      const pnlVal = parseFloat(obj.Actual_Profit || '0');
+      records.push({
+        Date: obj.Date || '',
+        Time: obj.Time || '',
+        Stock: obj.Stock || '',
+        Action: (obj.Action as any) || 'BUY',
+        Entry_Price: parseFloat(obj.Entry_Price) || 0,
+        Exit_Price: parseFloat(obj.Exit_Price) || 0,
+        Qty: parseInt(obj.Qty) || 1,
+        PnL: pnlVal >= 0 ? `+${pnlVal.toFixed(2)}` : `${pnlVal.toFixed(2)}`,
+        Status: (obj.Status as any) || 'OPEN',
+        Exit_Reason: obj.Status === 'OPEN' ? 'Holding Active Position' : (obj.Action || 'Closed'),
+      });
+    }
+    return records;
+  } catch {
+    return [];
+  }
+};
+
 export const fetchStatusData = async (): Promise<SystemStatus> => {
   const fallback: SystemStatus = {
     status: 'ACTIVE',
@@ -34,22 +65,34 @@ export const fetchStatusData = async (): Promise<SystemStatus> => {
     timestamp: new Date().toLocaleTimeString('en-IN') + ' IST',
   };
 
-  // Only query local backend on localhost
   if (isLocalhost) {
     const data = await fetchSafeJson<SystemStatus>('/api/status', null as any);
     if (data && data.capital) return data;
   }
 
-  // On Vercel / Cloud: query GitHub Raw directly to prevent 404 errors
-  const gitData = await fetchSafeJson<any>(`${GITHUB_RAW}/dashboard_state.json`, null);
-  if (gitData) {
+  // 1. Try daily_state.json for live active session metrics
+  const dailyData = await fetchSafeJson<any>(`${GITHUB_RAW}/daily_state.json`, null);
+  const dashData = await fetchSafeJson<any>(`${GITHUB_RAW}/dashboard_state.json`, null);
+
+  const merged = { ...dashData, ...dailyData };
+
+  if (merged) {
+    const capital = merged.capital || 15000;
+    const profit = merged.total_profit !== undefined ? merged.total_profit : (merged.realized_pnl || 0);
+    const activeBullets = merged.active_count !== undefined 
+      ? merged.active_count 
+      : (Array.isArray(merged.active_trades) ? merged.active_trades.filter((t: any) => t.status === 'OPEN').length : 0);
+
     return {
       ...fallback,
-      equity: gitData.equity || 15000,
-      realized_pnl: gitData.realized_pnl || 0,
-      unrealized_pnl: gitData.unrealized_pnl || 0,
-      regime: gitData.regime || 'BULLISH',
-      timestamp: gitData.timestamp || fallback.timestamp,
+      status: merged.status || 'ACTIVE',
+      capital: capital,
+      realized_pnl: profit,
+      unrealized_pnl: merged.unrealized_pnl || 0,
+      equity: capital + profit,
+      active_bullets: activeBullets,
+      regime: merged.regime || 'BULLISH',
+      timestamp: merged.last_updated || merged.timestamp || fallback.timestamp,
     };
   }
 
@@ -78,18 +121,45 @@ export const fetchStrategiesData = async (): Promise<Record<string, StrategyInfo
 };
 
 export const fetchTradesData = async (): Promise<TradeRecord[]> => {
-  const fallback: TradeRecord[] = [
-    { Date: '2026-03-02', Time: '11:22', Stock: 'INFY.NS', Action: 'BUY', Entry_Price: 1288.9, Exit_Price: 1302.5, Qty: 2, PnL: '+27.20', Status: 'CLOSED', Exit_Reason: 'Target Hit (1.05%)' },
-    { Date: '2026-03-02', Time: '11:17', Stock: 'TCS.NS', Action: 'BUY', Entry_Price: 2607.7, Exit_Price: 2628.4, Qty: 1, PnL: '+20.70', Status: 'CLOSED', Exit_Reason: 'Trailing Stop Hit' },
-    { Date: '2026-03-02', Time: '11:01', Stock: 'SBIN.NS', Action: 'BUY', Entry_Price: 818.5, Exit_Price: 829.2, Qty: 4, PnL: '+42.80', Status: 'CLOSED', Exit_Reason: 'VWAP Reversion Target' },
-  ];
-
   if (isLocalhost) {
     const data = await fetchSafeJson<{ trades: TradeRecord[] }>('/api/trades', null as any);
     if (data && data.trades && data.trades.length > 0) return data.trades;
   }
 
-  return fallback;
+  // Fetch real trade history CSV from GitHub Raw
+  try {
+    const res = await fetch(`${GITHUB_RAW}/trade_history.csv`);
+    if (res.ok) {
+      const csvText = await res.text();
+      const parsed = parseCsvTrades(csvText);
+      if (parsed.length > 0) return parsed;
+    }
+  } catch {}
+
+  // Fallback to active trades in daily_state.json
+  try {
+    const dailyData = await fetchSafeJson<any>(`${GITHUB_RAW}/daily_state.json`, null);
+    if (dailyData && Array.isArray(dailyData.active_trades) && dailyData.active_trades.length > 0) {
+      return dailyData.active_trades.map((t: any) => ({
+        Date: new Date().toISOString().split('T')[0],
+        Time: t.time || '11:00',
+        Stock: t.stock || 'UNKNOWN',
+        Action: 'BUY',
+        Entry_Price: t.price || 0,
+        Exit_Price: 0,
+        Qty: t.qty || 1,
+        PnL: '0.00',
+        Status: t.status || 'OPEN',
+        Exit_Reason: `Target: ₹${t.target} | SL: ₹${t.stop_loss}`,
+      }));
+    }
+  } catch {}
+
+  return [
+    { Date: '2026-03-02', Time: '11:22', Stock: 'INFY.NS', Action: 'BUY', Entry_Price: 1288.9, Exit_Price: 1302.5, Qty: 2, PnL: '+27.20', Status: 'CLOSED', Exit_Reason: 'Target Hit (1.05%)' },
+    { Date: '2026-03-02', Time: '11:17', Stock: 'TCS.NS', Action: 'BUY', Entry_Price: 2607.7, Exit_Price: 2628.4, Qty: 1, PnL: '+20.70', Status: 'CLOSED', Exit_Reason: 'Trailing Stop Hit' },
+    { Date: '2026-03-02', Time: '11:01', Stock: 'SBIN.NS', Action: 'BUY', Entry_Price: 818.5, Exit_Price: 829.2, Qty: 4, PnL: '+42.80', Status: 'CLOSED', Exit_Reason: 'VWAP Reversion Target' },
+  ];
 };
 
 export const fetchEvolutionData = async (): Promise<EvolutionStatus> => {
