@@ -1,0 +1,137 @@
+{
+  "parametric_var_95": {
+    "method": "Parametric",
+    "confidence": 0.95,
+    "var_pct": 1.7155,
+    "var_rupees": 257.33,
+    "mean_daily_return": 0.0508,
+    "daily_volatility": 1.0736
+  },
+  "historical_var_95": {
+    "method": "Historical",
+    "confidence": 0.95,
+    "var_pct": 1.8066,
+    "var_rupees": 271.0,
+    "cvar_pct": 2.5503,
+    "cvar_rupees": 382.55,
+    "worst_day": -3.4736,
+    "best_day": 3.4722
+  },
+  "monte_carlo_var_95": {
+    "method": "Monte Carlo",
+    "confidence": 0.95,
+    "simulations": 10000,
+    "horizon_days": 1,
+    "var_pct": 1.7259,
+    "var_rupees": 258.89,
+    "cvar_pct": 2.1774,
+    "cvar_rupees": 326.61,
+    "sim_mean": 0.0485,
+    "sim_std": 1.0773
+  },
+  "parametric_var_99": {
+    "method": "Parametric",
+    "confidence": 0.99,
+    "var_pct": 2.4473,
+    "var_rupees": 367.09,
+    "mean_daily_return": 0.0508,
+    "daily_volatility": 1.0736
+  },
+  "historical_var_99": {
+    "method": "Historical",
+    "confidence": 0.99,
+    "var_pct": 3.0906,
+    "var_rupees": 463.6,
+    "cvar_pct": 3.3532,
+    "cvar_rupees": 502.98,
+    "worst_day": -3.4736,
+    "best_day": 3.4722
+  },
+  "monte_carlo_var_99": {
+    "method": "Monte Carlo",
+    "confidence": 0.99,
+    "simulations": 10000,
+    "horizon_days": 1,
+    "var_pct": 2.4403,
+    "var_rupees": 366.05,
+    "cvar_pct": 2.8446,
+    "cvar_rupees": 426.69,
+    "sim_mean": 0.0485,
+    "sim_std": 1.0773
+  },
+  "stress_tests": [
+    {
+      "scenario": "2008_GFC",
+      "name": "2008 Global Financial Crisis",
+      "description": "Lehman-era shock: ~55% equity drawdown, correlations spike to 0.9",
+      "equity_shock_pct": -55.0,
+      "estimated_loss": 8250.0,
+      "portfolio_after": 6750.0,
+      "vol_multiplier": 3.0,
+      "correlation_spike": 0.9,
+      "severity": "EXTREME"
+    },
+    {
+      "scenario": "COVID_2020",
+      "name": "COVID-19 Crash (Mar 2020)",
+      "description": "Pandemic panic: ~38% drawdown in 5 weeks, extreme vol spike",
+      "equity_shock_pct": -38.0,
+      "estimated_loss": 5700.0,
+      "portfolio_after": 9300.0,
+      "vol_multiplier": 4.0,
+      "correlation_spike": 0.85,
+      "severity": "EXTREME"
+    },
+    {
+      "scenario": "RATE_HIKE",
+      "name": "Aggressive Rate Hike Cycle",
+      "description": "Central bank tightening: 15% correction, moderate vol rise",
+      "equity_shock_pct": -15.0,
+      "estimated_loss": 2250.0,
+      "portfolio_after": 12750.0,
+      "vol_multiplier": 1.8,
+      "correlation_spike": 0.6,
+      "severity": "MODERATE"
+    },
+    {
+      "scenario": "FLASH_CRASH",
+      "name": "Flash Crash / Circuit Breaker",
+      "description": "Intraday crash: 20% drop, massive vol, all correlations spike",
+      "equity_shock_pct": -20.0,
+      "estimated_loss": 3000.0,
+      "portfolio_after": 12000.0,
+      "vol_multiplier": 5.0,
+      "correlation_spike": 0.95,
+      "severity": "HIGH"
+    },
+    {
+      "scenario": "SECTOR_ROTATION",
+      "name": "Sector Rotation (IT to Banks)",
+      "description": "Sector-specific drawdown: 8%, moderate disruption",
+      "equity_shock_pct": -8.0,
+      "estimated_loss": 1200.0,
+      "portfolio_after": 13800.0,
+      "vol_multiplier": 1.3,
+      "correlation_spike": 0.4,
+      "severity": "MODERATE"
+    }
+  ],
+  "drawdowns": {
+    "max_drawdown_pct": -13.51,
+    "max_drawdown_day": 224,
+    "current_drawdown_pct": -12.1579,
+    "drawdown_periods": 11,
+    "longest_drawdown_days": 135,
+    "avg_drawdown_pct": -5.836
+  },
+  "risk_score": 85,
+  "risk_level": "HIGH",
+  "capital": 15000.0,
+  "symbols": [
+    "TATASTEEL.NS",
+    "SBIN.NS",
+    "RELIANCE.NS"
+  ],
+  "observations": 251,
+  "timestamp": "2026-09-02 11:56:14 IST"
+}
