@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { fetchSafeJson } from '../apiClient';
+import { fetchSafeJson, isLocalhost } from '../apiClient';
+
+const GITHUB_RAW = 'https://raw.githubusercontent.com/Haik11kashiyani/project-aegis/main/data';
 
 export const MarketRadar: React.FC = () => {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     const loadRadar = async () => {
-      const d = await fetchSafeJson<any>('/api/market-intelligence', {
+      const fallback = {
         intelligence: {
           vix_analysis: { value: 11.24, classification: 'Low Volatility' },
           fii_dii: { fii_net: +482.5, dii_net: +1120.3, signal: 'BULLISH' },
           global_cues: { gift_nifty: '+0.42%', sp500: '+0.31%', brent_crude: '$78.40' },
         },
-      });
-      setData(d);
+      };
+
+      if (isLocalhost) {
+        const d = await fetchSafeJson<any>('/api/market-intelligence', null);
+        if (d) { setData(d); return; }
+      }
+
+      const gitData = await fetchSafeJson<any>(`${GITHUB_RAW}/market_intelligence.json`, null);
+      if (gitData) {
+        setData({ intelligence: gitData });
+      } else {
+        setData(fallback);
+      }
     };
     loadRadar();
   }, []);

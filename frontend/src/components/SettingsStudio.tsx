@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Save, Check, Shield, Key, Sliders, Server, Plus, X, Globe, Laptop } from 'lucide-react';
+import { isLocalhost, fetchSafeJson } from '../apiClient';
+
+const GITHUB_RAW = 'https://raw.githubusercontent.com/Haik11kashiyani/project-aegis/main/data';
 
 export const SettingsStudio: React.FC = () => {
   const [cfg, setCfg] = useState<any>({
@@ -26,10 +29,16 @@ export const SettingsStudio: React.FC = () => {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch('/api/config')
-      .then((r) => r.json())
-      .then((d) => setCfg((prev: any) => ({ ...prev, ...d })))
-      .catch((e) => console.error(e));
+    if (isLocalhost) {
+      fetch('/api/config')
+        .then((r) => r.json())
+        .then((d) => setCfg((prev: any) => ({ ...prev, ...d })))
+        .catch((e) => console.error(e));
+    } else {
+      fetchSafeJson<any>(`${GITHUB_RAW}/user_config.json`, null).then((d) => {
+        if (d) setCfg((prev: any) => ({ ...prev, ...d }));
+      });
+    }
   }, []);
 
   const handleSave = () => {

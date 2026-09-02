@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createChart, IChartApi, ISeriesApi } from 'lightweight-charts';
-import { fetchSafeJson } from '../apiClient';
+import { fetchSafeJson, isLocalhost } from '../apiClient';
 
 const WATCHLIST = [
   { symbol: 'SBIN.NS', name: 'State Bank of India', basePrice: 820.5 },
@@ -40,7 +40,7 @@ export const LiveChart: React.FC = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchSafeJson<any>(`/api/chart/${symbol}`, null);
+      const data = isLocalhost ? await fetchSafeJson<any>(`/api/chart/${symbol}`, null) : null;
       let candlesData: any[] = [];
       if (data && data.candles && data.candles.length > 0) {
         candlesData = data.candles;

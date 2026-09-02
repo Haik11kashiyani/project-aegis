@@ -1262,14 +1262,44 @@ def fetch_and_engineer(symbol: str, period: str = DATA_PERIOD) -> pd.DataFrame:
 #  MAIN — ORCHESTRATOR
 # ══════════════════════════════════════════════════
 def main():
-    Log.section("PROJECT AEGIS - THE LEARNER")
+    Log.section("PROJECT AEGIS - THE DEEP LEARNER")
     print(f"   {Log.DIM}Watchlist :{Log.RESET} {len(STOCK_WATCHLIST)} stocks")
-    print(f"   {Log.DIM}Mode      :{Log.RESET} Continuous Learning & Adaptation")
+    print(f"   {Log.DIM}Mode      :{Log.RESET} Continuous Deep Evolution & Intelligence Scraping")
     print(f"   {Log.DIM}Date      :{Log.RESET} {datetime.now(IST).strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
     os.makedirs("models", exist_ok=True)
     os.makedirs("data", exist_ok=True)
+
+    # ── Step 0a: Market Intelligence & Institutional Flows ──
+    Log.highlight("STEP 0a: Market Intelligence & Institutional Flow Scraping")
+    intel_data = {}
+    try:
+        from market_intelligence import MarketIntelligence
+        mi = MarketIntelligence()
+        intel_data = mi.get_full_intelligence()
+        with open("data/market_intelligence.json", "w") as f:
+            json.dump(intel_data, f, indent=2, default=str)
+        fii_flow = intel_data.get("fii_dii", {})
+        vix_val = intel_data.get("vix_analysis", {}).get("value", "N/A")
+        Log.success(f"Market Intel: VIX={vix_val} | FII Net={fii_flow.get('fii_net', 0)} Cr ({fii_flow.get('signal', 'NEUTRAL')})")
+    except Exception as e:
+        Log.warn(f"Market intelligence scraping step failed: {e}")
+
+    # ── Step 0b: YouTube Financial Media & Sentiment Scraping ──
+    Log.highlight("STEP 0b: YouTube Financial Media Sentiment Scraping")
+    yt_data = {}
+    try:
+        from youtube_scraper import YouTubeSentimentScraper
+        yt = YouTubeSentimentScraper()
+        yt_data = yt.get_youtube_mood()
+        with open("data/youtube_mood.json", "w") as f:
+            json.dump(yt_data, f, indent=2, default=str)
+        Log.success(f"YouTube Mood: Score={yt_data.get('overall_mood', 0):+.2f} | Consensus={yt_data.get('channel_consensus', 'mixed')}")
+        if yt_data.get("trending_topics"):
+            print(f"   {Log.DIM}Trending Videos: {len(yt_data['trending_topics'])} scanned{Log.RESET}")
+    except Exception as e:
+        Log.warn(f"YouTube sentiment scraping step failed: {e}")
 
     # ── Step 1: Review past trades ──
     Log.highlight("STEP 1: Trade Review")
@@ -1279,10 +1309,10 @@ def main():
     Log.highlight("STEP 1b: Strategy Performance Analysis")
     strat_perf = analyze_strategy_performance()
 
-    # ── Step 2: Hyperparameter tuning for each stock ──
-    Log.highlight("STEP 2: Hyperparameter Tuning")
+    # ── Step 2: Hyperparameter tuning for full watchlist ──
+    Log.highlight(f"STEP 2: Hyperparameter Tuning across {len(STOCK_WATCHLIST)} stocks")
     tuned_params = []
-    for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
+    for sym in STOCK_WATCHLIST:
         try:
             df = fetch_and_engineer(sym)
             params = tune_hyperparameters(sym, df)
@@ -1306,8 +1336,8 @@ def main():
         Log.error(f"Regime detection failed: {e}")
         regimes["NIFTY50"] = "UNKNOWN"
 
-    # Per-stock regime
-    for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
+    # Per-stock regime across full watchlist
+    for sym in STOCK_WATCHLIST:
         try:
             regime = train_regime_detector(sym)
             regimes[sym] = regime
@@ -1317,7 +1347,7 @@ def main():
     # ── Step 4: Confidence calibration ──
     Log.highlight("STEP 4: Confidence Calibration")
     calibrations = []
-    for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
+    for sym in STOCK_WATCHLIST:
         try:
             df = fetch_and_engineer(sym)
             cal = calibrate_confidence(sym, df)
@@ -1327,10 +1357,10 @@ def main():
 
     # ── Step 5: Ensemble weight optimization ──
     print(f"\n{'─' * 50}")
-    print("  STEP 5: Ensemble Weight Optimization")
+    print(f"  STEP 5: Ensemble Weight Optimization ({len(STOCK_WATCHLIST)} stocks)")
     print(f"{'─' * 50}")
     all_weights = {}
-    for sym in STOCK_WATCHLIST[:TOP_N_STOCKS]:
+    for sym in STOCK_WATCHLIST:
         try:
             df = fetch_and_engineer(sym)
             w = optimize_ensemble_weights(sym, df)
@@ -1363,38 +1393,58 @@ def main():
 
     # ── Step 6d: Deep Genetic Evolution & Strategy Breeding ──
     print(f"\n{'─' * 50}")
-    print("  STEP 6d: Deep Genetic Evolution & Strategy Breeding")
+    print("  STEP 6d: Deep Genetic Evolution (15 Generations)")
     print(f"{'─' * 50}")
     try:
         import genetic_evolver as ga
-        active_syms = STOCK_WATCHLIST[:5]
+        active_syms = STOCK_WATCHLIST[:10]
         Log.highlight(f"Breeding next generation chromosomes across: {', '.join(active_syms)}")
-        ga_state = ga.evolve_strategies(symbols=active_syms, n_generations=5, pop_size=15)
+        ga_state = ga.evolve_strategies(symbols=active_syms, n_generations=15, pop_size=25)
         ga.save_evolver_state(ga_state)
         Log.success(f"Genetic breeding complete! Generation #{ga_state.get('generation', 15)} (Fitness: {ga_state.get('best_fitness', 0):.3f})")
     except Exception as e:
         Log.warn(f"Genetic evolution step: {e}")
 
-    # ── Step 7: Generate health report ──
+    # ── Step 7: Generate health report & Dashboard state ──
     print(f"\n{'─' * 50}")
-    print("  STEP 7: Health Report Generation")
+    print("  STEP 7: Health Report & Dashboard State Generation")
     print(f"{'─' * 50}")
-    # H4-FIX: Merge voter accuracy BEFORE generating report so it's saved to disk
     extra_data = {
         "voter_accuracy": voter_accuracy,
         "confidence_decay": decay_result,
+        "youtube_mood": yt_data,
+        "market_intelligence": intel_data,
     }
     report = generate_health_report(
         trade_review, calibrations, all_weights, risk_params, regimes, tuned_params,
         extra_data=extra_data
     )
 
+    # Export dashboard state for Vercel cloud frontend
+    dash_state = {
+        "status": "ACTIVE",
+        "trade_mode": "PAPER (₹15K)",
+        "capital": CAPITAL,
+        "realized_pnl": trade_review.get("total_wins", 0) - trade_review.get("total_losses", 0),
+        "unrealized_pnl": 0.0,
+        "equity": CAPITAL,
+        "regime": regimes.get("NIFTY50", "BULLISH"),
+        "model_health": report.get("model_health", "OPTIMAL"),
+        "active_bullets": 0,
+        "max_bullets": MAX_BULLETS,
+        "timestamp": datetime.now(IST).strftime("%Y-%m-%d %H:%M") + " IST",
+    }
+    with open("data/dashboard_state.json", "w") as f:
+        json.dump(dash_state, f, indent=2)
+
     print(f"\n{'=' * 60}")
-    print("  LEARNER COMPLETE — Brain is now smarter!")
+    print("  DEEP LEARNER COMPLETE — Brain is now fully evolved!")
     print(f"   Model Health  : {report['model_health']}")
     print(f"   Trading Status: {'ALLOWED' if report['trading_allowed'] else 'PAUSED'}")
     print(f"   Risk Level    : {risk_params['risk_level']}")
     print(f"   Market Regime : {regimes.get('NIFTY50', 'UNKNOWN')}")
+    print(f"   YouTube Mood  : {yt_data.get('channel_consensus', 'N/A')} ({yt_data.get('overall_mood', 0):+.2f})")
+    print(f"   FII Flow      : {intel_data.get('fii_dii', {}).get('signal', 'N/A')}")
     print(f"{'=' * 60}")
 
 

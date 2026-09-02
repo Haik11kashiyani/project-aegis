@@ -36,13 +36,13 @@ permissions:
 jobs:
   learner:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: "📥 Checkout Code"
         uses: actions/checkout@v4
 
-      - name: "🐍 Setup Python 3.10"
+      - name: "🐍 Setup Python 3.11"
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -57,7 +57,13 @@ jobs:
           AEGIS_VAULT_KEY: ${{ secrets.AEGIS_VAULT_KEY }}
         run: python src/vault.py --unlock
 
-      - name: "🧠 Run Continuous Learner"
+      - name: "🎓 Retrain Neural Networks (Scholar)"
+        env:
+          STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
+          CAPITAL: ${{ secrets.CAPITAL }}
+        run: python src/scholar.py
+
+      - name: "🧠 Run Continuous Deep Learner & Genetic Evolution"
         env:
           STOCK_WATCHLIST: ${{ secrets.STOCK_WATCHLIST }}
           TOP_N_STOCKS: ${{ secrets.TOP_N_STOCKS }}

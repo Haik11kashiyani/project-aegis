@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Sliders, ShieldCheck } from 'lucide-react';
 import { StrategyInfo } from '../types';
-import { fetchStrategiesData, fetchSafeJson } from '../apiClient';
+import { fetchStrategiesData, fetchStatusData } from '../apiClient';
 
 export const StrategyStudio: React.FC = () => {
   const [strategies, setStrategies] = useState<Record<string, StrategyInfo>>({});
@@ -10,7 +10,7 @@ export const StrategyStudio: React.FC = () => {
 
   useEffect(() => {
     fetchStrategiesData().then((s) => setStrategies(s));
-    fetchSafeJson<any>('/api/status', { capital: 15000 }).then((st) => {
+    fetchStatusData().then((st) => {
       if (st && st.capital) setCapital(st.capital);
     });
   }, []);

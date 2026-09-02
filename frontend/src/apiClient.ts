@@ -34,9 +34,13 @@ export const fetchStatusData = async (): Promise<SystemStatus> => {
     timestamp: new Date().toLocaleTimeString('en-IN') + ' IST',
   };
 
-  const data = await fetchSafeJson<SystemStatus>('/api/status', null as any);
-  if (data && data.capital) return data;
+  // Only query local backend on localhost
+  if (isLocalhost) {
+    const data = await fetchSafeJson<SystemStatus>('/api/status', null as any);
+    if (data && data.capital) return data;
+  }
 
+  // On Vercel / Cloud: query GitHub Raw directly to prevent 404 errors
   const gitData = await fetchSafeJson<any>(`${GITHUB_RAW}/dashboard_state.json`, null);
   if (gitData) {
     return {
@@ -62,8 +66,10 @@ export const fetchStrategiesData = async (): Promise<Record<string, StrategyInfo
     Gap: { weight: 0.85, enabled: true, trades: 12, wins: 7, win_rate: 58.3, total_pnl: 18.4, description: 'Overnight gap-and-go trading aligned with sector momentum' },
   };
 
-  const data = await fetchSafeJson<Record<string, StrategyInfo>>('/api/strategies', null as any);
-  if (data && Object.keys(data).length > 0) return data;
+  if (isLocalhost) {
+    const data = await fetchSafeJson<Record<string, StrategyInfo>>('/api/strategies', null as any);
+    if (data && Object.keys(data).length > 0) return data;
+  }
 
   const gitData = await fetchSafeJson<Record<string, StrategyInfo>>(`${GITHUB_RAW}/strategy_weights.json`, null as any);
   if (gitData && Object.keys(gitData).length > 0) return gitData;
@@ -78,8 +84,10 @@ export const fetchTradesData = async (): Promise<TradeRecord[]> => {
     { Date: '2026-03-02', Time: '11:01', Stock: 'SBIN.NS', Action: 'BUY', Entry_Price: 818.5, Exit_Price: 829.2, Qty: 4, PnL: '+42.80', Status: 'CLOSED', Exit_Reason: 'VWAP Reversion Target' },
   ];
 
-  const data = await fetchSafeJson<{ trades: TradeRecord[] }>('/api/trades', null as any);
-  if (data && data.trades && data.trades.length > 0) return data.trades;
+  if (isLocalhost) {
+    const data = await fetchSafeJson<{ trades: TradeRecord[] }>('/api/trades', null as any);
+    if (data && data.trades && data.trades.length > 0) return data.trades;
+  }
 
   return fallback;
 };
@@ -110,8 +118,10 @@ export const fetchEvolutionData = async (): Promise<EvolutionStatus> => {
     next_cycle_in: '3h 42m',
   };
 
-  const data = await fetchSafeJson<EvolutionStatus>('/api/evolution/status', null as any);
-  if (data && data.best_chromosome) return data;
+  if (isLocalhost) {
+    const data = await fetchSafeJson<EvolutionStatus>('/api/evolution/status', null as any);
+    if (data && data.best_chromosome) return data;
+  }
 
   const gitData = await fetchSafeJson<any>(`${GITHUB_RAW}/ga_evolver_state.json`, null);
   if (gitData && gitData.best_chromosome) {
