@@ -28,8 +28,12 @@ TARGET_STOCK = os.getenv("TARGET_STOCK", STOCK_WATCHLIST[0])
 
 DAILY_TARGET = float(os.getenv("DAILY_TARGET", "0.02"))       # 2 % daily target
 MAX_BULLETS  = int(os.getenv("MAX_BULLETS", "5"))              # Split capital into 5 shots
-TIME_GAP     = int(os.getenv("TIME_GAP", "600"))               # 10 min between bullets
-CAPITAL      = float(os.getenv("CAPITAL", "15000"))                       # Starting capital ₹
+_raw_capital = os.getenv("CAPITAL", "").strip()
+try:
+    _cap_val = float(_raw_capital) if _raw_capital else 15000.0
+    CAPITAL = _cap_val if _cap_val >= 5000.0 else 15000.0  # Default to ₹15,000 for realistic intraday sizing
+except ValueError:
+    CAPITAL = 15000.0
 
 # ₹15K Capital Management
 MAX_PRICE_PER_SHARE = int(os.environ.get('MAX_PRICE_PER_SHARE', '1000'))

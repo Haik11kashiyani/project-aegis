@@ -778,7 +778,8 @@ def run_sniper():
     #  BROKER BRIDGE — Paper / DryRun / Live Order Router
     # ═══════════════════════════════════════════════════════
     broker = create_bridge()
-    print(f"   [BROKER] Mode: {broker.mode.value} | Broker: {broker.broker.__class__.__name__}")
+    broker_mode_str = getattr(broker.mode, 'value', str(broker.mode))
+    print(f"   [BROKER] Mode: {broker_mode_str} | Broker: {broker.broker.__class__.__name__}")
 
     # ═══════════════════════════════════════════════════════
     #  MULTI-STRATEGY & MARKET INTEL (New Additions)
@@ -1749,7 +1750,7 @@ def run_sniper():
             "smart_entry": SMART_ENTRY_ENABLED,
             "global_mood": market_mood_cache.get("mood", {}),
             "neuro_voters": neuro_ensemble.get_voter_summary(),
-            "broker_mode": broker.mode.value,
+            "broker_mode": getattr(broker.mode, 'value', str(broker.mode)),
             "broker_name": broker.broker.__class__.__name__,
             "market_breadth": breadth_cache.get("data", {}),
             "sector_rotation": sector_cache.get("data", {}),
