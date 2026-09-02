@@ -1108,7 +1108,7 @@ def run_sniper():
             # Just initialize — actual fusion happens at trade time
             from bayesian_fusion import BayesianFusion
             _bf = BayesianFusion()
-            n_sources = len(_bf.sources)
+            n_sources = len(_bf.trackers)
             print(f"   [BAYES] Fusion engine ready: {n_sources} sources loaded")
         except Exception as e:
             Log.warn(f"[BAYES] Init failed: {e}")
@@ -1423,7 +1423,6 @@ def run_sniper():
                         logger.error(f"CRITICAL: Sell order FAILED for {sym}: {e}")
                         # Retry once after 2 seconds
                         try:
-                            import time
                             time.sleep(2)
                             result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
                             logger.info(f"Sell retry succeeded: {result}")
@@ -1721,7 +1720,6 @@ def run_sniper():
                 logger.error(f"CRITICAL: Sell order FAILED for {sym}: {e}")
                 # Retry once after 2 seconds
                 try:
-                    import time
                     time.sleep(2)
                     result = broker.sell(symbol=sym, qty=trade["qty"], price=current_price)
                     logger.info(f"Sell retry succeeded: {result}")
