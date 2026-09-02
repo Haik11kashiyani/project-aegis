@@ -1,0 +1,25 @@
+{
+  "per_stock": {},
+  "net_delta": 0.0,
+  "net_gamma": 0.0,
+  "net_theta": 0.0,
+  "net_vega": 0.0,
+  "total_premium": 0.0,
+  "total_notional": 0.0,
+  "delta_pct": 0.0,
+  "theta_pct_daily": 0.0,
+  "levels": {
+    "delta": "GREEN",
+    "gamma": "GREEN",
+    "theta": "GREEN",
+    "vega": "GREEN"
+  },
+  "alerts": [],
+  "open_positions": 0,
+  "timestamp": "2026-09-02T15:10:14.150582+05:30",
+  "heatmap": {
+    "stocks": [],
+    "metrics": [],
+    "matrix": []
+  }
+}

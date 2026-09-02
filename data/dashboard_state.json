@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-03-02 11:40 IST",
-  "status": "ACTIVE",
-  "total_profit": 0,
-  "total_profit_pct": 0,
+  "last_updated": "2026-09-02 15:10 IST",
+  "status": "MARKET_CLOSED",
+  "total_profit": 0.0,
+  "total_profit_pct": 0.0,
   "trades_taken": 0,
   "trades_won": 0,
   "trades_lost": 0,
   "stocks_traded": [
-    "TCS.NS",
-    "INFY.NS",
-    "SBIN.NS"
+    "HDFCBANK.NS",
+    "SBIN.NS",
+    "RELIANCE.NS"
   ],
-  "active_count": 5
+  "active_count": 0
 }

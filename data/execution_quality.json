@@ -1,0 +1,93 @@
+{
+  "trades_analysed": 6,
+  "avg_timing_score": 0.0,
+  "avg_slippage_bps": 1217.04,
+  "total_slippage_cost": 1727.96,
+  "overall_grade": "D",
+  "grade_distribution": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "F": 6,
+    "N/A": 0
+  },
+  "best_timing": 0,
+  "worst_timing": 0,
+  "improvement_tip": "Entries are consistently near day-highs. Consider waiting for pullbacks or using limit orders.",
+  "trade_details": [
+    {
+      "symbol": "TCS.NS",
+      "entry_price": 2617.199951171875,
+      "entry_time": "11:01",
+      "day_low": 2244.1,
+      "day_high": 2399.3,
+      "vwap_estimate": 2335.27,
+      "timing_score": 0,
+      "slippage_bps": 1207.27,
+      "slippage_rupees": 315.97,
+      "grade": "F"
+    },
+    {
+      "symbol": "TCS.NS",
+      "entry_price": 2614.60009765625,
+      "entry_time": "11:07",
+      "day_low": 2244.1,
+      "day_high": 2399.3,
+      "vwap_estimate": 2335.27,
+      "timing_score": 0,
+      "slippage_bps": 1196.13,
+      "slippage_rupees": 312.74,
+      "grade": "F"
+    },
+    {
+      "symbol": "TCS.NS",
+      "entry_price": 2612.89990234375,
+      "entry_time": "11:10",
+      "day_low": 2244.1,
+      "day_high": 2399.3,
+      "vwap_estimate": 2335.27,
+      "timing_score": 0,
+      "slippage_bps": 1188.85,
+      "slippage_rupees": 310.64,
+      "grade": "F"
+    },
+    {
+      "symbol": "TCS.NS",
+      "entry_price": 2611.699951171875,
+      "entry_time": "11:12",
+      "day_low": 2244.1,
+      "day_high": 2399.3,
+      "vwap_estimate": 2335.27,
+      "timing_score": 0,
+      "slippage_bps": 1183.71,
+      "slippage_rupees": 309.15,
+      "grade": "F"
+    },
+    {
+      "symbol": "TCS.NS",
+      "entry_price": 2607.699951171875,
+      "entry_time": "11:17",
+      "day_low": 2244.1,
+      "day_high": 2399.3,
+      "vwap_estimate": 2335.27,
+      "timing_score": 0,
+      "slippage_bps": 1166.59,
+      "slippage_rupees": 304.21,
+      "grade": "F"
+    },
+    {
+      "symbol": "INFY.NS",
+      "entry_price": 1288.9000244140625,
+      "entry_time": "11:22",
+      "day_low": 1107.6,
+      "day_high": 1156.0,
+      "vwap_estimate": 1134.62,
+      "timing_score": 0,
+      "slippage_bps": 1359.71,
+      "slippage_rupees": 175.25,
+      "grade": "F"
+    }
+  ],
+  "timestamp": "2026-09-02 15:10:14 IST"
+}

@@ -1,0 +1,121 @@
+{
+  "sources": [
+    {
+      "name": "RF",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "XGB",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "DailyLSTM",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "IntraLSTM",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "MomentumHunter",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "ValueSeeker",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "RiskManager",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "SentimentReader",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "PatternDetective",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    },
+    {
+      "name": "QuantAnalyst",
+      "alpha": 2.0,
+      "beta": 2.0,
+      "accuracy": 0.5,
+      "uncertainty": 0.2236,
+      "confidence": 0.5528,
+      "weight": 0.2764,
+      "observations": 0
+    }
+  ],
+  "weights": {
+    "RF": 0.2764,
+    "XGB": 0.2764,
+    "DailyLSTM": 0.2764,
+    "IntraLSTM": 0.2764,
+    "MomentumHunter": 0.2764,
+    "ValueSeeker": 0.2764,
+    "RiskManager": 0.2764,
+    "SentimentReader": 0.2764,
+    "PatternDetective": 0.2764,
+    "QuantAnalyst": 0.2764
+  },
+  "best_source": "RF",
+  "worst_source": "RF",
+  "avg_accuracy": 0.5,
+  "total_observations": 0,
+  "timestamp": "2026-09-02T15:10:14.150342+05:30"
+}

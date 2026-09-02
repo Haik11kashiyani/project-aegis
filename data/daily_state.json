@@ -1,71 +1,15 @@
 {
-  "stocks_traded": [
-    "TCS.NS",
-    "INFY.NS",
-    "SBIN.NS"
-  ],
+  "date": "2026-09-02",
+  "total_profit": 0.0,
+  "total_profit_pct": 0.0,
   "trades_taken": 0,
-  "total_profit_pct": 0,
-  "active_trades": [
-    {
-      "stock": "TCS.NS",
-      "price": 2617.199951171875,
-      "qty": 1,
-      "stop_loss": 2504.5,
-      "target": 2842.61,
-      "status": "OPEN",
-      "time": "11:01",
-      "confidence": 0.646,
-      "votes": 2
-    },
-    {
-      "stock": "TCS.NS",
-      "price": 2614.60009765625,
-      "qty": 1,
-      "stop_loss": 2502.3,
-      "target": 2840.01,
-      "status": "OPEN",
-      "time": "11:07",
-      "confidence": 0.646,
-      "votes": 2
-    },
-    {
-      "stock": "TCS.NS",
-      "price": 2612.89990234375,
-      "qty": 1,
-      "stop_loss": 2500.2,
-      "target": 2838.31,
-      "status": "OPEN",
-      "time": "11:10",
-      "confidence": 0.646,
-      "votes": 2
-    },
-    {
-      "stock": "TCS.NS",
-      "price": 2611.699951171875,
-      "qty": 1,
-      "stop_loss": 2499.0,
-      "target": 2837.11,
-      "status": "OPEN",
-      "time": "11:12",
-      "confidence": 0.646,
-      "votes": 2
-    },
-    {
-      "stock": "INFY.NS",
-      "price": 1288.9000244140625,
-      "qty": 1,
-      "stop_loss": 1222.17,
-      "target": 1422.36,
-      "status": "OPEN",
-      "time": "11:22",
-      "confidence": 0.64,
-      "votes": 2
-    }
-  ],
   "trades_won": 0,
-  "date": "2026-03-02",
   "trades_lost": 0,
-  "status": "ACTIVE",
-  "total_profit": 0
+  "status": "MARKET_CLOSED",
+  "active_trades": [],
+  "stocks_traded": [
+    "HDFCBANK.NS",
+    "SBIN.NS",
+    "RELIANCE.NS"
+  ]
 }
