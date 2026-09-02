@@ -28,6 +28,7 @@ TARGET_STOCK = os.getenv("TARGET_STOCK", STOCK_WATCHLIST[0])
 
 DAILY_TARGET = float(os.getenv("DAILY_TARGET", "0.02"))       # 2 % daily target
 MAX_BULLETS  = int(os.getenv("MAX_BULLETS", "5"))              # Split capital into 5 shots
+TIME_GAP     = int(os.getenv("TIME_GAP", "600"))               # 10 min between bullets
 _raw_capital = os.getenv("CAPITAL", "").strip()
 try:
     _cap_val = float(_raw_capital) if _raw_capital else 15000.0
