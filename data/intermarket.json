@@ -7,24 +7,24 @@
   "instruments": {
     "gold": {
       "signal": "NEUTRAL",
-      "z": 0.06,
-      "change_5d": -5.07,
-      "change_20d": 2.81,
-      "price": 4365.2
+      "z": -0.075,
+      "change_5d": -5.27,
+      "change_20d": 2.59,
+      "price": 4355.8
     },
     "usdinr": {
       "signal": "NEUTRAL",
-      "z": -0.203,
+      "z": -0.195,
       "change_5d": 1.52,
-      "change_20d": -0.14,
-      "price": 94.96
+      "change_20d": -0.13,
+      "price": 94.97
     },
     "crude": {
       "signal": "NEUTRAL",
-      "z": -0.095,
-      "change_5d": 10.45,
-      "change_20d": 20.74,
-      "price": 90.82
+      "z": -0.244,
+      "change_5d": 10.08,
+      "change_20d": 20.34,
+      "price": 90.52
     },
     "us10y": {
       "signal": "UP",
@@ -35,10 +35,10 @@
     },
     "nifty": {
       "signal": "STRONG_DOWN",
-      "z": -2.292,
-      "change_5d": -2.02,
-      "change_20d": -3.14,
-      "price": 23841.85
+      "z": -1.765,
+      "change_5d": -1.86,
+      "change_20d": -2.97,
+      "price": 23882.85
     }
   },
   "correlations": {
@@ -53,5 +53,5 @@
     "nifty_vs_usdinr": -0.145,
     "nifty_vs_us10y": -0.118
   },
-  "timestamp": "2026-09-02T12:17:25.579918+05:30"
+  "timestamp": "2026-09-02T15:17:00.178799+05:30"
 }
