@@ -9,11 +9,11 @@
     "rf_precision": 0,
     "xgb_params": {
       "n_estimators": 200,
-      "max_depth": 6,
-      "learning_rate": 0.05,
-      "subsample": 0.8
+      "max_depth": 4,
+      "learning_rate": 0.08,
+      "subsample": 0.9
     },
-    "xgb_precision": 0.463
+    "xgb_precision": 0.3889
   },
   {
     "symbol": "SBIN.NS",
@@ -22,30 +22,30 @@
       "max_depth": 12,
       "min_samples_split": 40
     },
-    "rf_precision": 0.2157,
-    "xgb_params": {
-      "n_estimators": 250,
-      "max_depth": 5,
-      "learning_rate": 0.04,
-      "subsample": 0.85
-    },
-    "xgb_precision": 0.6171
-  },
-  {
-    "symbol": "RELIANCE.NS",
-    "rf_params": {
-      "n_estimators": 150,
-      "max_depth": 8,
-      "min_samples_split": 30
-    },
-    "rf_precision": 0.6944,
+    "rf_precision": 0.25,
     "xgb_params": {
       "n_estimators": 150,
       "max_depth": 4,
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.6065
+    "xgb_precision": 0.6006
+  },
+  {
+    "symbol": "RELIANCE.NS",
+    "rf_params": {
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 60
+    },
+    "rf_precision": 0.7222,
+    "xgb_params": {
+      "n_estimators": 300,
+      "max_depth": 7,
+      "learning_rate": 0.02,
+      "subsample": 0.75
+    },
+    "xgb_precision": 0.5761
   },
   {
     "symbol": "HDFCBANK.NS",
@@ -54,78 +54,78 @@
       "max_depth": 12,
       "min_samples_split": 40
     },
-    "rf_precision": 0.731,
+    "rf_precision": 0.7778,
+    "xgb_params": {
+      "n_estimators": 150,
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "subsample": 0.7
+    },
+    "xgb_precision": 0.6105
+  },
+  {
+    "symbol": "ICICIBANK.NS",
+    "rf_params": {
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 60
+    },
+    "rf_precision": 0.5088,
     "xgb_params": {
       "n_estimators": 300,
       "max_depth": 7,
       "learning_rate": 0.02,
       "subsample": 0.75
     },
-    "xgb_precision": 0.5645
+    "xgb_precision": 0.7657
   },
   {
-    "symbol": "ICICIBANK.NS",
+    "symbol": "NTPC.NS",
     "rf_params": {
-      "n_estimators": 200,
+      "n_estimators": 150,
       "max_depth": 8,
-      "min_samples_split": 80
+      "min_samples_split": 30
     },
-    "rf_precision": 0.5079,
+    "rf_precision": 0.7599,
+    "xgb_params": {
+      "n_estimators": 150,
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "subsample": 0.7
+    },
+    "xgb_precision": 0.5539
+  },
+  {
+    "symbol": "POWERGRID.NS",
+    "rf_params": {
+      "n_estimators": 150,
+      "max_depth": 8,
+      "min_samples_split": 30
+    },
+    "rf_precision": 0.3582,
     "xgb_params": {
       "n_estimators": 200,
       "max_depth": 4,
       "learning_rate": 0.08,
       "subsample": 0.9
     },
-    "xgb_precision": 0.6076
-  },
-  {
-    "symbol": "NTPC.NS",
-    "rf_params": {
-      "n_estimators": 250,
-      "max_depth": 12,
-      "min_samples_split": 40
-    },
-    "rf_precision": 0.7075,
-    "xgb_params": {
-      "n_estimators": 150,
-      "max_depth": 4,
-      "learning_rate": 0.03,
-      "subsample": 0.7
-    },
-    "xgb_precision": 0.5498
-  },
-  {
-    "symbol": "POWERGRID.NS",
-    "rf_params": {
-      "n_estimators": 200,
-      "max_depth": 8,
-      "min_samples_split": 80
-    },
-    "rf_precision": 0.4555,
-    "xgb_params": {
-      "n_estimators": 150,
-      "max_depth": 4,
-      "learning_rate": 0.03,
-      "subsample": 0.7
-    },
-    "xgb_precision": 0.6829
+    "xgb_precision": 0.632
   },
   {
     "symbol": "COALINDIA.NS",
     "rf_params": {
-      "n_estimators": 200,
-      "max_depth": 8,
-      "min_samples_split": 80
+      "n_estimators": 300,
+      "max_depth": 15,
+      "min_samples_split": 60
     },
-    "rf_precision": 0.3333,
+    "rf_precision": 0.1951,
     "xgb_params": {
       "n_estimators": 200,
       "max_depth": 6,
       "learning_rate": 0.05,
       "subsample": 0.8
     },
-    "xgb_precision": 0.6829
+    "xgb_precision": 0.6842
   },
   {
     "symbol": "INFY.NS",
@@ -134,29 +134,29 @@
       "max_depth": 8,
       "min_samples_split": 30
     },
-    "rf_precision": 0.4435,
+    "rf_precision": 0.4664,
     "xgb_params": {
-      "n_estimators": 250,
-      "max_depth": 5,
-      "learning_rate": 0.04,
-      "subsample": 0.85
+      "n_estimators": 200,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "subsample": 0.8
     },
-    "xgb_precision": 0.4819
+    "xgb_precision": 0.4732
   },
   {
     "symbol": "TCS.NS",
     "rf_params": {
-      "n_estimators": 250,
-      "max_depth": 12,
-      "min_samples_split": 40
+      "n_estimators": 200,
+      "max_depth": 10,
+      "min_samples_split": 50
     },
-    "rf_precision": 0.627,
+    "rf_precision": 0.5458,
     "xgb_params": {
       "n_estimators": 150,
       "max_depth": 4,
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.501
+    "xgb_precision": 0.5043
   }
 ]

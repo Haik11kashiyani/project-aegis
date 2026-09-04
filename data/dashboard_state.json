@@ -1,15 +1,13 @@
 {
-  "last_updated": "2026-09-04 15:10 IST",
-  "status": "MARKET_CLOSED",
-  "total_profit": 0.0,
-  "total_profit_pct": 0.0,
-  "trades_taken": 0,
-  "trades_won": 0,
-  "trades_lost": 0,
-  "stocks_traded": [
-    "INFY.NS",
-    "SBIN.NS",
-    "TATASTEEL.NS"
-  ],
-  "active_count": 0
+  "status": "ACTIVE",
+  "trade_mode": "PAPER (\u20b915K)",
+  "capital": 15000.0,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0.0,
+  "equity": 15000.0,
+  "regime": "RANGING",
+  "model_health": "HEALTHY",
+  "active_bullets": 0,
+  "max_bullets": 5,
+  "timestamp": "2026-09-04 20:34 IST"
 }
