@@ -22,5 +22,17 @@
       "losses": 0,
       "capital": 15000.0
     }
+  },
+  {
+    "timestamp": "2026-09-04 15:10:55 IST",
+    "type": "DAILY_SUMMARY",
+    "message": "\ud83d\udcc8 <b>DAILY SUMMARY</b>\nP&L: \u20b90.00 (+0.00%)\nTrades: 0 | W: 0 L: 0 | WR: 0%\nCapital: \u20b915,000.00",
+    "details": {
+      "pnl": 0.0,
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "capital": 15000.0
+    }
   }
 ]

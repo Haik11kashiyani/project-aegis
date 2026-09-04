@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "total_profit": 0.0,
   "total_profit_pct": 0.0,
   "trades_taken": 0,
@@ -8,8 +8,8 @@
   "status": "MARKET_CLOSED",
   "active_trades": [],
   "stocks_traded": [
+    "INFY.NS",
     "SBIN.NS",
-    "POWERGRID.NS",
-    "NTPC.NS"
+    "TATASTEEL.NS"
   ]
 }
