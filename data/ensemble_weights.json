@@ -63,13 +63,13 @@
     "lstm_accuracy": 0.4878
   },
   "COALINDIA.NS": {
-    "rf_weight": 0.2472,
-    "xgb_weight": 0.2472,
-    "lstm_weight": 0.2443,
-    "intraday_weight": 0.2613,
+    "rf_weight": 0.2446,
+    "xgb_weight": 0.2446,
+    "lstm_weight": 0.2523,
+    "intraday_weight": 0.2586,
     "rf_accuracy": 0.4729,
     "xgb_accuracy": 0.4729,
-    "lstm_accuracy": 0.4675
+    "lstm_accuracy": 0.4878
   },
   "INFY.NS": {
     "rf_weight": 0.2662,

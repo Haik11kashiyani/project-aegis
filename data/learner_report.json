@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04 15:04",
+  "generated_at": "2026-09-05 08:38",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-09-04 14:59"
+    "analysis_date": "2026-09-05 08:33"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -89,13 +89,13 @@
       "lstm_accuracy": 0.4878
     },
     "COALINDIA.NS": {
-      "rf_weight": 0.2472,
-      "xgb_weight": 0.2472,
-      "lstm_weight": 0.2443,
-      "intraday_weight": 0.2613,
+      "rf_weight": 0.2446,
+      "xgb_weight": 0.2446,
+      "lstm_weight": 0.2523,
+      "intraday_weight": 0.2586,
       "rf_accuracy": 0.4729,
       "xgb_accuracy": 0.4729,
-      "lstm_accuracy": 0.4675
+      "lstm_accuracy": 0.4878
     },
     "INFY.NS": {
       "rf_weight": 0.2662,
@@ -118,10 +118,10 @@
   },
   "market_regimes": {
     "NIFTY50": "RANGING",
-    "TATASTEEL.NS": "RANGING",
+    "TATASTEEL.NS": "TRENDING_DOWN",
     "SBIN.NS": "TRENDING_UP",
     "RELIANCE.NS": "RANGING",
-    "HDFCBANK.NS": "TRENDING_DOWN",
+    "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "RANGING",
     "POWERGRID.NS": "RANGING",
@@ -155,13 +155,13 @@
     {
       "symbol": "RELIANCE.NS",
       "rf_brier_score": 0.2481,
-      "xgb_brier_score": 0.2627,
+      "xgb_brier_score": 0.2635,
       "rf_calibration_error": 0.0656,
-      "xgb_calibration_error": 0.1214,
+      "xgb_calibration_error": 0.1368,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.0656,
-      "xgb_ece": 0.1214
+      "xgb_ece": 0.1368
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -177,13 +177,13 @@
     {
       "symbol": "ICICIBANK.NS",
       "rf_brier_score": 0.255,
-      "xgb_brier_score": 0.2911,
-      "rf_calibration_error": 0.0678,
-      "xgb_calibration_error": 0.2025,
+      "xgb_brier_score": 0.2921,
+      "rf_calibration_error": 0.0677,
+      "xgb_calibration_error": 0.2089,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0678,
-      "xgb_ece": 0.2025
+      "rf_ece": 0.0677,
+      "xgb_ece": 0.2089
     },
     {
       "symbol": "NTPC.NS",
@@ -198,19 +198,19 @@
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2666,
-      "xgb_brier_score": 0.3077,
-      "rf_calibration_error": 0.0687,
-      "xgb_calibration_error": 0.1794,
+      "rf_brier_score": 0.2667,
+      "xgb_brier_score": 0.3234,
+      "rf_calibration_error": 0.0737,
+      "xgb_calibration_error": 0.2286,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0687,
-      "xgb_ece": 0.1794
+      "rf_ece": 0.0737,
+      "xgb_ece": 0.2286
     },
     {
       "symbol": "COALINDIA.NS",
       "rf_brier_score": 0.2708,
-      "xgb_brier_score": 0.3432,
+      "xgb_brier_score": 0.3431,
       "rf_calibration_error": 0.2675,
       "xgb_calibration_error": 0.1918,
       "rf_reliable": true,
@@ -232,14 +232,14 @@
     {
       "symbol": "TCS.NS",
       "rf_brier_score": 0.2924,
-      "xgb_brier_score": 0.4303,
+      "xgb_brier_score": 0.4294,
       "rf_calibration_error": 0.1808,
-      "xgb_calibration_error": 0.3381,
+      "xgb_calibration_error": 0.2228,
       "rf_reliable": true,
-      "xgb_reliable": false,
+      "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.1808,
-      "xgb_ece": 0.3381
+      "xgb_ece": 0.2228
     }
   ],
   "tuned_params": [
@@ -321,7 +321,7 @@
         "learning_rate": 0.02,
         "subsample": 0.75
       },
-      "xgb_precision": 0.7657
+      "xgb_precision": 0.7553
     },
     {
       "symbol": "NTPC.NS",
@@ -401,31 +401,31 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.5043
+      "xgb_precision": 0.5031
     }
   ],
   "voter_accuracy": {
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-09-04 15:03"
+    "analysis_date": "2026-09-05 08:38"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-09-04 15:03"
+    "analysis_date": "2026-09-05 08:38"
   },
   "youtube_mood": {
     "overall_mood": 0.2,
     "stock_mentions": {},
     "trending_topics": [
+      "Same Money, Different Names | Happy Teachers Day | CA Rachana Ranade | #shorts",
       "India\u2019s Economy Is Booming, So Why Is Nifty Still Sideways? | CA Rachana Ranade | #shorts",
       "India\u2019s Economy Is Booming, So Why Is Nifty Still Sideways? | CA Rachana Ranade",
-      "Is India's 7.8% GDP Fake? (If yes, how it impacts your investments?)",
-      "No One Told You This About Dividends",
-      "No One Told You This About Wedding Gifts"
+      "41.5% Ownership vs 100% Ownership",
+      "No One Told You This About Dividends"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -439,9 +439,9 @@
     },
     "sector_heatmap": {
       "it": {
-        "1d": -0.46613282214100504,
-        "5d": -1.8752165771845186,
-        "20d": -2.960185614321981
+        "1d": -0.46596815565492267,
+        "5d": -1.87505424185342,
+        "20d": -2.9600250739381084
       },
       "banking": {
         "1d": -0.019088550314464124,
@@ -456,24 +456,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": -0.453813532350474,
-        "DowJones": -0.6835305105399994,
-        "NASDAQ": -0.3989996649043471,
+        "SP500": -0.375722160845159,
+        "DowJones": -0.5063868068759638,
+        "NASDAQ": -0.28991174002219816,
         "Nikkei": 1.255886416292762,
         "HangSeng": 1.7354269798744542,
-        "BrentCrude": -0.29313106065440747,
-        "Gold": -0.3762582071402963,
-        "USDINR": -0.013444016209688542
+        "BrentCrude": 0.7956471555065068,
+        "Gold": -1.3781060162830707,
+        "USDINR": -0.005191497634840876
       },
-      "score": 0.1921554311773384
+      "score": 0.06362049504338169
     },
     "vix_analysis": {
       "value": 10.680000305175781,
       "classification": "Low volatility (safe)",
       "trend": "falling"
     },
-    "market_mood_score": 0.27686217247093536,
+    "market_mood_score": 0.2254481980173527,
     "earnings_calendar": [],
-    "timestamp": "2026-09-04T20:29:03.162341+05:30"
+    "timestamp": "2026-09-05T14:03:37.225469+05:30"
   }
 }
