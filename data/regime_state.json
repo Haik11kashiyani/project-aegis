@@ -1,9 +1,7 @@
 {
   "regime": "SIDEWAYS",
-  "confidence": 0.6312,
+  "confidence": 0.5745,
   "regime_history": [
-    "SIDEWAYS",
-    "BULL",
     "BULL",
     "BULL",
     "BULL",
@@ -28,17 +26,19 @@
     "SIDEWAYS",
     "SIDEWAYS",
     "BULL",
-    "BEAR",
-    "BEAR",
-    "BEAR",
-    "BEAR",
-    "BEAR",
+    "SIDEWAYS",
+    "SIDEWAYS",
+    "SIDEWAYS",
+    "SIDEWAYS",
+    "SIDEWAYS",
     "BULL",
     "BULL",
     "BULL",
     "BULL",
     "BULL",
     "BULL",
+    "SIDEWAYS",
+    "SIDEWAYS",
     "SIDEWAYS",
     "SIDEWAYS",
     "SIDEWAYS",
@@ -66,17 +66,17 @@
   "personality_override": null,
   "sizing_multiplier": 0.85,
   "state_probs": {
-    "BEAR": 0.1671,
-    "SIDEWAYS": 0.6312,
-    "BULL": 0.2017
+    "BEAR": 0.2874,
+    "SIDEWAYS": 0.5745,
+    "BULL": 0.1382
   },
   "state_means": {
-    "BEAR": -0.5991,
-    "SIDEWAYS": -0.0708,
-    "BULL": 0.5356
+    "BEAR": -0.6068,
+    "SIDEWAYS": -0.0925,
+    "BULL": 0.5295
   },
   "transition_active": false,
   "lookback_days": 252,
-  "observations": 246,
-  "timestamp": "2026-09-04 08:02:16 UTC"
+  "observations": 247,
+  "timestamp": "2026-09-07 08:20:12 UTC"
 }

@@ -6,52 +6,52 @@
   "macro_bias": "NEUTRAL",
   "instruments": {
     "gold": {
-      "signal": "STRONG_UP",
-      "z": 2.552,
-      "change_5d": -1.71,
-      "change_20d": 6.81,
-      "price": 4530.8
+      "signal": "UP",
+      "z": 0.64,
+      "change_5d": 1.03,
+      "change_20d": 2.63,
+      "price": 4476.6
     },
     "usdinr": {
       "signal": "NEUTRAL",
-      "z": 0.032,
-      "change_5d": -1.04,
-      "change_20d": -0.87,
-      "price": 94.48
+      "z": -0.014,
+      "change_5d": -0.98,
+      "change_20d": -0.8,
+      "price": 94.44
     },
     "crude": {
-      "signal": "DOWN",
-      "z": -0.607,
-      "change_5d": 8.55,
-      "change_20d": 17.31,
-      "price": 90.67
+      "signal": "NEUTRAL",
+      "z": -0.365,
+      "change_5d": 6.67,
+      "change_20d": 11.38,
+      "price": 91.48
     },
     "us10y": {
       "signal": "NEUTRAL",
-      "z": -0.224,
-      "change_5d": 2.83,
-      "change_20d": 3.88,
-      "price": 4.8
+      "z": 0.46,
+      "change_5d": 1.36,
+      "change_20d": 2.66,
+      "price": 4.78
     },
     "nifty": {
-      "signal": "UP",
-      "z": 0.655,
-      "change_5d": -0.66,
-      "change_20d": -2.85,
-      "price": 23933.05
+      "signal": "DOWN",
+      "z": -1.218,
+      "change_5d": -1.31,
+      "change_20d": -3.33,
+      "price": 23765.1
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.049,
-    "gold_vs_us10y": -0.103,
-    "gold_vs_nifty": 0.062,
-    "crude_vs_gold": -0.161,
-    "crude_vs_usdinr": 0.118,
-    "crude_vs_us10y": 0.547,
-    "crude_vs_nifty": -0.279,
-    "us10y_vs_usdinr": -0.03,
-    "nifty_vs_usdinr": -0.155,
-    "nifty_vs_us10y": -0.172
+    "gold_vs_usdinr": 0.058,
+    "gold_vs_us10y": -0.121,
+    "gold_vs_nifty": 0.002,
+    "crude_vs_gold": -0.11,
+    "crude_vs_usdinr": 0.082,
+    "crude_vs_us10y": 0.538,
+    "crude_vs_nifty": -0.246,
+    "us10y_vs_usdinr": -0.028,
+    "nifty_vs_usdinr": -0.118,
+    "nifty_vs_us10y": -0.15
   },
-  "timestamp": "2026-09-04T13:32:24.729195+05:30"
+  "timestamp": "2026-09-07T13:50:21.423021+05:30"
 }
