@@ -6,25 +6,25 @@
   "macro_bias": "NEUTRAL",
   "instruments": {
     "gold": {
-      "signal": "UP",
-      "z": 0.64,
-      "change_5d": 1.03,
-      "change_20d": 2.63,
-      "price": 4476.6
+      "signal": "NEUTRAL",
+      "z": 0.017,
+      "change_5d": 0.1,
+      "change_20d": 1.69,
+      "price": 4435.4
     },
     "usdinr": {
-      "signal": "NEUTRAL",
-      "z": -0.014,
-      "change_5d": -0.98,
-      "change_20d": -0.8,
-      "price": 94.44
+      "signal": "UP",
+      "z": 0.517,
+      "change_5d": -0.39,
+      "change_20d": -0.68,
+      "price": 94.75
     },
     "crude": {
-      "signal": "NEUTRAL",
-      "z": -0.365,
-      "change_5d": 6.67,
-      "change_20d": 11.38,
-      "price": 91.48
+      "signal": "UP",
+      "z": 1.183,
+      "change_5d": 10.28,
+      "change_20d": 15.16,
+      "price": 94.58
     },
     "us10y": {
       "signal": "NEUTRAL",
@@ -35,23 +35,23 @@
     },
     "nifty": {
       "signal": "DOWN",
-      "z": -1.218,
-      "change_5d": -1.31,
-      "change_20d": -3.33,
-      "price": 23765.1
+      "z": -1.109,
+      "change_5d": -1.7,
+      "change_20d": -3.37,
+      "price": 23647.95
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.058,
-    "gold_vs_us10y": -0.121,
-    "gold_vs_nifty": 0.002,
-    "crude_vs_gold": -0.11,
-    "crude_vs_usdinr": 0.082,
-    "crude_vs_us10y": 0.538,
-    "crude_vs_nifty": -0.246,
-    "us10y_vs_usdinr": -0.028,
-    "nifty_vs_usdinr": -0.118,
-    "nifty_vs_us10y": -0.15
+    "gold_vs_usdinr": 0.059,
+    "gold_vs_us10y": -0.122,
+    "gold_vs_nifty": 0.001,
+    "crude_vs_gold": -0.114,
+    "crude_vs_usdinr": 0.057,
+    "crude_vs_us10y": 0.519,
+    "crude_vs_nifty": -0.223,
+    "us10y_vs_usdinr": -0.046,
+    "nifty_vs_usdinr": -0.107,
+    "nifty_vs_us10y": -0.133
   },
-  "timestamp": "2026-09-07T13:50:21.423021+05:30"
+  "timestamp": "2026-09-08T13:37:21.874737+05:30"
 }
