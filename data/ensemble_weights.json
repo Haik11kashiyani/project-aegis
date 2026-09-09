@@ -9,58 +9,58 @@
     "lstm_accuracy": 0.5163
   },
   "SBIN.NS": {
-    "rf_weight": 0.2436,
-    "xgb_weight": 0.2477,
-    "lstm_weight": 0.2447,
-    "intraday_weight": 0.264,
-    "rf_accuracy": 0.4612,
+    "rf_weight": 0.2446,
+    "xgb_weight": 0.2466,
+    "lstm_weight": 0.2458,
+    "intraday_weight": 0.2629,
+    "rf_accuracy": 0.4651,
     "xgb_accuracy": 0.469,
-    "lstm_accuracy": 0.4634
+    "lstm_accuracy": 0.4675
   },
   "RELIANCE.NS": {
-    "rf_weight": 0.2513,
-    "xgb_weight": 0.2568,
-    "lstm_weight": 0.2518,
-    "intraday_weight": 0.2401,
-    "rf_accuracy": 0.5233,
-    "xgb_accuracy": 0.5349,
-    "lstm_accuracy": 0.5244
+    "rf_weight": 0.2531,
+    "xgb_weight": 0.2604,
+    "lstm_weight": 0.25,
+    "intraday_weight": 0.2365,
+    "rf_accuracy": 0.5349,
+    "xgb_accuracy": 0.5504,
+    "lstm_accuracy": 0.5285
   },
   "HDFCBANK.NS": {
-    "rf_weight": 0.2661,
-    "xgb_weight": 0.2452,
-    "lstm_weight": 0.2644,
-    "intraday_weight": 0.2243,
-    "rf_accuracy": 0.593,
-    "xgb_accuracy": 0.5465,
+    "rf_weight": 0.2652,
+    "xgb_weight": 0.2443,
+    "lstm_weight": 0.2654,
+    "intraday_weight": 0.2251,
+    "rf_accuracy": 0.5891,
+    "xgb_accuracy": 0.5426,
     "lstm_accuracy": 0.5894
   },
   "ICICIBANK.NS": {
-    "rf_weight": 0.2554,
-    "xgb_weight": 0.2591,
-    "lstm_weight": 0.2486,
-    "intraday_weight": 0.237,
-    "rf_accuracy": 0.5388,
-    "xgb_accuracy": 0.5465,
-    "lstm_accuracy": 0.5244
+    "rf_weight": 0.2545,
+    "xgb_weight": 0.2563,
+    "lstm_weight": 0.2514,
+    "intraday_weight": 0.2379,
+    "rf_accuracy": 0.5349,
+    "xgb_accuracy": 0.5388,
+    "lstm_accuracy": 0.5285
   },
   "NTPC.NS": {
-    "rf_weight": 0.2607,
-    "xgb_weight": 0.2551,
-    "lstm_weight": 0.2441,
-    "intraday_weight": 0.2402,
-    "rf_accuracy": 0.5426,
+    "rf_weight": 0.2593,
+    "xgb_weight": 0.2556,
+    "lstm_weight": 0.2445,
+    "intraday_weight": 0.2406,
+    "rf_accuracy": 0.5388,
     "xgb_accuracy": 0.531,
     "lstm_accuracy": 0.5081
   },
   "POWERGRID.NS": {
-    "rf_weight": 0.2463,
-    "xgb_weight": 0.2762,
-    "lstm_weight": 0.2368,
-    "intraday_weight": 0.2407,
-    "rf_accuracy": 0.5116,
-    "xgb_accuracy": 0.5736,
-    "lstm_accuracy": 0.4919
+    "rf_weight": 0.2477,
+    "xgb_weight": 0.2667,
+    "lstm_weight": 0.2398,
+    "intraday_weight": 0.2458,
+    "rf_accuracy": 0.5039,
+    "xgb_accuracy": 0.5426,
+    "lstm_accuracy": 0.4878
   },
   "COALINDIA.NS": {
     "rf_weight": 0.2446,
@@ -72,21 +72,21 @@
     "lstm_accuracy": 0.4878
   },
   "INFY.NS": {
-    "rf_weight": 0.2594,
-    "xgb_weight": 0.2523,
-    "lstm_weight": 0.259,
-    "intraday_weight": 0.2292,
-    "rf_accuracy": 0.5659,
-    "xgb_accuracy": 0.5504,
-    "lstm_accuracy": 0.565
+    "rf_weight": 0.2656,
+    "xgb_weight": 0.2461,
+    "lstm_weight": 0.26,
+    "intraday_weight": 0.2284,
+    "rf_accuracy": 0.5814,
+    "xgb_accuracy": 0.5388,
+    "lstm_accuracy": 0.5691
   },
   "TCS.NS": {
-    "rf_weight": 0.2507,
-    "xgb_weight": 0.2413,
-    "lstm_weight": 0.2649,
-    "intraday_weight": 0.2432,
-    "rf_accuracy": 0.5155,
-    "xgb_accuracy": 0.4961,
-    "lstm_accuracy": 0.5447
+    "rf_weight": 0.2611,
+    "xgb_weight": 0.227,
+    "lstm_weight": 0.2679,
+    "intraday_weight": 0.244,
+    "rf_accuracy": 0.5349,
+    "xgb_accuracy": 0.4651,
+    "lstm_accuracy": 0.5488
   }
 }
