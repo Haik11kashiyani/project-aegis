@@ -1,7 +1,7 @@
 {
   "TATASTEEL.NS": {
     "ok": true,
-    "reason": "Low liquidity (score=35/100) \u2014 sizing halved",
+    "reason": "Liquidity OK (score=66/100)",
     "score": 0
   },
   "SBIN.NS": {
@@ -11,7 +11,7 @@
   },
   "RELIANCE.NS": {
     "ok": true,
-    "reason": "Low liquidity (score=31/100) \u2014 sizing halved",
+    "reason": "Low liquidity (score=39/100) \u2014 sizing halved",
     "score": 0
   }
 }
