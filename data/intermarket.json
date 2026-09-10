@@ -7,51 +7,51 @@
   "instruments": {
     "gold": {
       "signal": "UP",
-      "z": 0.856,
-      "change_5d": 2.39,
-      "change_20d": 1.58,
-      "price": 4452.1
+      "z": 0.565,
+      "change_5d": 2.03,
+      "change_20d": 1.05,
+      "price": 4455.1
     },
     "usdinr": {
       "signal": "UP",
-      "z": 0.912,
-      "change_5d": 0.12,
-      "change_20d": -0.32,
-      "price": 95.07
+      "z": 0.803,
+      "change_5d": 0.91,
+      "change_20d": 0.01,
+      "price": 95.35
     },
     "crude": {
-      "signal": "UP",
-      "z": 0.521,
-      "change_5d": 4.81,
-      "change_20d": 13.65,
-      "price": 94.56
+      "signal": "NEUTRAL",
+      "z": -0.233,
+      "change_5d": 5.8,
+      "change_20d": 15.64,
+      "price": 96.29
     },
     "us10y": {
-      "signal": "NEUTRAL",
-      "z": 0.415,
-      "change_5d": 1.01,
-      "change_20d": 2.28,
-      "price": 4.81
+      "signal": "UP",
+      "z": 0.683,
+      "change_5d": 0.85,
+      "change_20d": 3.27,
+      "price": 4.84
     },
     "nifty": {
-      "signal": "NEUTRAL",
-      "z": -0.423,
-      "change_5d": -1.49,
-      "change_20d": -3.59,
-      "price": 23558.45
+      "signal": "UP",
+      "z": 0.649,
+      "change_5d": -1.81,
+      "change_20d": -3.91,
+      "price": 23441.4
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.055,
-    "gold_vs_us10y": -0.132,
-    "gold_vs_nifty": 0.006,
-    "crude_vs_gold": -0.119,
-    "crude_vs_usdinr": 0.057,
-    "crude_vs_us10y": 0.521,
-    "crude_vs_nifty": -0.231,
-    "us10y_vs_usdinr": -0.049,
-    "nifty_vs_usdinr": -0.112,
-    "nifty_vs_us10y": -0.148
+    "gold_vs_usdinr": 0.058,
+    "gold_vs_us10y": -0.153,
+    "gold_vs_nifty": 0.021,
+    "crude_vs_gold": -0.126,
+    "crude_vs_usdinr": 0.067,
+    "crude_vs_us10y": 0.524,
+    "crude_vs_nifty": -0.245,
+    "us10y_vs_usdinr": -0.043,
+    "nifty_vs_usdinr": -0.126,
+    "nifty_vs_us10y": -0.155
   },
-  "timestamp": "2026-09-09T13:42:08.352808+05:30"
+  "timestamp": "2026-09-10T13:40:05.057823+05:30"
 }
