@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11 15:04",
+  "generated_at": "2026-09-12 08:52",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-09-11 15:01"
+    "analysis_date": "2026-09-12 08:48"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -107,39 +107,39 @@
       "lstm_accuracy": 0.5691
     },
     "TCS.NS": {
-      "rf_weight": 0.2468,
-      "xgb_weight": 0.2275,
-      "lstm_weight": 0.277,
-      "intraday_weight": 0.2487,
+      "rf_weight": 0.2463,
+      "xgb_weight": 0.229,
+      "lstm_weight": 0.2765,
+      "intraday_weight": 0.2482,
       "rf_accuracy": 0.4961,
-      "xgb_accuracy": 0.4574,
+      "xgb_accuracy": 0.4612,
       "lstm_accuracy": 0.5569
     }
   },
   "market_regimes": {
     "NIFTY50": "RANGING",
     "TATASTEEL.NS": "RANGING",
-    "SBIN.NS": "TRENDING_UP",
+    "SBIN.NS": "RANGING",
     "RELIANCE.NS": "RANGING",
     "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
-    "INFY.NS": "RANGING",
-    "TCS.NS": "TRENDING_UP"
+    "INFY.NS": "TRENDING_UP",
+    "TCS.NS": "RANGING"
   },
   "calibrations": [
     {
       "symbol": "TATASTEEL.NS",
-      "rf_brier_score": 0.2694,
-      "xgb_brier_score": 0.3334,
-      "rf_calibration_error": 0.1026,
-      "xgb_calibration_error": 0.2201,
+      "rf_brier_score": 0.2693,
+      "xgb_brier_score": 0.3349,
+      "rf_calibration_error": 0.1025,
+      "xgb_calibration_error": 0.241,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.1026,
-      "xgb_ece": 0.2201
+      "rf_ece": 0.1025,
+      "xgb_ece": 0.241
     },
     {
       "symbol": "SBIN.NS",
@@ -155,13 +155,13 @@
     {
       "symbol": "RELIANCE.NS",
       "rf_brier_score": 0.2505,
-      "xgb_brier_score": 0.2708,
+      "xgb_brier_score": 0.272,
       "rf_calibration_error": 0.0404,
-      "xgb_calibration_error": 0.1633,
+      "xgb_calibration_error": 0.1678,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.0404,
-      "xgb_ece": 0.1633
+      "xgb_ece": 0.1678
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -177,13 +177,14 @@
     {
       "symbol": "ICICIBANK.NS",
       "rf_brier_score": 0.2635,
-      "xgb_brier_score": 0.3019,
+      "xgb_brier_score": 0.2947,
       "rf_calibration_error": 0.0816,
-      "xgb_calibration_error": 0.2106,
+      "xgb_calibration_error": 0.215,
       "rf_reliable": true,
       "xgb_reliable": true,
+      "xgb_weight_penalty": 0.5,
       "rf_ece": 0.0816,
-      "xgb_ece": 0.2106
+      "xgb_ece": 0.215
     },
     {
       "symbol": "NTPC.NS",
@@ -198,14 +199,14 @@
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2693,
-      "xgb_brier_score": 0.2925,
-      "rf_calibration_error": 0.1077,
-      "xgb_calibration_error": 0.2011,
+      "rf_brier_score": 0.2696,
+      "xgb_brier_score": 0.2909,
+      "rf_calibration_error": 0.1098,
+      "xgb_calibration_error": 0.2366,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.1077,
-      "xgb_ece": 0.2011
+      "rf_ece": 0.1098,
+      "xgb_ece": 0.2366
     },
     {
       "symbol": "COALINDIA.NS",
@@ -338,7 +339,7 @@
         "learning_rate": 0.05,
         "subsample": 0.8
       },
-      "xgb_precision": 0.5441
+      "xgb_precision": 0.5461
     },
     {
       "symbol": "POWERGRID.NS",
@@ -402,29 +403,29 @@
         "learning_rate": 0.08,
         "subsample": 0.9
       },
-      "xgb_precision": 0.4831
+      "xgb_precision": 0.4833
     }
   ],
   "voter_accuracy": {
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-09-11 15:04"
+    "analysis_date": "2026-09-12 08:52"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-09-11 15:04"
+    "analysis_date": "2026-09-12 08:52"
   },
   "youtube_mood": {
-    "overall_mood": -0.6666666666666666,
+    "overall_mood": -0.3333333333333333,
     "stock_mentions": {},
     "trending_topics": [
       "Ideas? Always ready. Makeup? Only under team pressure \ud83d\ude04| CA Rachana Ranade | #shorts",
-      "The Truth About The \u20b95L Cover on Your Bank Accounts",
-      "The Bank Account That Never Stopped Existing"
+      "The Loan You Never Took",
+      "The Truth About The \u20b95L Cover on Your Bank Accounts"
     ],
     "channel_consensus": "bearish",
     "contrarian_signal": false
@@ -455,24 +456,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.8510592043814297,
-        "DowJones": 0.7761766032107356,
-        "NASDAQ": 1.0123903676852226,
-        "Nikkei": 0.19674930405278024,
+        "SP500": 0.8598836028398098,
+        "DowJones": 0.9780011269161137,
+        "NASDAQ": 0.9635804410131886,
+        "Nikkei": -1.9298162353645676,
         "HangSeng": -0.5964456049607219,
-        "BrentCrude": -2.9545669295971253,
-        "Gold": 1.3564026878794821,
-        "USDINR": 0.45020677024350225
+        "BrentCrude": -2.805906085787344,
+        "Gold": 0.038955099381372434,
+        "USDINR": -0.16145427641361187
       },
-      "score": 0.5771366728278129
+      "score": 0.48069710119520626
     },
     "vix_analysis": {
-      "value": 12.28499984741211,
+      "value": 12.289999961853027,
       "classification": "Low volatility (safe)",
       "trend": "rising"
     },
-    "market_mood_score": 0.4308546691311252,
+    "market_mood_score": 0.39227884047808254,
     "earnings_calendar": [],
-    "timestamp": "2026-09-11T20:31:06.047494+05:30"
+    "timestamp": "2026-09-12T14:18:32.971521+05:30"
   }
 }

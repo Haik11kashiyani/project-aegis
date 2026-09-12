@@ -81,12 +81,12 @@
     "lstm_accuracy": 0.5691
   },
   "TCS.NS": {
-    "rf_weight": 0.2468,
-    "xgb_weight": 0.2275,
-    "lstm_weight": 0.277,
-    "intraday_weight": 0.2487,
+    "rf_weight": 0.2463,
+    "xgb_weight": 0.229,
+    "lstm_weight": 0.2765,
+    "intraday_weight": 0.2482,
     "rf_accuracy": 0.4961,
-    "xgb_accuracy": 0.4574,
+    "xgb_accuracy": 0.4612,
     "lstm_accuracy": 0.5569
   }
 }
