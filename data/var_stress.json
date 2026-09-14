@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.7358,
-    "var_rupees": 260.37,
-    "mean_daily_return": 0.0279,
-    "daily_volatility": 1.072
+    "var_pct": 1.7383,
+    "var_rupees": 260.75,
+    "mean_daily_return": 0.0272,
+    "daily_volatility": 1.0731
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.7461,
-    "var_rupees": 261.92,
-    "cvar_pct": 2.1969,
-    "cvar_rupees": 329.54,
-    "sim_mean": 0.0256,
-    "sim_std": 1.0757
+    "var_pct": 1.7487,
+    "var_rupees": 262.3,
+    "cvar_pct": 2.1999,
+    "cvar_rupees": 329.99,
+    "sim_mean": 0.0249,
+    "sim_std": 1.0768
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.4664,
-    "var_rupees": 369.96,
-    "mean_daily_return": 0.0279,
-    "daily_volatility": 1.072
+    "var_pct": 2.4697,
+    "var_rupees": 370.46,
+    "mean_daily_return": 0.0272,
+    "daily_volatility": 1.0731
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.4595,
-    "var_rupees": 368.92,
-    "cvar_pct": 2.8631,
-    "cvar_rupees": 429.47,
-    "sim_mean": 0.0256,
-    "sim_std": 1.0757
+    "var_pct": 2.4628,
+    "var_rupees": 369.42,
+    "cvar_pct": 2.8668,
+    "cvar_rupees": 430.03,
+    "sim_mean": 0.0249,
+    "sim_std": 1.0768
   },
   "stress_tests": [
     {
@@ -117,14 +117,14 @@
     }
   ],
   "drawdowns": {
-    "max_drawdown_pct": -14.4288,
-    "max_drawdown_day": 250,
-    "current_drawdown_pct": -14.4288,
+    "max_drawdown_pct": -14.2926,
+    "max_drawdown_day": 249,
+    "current_drawdown_pct": -14.2926,
     "drawdown_periods": 10,
     "longest_drawdown_days": 142,
-    "avg_drawdown_pct": -6.0931
+    "avg_drawdown_pct": -6.0925
   },
-  "risk_score": 90,
+  "risk_score": 89,
   "risk_level": "HIGH",
   "capital": 15000.0,
   "symbols": [
@@ -132,6 +132,6 @@
     "SBIN.NS",
     "RELIANCE.NS"
   ],
-  "observations": 251,
-  "timestamp": "2026-09-11 13:36:30 IST"
+  "observations": 250,
+  "timestamp": "2026-09-14 14:26:00 IST"
 }
