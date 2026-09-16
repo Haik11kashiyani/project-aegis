@@ -1,9 +1,8 @@
 {
-  "regime": "SIDEWAYS",
-  "confidence": 0.3497,
+  "regime": "BULL",
+  "confidence": 0.584,
   "regime_history": [
     "BEAR",
-    "BEAR",
     "BULL",
     "SIDEWAYS",
     "SIDEWAYS",
@@ -57,26 +56,27 @@
     "SIDEWAYS",
     "SIDEWAYS",
     "SIDEWAYS",
-    "SIDEWAYS",
-    "SIDEWAYS",
-    "SIDEWAYS",
-    "SIDEWAYS",
-    "SIDEWAYS"
+    "BEAR",
+    "BEAR",
+    "BEAR",
+    "BEAR",
+    "BEAR",
+    "BULL"
   ],
-  "personality_override": null,
-  "sizing_multiplier": 0.85,
+  "personality_override": "AGGRESSIVE",
+  "sizing_multiplier": 1.3,
   "state_probs": {
-    "BEAR": 0.5204,
-    "SIDEWAYS": 0.3497,
-    "BULL": 0.1299
+    "BEAR": 0.3535,
+    "SIDEWAYS": 0.0624,
+    "BULL": 0.584
   },
   "state_means": {
-    "BEAR": -0.6303,
-    "SIDEWAYS": -0.1297,
-    "BULL": 0.544
+    "BEAR": -0.6363,
+    "SIDEWAYS": -0.1241,
+    "BULL": 0.5398
   },
-  "transition_active": false,
+  "transition_active": true,
   "lookback_days": 252,
   "observations": 246,
-  "timestamp": "2026-09-15 08:43:55 UTC"
+  "timestamp": "2026-09-16 08:37:34 UTC"
 }

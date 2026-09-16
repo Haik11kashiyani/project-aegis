@@ -2,67 +2,67 @@
   "chains": {
     "TATASTEEL.NS": {
       "symbol": "TATASTEEL",
-      "spot": 182.9600067138672,
+      "spot": 182.99000549316406,
       "source": "BLACK_SCHOLES",
       "atm_put": {
         "source": "BLACK_SCHOLES",
         "strike": 200,
-        "premium": 16.76,
+        "premium": 16.73,
         "iv": 0.25,
-        "delta": -0.8962,
-        "gamma": 0.016029,
-        "theta": -0.0781,
-        "vega": 0.1103,
+        "delta": -0.8958,
+        "gamma": 0.016068,
+        "theta": -0.0782,
+        "vega": 0.1106,
         "lot_size": 850,
-        "total_cost": 14246.000000000002
+        "total_cost": 14220.5
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-09-15 14:13:58 IST"
+      "timestamp": "2026-09-16 14:07:38 IST"
     },
     "SBIN.NS": {
       "symbol": "SBIN",
-      "spot": 975.7999877929688,
+      "spot": 987.7999877929688,
       "source": "BLACK_SCHOLES",
       "atm_put": {
         "source": "BLACK_SCHOLES",
         "strike": 950,
-        "premium": 17.17,
+        "premium": 12.46,
         "iv": 0.25,
-        "delta": -0.2774,
-        "gamma": 0.005073,
-        "theta": -0.4648,
-        "vega": 0.9926,
+        "delta": -0.2196,
+        "gamma": 0.004548,
+        "theta": -0.4208,
+        "vega": 0.9118,
         "lot_size": 750,
-        "total_cost": 12877.500000000002
+        "total_cost": 9345.0
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-09-15 14:13:59 IST"
+      "timestamp": "2026-09-16 14:07:38 IST"
     },
     "RELIANCE.NS": {
       "symbol": "RELIANCE",
-      "spot": 1245.5999755859375,
+      "spot": 1248.300048828125,
       "source": "BLACK_SCHOLES",
       "atm_put": {
         "source": "BLACK_SCHOLES",
         "strike": 1200,
-        "premium": 16.48,
+        "premium": 15.55,
         "iv": 0.25,
-        "delta": -0.2272,
-        "gamma": 0.003663,
-        "theta": -0.5398,
-        "vega": 1.1677,
+        "delta": -0.2177,
+        "gamma": 0.003584,
+        "theta": -0.5293,
+        "vega": 1.1476,
         "lot_size": 250,
-        "total_cost": 4120.0
+        "total_cost": 3887.5
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-09-15 14:13:59 IST"
+      "timestamp": "2026-09-16 14:07:39 IST"
     }
   },
   "nse_live": 0,
   "bs_fallback": 3,
   "total": 3,
-  "timestamp": "2026-09-15 14:13:59 IST"
+  "timestamp": "2026-09-16 14:07:39 IST"
 }
