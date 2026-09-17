@@ -1,193 +1,193 @@
 {
-  "timestamp": "2026-09-16 14:07:28",
+  "timestamp": "2026-09-17 14:11:53",
   "breadth": {
-    "advance_decline_ratio": 1.9,
-    "advancing": 19,
-    "declining": 10,
-    "pct_above_sma50": 6.9,
-    "pct_above_sma200": 31.0,
-    "breadth_score": 86.2,
+    "advance_decline_ratio": 1.64,
+    "advancing": 18,
+    "declining": 11,
+    "pct_above_sma50": 10.3,
+    "pct_above_sma200": 27.6,
+    "breadth_score": 76.0,
     "signal": "HEALTHY",
     "stocks_analysed": 29,
     "detail": {
       "RELIANCE.NS": {
-        "price": 1248.2,
-        "change": 1.04,
+        "price": 1242.0,
+        "change": 0.16,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "TCS.NS": {
-        "price": 2196.2,
-        "change": -2.43,
+        "price": 2192.0,
+        "change": 0.15,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "HDFCBANK.NS": {
-        "price": 718.3,
-        "change": 0.24,
+        "price": 716.5,
+        "change": -0.69,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "INFY.NS": {
-        "price": 1060.6,
-        "change": -1.52,
+        "price": 1054.3,
+        "change": -0.54,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "ICICIBANK.NS": {
-        "price": 1353.0,
-        "change": 0.19,
+        "price": 1353.3,
+        "change": -0.4,
         "above_sma50": "False",
         "above_sma200": "True"
       },
       "HINDUNILVR.NS": {
-        "price": 1967.2,
-        "change": 1.5,
+        "price": 1951.3,
+        "change": -0.55,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "SBIN.NS": {
-        "price": 987.8,
-        "change": 2.05,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "BHARTIARTL.NS": {
-        "price": 1834.4,
-        "change": 0.22,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "KOTAKBANK.NS": {
-        "price": 415.4,
-        "change": 1.37,
-        "above_sma50": "True",
-        "above_sma200": "True"
-      },
-      "ITC.NS": {
-        "price": 264.05,
-        "change": 2.34,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "LT.NS": {
-        "price": 3815.1,
-        "change": -0.92,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "AXISBANK.NS": {
-        "price": 1246.7,
-        "change": 1.95,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "BAJFINANCE.NS": {
-        "price": 1010.9,
-        "change": 0.17,
-        "above_sma50": "False",
-        "above_sma200": "True"
-      },
-      "ASIANPAINT.NS": {
-        "price": 2439.0,
-        "change": 1.51,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "MARUTI.NS": {
-        "price": 12224.0,
-        "change": -0.06,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "TITAN.NS": {
-        "price": 4908.0,
-        "change": 1.07,
-        "above_sma50": "False",
-        "above_sma200": "True"
-      },
-      "SUNPHARMA.NS": {
-        "price": 1848.0,
-        "change": 0.71,
-        "above_sma50": "False",
-        "above_sma200": "True"
-      },
-      "WIPRO.NS": {
-        "price": 167.1,
-        "change": -1.71,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "ULTRACEMCO.NS": {
-        "price": 10687.0,
-        "change": -0.09,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "NTPC.NS": {
-        "price": 329.1,
-        "change": -0.12,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "POWERGRID.NS": {
-        "price": 264.3,
-        "change": 0.57,
-        "above_sma50": "False",
-        "above_sma200": "False"
-      },
-      "TATASTEEL.NS": {
-        "price": 182.94,
+        "price": 987.5,
         "change": -0.39,
         "above_sma50": "False",
         "above_sma200": "False"
       },
-      "COALINDIA.NS": {
-        "price": 423.2,
-        "change": 0.94,
+      "BHARTIARTL.NS": {
+        "price": 1835.4,
+        "change": 0.02,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "KOTAKBANK.NS": {
+        "price": 415.1,
+        "change": 0.02,
         "above_sma50": "True",
         "above_sma200": "True"
       },
+      "ITC.NS": {
+        "price": 265.85,
+        "change": 0.64,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "LT.NS": {
+        "price": 3856.8,
+        "change": 1.29,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "AXISBANK.NS": {
+        "price": 1241.5,
+        "change": 0.04,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "BAJFINANCE.NS": {
+        "price": 1012.6,
+        "change": 0.64,
+        "above_sma50": "False",
+        "above_sma200": "True"
+      },
+      "ASIANPAINT.NS": {
+        "price": 2444.6,
+        "change": 1.74,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "MARUTI.NS": {
+        "price": 12354.0,
+        "change": 1.55,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "TITAN.NS": {
+        "price": 4850.0,
+        "change": -0.12,
+        "above_sma50": "False",
+        "above_sma200": "True"
+      },
+      "SUNPHARMA.NS": {
+        "price": 1857.7,
+        "change": 1.24,
+        "above_sma50": "False",
+        "above_sma200": "True"
+      },
+      "WIPRO.NS": {
+        "price": 166.12,
+        "change": -0.46,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "ULTRACEMCO.NS": {
+        "price": 10809.0,
+        "change": 1.05,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "NTPC.NS": {
+        "price": 330.0,
+        "change": 0.92,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "POWERGRID.NS": {
+        "price": 263.7,
+        "change": 0.34,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "TATASTEEL.NS": {
+        "price": 185.24,
+        "change": 1.22,
+        "above_sma50": "False",
+        "above_sma200": "False"
+      },
+      "COALINDIA.NS": {
+        "price": 418.4,
+        "change": -0.91,
+        "above_sma50": "True",
+        "above_sma200": "False"
+      },
       "ONGC.NS": {
-        "price": 235.33,
-        "change": -0.26,
+        "price": 232.02,
+        "change": -1.67,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "ADANIENT.NS": {
-        "price": 2936.4,
-        "change": 0.27,
+        "price": 2923.0,
+        "change": 0.1,
         "above_sma50": "False",
         "above_sma200": "True"
       },
       "ADANIPORTS.NS": {
-        "price": 1731.1,
-        "change": 1.01,
-        "above_sma50": "False",
+        "price": 1734.1,
+        "change": 1.18,
+        "above_sma50": "True",
         "above_sma200": "True"
       },
       "HCLTECH.NS": {
-        "price": 1254.9,
-        "change": 0.1,
+        "price": 1243.9,
+        "change": -0.73,
         "above_sma50": "False",
         "above_sma200": "False"
       },
       "TECHM.NS": {
-        "price": 1557.3,
-        "change": 1.06,
+        "price": 1555.3,
+        "change": -1.31,
         "above_sma50": "False",
         "above_sma200": "True"
       },
       "BAJAJFINSV.NS": {
-        "price": 1841.9,
-        "change": -3.74,
+        "price": 1848.5,
+        "change": 0.63,
         "above_sma50": "False",
         "above_sma200": "False"
       }
     }
   },
   "vix": {
-    "vix": 13.09,
+    "vix": 12.48,
     "signal": "NORMAL"
   },
   "position_size_factor": 1.0,
