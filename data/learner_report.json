@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17 15:39",
+  "generated_at": "2026-09-18 15:01",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-09-17 15:34"
+    "analysis_date": "2026-09-18 14:58"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -26,224 +26,223 @@
   },
   "ensemble_weights": {
     "TATASTEEL.NS": {
-      "rf_weight": 0.2527,
-      "xgb_weight": 0.2527,
-      "lstm_weight": 0.2512,
-      "intraday_weight": 0.2433,
-      "rf_accuracy": 0.5194,
+      "rf_weight": 0.2541,
+      "xgb_weight": 0.2523,
+      "lstm_weight": 0.2507,
+      "intraday_weight": 0.2428,
+      "rf_accuracy": 0.5233,
       "xgb_accuracy": 0.5194,
       "lstm_accuracy": 0.5163
     },
     "SBIN.NS": {
-      "rf_weight": 0.2451,
-      "xgb_weight": 0.2471,
-      "lstm_weight": 0.2464,
-      "intraday_weight": 0.2613,
+      "rf_weight": 0.2456,
+      "xgb_weight": 0.2477,
+      "lstm_weight": 0.2448,
+      "intraday_weight": 0.2619,
       "rf_accuracy": 0.469,
       "xgb_accuracy": 0.4729,
-      "lstm_accuracy": 0.4715
+      "lstm_accuracy": 0.4675
     },
     "RELIANCE.NS": {
-      "rf_weight": 0.2563,
-      "xgb_weight": 0.2545,
-      "lstm_weight": 0.2514,
-      "intraday_weight": 0.2379,
-      "rf_accuracy": 0.5388,
-      "xgb_accuracy": 0.5349,
+      "rf_weight": 0.2562,
+      "xgb_weight": 0.2581,
+      "lstm_weight": 0.2496,
+      "intraday_weight": 0.2361,
+      "rf_accuracy": 0.5426,
+      "xgb_accuracy": 0.5465,
       "lstm_accuracy": 0.5285
     },
     "HDFCBANK.NS": {
-      "rf_weight": 0.2652,
-      "xgb_weight": 0.2531,
-      "lstm_weight": 0.2581,
-      "intraday_weight": 0.2236,
+      "rf_weight": 0.2657,
+      "xgb_weight": 0.2535,
+      "lstm_weight": 0.2568,
+      "intraday_weight": 0.224,
       "rf_accuracy": 0.593,
       "xgb_accuracy": 0.5659,
-      "lstm_accuracy": 0.5772
+      "lstm_accuracy": 0.5732
     },
     "ICICIBANK.NS": {
-      "rf_weight": 0.2476,
-      "xgb_weight": 0.2694,
-      "lstm_weight": 0.2482,
-      "intraday_weight": 0.2348,
-      "rf_accuracy": 0.5271,
-      "xgb_accuracy": 0.5736,
+      "rf_weight": 0.2616,
+      "xgb_weight": 0.239,
+      "lstm_weight": 0.2566,
+      "intraday_weight": 0.2428,
+      "rf_accuracy": 0.5388,
+      "xgb_accuracy": 0.4922,
       "lstm_accuracy": 0.5285
     },
     "NTPC.NS": {
-      "rf_weight": 0.2517,
-      "xgb_weight": 0.2555,
-      "lstm_weight": 0.2523,
-      "intraday_weight": 0.2405,
-      "rf_accuracy": 0.5233,
-      "xgb_accuracy": 0.531,
+      "rf_weight": 0.2541,
+      "xgb_weight": 0.2522,
+      "lstm_weight": 0.2527,
+      "intraday_weight": 0.241,
+      "rf_accuracy": 0.5271,
+      "xgb_accuracy": 0.5233,
       "lstm_accuracy": 0.5244
     },
     "POWERGRID.NS": {
-      "rf_weight": 0.2444,
-      "xgb_weight": 0.2726,
-      "lstm_weight": 0.2405,
-      "intraday_weight": 0.2425,
-      "rf_accuracy": 0.5039,
-      "xgb_accuracy": 0.562,
+      "rf_weight": 0.2622,
+      "xgb_weight": 0.2566,
+      "lstm_weight": 0.2396,
+      "intraday_weight": 0.2416,
+      "rf_accuracy": 0.5426,
+      "xgb_accuracy": 0.531,
       "lstm_accuracy": 0.4959
     },
     "COALINDIA.NS": {
-      "rf_weight": 0.2471,
-      "xgb_weight": 0.2471,
-      "lstm_weight": 0.2508,
-      "intraday_weight": 0.255,
-      "rf_accuracy": 0.4845,
-      "xgb_accuracy": 0.4845,
-      "lstm_accuracy": 0.4919
+      "rf_weight": 0.2501,
+      "xgb_weight": 0.2501,
+      "lstm_weight": 0.2436,
+      "intraday_weight": 0.2561,
+      "rf_accuracy": 0.4884,
+      "xgb_accuracy": 0.4884,
+      "lstm_accuracy": 0.4756
     },
     "INFY.NS": {
-      "rf_weight": 0.2669,
-      "xgb_weight": 0.2342,
-      "lstm_weight": 0.2647,
-      "intraday_weight": 0.2342,
-      "rf_accuracy": 0.5698,
-      "xgb_accuracy": 0.5,
+      "rf_weight": 0.2581,
+      "xgb_weight": 0.2528,
+      "lstm_weight": 0.2595,
+      "intraday_weight": 0.2296,
+      "rf_accuracy": 0.562,
+      "xgb_accuracy": 0.5504,
       "lstm_accuracy": 0.565
     },
     "TCS.NS": {
-      "rf_weight": 0.2646,
-      "xgb_weight": 0.2166,
-      "lstm_weight": 0.2715,
-      "intraday_weight": 0.2473,
-      "rf_accuracy": 0.5349,
-      "xgb_accuracy": 0.438,
+      "rf_weight": 0.2667,
+      "xgb_weight": 0.2213,
+      "lstm_weight": 0.2679,
+      "intraday_weight": 0.244,
+      "rf_accuracy": 0.5465,
+      "xgb_accuracy": 0.4535,
       "lstm_accuracy": 0.5488
     }
   },
   "market_regimes": {
     "NIFTY50": "RANGING",
     "TATASTEEL.NS": "RANGING",
-    "SBIN.NS": "RANGING",
+    "SBIN.NS": "TRENDING_UP",
     "RELIANCE.NS": "RANGING",
-    "HDFCBANK.NS": "TRENDING_DOWN",
+    "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "RANGING",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
-    "INFY.NS": "RANGING",
-    "TCS.NS": "RANGING"
+    "INFY.NS": "TRENDING_UP",
+    "TCS.NS": "TRENDING_UP"
   },
   "calibrations": [
     {
       "symbol": "TATASTEEL.NS",
-      "rf_brier_score": 0.2705,
-      "xgb_brier_score": 0.3335,
-      "rf_calibration_error": 0.1245,
-      "xgb_calibration_error": 0.3276,
+      "rf_brier_score": 0.2736,
+      "xgb_brier_score": 0.3399,
+      "rf_calibration_error": 0.1445,
+      "xgb_calibration_error": 0.2277,
       "rf_reliable": true,
-      "xgb_reliable": false,
-      "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1245,
-      "xgb_ece": 0.3276
+      "xgb_reliable": true,
+      "rf_ece": 0.1445,
+      "xgb_ece": 0.2277
     },
     {
       "symbol": "SBIN.NS",
-      "rf_brier_score": 0.2988,
-      "xgb_brier_score": 0.3933,
-      "rf_calibration_error": 0.1938,
-      "xgb_calibration_error": 0.2329,
+      "rf_brier_score": 0.2952,
+      "xgb_brier_score": 0.3823,
+      "rf_calibration_error": 0.1052,
+      "xgb_calibration_error": 0.2393,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.1938,
-      "xgb_ece": 0.2329
+      "rf_ece": 0.1052,
+      "xgb_ece": 0.2393
     },
     {
       "symbol": "RELIANCE.NS",
-      "rf_brier_score": 0.2494,
-      "xgb_brier_score": 0.2714,
-      "rf_calibration_error": 0.0247,
-      "xgb_calibration_error": 0.1614,
+      "rf_brier_score": 0.2514,
+      "xgb_brier_score": 0.269,
+      "rf_calibration_error": 0.0623,
+      "xgb_calibration_error": 0.1832,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0247,
-      "xgb_ece": 0.1614
+      "rf_ece": 0.0623,
+      "xgb_ece": 0.1832
     },
     {
       "symbol": "HDFCBANK.NS",
-      "rf_brier_score": 0.2683,
-      "xgb_brier_score": 0.307,
-      "rf_calibration_error": 0.1228,
-      "xgb_calibration_error": 0.2806,
+      "rf_brier_score": 0.2634,
+      "xgb_brier_score": 0.3023,
+      "rf_calibration_error": 0.1334,
+      "xgb_calibration_error": 0.2593,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1228,
-      "xgb_ece": 0.2806
+      "rf_ece": 0.1334,
+      "xgb_ece": 0.2593
     },
     {
       "symbol": "ICICIBANK.NS",
-      "rf_brier_score": 0.2645,
-      "xgb_brier_score": 0.2945,
-      "rf_calibration_error": 0.1191,
-      "xgb_calibration_error": 0.1807,
-      "rf_reliable": true,
-      "xgb_reliable": true,
-      "rf_ece": 0.1191,
-      "xgb_ece": 0.1807
-    },
-    {
-      "symbol": "NTPC.NS",
-      "rf_brier_score": 0.2483,
-      "xgb_brier_score": 0.2997,
-      "rf_calibration_error": 0.0735,
-      "xgb_calibration_error": 0.2041,
+      "rf_brier_score": 0.2638,
+      "xgb_brier_score": 0.2847,
+      "rf_calibration_error": 0.0718,
+      "xgb_calibration_error": 0.2021,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.0735,
-      "xgb_ece": 0.2041
+      "rf_ece": 0.0718,
+      "xgb_ece": 0.2021
+    },
+    {
+      "symbol": "NTPC.NS",
+      "rf_brier_score": 0.2479,
+      "xgb_brier_score": 0.3032,
+      "rf_calibration_error": 0.0644,
+      "xgb_calibration_error": 0.1439,
+      "rf_reliable": true,
+      "xgb_reliable": true,
+      "rf_ece": 0.0644,
+      "xgb_ece": 0.1439
     },
     {
       "symbol": "POWERGRID.NS",
       "rf_brier_score": 0.2605,
-      "xgb_brier_score": 0.2828,
-      "rf_calibration_error": 0.0893,
-      "xgb_calibration_error": 0.1851,
+      "xgb_brier_score": 0.2768,
+      "rf_calibration_error": 0.0993,
+      "xgb_calibration_error": 0.1588,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0893,
-      "xgb_ece": 0.1851
+      "rf_ece": 0.0993,
+      "xgb_ece": 0.1588
     },
     {
       "symbol": "COALINDIA.NS",
-      "rf_brier_score": 0.2669,
-      "xgb_brier_score": 0.3408,
-      "rf_calibration_error": 0.3648,
-      "xgb_calibration_error": 0.1844,
-      "rf_reliable": false,
+      "rf_brier_score": 0.2692,
+      "xgb_brier_score": 0.354,
+      "rf_calibration_error": 0.2855,
+      "xgb_calibration_error": 0.2387,
+      "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.3648,
-      "xgb_ece": 0.1844
+      "rf_ece": 0.2855,
+      "xgb_ece": 0.2387
     },
     {
       "symbol": "INFY.NS",
-      "rf_brier_score": 0.2624,
-      "xgb_brier_score": 0.3093,
-      "rf_calibration_error": 0.1472,
-      "xgb_calibration_error": 0.2431,
+      "rf_brier_score": 0.2626,
+      "xgb_brier_score": 0.3142,
+      "rf_calibration_error": 0.224,
+      "xgb_calibration_error": 0.2883,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1472,
-      "xgb_ece": 0.2431
+      "rf_ece": 0.224,
+      "xgb_ece": 0.2883
     },
     {
       "symbol": "TCS.NS",
-      "rf_brier_score": 0.284,
-      "xgb_brier_score": 0.3988,
-      "rf_calibration_error": 0.1923,
-      "xgb_calibration_error": 0.2388,
+      "rf_brier_score": 0.2862,
+      "xgb_brier_score": 0.3894,
+      "rf_calibration_error": 0.1816,
+      "xgb_calibration_error": 0.2702,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1923,
-      "xgb_ece": 0.2388
+      "rf_ece": 0.1816,
+      "xgb_ece": 0.2702
     }
   ],
   "tuned_params": [
@@ -261,71 +260,71 @@
         "learning_rate": 0.05,
         "subsample": 0.8
       },
-      "xgb_precision": 0.7381
+      "xgb_precision": 0.6928
     },
     {
       "symbol": "SBIN.NS",
+      "rf_params": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "min_samples_split": 80
+      },
+      "rf_precision": 0.7,
+      "xgb_params": {
+        "n_estimators": 150,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.7
+      },
+      "xgb_precision": 0.5566
+    },
+    {
+      "symbol": "RELIANCE.NS",
       "rf_params": {
         "n_estimators": 150,
         "max_depth": 8,
         "min_samples_split": 30
       },
-      "rf_precision": 0.5869,
+      "rf_precision": 0.7361,
       "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
-      },
-      "xgb_precision": 0.5546
-    },
-    {
-      "symbol": "RELIANCE.NS",
-      "rf_params": {
         "n_estimators": 300,
-        "max_depth": 15,
-        "min_samples_split": 60
+        "max_depth": 7,
+        "learning_rate": 0.02,
+        "subsample": 0.75
       },
-      "rf_precision": 0.6818,
-      "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
-      },
-      "xgb_precision": 0.5593
+      "xgb_precision": 0.5442
     },
     {
       "symbol": "HDFCBANK.NS",
       "rf_params": {
-        "n_estimators": 250,
-        "max_depth": 12,
-        "min_samples_split": 40
+        "n_estimators": 150,
+        "max_depth": 8,
+        "min_samples_split": 30
       },
-      "rf_precision": 0.4091,
+      "rf_precision": 0.6852,
       "xgb_params": {
         "n_estimators": 150,
         "max_depth": 4,
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.644
+      "xgb_precision": 0.6658
     },
     {
       "symbol": "ICICIBANK.NS",
       "rf_params": {
         "n_estimators": 200,
-        "max_depth": 10,
-        "min_samples_split": 50
+        "max_depth": 8,
+        "min_samples_split": 80
       },
-      "rf_precision": 0.5067,
+      "rf_precision": 0.5042,
       "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
+        "n_estimators": 250,
+        "max_depth": 5,
+        "learning_rate": 0.04,
+        "subsample": 0.85
       },
-      "xgb_precision": 0.6959
+      "xgb_precision": 0.6706
     },
     {
       "symbol": "NTPC.NS",
@@ -334,30 +333,30 @@
         "max_depth": 8,
         "min_samples_split": 80
       },
-      "rf_precision": 0.6589,
+      "rf_precision": 0.6307,
       "xgb_params": {
-        "n_estimators": 200,
+        "n_estimators": 150,
         "max_depth": 4,
-        "learning_rate": 0.08,
-        "subsample": 0.9
+        "learning_rate": 0.03,
+        "subsample": 0.7
       },
-      "xgb_precision": 0.537
+      "xgb_precision": 0.5355
     },
     {
       "symbol": "POWERGRID.NS",
       "rf_params": {
-        "n_estimators": 150,
-        "max_depth": 8,
-        "min_samples_split": 30
-      },
-      "rf_precision": 0.381,
-      "xgb_params": {
         "n_estimators": 250,
-        "max_depth": 5,
-        "learning_rate": 0.04,
-        "subsample": 0.85
+        "max_depth": 12,
+        "min_samples_split": 40
       },
-      "xgb_precision": 0.6201
+      "rf_precision": 0.3527,
+      "xgb_params": {
+        "n_estimators": 150,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.7
+      },
+      "xgb_precision": 0.6821
     },
     {
       "symbol": "COALINDIA.NS",
@@ -366,30 +365,30 @@
         "max_depth": 8,
         "min_samples_split": 30
       },
-      "rf_precision": 0.1749,
-      "xgb_params": {
-        "n_estimators": 250,
-        "max_depth": 5,
-        "learning_rate": 0.04,
-        "subsample": 0.85
-      },
-      "xgb_precision": 0.5022
-    },
-    {
-      "symbol": "INFY.NS",
-      "rf_params": {
-        "n_estimators": 200,
-        "max_depth": 10,
-        "min_samples_split": 50
-      },
-      "rf_precision": 0.465,
+      "rf_precision": 0.1739,
       "xgb_params": {
         "n_estimators": 200,
         "max_depth": 6,
         "learning_rate": 0.05,
         "subsample": 0.8
       },
-      "xgb_precision": 0.4884
+      "xgb_precision": 0.3647
+    },
+    {
+      "symbol": "INFY.NS",
+      "rf_params": {
+        "n_estimators": 150,
+        "max_depth": 8,
+        "min_samples_split": 30
+      },
+      "rf_precision": 0.4844,
+      "xgb_params": {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.02,
+        "subsample": 0.75
+      },
+      "xgb_precision": 0.4894
     },
     {
       "symbol": "TCS.NS",
@@ -398,38 +397,38 @@
         "max_depth": 8,
         "min_samples_split": 80
       },
-      "rf_precision": 0.6376,
+      "rf_precision": 0.543,
       "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "subsample": 0.8
       },
-      "xgb_precision": 0.5079
+      "xgb_precision": 0.4742
     }
   ],
   "voter_accuracy": {
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-09-17 15:38"
+    "analysis_date": "2026-09-18 15:01"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-09-17 15:38"
+    "analysis_date": "2026-09-18 15:01"
   },
   "youtube_mood": {
-    "overall_mood": 0.0,
+    "overall_mood": -0.1,
     "stock_mentions": {},
     "trending_topics": [
+      "BSE vs NSE: Can NSE Repeat BSE\u2019s Massive Growth Story? | CA Rachana Ranade",
       "Nifty at 23,000: Key Levels & Market Updates | CA Rachana Ranade | #shorts",
       "Nifty at 23,000: Key Levels & Market Updates | CA Rachana Ranade",
-      "Monday meeting got replaced by Bappa ki Aarti! | CA Rachana Ranade | #shorts",
-      "Yeh Fake SBI Branch Customers ko Lootne ke liye bani hi nahi thi! #shorts",
-      "How Looking Rich Can Keep You Poor"
+      "Aap Ghar Main Legally Kitna Cash Rakh Sakte hain? #shorts",
+      "Yeh Fake SBI Branch Customers ko Lootne ke liye bani hi nahi thi! #shorts"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -443,41 +442,41 @@
     },
     "sector_heatmap": {
       "it": {
-        "1d": 0.2336016069964185,
-        "5d": 0.8355800282735008,
-        "20d": -4.9471804506729935
+        "1d": -1.032559207008034,
+        "5d": -0.12581681042656367,
+        "20d": -5.494843055293992
       },
       "banking": {
-        "1d": -0.42048129373479054,
-        "5d": -0.42596755502367145,
-        "20d": -2.504784648361466
+        "1d": 0.5404427177408205,
+        "5d": -0.20054204178664753,
+        "20d": -2.42936746245484
       },
       "pharma": {
-        "1d": 1.6562666628021787,
-        "5d": -0.4216679952484238,
-        "20d": 0.6179966686856451
+        "1d": 0.49229985562045575,
+        "5d": 0.5808513087283985,
+        "20d": 1.3291082403095629
       }
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.9944648643643808,
-        "DowJones": 0.5477277409272606,
-        "NASDAQ": 1.5257925821271794,
-        "Nikkei": 0.6913517348401083,
-        "HangSeng": -0.44303314786356773,
-        "BrentCrude": -2.0504565164890223,
-        "Gold": 0.33048433048433046,
-        "USDINR": -0.07573544810802456
+        "SP500": -0.12974574054227392,
+        "DowJones": -0.3919600325246481,
+        "NASDAQ": -0.014290815508011506,
+        "Nikkei": 1.3762875421466019,
+        "HangSeng": 0.5953849509851084,
+        "BrentCrude": -4.779624261416451,
+        "Gold": -0.22047400690698699,
+        "USDINR": -0.28013723216510017
       },
-      "score": 0.6543459445344945
+      "score": 0.9165386761011654
     },
     "vix_analysis": {
-      "value": 12.289999961853027,
+      "value": 11.385000228881836,
       "classification": "Low volatility (safe)",
       "trend": "falling"
     },
-    "market_mood_score": 0.4617383778137978,
+    "market_mood_score": 0.5666154704404662,
     "earnings_calendar": [],
-    "timestamp": "2026-09-17T21:04:08.565758+05:30"
+    "timestamp": "2026-09-18T20:27:58.700780+05:30"
   }
 }
