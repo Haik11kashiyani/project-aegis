@@ -88,12 +88,12 @@
     },
     "rf_precision": 0.6307,
     "xgb_params": {
-      "n_estimators": 150,
-      "max_depth": 4,
-      "learning_rate": 0.03,
-      "subsample": 0.7
+      "n_estimators": 300,
+      "max_depth": 7,
+      "learning_rate": 0.02,
+      "subsample": 0.75
     },
-    "xgb_precision": 0.5355
+    "xgb_precision": 0.5328
   },
   {
     "symbol": "POWERGRID.NS",
@@ -118,14 +118,14 @@
       "max_depth": 8,
       "min_samples_split": 30
     },
-    "rf_precision": 0.1739,
+    "rf_precision": 0.1751,
     "xgb_params": {
-      "n_estimators": 200,
-      "max_depth": 6,
-      "learning_rate": 0.05,
-      "subsample": 0.8
+      "n_estimators": 150,
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "subsample": 0.7
     },
-    "xgb_precision": 0.3647
+    "xgb_precision": 0.3453
   },
   {
     "symbol": "INFY.NS",
@@ -141,7 +141,7 @@
       "learning_rate": 0.02,
       "subsample": 0.75
     },
-    "xgb_precision": 0.4894
+    "xgb_precision": 0.4896
   },
   {
     "symbol": "TCS.NS",
