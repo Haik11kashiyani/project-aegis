@@ -1,8 +1,8 @@
 {
   "trades_analysed": 6,
   "avg_timing_score": 0.0,
-  "avg_slippage_bps": 1977.6,
-  "total_slippage_cost": 2812.34,
+  "avg_slippage_bps": 2204.07,
+  "total_slippage_cost": 3148.75,
   "overall_grade": "D",
   "grade_distribution": {
     "A": 0,
@@ -21,11 +21,11 @@
       "entry_price": 2617.199951171875,
       "entry_time": "11:01",
       "day_low": 2078.4,
-      "day_high": 2322.8,
-      "vwap_estimate": 2188.64,
+      "day_high": 2272.9,
+      "vwap_estimate": 2144.86,
       "timing_score": 0,
-      "slippage_bps": 1958.13,
-      "slippage_rupees": 512.48,
+      "slippage_bps": 2202.19,
+      "slippage_rupees": 576.36,
       "grade": "F"
     },
     {
@@ -33,11 +33,11 @@
       "entry_price": 2614.60009765625,
       "entry_time": "11:07",
       "day_low": 2078.4,
-      "day_high": 2322.8,
-      "vwap_estimate": 2188.64,
+      "day_high": 2272.9,
+      "vwap_estimate": 2144.86,
       "timing_score": 0,
-      "slippage_bps": 1946.25,
-      "slippage_rupees": 508.87,
+      "slippage_bps": 2190.07,
+      "slippage_rupees": 572.61,
       "grade": "F"
     },
     {
@@ -45,11 +45,11 @@
       "entry_price": 2612.89990234375,
       "entry_time": "11:10",
       "day_low": 2078.4,
-      "day_high": 2322.8,
-      "vwap_estimate": 2188.64,
+      "day_high": 2272.9,
+      "vwap_estimate": 2144.86,
       "timing_score": 0,
-      "slippage_bps": 1938.48,
-      "slippage_rupees": 506.51,
+      "slippage_bps": 2182.14,
+      "slippage_rupees": 570.17,
       "grade": "F"
     },
     {
@@ -57,11 +57,11 @@
       "entry_price": 2611.699951171875,
       "entry_time": "11:12",
       "day_low": 2078.4,
-      "day_high": 2322.8,
-      "vwap_estimate": 2188.64,
+      "day_high": 2272.9,
+      "vwap_estimate": 2144.86,
       "timing_score": 0,
-      "slippage_bps": 1933.0,
-      "slippage_rupees": 504.84,
+      "slippage_bps": 2176.54,
+      "slippage_rupees": 568.45,
       "grade": "F"
     },
     {
@@ -69,25 +69,25 @@
       "entry_price": 2607.699951171875,
       "entry_time": "11:17",
       "day_low": 2078.4,
-      "day_high": 2322.8,
-      "vwap_estimate": 2188.64,
+      "day_high": 2272.9,
+      "vwap_estimate": 2144.86,
       "timing_score": 0,
-      "slippage_bps": 1914.72,
-      "slippage_rupees": 499.3,
+      "slippage_bps": 2157.9,
+      "slippage_rupees": 562.71,
       "grade": "F"
     },
     {
       "symbol": "INFY.NS",
       "entry_price": 1288.9000244140625,
       "entry_time": "11:22",
-      "day_low": 1030.5,
-      "day_high": 1097.6,
-      "vwap_estimate": 1058.65,
+      "day_low": 1019.2,
+      "day_high": 1084.5,
+      "vwap_estimate": 1046.56,
       "timing_score": 0,
-      "slippage_bps": 2175.0,
-      "slippage_rupees": 280.34,
+      "slippage_bps": 2315.57,
+      "slippage_rupees": 298.45,
       "grade": "F"
     }
   ],
-  "timestamp": "2026-09-21 15:10:46 IST"
+  "timestamp": "2026-09-22 15:11:06 IST"
 }
