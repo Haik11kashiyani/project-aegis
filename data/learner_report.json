@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25 15:54",
+  "generated_at": "2026-09-26 09:36",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-09-25 15:50"
+    "analysis_date": "2026-09-26 09:31"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -107,12 +107,12 @@
       "lstm_accuracy": 0.5732
     },
     "TCS.NS": {
-      "rf_weight": 0.2603,
-      "xgb_weight": 0.2179,
-      "lstm_weight": 0.273,
-      "intraday_weight": 0.2488,
+      "rf_weight": 0.2608,
+      "xgb_weight": 0.2164,
+      "lstm_weight": 0.2735,
+      "intraday_weight": 0.2492,
       "rf_accuracy": 0.5233,
-      "xgb_accuracy": 0.438,
+      "xgb_accuracy": 0.4341,
       "lstm_accuracy": 0.5488
     }
   },
@@ -120,13 +120,13 @@
     "NIFTY50": "RANGING",
     "TATASTEEL.NS": "RANGING",
     "SBIN.NS": "RANGING",
-    "RELIANCE.NS": "RANGING",
-    "HDFCBANK.NS": "TRENDING_DOWN",
+    "RELIANCE.NS": "TRENDING_DOWN",
+    "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "RANGING",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
-    "INFY.NS": "RANGING",
+    "INFY.NS": "TRENDING_DOWN",
     "TCS.NS": "RANGING"
   },
   "calibrations": [
@@ -154,14 +154,14 @@
     },
     {
       "symbol": "RELIANCE.NS",
-      "rf_brier_score": 0.2505,
-      "xgb_brier_score": 0.2743,
-      "rf_calibration_error": 0.0412,
-      "xgb_calibration_error": 0.1575,
+      "rf_brier_score": 0.2506,
+      "xgb_brier_score": 0.2752,
+      "rf_calibration_error": 0.0414,
+      "xgb_calibration_error": 0.1643,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0412,
-      "xgb_ece": 0.1575
+      "rf_ece": 0.0414,
+      "xgb_ece": 0.1643
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -189,13 +189,13 @@
     {
       "symbol": "NTPC.NS",
       "rf_brier_score": 0.2479,
-      "xgb_brier_score": 0.313,
+      "xgb_brier_score": 0.3126,
       "rf_calibration_error": 0.0511,
-      "xgb_calibration_error": 0.2295,
+      "xgb_calibration_error": 0.1978,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.0511,
-      "xgb_ece": 0.2295
+      "xgb_ece": 0.1978
     },
     {
       "symbol": "POWERGRID.NS",
@@ -339,7 +339,7 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.5382
+      "xgb_precision": 0.537
     },
     {
       "symbol": "POWERGRID.NS",
@@ -403,21 +403,21 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.511
+      "xgb_precision": 0.5037
     }
   ],
   "voter_accuracy": {
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-09-25 15:54"
+    "analysis_date": "2026-09-26 09:36"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-09-25 15:54"
+    "analysis_date": "2026-09-26 09:36"
   },
   "youtube_mood": {
     "overall_mood": -0.08333333333333333,
@@ -427,7 +427,7 @@
       "Not All Stocks Are Listed on both NSE & BSE:Here\u2019s What You Need to Know |#carachanaranade| #shorts",
       "Why Insurance companies crashed today? | CA Rachana Ranade",
       "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "iPhone Duo ke Price main Aur KYA aa sakta hain?! #shorts"
+      "50-30-20 Rule Harr Baar NAHI Chalta! #shorts"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -458,24 +458,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.10916425836436905,
-        "DowJones": 0.3274024492615207,
-        "NASDAQ": 0.1155879772553485,
-        "Nikkei": 0.7613765962819372,
+        "SP500": 0.5098599586843957,
+        "DowJones": 0.9321145220128872,
+        "NASDAQ": 0.4801580980786063,
+        "Nikkei": 1.29776077759157,
         "HangSeng": -1.0138511728350705,
-        "BrentCrude": -6.87617442399323,
-        "Gold": 0.35132847036412285,
-        "USDINR": 0.0635031135172541
+        "BrentCrude": -2.138835658473656,
+        "Gold": 0.5397904912168451,
+        "USDINR": -0.35492548667278007
       },
-      "score": 1.0
+      "score": 0.6124146644588433
     },
     "vix_analysis": {
       "value": 12.15999984741211,
       "classification": "Low volatility (safe)",
       "trend": "falling"
     },
-    "market_mood_score": 0.6000000000000001,
+    "market_mood_score": 0.44496586578353736,
     "earnings_calendar": [],
-    "timestamp": "2026-09-25T21:20:41.725434+05:30"
+    "timestamp": "2026-09-26T15:01:53.711020+05:30"
   }
 }

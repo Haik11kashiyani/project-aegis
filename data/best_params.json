@@ -93,7 +93,7 @@
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.5382
+    "xgb_precision": 0.537
   },
   {
     "symbol": "POWERGRID.NS",
@@ -157,6 +157,6 @@
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.511
+    "xgb_precision": 0.5037
   }
 ]
