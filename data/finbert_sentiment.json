@@ -1,13 +1,18 @@
 {
   "stocks": {
     "TATASTEEL.NS": {
-      "overall": "positive",
+      "overall": "neutral",
       "positive": 2,
-      "negative": 1,
-      "neutral": 12,
+      "negative": 2,
+      "neutral": 11,
       "total": 15,
-      "avg_score": 0.0667,
+      "avg_score": 0.0,
       "details": [
+        {
+          "text": "Stocks to buy under \u20b9200: Tata Steel, South Bank, Castrol by Mehul Kothari of Anand Rathi | Target, SL, market outlook - Livemint",
+          "label": "negative",
+          "score": 1.0
+        },
         {
           "text": "Stocks To Watch Next Week (July 13-17): HDFC Bank, Dabur, Tata Steel, Coal India Among Key Names to Track - Goodreturns",
           "label": "negative",
@@ -34,7 +39,7 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel shares rise 1.6% as Q1 results beat estimates - BusinessLine",
+          "text": "Tata Steel shares rise 1.6% as Q1 results beat India estimates; analysts split on outlook - BusinessLine",
           "label": "positive",
           "score": 1.0
         },
@@ -44,19 +49,14 @@
           "score": 0.5
         },
         {
-          "text": "Vinay Rajani of HDFC Sec suggests Tata Steel, Linde India shares to buy - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Tata Steel, JSW Steel, Jindal Steel share price targets: 3 metal stocks to buy - Business Today",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Tata Steel Q4 Results 2026: Share Price Target, Dividend Details - Liquide Blog",
           "label": "positive",
           "score": 1.0
+        },
+        {
+          "text": "Tata Steel falls 5% despite strong Q4; analysts see more upside ahead - Business Standard",
+          "label": "neutral",
+          "score": 0.5
         },
         {
           "text": "Tata Steel Q4 net more than doubles on India strength, Europe recovery - The Economic Times",
@@ -69,17 +69,17 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel warns of softer India margins in Q2 as Europe business returns to profit - CNBC TV18",
+          "text": "Tata Steel, JSW Steel, Jindal Steel share price targets: 3 metal stocks to buy - Business Today",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Tata Steel and Hindalco Hit Fresh 52-Week Highs - India Infoline",
+          "text": "Stocks to watch, May 18: Tata Steel Vi, Coal India, HFCL, Bajaj Electricals, SAIL, IOC - Upstox",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Tata Steel share price dips nearly 1% after Q1FY27 business update; details here - Livemint",
+          "text": "Vinay Rajani of HDFC Sec suggests Tata Steel, Linde India shares to buy - Livemint",
           "label": "neutral",
           "score": 0.5
         }
@@ -102,14 +102,19 @@
           "score": 0.5
         },
         {
-          "text": "State Bank Of India (SBIN) Share Price Falls 2.17% Today - Univest",
+          "text": "State Bank of India (NSE: SBIN) Up 0.33% at \u20b9981.70: EMA 51, RSI and Q1 Numbers - kalkine.co.in",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "What should investors do about SBI after Q1 FY27 results? - BusinessLine",
-          "label": "neutral",
-          "score": 0.5
+          "text": "India's largest lender SBI beats quarterly profit view on healthy loan growth - Reuters",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "SBIN Share Price Today - State Bank Of India Stock Price Live NSE/BSE - Univest",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "SBI's 80 paise masterstroke: How NSE IPO could deliver Rs 2,850 crore jackpot and 2,23,025% return - The Economic Times",
@@ -117,8 +122,13 @@
           "score": 0.5
         },
         {
-          "text": "India's largest lender SBI beats quarterly profit view on healthy loan growth - Reuters",
-          "label": "positive",
+          "text": "What should investors do about SBI after Q1 FY27 results? - BusinessLine",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
+          "label": "negative",
           "score": 1.0
         },
         {
@@ -127,24 +137,9 @@
           "score": 0.5
         },
         {
-          "text": "SBI dips 1.5% despite all-round Q1 beat: Opportunity to buy PSU stock? - Business Standard",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "NSE IPO countdown begins: SBI, IFCI, GIC Re, Bank of Baroda shares in focus after SEBI nod - upstox.com",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
           "text": "SBI stock gives up opening gains, falls over 1% despite Q1 beat; brokerages bullish as NIM, loan growth... - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
-        },
-        {
-          "text": "NSE IPO: How SBI, IFCI, GIC Re, Bank of Baroda shares reacted after Sebi approval - Fortune India",
-          "label": "negative",
-          "score": 1.0
         },
         {
           "text": "HDFC, Axis, SBI, ICICI - Why banking stocks are falling despite strong earnings? - India Infoline",
@@ -152,7 +147,7 @@
           "score": 1.0
         },
         {
-          "text": "SBI shares see profit booking after Q1 results; Analysts advice whether to 'buy' or 'sell' - CNBC TV18",
+          "text": "SBI dips 1.5% despite all-round Q1 beat: Opportunity to buy PSU stock? - Business Standard",
           "label": "neutral",
           "score": 0.5
         },
@@ -167,7 +162,12 @@
           "score": 1.0
         },
         {
-          "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
+          "text": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBI shares decline nearly 3%; Jefferies, Morgan Stanlay and other analysts decode Q1 earnings - Upstox",
           "label": "neutral",
           "score": 0.5
         }
@@ -177,12 +177,12 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "neutral",
-      "positive": 1,
+      "overall": "negative",
+      "positive": 0,
       "negative": 1,
-      "neutral": 13,
+      "neutral": 14,
       "total": 15,
-      "avg_score": 0.0,
+      "avg_score": -0.0667,
       "details": [
         {
           "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - Reuters",
@@ -190,42 +190,12 @@
           "score": 0.5
         },
         {
-          "text": "Reliance Share Price Prediction for Tomorrow: 22 Sept 2026 - Univest",
+          "text": "Reliance Industries meets investors at BofA India Conference 2026 - scanx.trade",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance stock heads into the open after a 1.41 percent slide - AD HOC NEWS",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - BusinessLine",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Dividend, Bonus Issue, Stock Split Record Dates to Mark: Reliance, Infosys, Adani, Tata, Trent, Inox and More - Goodreturns",
-          "label": "positive",
-          "score": 1.0
-        },
-        {
-          "text": "Reliance to IndiGo: Here\u2019s how oil-sensitive stocks are performing on September 9 - upstox.com",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Stock markets edged higher in early trade amid lower crude oil prices, buying in Reliance Industries - The Hindu",
+          "text": "Reliance Industries Ltd (RELIANCE) Share/Stock Price Live NSE/BSE - TechGraph",
           "label": "neutral",
           "score": 0.5
         },
@@ -235,22 +205,52 @@
           "score": 1.0
         },
         {
-          "text": "Why Reliance Stock Fell Sharply \u2014 And What It Signals For The Market - Samco",
+          "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - BusinessLine",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Ice cream stocks scoop up 85% gains from 2026 lows; can RIL roil the party? - Business Standard",
+          "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance shares briefly slip below \u20b91,300 amid volatility: Buy the dip or wait? - Livemint",
+          "text": "Reliance Share Price Prediction for Tomorrow: 22 Sept 2026 - Univest",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance to IndiGo: Here\u2019s how oil-sensitive stocks are performing on September 9 - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance stock heads into the open after a 1.41 percent slide - AD HOC NEWS",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - bbc.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stock markets edged higher in early trade amid lower crude oil prices, buying in Reliance Industries - The Hindu",
           "label": "neutral",
           "score": 0.5
         },
         {
           "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance confirms participation in Jefferies India Forum on Sep 17 - scanx.trade",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Graphite India, Reliance Power, DLF shares spurt amid heavy volumes; check full list - Upstox",
           "label": "neutral",
           "score": 0.5
         },
@@ -265,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.0667,
+  "market_sentiment": -0.1111,
   "market_label": "NEUTRAL",
   "total_headlines": 45,
-  "positive": 4,
-  "negative": 7,
+  "positive": 3,
+  "negative": 8,
   "neutral": 34,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-09-25 14:21:48 IST"
+  "timestamp": "2026-09-28 15:17:32 IST"
 }
