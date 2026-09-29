@@ -2,18 +2,18 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.7699,
-    "var_rupees": 265.49,
-    "mean_daily_return": 0.0162,
-    "daily_volatility": 1.0857
+    "var_pct": 1.7691,
+    "var_rupees": 265.36,
+    "mean_daily_return": 0.0144,
+    "daily_volatility": 1.084
   },
   "historical_var_95": {
     "method": "Historical",
     "confidence": 0.95,
-    "var_pct": 1.8832,
-    "var_rupees": 282.47,
-    "cvar_pct": 2.5522,
-    "cvar_rupees": 382.83,
+    "var_pct": 1.8066,
+    "var_rupees": 271.0,
+    "cvar_pct": 2.5503,
+    "cvar_rupees": 382.55,
     "worst_day": -3.4736,
     "best_day": 3.4722
   },
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.7804,
-    "var_rupees": 267.06,
-    "cvar_pct": 2.2369,
-    "cvar_rupees": 335.54,
-    "sim_mean": 0.0139,
-    "sim_std": 1.0894
+    "var_pct": 1.7795,
+    "var_rupees": 266.93,
+    "cvar_pct": 2.2354,
+    "cvar_rupees": 335.31,
+    "sim_mean": 0.0121,
+    "sim_std": 1.0877
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.5099,
-    "var_rupees": 376.48,
-    "mean_daily_return": 0.0162,
-    "daily_volatility": 1.0857
+    "var_pct": 2.5079,
+    "var_rupees": 376.19,
+    "mean_daily_return": 0.0144,
+    "daily_volatility": 1.084
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.5029,
-    "var_rupees": 375.43,
-    "cvar_pct": 2.9116,
-    "cvar_rupees": 436.75,
-    "sim_mean": 0.0139,
-    "sim_std": 1.0894
+    "var_pct": 2.5009,
+    "var_rupees": 375.13,
+    "cvar_pct": 2.9091,
+    "cvar_rupees": 436.36,
+    "sim_mean": 0.0121,
+    "sim_std": 1.0877
   },
   "stress_tests": [
     {
@@ -117,12 +117,12 @@
     }
   ],
   "drawdowns": {
-    "max_drawdown_pct": -16.5788,
-    "max_drawdown_day": 250,
-    "current_drawdown_pct": -16.5788,
+    "max_drawdown_pct": -16.4715,
+    "max_drawdown_day": 249,
+    "current_drawdown_pct": -16.3066,
     "drawdown_periods": 11,
-    "longest_drawdown_days": 153,
-    "avg_drawdown_pct": -6.6845
+    "longest_drawdown_days": 154,
+    "avg_drawdown_pct": -6.7548
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-09-28 15:17:30 IST"
+  "timestamp": "2026-09-29 15:21:21 IST"
 }
