@@ -1,6 +1,6 @@
 {
   "regime": "BEAR",
-  "confidence": 0.7779,
+  "confidence": 0.7712,
   "regime_history": [
     "BULL",
     "BULL",
@@ -66,17 +66,17 @@
   "personality_override": "CONSERVATIVE",
   "sizing_multiplier": 0.5,
   "state_probs": {
-    "BEAR": 0.7779,
-    "SIDEWAYS": 0.1107,
-    "BULL": 0.1114
+    "BEAR": 0.7712,
+    "SIDEWAYS": 0.1142,
+    "BULL": 0.1147
   },
   "state_means": {
-    "BEAR": -0.6679,
-    "SIDEWAYS": -0.0997,
-    "BULL": 0.5338
+    "BEAR": -0.6766,
+    "SIDEWAYS": -0.1127,
+    "BULL": 0.5313
   },
   "transition_active": false,
   "lookback_days": 252,
-  "observations": 246,
-  "timestamp": "2026-10-01 10:09:17 UTC"
+  "observations": 245,
+  "timestamp": "2026-10-02 09:47:44 UTC"
 }

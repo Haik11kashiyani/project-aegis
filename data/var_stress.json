@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.7893,
-    "var_rupees": 268.39,
-    "mean_daily_return": 0.0058,
-    "daily_volatility": 1.0911
+    "var_pct": 1.7936,
+    "var_rupees": 269.04,
+    "mean_daily_return": 0.0014,
+    "daily_volatility": 1.091
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.7998,
-    "var_rupees": 269.97,
-    "cvar_pct": 2.2586,
-    "cvar_rupees": 338.79,
-    "sim_mean": 0.0035,
+    "var_pct": 1.8041,
+    "var_rupees": 270.61,
+    "cvar_pct": 2.2629,
+    "cvar_rupees": 339.43,
+    "sim_mean": -0.0009,
     "sim_std": 1.0948
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.5329,
-    "var_rupees": 379.94,
-    "mean_daily_return": 0.0058,
-    "daily_volatility": 1.0911
+    "var_pct": 2.5372,
+    "var_rupees": 380.58,
+    "mean_daily_return": 0.0014,
+    "daily_volatility": 1.091
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,11 +52,11 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.5259,
-    "var_rupees": 378.88,
-    "cvar_pct": 2.9367,
-    "cvar_rupees": 440.5,
-    "sim_mean": 0.0035,
+    "var_pct": 2.5301,
+    "var_rupees": 379.52,
+    "cvar_pct": 2.9409,
+    "cvar_rupees": 441.14,
+    "sim_mean": -0.0009,
     "sim_std": 1.0948
   },
   "stress_tests": [
@@ -118,11 +118,11 @@
   ],
   "drawdowns": {
     "max_drawdown_pct": -19.1083,
-    "max_drawdown_day": 250,
+    "max_drawdown_day": 249,
     "current_drawdown_pct": -19.1083,
-    "drawdown_periods": 10,
+    "drawdown_periods": 9,
     "longest_drawdown_days": 156,
-    "avg_drawdown_pct": -6.8846
+    "avg_drawdown_pct": -6.9148
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -132,6 +132,6 @@
     "SBIN.NS",
     "RELIANCE.NS"
   ],
-  "observations": 251,
-  "timestamp": "2026-10-01 15:39:17 IST"
+  "observations": 250,
+  "timestamp": "2026-10-02 15:17:45 IST"
 }

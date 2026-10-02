@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-01 15:39:12",
+  "timestamp": "2026-10-02 15:17:39",
   "sectors": {
     "Banking": {
       "ticker": "^NSEBANK",
@@ -8,7 +8,7 @@
       "ret_10d": -3.39,
       "ret_20d": -5.11,
       "acceleration": -1.6,
-      "vol_trend": 0.9,
+      "vol_trend": 29.5,
       "momentum_score": -3.01,
       "state": "ROTATING_OUT"
     },
@@ -19,7 +19,7 @@
       "ret_10d": -1.91,
       "ret_20d": -8.22,
       "acceleration": 4.53,
-      "vol_trend": 103.7,
+      "vol_trend": 137.6,
       "momentum_score": -1.56,
       "state": "WEAKENING"
     },
@@ -42,7 +42,7 @@
       "ret_10d": -1.49,
       "ret_20d": -1.3,
       "acceleration": -1.69,
-      "vol_trend": -15.4,
+      "vol_trend": 5.3,
       "momentum_score": -1.9,
       "state": "WEAKENING"
     },
@@ -69,7 +69,7 @@
       "ret_10d": -3.96,
       "ret_20d": -6.08,
       "acceleration": -1.75,
-      "vol_trend": 11.5,
+      "vol_trend": 46.3,
       "momentum_score": -3.82,
       "state": "ROTATING_OUT"
     }
