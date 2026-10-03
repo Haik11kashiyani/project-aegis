@@ -77,7 +77,7 @@
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.6756
+    "xgb_precision": 0.6941
   },
   {
     "symbol": "NTPC.NS",
@@ -88,12 +88,12 @@
     },
     "rf_precision": 0.625,
     "xgb_params": {
-      "n_estimators": 200,
-      "max_depth": 4,
-      "learning_rate": 0.08,
-      "subsample": 0.9
+      "n_estimators": 250,
+      "max_depth": 5,
+      "learning_rate": 0.04,
+      "subsample": 0.85
     },
-    "xgb_precision": 0.419
+    "xgb_precision": 0.4195
   },
   {
     "symbol": "POWERGRID.NS",

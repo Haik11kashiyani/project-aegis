@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02 16:44",
+  "generated_at": "2026-10-03 10:07",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-10-02 16:39"
+    "analysis_date": "2026-10-03 10:02"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -71,12 +71,12 @@
       "lstm_accuracy": 0.5285
     },
     "NTPC.NS": {
-      "rf_weight": 0.2594,
-      "xgb_weight": 0.263,
-      "lstm_weight": 0.2435,
-      "intraday_weight": 0.234,
+      "rf_weight": 0.2608,
+      "xgb_weight": 0.259,
+      "lstm_weight": 0.2449,
+      "intraday_weight": 0.2353,
       "rf_accuracy": 0.5543,
-      "xgb_accuracy": 0.562,
+      "xgb_accuracy": 0.5504,
       "lstm_accuracy": 0.5203
     },
     "POWERGRID.NS": {
@@ -120,13 +120,13 @@
     "NIFTY50": "RANGING",
     "TATASTEEL.NS": "RANGING",
     "SBIN.NS": "RANGING",
-    "RELIANCE.NS": "RANGING",
+    "RELIANCE.NS": "TRENDING_DOWN",
     "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
-    "NTPC.NS": "RANGING",
+    "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
-    "COALINDIA.NS": "RANGING",
-    "INFY.NS": "RANGING",
+    "COALINDIA.NS": "TRENDING_UP",
+    "INFY.NS": "TRENDING_DOWN",
     "TCS.NS": "TRENDING_DOWN"
   },
   "calibrations": [
@@ -166,14 +166,14 @@
     {
       "symbol": "HDFCBANK.NS",
       "rf_brier_score": 0.2671,
-      "xgb_brier_score": 0.3339,
+      "xgb_brier_score": 0.3343,
       "rf_calibration_error": 0.1174,
-      "xgb_calibration_error": 0.2685,
+      "xgb_calibration_error": 0.2689,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.1174,
-      "xgb_ece": 0.2685
+      "xgb_ece": 0.2689
     },
     {
       "symbol": "ICICIBANK.NS",
@@ -213,13 +213,13 @@
     {
       "symbol": "COALINDIA.NS",
       "rf_brier_score": 0.2745,
-      "xgb_brier_score": 0.3243,
+      "xgb_brier_score": 0.3305,
       "rf_calibration_error": 0.3686,
-      "xgb_calibration_error": 0.2908,
+      "xgb_calibration_error": 0.2889,
       "rf_reliable": false,
       "xgb_reliable": true,
       "rf_ece": 0.3686,
-      "xgb_ece": 0.2908
+      "xgb_ece": 0.2889
     },
     {
       "symbol": "INFY.NS",
@@ -325,7 +325,7 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.6756
+      "xgb_precision": 0.6941
     },
     {
       "symbol": "NTPC.NS",
@@ -336,12 +336,12 @@
       },
       "rf_precision": 0.625,
       "xgb_params": {
-        "n_estimators": 200,
-        "max_depth": 4,
-        "learning_rate": 0.08,
-        "subsample": 0.9
+        "n_estimators": 250,
+        "max_depth": 5,
+        "learning_rate": 0.04,
+        "subsample": 0.85
       },
-      "xgb_precision": 0.419
+      "xgb_precision": 0.4195
     },
     {
       "symbol": "POWERGRID.NS",
@@ -412,14 +412,14 @@
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-10-02 16:44"
+    "analysis_date": "2026-10-03 10:07"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-10-02 16:44"
+    "analysis_date": "2026-10-03 10:07"
   },
   "youtube_mood": {
     "overall_mood": 0.125,
@@ -427,8 +427,8 @@
     "trending_topics": [
       "\u20b914 Lakh Crore Sold by FIIs in 6 Years! | #carachanaranade | #shorts",
       "Correction FINALLY OVER in Indian Markets? (time to buy?)",
-      "PAISA Double Hoga - Par KAB? Yeh Sawaal Zaroor Poochho! #shorts",
-      "Iss AUCTION Ke Liye Ek GAADI Zaruri thi! #shorts"
+      "8% ka Loan ya 11% ka Loan - Inme se SASTA Kaunsa hain?! #shorts",
+      "PAISA Double Hoga - Par KAB? Yeh Sawaal Zaroor Poochho! #shorts"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -459,24 +459,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.7849746097195764,
-        "DowJones": 0.41548034972849607,
-        "NASDAQ": 1.2845447959658267,
-        "Nikkei": 3.3001906728979047,
-        "HangSeng": 0.3657673723971549,
-        "BrentCrude": -0.1563835759288458,
-        "Gold": -0.9232993001646466,
-        "USDINR": 0.3887346871642951
+        "SP500": 0.7339775006384989,
+        "DowJones": 0.4916930392793728,
+        "NASDAQ": 1.1880936388826524,
+        "Nikkei": -0.9386435785127899,
+        "HangSeng": -2.6042069215395593,
+        "BrentCrude": -0.05864290883145503,
+        "Gold": -0.9518597401209113,
+        "USDINR": 0.0781533885325502
       },
-      "score": 0.5608063790273637
+      "score": -0.11974287350697432
     },
     "vix_analysis": {
       "value": 14.460000038146973,
       "classification": "Normal",
       "trend": "rising"
     },
-    "market_mood_score": 0.4243225516109455,
+    "market_mood_score": 0.1521028505972103,
     "earnings_calendar": [],
-    "timestamp": "2026-10-02T22:09:39.843491+05:30"
+    "timestamp": "2026-10-03T15:32:36.843243+05:30"
   }
 }
