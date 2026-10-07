@@ -1,8 +1,8 @@
 {
   "trades_analysed": 6,
   "avg_timing_score": 0.0,
-  "avg_slippage_bps": 2545.95,
-  "total_slippage_cost": 3630.34,
+  "avg_slippage_bps": 2521.48,
+  "total_slippage_cost": 3592.17,
   "overall_grade": "D",
   "grade_distribution": {
     "A": 0,
@@ -22,10 +22,10 @@
       "entry_time": "11:01",
       "day_low": 2045.1,
       "day_high": 2140.9,
-      "vwap_estimate": 2088.61,
+      "vwap_estimate": 2093.47,
       "timing_score": 0,
-      "slippage_bps": 2530.84,
-      "slippage_rupees": 662.37,
+      "slippage_bps": 2501.72,
+      "slippage_rupees": 654.75,
       "grade": "F"
     },
     {
@@ -34,10 +34,10 @@
       "entry_time": "11:07",
       "day_low": 2045.1,
       "day_high": 2140.9,
-      "vwap_estimate": 2088.61,
+      "vwap_estimate": 2093.47,
       "timing_score": 0,
-      "slippage_bps": 2518.4,
-      "slippage_rupees": 658.46,
+      "slippage_bps": 2489.3,
+      "slippage_rupees": 650.85,
       "grade": "F"
     },
     {
@@ -46,10 +46,10 @@
       "entry_time": "11:10",
       "day_low": 2045.1,
       "day_high": 2140.9,
-      "vwap_estimate": 2088.61,
+      "vwap_estimate": 2093.47,
       "timing_score": 0,
-      "slippage_bps": 2510.26,
-      "slippage_rupees": 655.9,
+      "slippage_bps": 2481.18,
+      "slippage_rupees": 648.31,
       "grade": "F"
     },
     {
@@ -58,10 +58,10 @@
       "entry_time": "11:12",
       "day_low": 2045.1,
       "day_high": 2140.9,
-      "vwap_estimate": 2088.61,
+      "vwap_estimate": 2093.47,
       "timing_score": 0,
-      "slippage_bps": 2504.51,
-      "slippage_rupees": 654.1,
+      "slippage_bps": 2475.45,
+      "slippage_rupees": 646.51,
       "grade": "F"
     },
     {
@@ -70,24 +70,24 @@
       "entry_time": "11:17",
       "day_low": 2045.1,
       "day_high": 2140.9,
-      "vwap_estimate": 2088.61,
+      "vwap_estimate": 2093.47,
       "timing_score": 0,
-      "slippage_bps": 2485.36,
-      "slippage_rupees": 648.11,
+      "slippage_bps": 2456.34,
+      "slippage_rupees": 640.54,
       "grade": "F"
     },
     {
       "symbol": "INFY.NS",
       "entry_price": 1288.9000244140625,
       "entry_time": "11:22",
-      "day_low": 992.5,
+      "day_low": 990.2,
       "day_high": 1050.6,
-      "vwap_estimate": 1012.78,
+      "vwap_estimate": 1012.9,
       "timing_score": 0,
-      "slippage_bps": 2726.32,
-      "slippage_rupees": 351.4,
+      "slippage_bps": 2724.86,
+      "slippage_rupees": 351.21,
       "grade": "F"
     }
   ],
-  "timestamp": "2026-10-06 15:47:43 IST"
+  "timestamp": "2026-10-07 15:45:52 IST"
 }
