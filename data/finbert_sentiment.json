@@ -9,7 +9,22 @@
       "avg_score": 0.0667,
       "details": [
         {
-          "text": "Metal stocks to buy ahead of Q2 results: Nuvama picks Coal India, Tata Steel; Jindal Steel an underperformer |Here\u2019s why - Livemint",
+          "text": "Tata Steel shares decline 2% after Q2 production growth update; global volumes remain under pressure - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Top stocks to watch today: TCS, Tata Steel, Reliance, Sun Pharma shares in focus on Thursday, 8 October | Full list - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel Q2 Update: India crude steel production up 10%; deliveries rise 15% - CNBC TV18",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel Q2FY27 Results: India crude steel production up 10% YoY to 6.21 MT - scanx.trade",
           "label": "neutral",
           "score": 0.5
         },
@@ -25,6 +40,11 @@
         },
         {
           "text": "Stocks in news: Tata Steel, KPI Green Energy, NLC India, Poonawalla Fincorp and Cummins India - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Metal stocks to buy ahead of Q2 results: Nuvama picks Coal India, Tata Steel; Jindal Steel an underperformer |Here\u2019s why - Livemint",
           "label": "neutral",
           "score": 0.5
         },
@@ -54,32 +74,12 @@
           "score": 1.0
         },
         {
-          "text": "Tata Steel falls 5% despite strong Q4; analysts see more upside ahead - Business Standard",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Tata Steel and Hindalco Hit Fresh 52-Week Highs - India Infoline",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Top stocks to watch today: KPI Green, Tata Steel, NLC, NALCO shares in focus on Wednesday, 30 September | Full list - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Buzzing Stocks: Tata Steel slips after Q1 business update; NLC India gains on NALCO JV - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Tata Steel Q4 net more than doubles on India strength, Europe recovery - The Economic Times",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Stocks to Watch, July 9: TCS, SBI, Tata Steel, NLC India, NALCO, JSW Energy, M&M - BusinessLine",
+          "text": "Top stocks to watch today: KPI Green, Tata Steel, NLC, NALCO shares in focus on Wednesday, 30 September | Full list - Livemint",
           "label": "neutral",
           "score": 0.5
         }
@@ -91,15 +91,20 @@
     "SBIN.NS": {
       "overall": "negative",
       "positive": 1,
-      "negative": 6,
-      "neutral": 8,
+      "negative": 7,
+      "neutral": 7,
       "total": 15,
-      "avg_score": -0.3333,
+      "avg_score": -0.4,
       "details": [
         {
           "text": "SBI Funds Management Ltd Share Price Today,, SBIFUNDS Share Price NSE, BSE - Business Today",
           "label": "neutral",
           "score": 0.5
+        },
+        {
+          "text": "State Bank of India stock fell 1.01 percent on October 7 - AD HOC NEWS",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "State Bank Of India Share Price Today Drops to Rs 962.5 - Univest",
@@ -127,12 +132,12 @@
           "score": 1.0
         },
         {
-          "text": "SBI's 80 paise masterstroke: How NSE IPO could deliver Rs 2,850 crore jackpot and 2,23,025% return - The Economic Times",
+          "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
+          "text": "SBI's 80 paise masterstroke: How NSE IPO could deliver Rs 2,850 crore jackpot and 2,23,025% return - The Economic Times",
           "label": "neutral",
           "score": 0.5
         },
@@ -145,11 +150,6 @@
           "text": "State Bank Of India Stock Leads These 3 India Catalyst Picks - Simply Wall Street",
           "label": "negative",
           "score": 1.0
-        },
-        {
-          "text": "SBI dips 1.5% despite all-round Q1 beat: Opportunity to buy PSU stock? - Business Standard",
-          "label": "neutral",
-          "score": 0.5
         },
         {
           "text": "What should investors do about SBI after Q1 FY27 results? - BusinessLine",
@@ -177,20 +177,60 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "negative",
-      "positive": 2,
-      "negative": 5,
+      "overall": "neutral",
+      "positive": 3,
+      "negative": 4,
       "neutral": 8,
       "total": 15,
-      "avg_score": -0.2,
+      "avg_score": -0.0667,
       "details": [
+        {
+          "text": "Top stocks to watch today: TCS, Tata Steel, Reliance, Sun Pharma shares in focus on Thursday, 8 October | Full list - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance Jio IPO clock ticking: Can you still buy RIL for shareholders quota amid October 21 launch buzz? - The Economic Times",
+          "label": "positive",
+          "score": 1.0
+        },
         {
           "text": "PepsiCo, Monster, Reliance win partial reprieve on 'energy drink' label ban in India - Reuters",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "India's largest IPO at \u20b936,000 crore; shares to list on stock market on 28 Oct - Bhaskar English",
+          "text": "Stock Markets Today: Sensex, Nifty Higher on Bank Stocks, RIL - Rediff",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Reliance to launch Jio IPO on 21 Oct around Dashami: India's largest IPO at \u20b936,000 crore; shares to list o... - Bhaskar English",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Dividend, Bonus Issue, Stock Split Record Dates to Mark: Reliance, Infosys, Adani, Tata, Trent, Inox and More - Goodreturns",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Reliance sues India's food regulator over 'energy drink' label ban - Business Standard",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Reliance Industries Ltd (RELIANCE) Share/Stock Price Live NSE/BSE - TechGraph",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Jio Platforms IPO: What does it mean for Reliance Industries share price? What should RIL investors do? - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - Reuters",
           "label": "neutral",
           "score": 0.5
         },
@@ -205,57 +245,17 @@
           "score": 1.0
         },
         {
-          "text": "Stock Markets Today: Sensex, Nifty Higher on Bank Stocks, RIL - Rediff",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "Dividend, Bonus Issue, Stock Split Record Dates to Mark: Reliance, Infosys, Adani, Tata, Trent, Inox and More - Goodreturns",
-          "label": "positive",
-          "score": 1.0
-        },
-        {
-          "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
+          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance sues India's food regulator over 'energy drink' label ban - Business Standard",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance Stock And India Refiners Facing A Russian Crude Test - Simply Wall Street",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "Reliance Industries Ltd (RELIANCE) Share/Stock Price Live NSE/BSE - TechGraph",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance to launch Jio IPO on 21 Oct around Dashami: India's largest IPO at \u20b936,000 crore; shares to list o... - Bhaskar English",
-          "label": "positive",
-          "score": 1.0
-        },
-        {
-          "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - Reuters",
+          "text": "Jio IPO: Latest GMP today, launch date, Reliance shareholder quota, expected share price band, size, valuation - Details - Livemint",
           "label": "neutral",
           "score": 0.5
         },
         {
           "text": "Reliance shares hit a fresh 52-week low; stock plunges 24% YTD - Time to buy or stay away? - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
           "label": "neutral",
           "score": 0.5
         }
@@ -265,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.1556,
+  "market_sentiment": -0.1333,
   "market_label": "NEUTRAL",
   "total_headlines": 45,
-  "positive": 5,
+  "positive": 6,
   "negative": 12,
-  "neutral": 28,
+  "neutral": 27,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-10-07 15:45:44 IST"
+  "timestamp": "2026-10-08 16:05:47 IST"
 }

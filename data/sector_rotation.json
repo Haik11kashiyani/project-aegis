@@ -1,27 +1,27 @@
 {
-  "timestamp": "2026-10-07 15:45:35",
+  "timestamp": "2026-10-08 16:05:37",
   "sectors": {
     "Banking": {
       "ticker": "^NSEBANK",
-      "price": 55055.55,
-      "ret_5d": 0.77,
-      "ret_10d": -2.64,
-      "ret_20d": -3.03,
-      "acceleration": -2.24,
-      "vol_trend": -2.1,
-      "momentum_score": -1.31,
+      "price": 54515.05,
+      "ret_5d": 0.12,
+      "ret_10d": -1.67,
+      "ret_20d": -3.16,
+      "acceleration": -0.14,
+      "vol_trend": -6.0,
+      "momentum_score": -1.1,
       "state": "WEAKENING"
     },
     "IT": {
       "ticker": "^CNXIT",
-      "price": 27757.8,
-      "ret_5d": 0.19,
-      "ret_10d": -2.03,
-      "ret_20d": -7.11,
-      "acceleration": 3.15,
-      "vol_trend": 10.6,
-      "momentum_score": -1.64,
-      "state": "WEAKENING"
+      "price": 27736.6,
+      "ret_5d": -2.01,
+      "ret_10d": -1.67,
+      "ret_20d": -4.07,
+      "acceleration": 0.76,
+      "vol_trend": -1.2,
+      "momentum_score": -2.04,
+      "state": "ROTATING_OUT"
     },
     "Metal": {
       "status": "NO_DATA",
@@ -37,14 +37,14 @@
     },
     "Pharma": {
       "ticker": "^CNXPHARMA",
-      "price": 26436.55,
-      "ret_5d": -0.01,
-      "ret_10d": -2.64,
-      "ret_20d": -1.65,
-      "acceleration": -3.64,
-      "vol_trend": -28.4,
-      "momentum_score": -1.49,
-      "state": "WEAKENING"
+      "price": 25823.25,
+      "ret_5d": -1.86,
+      "ret_10d": -4.46,
+      "ret_20d": -3.25,
+      "acceleration": -5.72,
+      "vol_trend": -25.9,
+      "momentum_score": -3.3,
+      "state": "ROTATING_OUT"
     },
     "FMCG": {
       "status": "NO_DATA",
@@ -64,18 +64,21 @@
     },
     "Nifty50": {
       "ticker": "^NSEI",
-      "price": 22603.05,
-      "ret_5d": -0.08,
+      "price": 22231.8,
+      "ret_5d": -0.85,
       "ret_10d": -3.6,
-      "ret_20d": -4.37,
-      "acceleration": -2.8,
-      "vol_trend": 14.0,
-      "momentum_score": -2.26,
+      "ret_20d": -5.12,
+      "acceleration": -2.03,
+      "vol_trend": 12.2,
+      "momentum_score": -2.65,
       "state": "ROTATING_OUT"
     }
   },
   "recommendations": {
     "overweight": [
+      "HDFCBANK.NS",
+      "ICICIBANK.NS",
+      "SBIN.NS",
       "RELIANCE.NS",
       "TATASTEEL.NS",
       "NTPC.NS",
@@ -83,9 +86,6 @@
       "COALINDIA.NS"
     ],
     "neutral": [
-      "HDFCBANK.NS",
-      "ICICIBANK.NS",
-      "SBIN.NS",
       "TCS.NS",
       "INFY.NS"
     ],
@@ -93,25 +93,25 @@
     "sector_ranking": [
       [
         "Banking",
-        -1.31
-      ],
-      [
-        "Pharma",
-        -1.49
+        -1.1
       ],
       [
         "IT",
-        -1.64
+        -2.04
       ],
       [
         "Nifty50",
-        -2.26
+        -2.65
+      ],
+      [
+        "Pharma",
+        -3.3
       ]
     ],
     "stock_adjustments": {
-      "HDFCBANK.NS": 0.0,
-      "ICICIBANK.NS": 0.0,
-      "SBIN.NS": 0.0,
+      "HDFCBANK.NS": -0.033,
+      "ICICIBANK.NS": -0.033,
+      "SBIN.NS": -0.033,
       "TCS.NS": 0.0,
       "INFY.NS": 0.0,
       "RELIANCE.NS": 0.0,
@@ -120,7 +120,7 @@
       "POWERGRID.NS": 0.0,
       "COALINDIA.NS": 0.0
     },
-    "avg_momentum": -1.67
+    "avg_momentum": -2.27
   },
   "stock_sector_map": {
     "HDFCBANK.NS": "Banking",
