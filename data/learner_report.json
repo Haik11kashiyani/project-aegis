@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09 17:33",
+  "generated_at": "2026-10-10 10:53",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-10-09 17:29"
+    "analysis_date": "2026-10-10 10:48"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -71,12 +71,12 @@
       "lstm_accuracy": 0.5143
     },
     "NTPC.NS": {
-      "rf_weight": 0.258,
-      "xgb_weight": 0.258,
-      "lstm_weight": 0.2464,
-      "intraday_weight": 0.2377,
+      "rf_weight": 0.2584,
+      "xgb_weight": 0.2566,
+      "lstm_weight": 0.2469,
+      "intraday_weight": 0.2381,
       "rf_accuracy": 0.5426,
-      "xgb_accuracy": 0.5426,
+      "xgb_accuracy": 0.5388,
       "lstm_accuracy": 0.5184
     },
     "POWERGRID.NS": {
@@ -117,17 +117,17 @@
     }
   },
   "market_regimes": {
-    "NIFTY50": "RANGING",
+    "NIFTY50": "TRENDING_DOWN",
     "TATASTEEL.NS": "RANGING",
     "SBIN.NS": "RANGING",
-    "RELIANCE.NS": "TRENDING_DOWN",
-    "HDFCBANK.NS": "RANGING",
+    "RELIANCE.NS": "RANGING",
+    "HDFCBANK.NS": "TRENDING_UP",
     "ICICIBANK.NS": "TRENDING_DOWN",
     "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "TRENDING_UP",
     "INFY.NS": "RANGING",
-    "TCS.NS": "RANGING"
+    "TCS.NS": "TRENDING_DOWN"
   },
   "calibrations": [
     {
@@ -144,13 +144,13 @@
     {
       "symbol": "SBIN.NS",
       "rf_brier_score": 0.2979,
-      "xgb_brier_score": 0.391,
+      "xgb_brier_score": 0.3913,
       "rf_calibration_error": 0.1042,
-      "xgb_calibration_error": 0.2213,
+      "xgb_calibration_error": 0.2255,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.1042,
-      "xgb_ece": 0.2213
+      "xgb_ece": 0.2255
     },
     {
       "symbol": "RELIANCE.NS",
@@ -177,36 +177,36 @@
     {
       "symbol": "ICICIBANK.NS",
       "rf_brier_score": 0.259,
-      "xgb_brier_score": 0.2949,
+      "xgb_brier_score": 0.2948,
       "rf_calibration_error": 0.0624,
-      "xgb_calibration_error": 0.219,
+      "xgb_calibration_error": 0.2189,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.0624,
-      "xgb_ece": 0.219
+      "xgb_ece": 0.2189
     },
     {
       "symbol": "NTPC.NS",
       "rf_brier_score": 0.2477,
-      "xgb_brier_score": 0.3046,
+      "xgb_brier_score": 0.3038,
       "rf_calibration_error": 0.0559,
-      "xgb_calibration_error": 0.1849,
+      "xgb_calibration_error": 0.2013,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.0559,
-      "xgb_ece": 0.1849
+      "xgb_ece": 0.2013
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2591,
-      "xgb_brier_score": 0.3039,
-      "rf_calibration_error": 0.0759,
-      "xgb_calibration_error": 0.1979,
+      "rf_brier_score": 0.259,
+      "xgb_brier_score": 0.2998,
+      "rf_calibration_error": 0.0624,
+      "xgb_calibration_error": 0.2168,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.0759,
-      "xgb_ece": 0.1979
+      "rf_ece": 0.0624,
+      "xgb_ece": 0.2168
     },
     {
       "symbol": "COALINDIA.NS",
@@ -259,7 +259,7 @@
         "learning_rate": 0.02,
         "subsample": 0.75
       },
-      "xgb_precision": 0.6984
+      "xgb_precision": 0.6998
     },
     {
       "symbol": "SBIN.NS",
@@ -410,26 +410,24 @@
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-10-09 17:33"
+    "analysis_date": "2026-10-10 10:52"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-10-09 17:33"
+    "analysis_date": "2026-10-10 10:52"
   },
   "youtube_mood": {
-    "overall_mood": 0.0,
+    "overall_mood": -0.3333333333333333,
     "stock_mentions": {},
     "trending_topics": [
       "Investing in Global Stocks from India: Pain Points and Solutions | CA Rachana Ranade",
-      "Strong GDP, Weak Markets | What\u2019s Really Driving the Nifty? | CA Rachana Ranade",
-      "Jio Platforms Limited IPO | CA Rachana Ranade | #shorts",
-      "Same Chocolate, Par I LOVE YOU Bolne Ke Extra Paise?! #shorts",
-      "BADA Pack Hamesha SASTA Hota Hai? Yeh Examples Dekhiye! #shorts"
+      "Apne Maa-Baap Ke Liye GHAR Banane Ka Sapna - Ek Money Matters Kahaani! #shorts",
+      "Same Chocolate, Par I LOVE YOU Bolne Ke Extra Paise?! #shorts"
     ],
-    "channel_consensus": "mixed",
+    "channel_consensus": "bearish",
     "contrarian_signal": false
   },
   "market_intelligence": {
@@ -458,24 +456,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.5341668795658705,
-        "DowJones": 0.7260375286878683,
-        "NASDAQ": 0.5454503666238358,
-        "Nikkei": -1.4187070413073866,
-        "HangSeng": -1.4285279521767058,
-        "BrentCrude": -0.22055593616359387,
-        "Gold": 1.5058960225222515,
-        "USDINR": 0.0033117525344960427
+        "SP500": 0.5946946000482788,
+        "DowJones": 0.8262639817617592,
+        "NASDAQ": 0.6355603214539406,
+        "Nikkei": -0.016203879199627944,
+        "HangSeng": 1.7891378156797273,
+        "BrentCrude": 0.4219432744120874,
+        "Gold": 1.4265048036444552,
+        "USDINR": -0.096360961274067
       },
-      "score": -0.07173698194301188
+      "score": 0.3389259850674081
     },
     "vix_analysis": {
-      "value": 14.375,
+      "value": 14.380000114440918,
       "classification": "Normal",
       "trend": "falling"
     },
-    "market_mood_score": 0.17130520722279524,
+    "market_mood_score": 0.33557039402696326,
     "earnings_calendar": [],
-    "timestamp": "2026-10-09T22:59:08.655795+05:30"
+    "timestamp": "2026-10-10T16:18:38.734704+05:30"
   }
 }

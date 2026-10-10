@@ -45,12 +45,12 @@
     "lstm_accuracy": 0.5143
   },
   "NTPC.NS": {
-    "rf_weight": 0.258,
-    "xgb_weight": 0.258,
-    "lstm_weight": 0.2464,
-    "intraday_weight": 0.2377,
+    "rf_weight": 0.2584,
+    "xgb_weight": 0.2566,
+    "lstm_weight": 0.2469,
+    "intraday_weight": 0.2381,
     "rf_accuracy": 0.5426,
-    "xgb_accuracy": 0.5426,
+    "xgb_accuracy": 0.5388,
     "lstm_accuracy": 0.5184
   },
   "POWERGRID.NS": {
