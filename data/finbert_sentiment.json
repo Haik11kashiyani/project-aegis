@@ -2,45 +2,276 @@
   "stocks": {
     "TATASTEEL.NS": {
       "overall": "neutral",
-      "positive": 0,
-      "negative": 0,
-      "neutral": 0,
+      "positive": 2,
+      "negative": 2,
+      "neutral": 11,
+      "total": 15,
       "avg_score": 0.0,
-      "details": [],
+      "details": [
+        {
+          "text": "Metal stocks to buy ahead of Q2 results: Nuvama picks Coal India, Tata Steel; Jindal Steel an underperformer |Here\u2019s why - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel Q2FY27 results: India crude steel production up 10% YoY - scanx.trade",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel Q2 Update: India crude steel production up 10%; deliveries rise 15% - CNBC TV18",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks in news: Tata Steel, KPI Green Energy, NLC India, Poonawalla Fincorp and Cummins India - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks To Watch Next Week (July 13-17): HDFC Bank, Dabur, Tata Steel, Coal India Among Key Names to Track - Goodreturns",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Tata Steel, SAIL & more: Top stocks to watch on May 19 - The Times of India",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "India\u2019s Supreme Court quashes \u20b91,781cr tax demand on Tata Steel - Investing.com India",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, JSW Steel, Jindal Steel in focus as rebar prices rally; Nomura retains 'Buy' - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel shares rise 1.6% as Q1 results beat estimates - BusinessLine",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Tata Steel Q4 Results 2026: Share Price Target, Dividend Details - Liquide Blog",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Top 3 Steel Stocks in India 2026: JSW Steel, Tata Steel, SAIL - Univest",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, JSW Steel, Jindal Steel share price targets: 3 metal stocks to buy - Business Today",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to buy under \u20b9200: Tata Steel, South Bank, Castrol by Mehul Kothari of Anand Rathi | Target, SL, market outlook - Livemint",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Buzzing Stocks: Tata Steel slips after Q1 business update; NLC India gains on NALCO JV - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel Q4 net more than doubles on India strength, Europe recovery - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        }
+      ],
       "method": "keyword",
       "symbol": "TATASTEEL.NS",
-      "headline_count": 0
+      "headline_count": 15
     },
     "SBIN.NS": {
-      "overall": "neutral",
-      "positive": 0,
-      "negative": 0,
-      "neutral": 0,
-      "avg_score": 0.0,
-      "details": [],
+      "overall": "negative",
+      "positive": 1,
+      "negative": 6,
+      "neutral": 8,
+      "total": 15,
+      "avg_score": -0.3333,
+      "details": [
+        {
+          "text": "Investec keeps INR 1,390 target for SBI stock - ad-hoc-news.de",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBI Funds Management Ltd Share Price Today,, SBIFUNDS Share Price NSE, BSE - Business Today",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "India's largest lender SBI beats quarterly profit view on healthy loan growth - Reuters",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "State Bank Of India Share Price Today Drops to Rs 962.5 - Univest",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "State Bank of India (NSE: SBIN) Up 0.33% at \u20b9981.70: EMA 51, RSI and Q1 Numbers - Kalkine India",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Is SBI stock a good buy after today's 7% decline? Here's a stop-loss for short-term traders - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Where Could SBI Share Price Potentially be in the Next 5 Years? - Equitymaster",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "HDFC, Axis, SBI, ICICI - Why banking stocks are falling despite strong earnings? - India Infoline",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "State Bank Of India Stock Leads These 3 India Catalyst Picks - Simply Wall Street",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBI stock at INR 941.00, market value INR 8.7 trillion - ad-hoc-news.de",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "State Bank Of India (SBIN) Share Price Falls 2.17% Today - Univest",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBI stock gives up opening gains, falls over 1% despite Q1 beat; brokerages bullish as NIM, loan growth... - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        }
+      ],
       "method": "keyword",
       "symbol": "SBIN.NS",
-      "headline_count": 0
+      "headline_count": 15
     },
     "RELIANCE.NS": {
       "overall": "neutral",
-      "positive": 0,
-      "negative": 0,
-      "neutral": 0,
+      "positive": 1,
+      "negative": 1,
+      "neutral": 13,
+      "total": 15,
       "avg_score": 0.0,
-      "details": [],
+      "details": [
+        {
+          "text": "Jio IPO may be valued at Rs 11 lakh crore: What it means for RIL, Bharti Airtel and telecom stocks - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Starlink row: Musk shares reports on Reliance-linked firm's BJP campaign role, political donations - The Hindu",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Elon Musk Pledges Affordable Starlink Internet Pricing in India to Challenge Reliance Jio - TIKR.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Dividend, Bonus Issue, Stock Split Record Dates to Mark: Reliance, Infosys, Adani, Tata, Trent, Inox and More - Goodreturns",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Elon Musk vs Mukesh Ambani: Why is Tesla, SpaceX CEO attacking Reliance Industries ahead of Jio Platforms IPO launch? - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance could be a cheaper way to own Jio after telecom unit's listing - Business Standard",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stock Markets Today: Sensex, Nifty Higher on Bank Stocks, RIL - Rediff",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Reliance shares hit a fresh 52-week low; stock plunges 24% YTD - Time to buy or stay away? - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "As NSE, Reliance Jio eye listings, what are India's biggest share offerings? - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Elon Musk shares reports of Reliance-backed firms' donations to BJP - Business Standard",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stock markets edged higher in early trade amid lower crude oil prices, buying in Reliance Industries - The Hindu",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "RIL selloff wipes off Rs 4 lakh crore from market value as shares drop 21% in 2026 so far. Should you buy - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        }
+      ],
       "method": "keyword",
       "symbol": "RELIANCE.NS",
-      "headline_count": 0
+      "headline_count": 15
     }
   },
-  "market_sentiment": 0.0,
+  "market_sentiment": -0.1111,
   "market_label": "NEUTRAL",
-  "total_headlines": 0,
-  "positive": 0,
-  "negative": 0,
-  "neutral": 0,
+  "total_headlines": 45,
+  "positive": 4,
+  "negative": 9,
+  "neutral": 32,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-10-12 16:18:32 IST"
+  "timestamp": "2026-10-13 16:04:13 IST"
 }
