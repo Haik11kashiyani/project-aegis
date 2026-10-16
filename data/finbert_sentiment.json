@@ -19,7 +19,7 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel Shares May Rally 20%, Says Motilal Oswal Amid Steel Price Surge \u2014 Check Target Price - NDTV Profit",
+          "text": "Tata Steel, SAIL & more: Top stocks to watch on May 19 - The Times of India",
           "label": "neutral",
           "score": 0.5
         },
@@ -29,7 +29,7 @@
           "score": 1.0
         },
         {
-          "text": "Tata Steel, SAIL & more: Top stocks to watch on May 19 - The Times of India",
+          "text": "Tata Steel Shares May Rally 20%, Says Motilal Oswal Amid Steel Price Surge \u2014 Check Target Price - NDTV Profit",
           "label": "neutral",
           "score": 0.5
         },
@@ -74,12 +74,12 @@
           "score": 1.0
         },
         {
-          "text": "Tata Steel, JSW Steel, Jindal Steel in focus as rebar prices rally; Nomura retains 'Buy' - Moneycontrol.com",
+          "text": "Stocks to Watch Today: SBI, TCS, Tata Steel, Iware Supplychain, NLC India, Graphite India, TVS Motor,... - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Stocks to Watch, July 9: TCS, SBI, Tata Steel, NLC India, NALCO, JSW Energy, M&M - BusinessLine",
+          "text": "Top stocks to watch today: KPI Green, Tata Steel, NLC, NALCO shares in focus on Wednesday, 30 September | Full list - Livemint",
           "label": "neutral",
           "score": 0.5
         }
@@ -91,20 +91,30 @@
     "SBIN.NS": {
       "overall": "negative",
       "positive": 1,
-      "negative": 6,
-      "neutral": 8,
+      "negative": 8,
+      "neutral": 6,
       "total": 15,
-      "avg_score": -0.3333,
+      "avg_score": -0.4667,
       "details": [
+        {
+          "text": "SBI Funds Management Ltd Share Price Today,, SBIFUNDS Share Price NSE, BSE - Business Today",
+          "label": "neutral",
+          "score": 0.5
+        },
         {
           "text": "RailTel share price jumps 2% on winning repeat order from SBI - Business Standard",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBI stock at INR 941.00, market value INR 8.7 trillion - ad-hoc-news.de",
-          "label": "neutral",
-          "score": 0.5
+          "text": "SBI, HDFC, ICICI To AU SFB: THESE 5 Bank Stocks Can Deliver Strong Returns In Long-Term | Check Target Price - Goodreturns",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBI calls INR 60.0 billion debt: State Bank of India stock sits 22.25 percent below its 52-week high - ad-hoc-news.de",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "India's largest lender SBI beats quarterly profit view on healthy loan growth - Reuters",
@@ -112,17 +122,7 @@
           "score": 1.0
         },
         {
-          "text": "SBI Funds Management Ltd Share Price Today,, SBIFUNDS Share Price NSE, BSE - Business Today",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "State Bank Of India Share Price Today Drops to Rs 962.5 - Univest",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank of India (NSE: SBIN) Up 0.33% at \u20b9981.70: EMA 51, RSI and Q1 Numbers - Kalkine India",
           "label": "negative",
           "score": 1.0
         },
@@ -132,7 +132,7 @@
           "score": 0.5
         },
         {
-          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
+          "text": "State Bank of India (NSE: SBIN) Up 0.33% at \u20b9981.70: EMA 51, RSI and Q1 Numbers - Kalkine India",
           "label": "negative",
           "score": 1.0
         },
@@ -140,6 +140,11 @@
           "text": "Where Could SBI Share Price Potentially be in the Next 5 Years? - Equitymaster",
           "label": "neutral",
           "score": 0.5
+        },
+        {
+          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "HDFC, Axis, SBI, ICICI - Why banking stocks are falling despite strong earnings? - India Infoline",
@@ -157,7 +162,7 @@
           "score": 0.5
         },
         {
-          "text": "Investec keeps INR 1,390 target for SBI stock - ad-hoc-news.de",
+          "text": "SBI stock at INR 941.00, market value INR 8.7 trillion - ad-hoc-news.de",
           "label": "neutral",
           "score": 0.5
         },
@@ -165,11 +170,6 @@
           "text": "State Bank Of India (SBIN) Share Price Falls 2.17% Today - Univest",
           "label": "negative",
           "score": 1.0
-        },
-        {
-          "text": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
-          "label": "neutral",
-          "score": 0.5
         }
       ],
       "method": "keyword",
@@ -179,15 +179,40 @@
     "RELIANCE.NS": {
       "overall": "negative",
       "positive": 0,
-      "negative": 7,
-      "neutral": 8,
+      "negative": 6,
+      "neutral": 9,
       "total": 15,
-      "avg_score": -0.4667,
+      "avg_score": -0.4,
       "details": [
         {
-          "text": "India's Reliance Industries jumps after unit Jio Platforms sets price band for IPO - Reuters",
+          "text": "India's Reliance, Airtel rally as Jio Platforms IPO recasts valuations - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Top stocks to watch today: Reliance Industries, Urban Company, Wipro shares in focus on Friday, 16 Oct | Full list - Livemint",
           "label": "negative",
           "score": 1.0
+        },
+        {
+          "text": "As Reliance Jio eyes listing, what are India's biggest share offerings? - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance Industries shares jump 3% as Jio IPO price band, record Rs 30,213 crore issue boost sentiment - Moneycontrol.com",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Jio Platforms to Reliance Power: A look at India's 10 biggest IPOs - Rediff",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "RIL rises 3% as Jio IPO date out; what does it mean for shareholders? - Business Standard",
+          "label": "neutral",
+          "score": 0.5
         },
         {
           "text": "Buzzing stocks: Eyes on these 14 including LIC, Reliance, IDBI Bank, NLC India, Dr Reddy\u2019s Lab, Morepen Lab, Aeroflex - BusinessLine",
@@ -195,7 +220,12 @@
           "score": 1.0
         },
         {
-          "text": "RIL rises 3% as Jio IPO date out; what does it mean for shareholders? - Business Standard",
+          "text": "Jio IPO will make Reliance India\u2019s biggest conglomerate: Uday Kotak - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Jio IPO 2026: Massive \u20b930,000 Crore Mega Issue Could Shake India\u2019s Stock Market! 5 Big Economic Impacts To Watch - Jagran Josh",
           "label": "neutral",
           "score": 0.5
         },
@@ -205,57 +235,27 @@
           "score": 0.5
         },
         {
-          "text": "Top stocks to watch today: Reliance Industries, IDBI Bank, Wipro shares in focus on Thursday, 15 Oct | Full list - Livemint",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "From Rs 1,000 in 1977 to Rs 52 lakh today: The Reliance wealth story behind Jio\u2019s Rs 10.3 lakh crore mega - The Economic Times",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Stocks to watch, Oct 15: IDBI Bank, RIL, Nestle India, Jio Financial Services, Tech Mahindra, Wipro, South Indian Bank, IRFC - Upstox",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
           "text": "Reliance Industries shares extend gain past 2% on Jio price band for India's largest IPO - CNBC TV18",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Jio IPO 2026: Massive \u20b930,000 Crore Mega Issue Could Shake India\u2019s Stock Market! 5 Big Economic Impacts To Watch - Jagran Josh",
+          "text": "RIL shares: Reliance Industries stock slides 6% in a month, can Jio Platforms IPO aid the bounce back? Experts' views - Livemint",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "As Reliance Jio eyes listing, what are India's biggest share offerings? - Reuters",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance Jio IPO a win-win for telecom stocks! RIL, Airtel and Vodafone Idea shares rise up to 3.6%- What should you do? - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Diwali offer for RIL shareholders! Reliance Jio sets aside Rs 2,500 crore shares in IPO reservation - The Economic Times",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Stocks To Watch For October 15: Reliance Industries, IDBI Bank, CSB Bank, Tata Tech and more - CNBC TV18",
+          "text": "Jio Platforms IPO Price Band Set; Reliance Shares Climb 3% - Rediff MoneyWiz",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Reliance Power shares crash 5% as ED seizes \u20b92,033 crore assets in FEMA case against Anil Ambani firm - What's next? - Livemint",
+          "text": "Mukesh Ambani's Jio sets price band for India IPO - Reuters",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Jio IPO may be valued at Rs 11 lakh crore: What it means for RIL, Bharti Airtel and telecom stocks - The Economic Times",
+          "text": "Race for Jio IPO bidding: Can you buy RIL shares now to access Rs 2,500 crore shareholder quota? - The Economic Times",
           "label": "neutral",
           "score": 0.5
         }
@@ -265,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.2667,
+  "market_sentiment": -0.2889,
   "market_label": "BEARISH",
   "total_headlines": 45,
   "positive": 3,
-  "negative": 15,
-  "neutral": 27,
+  "negative": 16,
+  "neutral": 26,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-10-15 13:49:20 IST"
+  "timestamp": "2026-10-16 13:42:11 IST"
 }

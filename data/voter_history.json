@@ -88394,5 +88394,8237 @@
         "veto": false
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-16 13:42:45",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.3000030517578,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:43:54",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1212.5999755859375,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:44:04",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2448.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:44:13",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.1999969482422,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:45:23",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1212.5,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:45:32",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.5,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:45:41",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.10000610351562,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:46:51",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1211.5999755859375,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:47:01",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.300048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:47:10",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.89999389648438,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:48:19",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1211.0,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:48:28",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:48:38",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.9499969482422,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:49:47",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.699951171875,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:49:57",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.699951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:50:06",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.9499969482422,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:51:16",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1211.4000244140625,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:51:26",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.300048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:51:35",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.6999969482422,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:52:51",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.9000244140625,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:53:00",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2448.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:53:10",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.8000030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:54:20",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5999755859375,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:54:29",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2447.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:54:39",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.8000030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:55:49",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.4000244140625,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:55:59",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:56:09",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.14999389648438,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:57:19",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.199951171875,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:57:29",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:57:39",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.0500030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:58:48",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.199951171875,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:58:57",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 13:59:06",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.0500030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:00:22",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.4000244140625,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:00:31",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2451.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:00:41",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.9499969482422,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:01:50",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.5999755859375,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:02:00",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:02:09",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.0,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:03:26",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.4000244140625,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:03:35",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.60009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:03:43",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.85000610351562,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:04:53",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.300048828125,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:05:03",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:05:13",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.6999969482422,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:06:23",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.5,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:06:33",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.10009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:06:43",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.75,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:07:55",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.0,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:08:04",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:08:14",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.60000610351562,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:09:23",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.199951171875,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:09:32",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:09:42",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.5500030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:10:52",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.800048828125,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:11:02",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:11:12",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 252.0,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:12:21",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.9000244140625,
+    "neuro_score": 0.494,
+    "conviction": 0.271,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:12:31",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.800048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:12:40",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.89999389648438,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:13:57",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.9000244140625,
+    "neuro_score": 0.494,
+    "conviction": 0.271,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:14:07",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.5,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:14:17",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.89999389648438,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:15:26",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1211.0,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:15:36",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2448.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:15:44",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.89999389648438,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:16:53",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.699951171875,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:17:03",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:17:12",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.75,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:18:27",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5999755859375,
+    "neuro_score": 0.546,
+    "conviction": 0.236,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.75,
+        "conviction": 0.9,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:18:36",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.5,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:18:45",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.85000610351562,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:19:54",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.699951171875,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:20:03",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2447.10009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:20:13",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.60000610351562,
+    "neuro_score": 0.102,
+    "conviction": 0.108,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:21:22",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:21:31",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2449.10009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:21:40",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.5,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:22:49",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1211.699951171875,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:22:58",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:23:07",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.5500030517578,
+    "neuro_score": 0.155,
+    "conviction": 0.132,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.05,
+        "conviction": 0.06,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:24:23",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.699951171875,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:24:32",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.699951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:24:41",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.25,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:25:50",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:25:59",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2454.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:26:08",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:27:17",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.800048828125,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:27:27",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2453.800048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:27:35",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.10000610351562,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:28:44",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5999755859375,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:28:53",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2451.800048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:29:01",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:30:11",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.0999755859375,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:30:19",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2450.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:30:28",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:31:38",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.5999755859375,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:31:47",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2452.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:31:56",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.25,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:33:06",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.0,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:33:17",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2451.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:33:27",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.1999969482422,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:34:43",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.4000244140625,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:34:52",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2453.60009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:35:01",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.10000610351562,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:36:15",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.0999755859375,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:36:24",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2453.10009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:36:34",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.0,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:37:44",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.300048828125,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:37:53",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2452.60009765625,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:38:03",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.0500030517578,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:39:12",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.0,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:39:21",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2453.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:39:32",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.0,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:40:40",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.5,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:40:50",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2457.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:41:00",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.0500030517578,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:42:09",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.5,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:42:18",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2457.5,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:42:28",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:43:37",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.800048828125,
+    "neuro_score": 0.57,
+    "conviction": 0.288,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:43:47",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2454.300048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:43:57",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.3000030517578,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:45:12",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.5999755859375,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:45:21",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2456.39990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:45:30",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.3000030517578,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:46:39",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.4000244140625,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:46:47",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2457.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:46:57",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.25,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:48:06",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.9000244140625,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:48:15",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2459.0,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:48:24",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.25,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:49:32",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.0,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:49:41",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2458.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:49:50",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:50:59",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.9000244140625,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:51:07",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2460.199951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:51:16",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.10000610351562,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:52:26",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1210.0,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:52:35",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2459.89990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:52:44",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.3000030517578,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:53:59",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.0999755859375,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:54:09",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2459.300048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:54:18",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.1999969482422,
+    "neuro_score": 0.077,
+    "conviction": 0.163,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.2,
+        "conviction": 0.24,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:55:36",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1209.199951171875,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:55:45",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2461.699951171875,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:55:54",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.14999389648438,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:57:03",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.5999755859375,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:57:13",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2461.800048828125,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:57:22",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 250.8000030517578,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:58:31",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.0,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:58:40",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2462.39990234375,
+    "neuro_score": 0.355,
+    "conviction": 0.223,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.05,
+        "conviction": 0.065,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:58:49",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 250.6999969482422,
+    "neuro_score": -0.061,
+    "conviction": 0.205,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 14:59:58",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.4000244140625,
+    "neuro_score": 0.629,
+    "conviction": 0.253,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.1,
+        "conviction": 0.13,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:00:07",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2461.10009765625,
+    "neuro_score": 0.298,
+    "conviction": 0.251,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.15,
+        "conviction": 0.195,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.35,
+        "conviction": 0.402,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:00:16",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 250.5,
+    "neuro_score": -0.087,
+    "conviction": 0.176,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:01:25",
+    "symbol": "RELIANCE.NS",
+    "action": "SKIP",
+    "price": 1207.5999755859375,
+    "neuro_score": 0.782,
+    "conviction": 0.191,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:02:34",
+    "symbol": "TCS.NS",
+    "action": "BUY",
+    "price": 2465.5,
+    "neuro_score": 0.352,
+    "conviction": 0.276,
+    "regime": "TRENDING_UP",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.15,
+        "conviction": 0.195,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.5,
+        "conviction": 0.575,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:02:43",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 250.8000030517578,
+    "neuro_score": -0.087,
+    "conviction": 0.176,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.4,
+        "conviction": 0.48,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:03:52",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1208.4000244140625,
+    "neuro_score": 0.695,
+    "conviction": 0.225,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:04:02",
+    "symbol": "TCS.NS",
+    "action": "SKIP",
+    "price": 2470.60009765625,
+    "neuro_score": 0.061,
+    "conviction": 0.389,
+    "regime": "TRENDING_UP",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.55,
+        "conviction": 0.715,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.5,
+        "conviction": 0.575,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:05:11",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 250.6999969482422,
+    "neuro_score": -0.004,
+    "conviction": 0.156,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.3,
+        "conviction": 0.36,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:06:28",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1207.9000244140625,
+    "neuro_score": 0.621,
+    "conviction": 0.26,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.2,
+        "conviction": 0.23,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:06:37",
+    "symbol": "TCS.NS",
+    "action": "SKIP",
+    "price": 2471.699951171875,
+    "neuro_score": 0.061,
+    "conviction": 0.389,
+    "regime": "TRENDING_UP",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.55,
+        "conviction": 0.715,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.5,
+        "conviction": 0.575,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:07:46",
+    "symbol": "POWERGRID.NS",
+    "action": "SKIP",
+    "price": 251.10000610351562,
+    "neuro_score": -0.004,
+    "conviction": 0.156,
+    "regime": "SIDEWAYS",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": -0.3,
+        "conviction": 0.36,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.1,
+        "conviction": 0.115,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.25,
+        "conviction": 0.312,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:08:55",
+    "symbol": "RELIANCE.NS",
+    "action": "BUY",
+    "price": 1207.5999755859375,
+    "neuro_score": 0.683,
+    "conviction": 0.227,
+    "regime": "SIDEWAYS",
+    "should_buy": true,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.85,
+        "conviction": 1.0,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.15,
+        "conviction": 0.188,
+        "veto": false
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-10-16 15:09:04",
+    "symbol": "TCS.NS",
+    "action": "SKIP",
+    "price": 2471.5,
+    "neuro_score": 0.061,
+    "conviction": 0.389,
+    "regime": "TRENDING_UP",
+    "should_buy": false,
+    "vetoed": false,
+    "voters": [
+      {
+        "name": "Momentum Mike",
+        "vote": 0.5,
+        "conviction": 0.6,
+        "veto": false
+      },
+      {
+        "name": "Value Vinay",
+        "vote": -0.2,
+        "conviction": 0.22,
+        "veto": false
+      },
+      {
+        "name": "Risk Raj",
+        "vote": -0.55,
+        "conviction": 0.715,
+        "veto": false
+      },
+      {
+        "name": "Sentiment Sanjay",
+        "vote": 0.1,
+        "conviction": 0.12,
+        "veto": false
+      },
+      {
+        "name": "Pattern Priya",
+        "vote": 0.5,
+        "conviction": 0.575,
+        "veto": false
+      },
+      {
+        "name": "Quant Qasim",
+        "vote": 0.0,
+        "conviction": 0.0,
+        "veto": false
+      }
+    ]
   }
 ]
