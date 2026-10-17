@@ -89,11 +89,11 @@
     "rf_precision": 0.7689,
     "xgb_params": {
       "n_estimators": 200,
-      "max_depth": 6,
-      "learning_rate": 0.05,
-      "subsample": 0.8
+      "max_depth": 4,
+      "learning_rate": 0.08,
+      "subsample": 0.9
     },
-    "xgb_precision": 0.5461
+    "xgb_precision": 0.5512
   },
   {
     "symbol": "POWERGRID.NS",
@@ -102,7 +102,7 @@
       "max_depth": 12,
       "min_samples_split": 40
     },
-    "rf_precision": 0.5135,
+    "rf_precision": 0.5156,
     "xgb_params": {
       "n_estimators": 150,
       "max_depth": 4,
@@ -136,12 +136,12 @@
     },
     "rf_precision": 0.3562,
     "xgb_params": {
-      "n_estimators": 150,
+      "n_estimators": 200,
       "max_depth": 4,
-      "learning_rate": 0.03,
-      "subsample": 0.7
+      "learning_rate": 0.08,
+      "subsample": 0.9
     },
-    "xgb_precision": 0.4755
+    "xgb_precision": 0.4747
   },
   {
     "symbol": "TCS.NS",

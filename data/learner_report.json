@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16 15:28",
+  "generated_at": "2026-10-17 08:51",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-10-16 15:23"
+    "analysis_date": "2026-10-17 08:47"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -35,13 +35,13 @@
       "lstm_accuracy": 0.5102
     },
     "SBIN.NS": {
-      "rf_weight": 0.2443,
-      "xgb_weight": 0.2443,
-      "lstm_weight": 0.2487,
-      "intraday_weight": 0.2626,
+      "rf_weight": 0.2387,
+      "xgb_weight": 0.2387,
+      "lstm_weight": 0.266,
+      "intraday_weight": 0.2566,
       "rf_accuracy": 0.4651,
       "xgb_accuracy": 0.4651,
-      "lstm_accuracy": 0.4735
+      "lstm_accuracy": 0.5184
     },
     "RELIANCE.NS": {
       "rf_weight": 0.2607,
@@ -118,16 +118,16 @@
   },
   "market_regimes": {
     "NIFTY50": "RANGING",
-    "TATASTEEL.NS": "RANGING",
-    "SBIN.NS": "RANGING",
-    "RELIANCE.NS": "RANGING",
+    "TATASTEEL.NS": "TRENDING_DOWN",
+    "SBIN.NS": "TRENDING_UP",
+    "RELIANCE.NS": "TRENDING_DOWN",
     "HDFCBANK.NS": "RANGING",
-    "ICICIBANK.NS": "TRENDING_DOWN",
+    "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "RANGING",
-    "POWERGRID.NS": "TRENDING_UP",
-    "COALINDIA.NS": "TRENDING_UP",
-    "INFY.NS": "RANGING",
-    "TCS.NS": "RANGING"
+    "POWERGRID.NS": "RANGING",
+    "COALINDIA.NS": "RANGING",
+    "INFY.NS": "TRENDING_DOWN",
+    "TCS.NS": "TRENDING_DOWN"
   },
   "calibrations": [
     {
@@ -166,13 +166,13 @@
     {
       "symbol": "HDFCBANK.NS",
       "rf_brier_score": 0.2554,
-      "xgb_brier_score": 0.2925,
+      "xgb_brier_score": 0.2874,
       "rf_calibration_error": 0.074,
-      "xgb_calibration_error": 0.2357,
+      "xgb_calibration_error": 0.227,
       "rf_reliable": true,
       "xgb_reliable": true,
       "rf_ece": 0.074,
-      "xgb_ece": 0.2357
+      "xgb_ece": 0.227
     },
     {
       "symbol": "ICICIBANK.NS",
@@ -199,13 +199,13 @@
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2695,
+      "rf_brier_score": 0.2697,
       "xgb_brier_score": 0.3046,
-      "rf_calibration_error": 0.1225,
+      "rf_calibration_error": 0.1276,
       "xgb_calibration_error": 0.2418,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "rf_ece": 0.1225,
+      "rf_ece": 0.1276,
       "xgb_ece": 0.2418
     },
     {
@@ -221,14 +221,14 @@
     },
     {
       "symbol": "INFY.NS",
-      "rf_brier_score": 0.2637,
+      "rf_brier_score": 0.2636,
       "xgb_brier_score": 0.3153,
-      "rf_calibration_error": 0.1142,
+      "rf_calibration_error": 0.1056,
       "xgb_calibration_error": 0.2678,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1142,
+      "rf_ece": 0.1056,
       "xgb_ece": 0.2678
     },
     {
@@ -335,11 +335,11 @@
       "rf_precision": 0.7689,
       "xgb_params": {
         "n_estimators": 200,
-        "max_depth": 6,
-        "learning_rate": 0.05,
-        "subsample": 0.8
+        "max_depth": 4,
+        "learning_rate": 0.08,
+        "subsample": 0.9
       },
-      "xgb_precision": 0.5461
+      "xgb_precision": 0.5512
     },
     {
       "symbol": "POWERGRID.NS",
@@ -348,7 +348,7 @@
         "max_depth": 12,
         "min_samples_split": 40
       },
-      "rf_precision": 0.5135,
+      "rf_precision": 0.5156,
       "xgb_params": {
         "n_estimators": 150,
         "max_depth": 4,
@@ -382,12 +382,12 @@
       },
       "rf_precision": 0.3562,
       "xgb_params": {
-        "n_estimators": 150,
+        "n_estimators": 200,
         "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
+        "learning_rate": 0.08,
+        "subsample": 0.9
       },
-      "xgb_precision": 0.4755
+      "xgb_precision": 0.4747
     },
     {
       "symbol": "TCS.NS",
@@ -410,23 +410,23 @@
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-10-16 15:27"
+    "analysis_date": "2026-10-17 08:51"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-10-16 15:27"
+    "analysis_date": "2026-10-17 08:51"
   },
   "youtube_mood": {
-    "overall_mood": -0.08333333333333333,
+    "overall_mood": -0.1,
     "stock_mentions": {},
     "trending_topics": [
       "Power Sector Is Booming, So Why Are REC & PFC Stocks Falling? | CA Rachana Ranade",
       "Is IT driving the market higher? | Q2 FY27 Result | CA Rachana Ranade | #shorts",
       "Is IT driving the market higher? | Q2 FY27 Result | CA Rachana Ranade",
-      "HD Fire Protect\u2019s \u20b9712 Crore IPO :Key things to know | CA Rachana Ranade | #shorts",
+      "19 Saal Ka, Night Shift Mein Kaam - Zindagi Kaise Badlegi? #shorts",
       "Printer Kharidein Ya Blinkit Se Print Mangayein? #shorts"
     ],
     "channel_consensus": "mixed",
@@ -458,24 +458,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": -0.39101289515307064,
-        "DowJones": 0.2168147022243477,
-        "NASDAQ": -1.2362003531311638,
-        "Nikkei": -4.8983314898891965,
+        "SP500": -1.0927099809045933,
+        "DowJones": -0.3359314014782269,
+        "NASDAQ": -2.1450206699957906,
+        "Nikkei": 1.3943757983290288,
         "HangSeng": 0.5157744900554078,
-        "BrentCrude": -0.3021145207289472,
-        "Gold": 0.8129277847024102,
-        "USDINR": -0.21155946143864762
+        "BrentCrude": 3.719790888895067,
+        "Gold": 0.26378263692476844,
+        "USDINR": 0.46040394509730176
       },
-      "score": -0.491666484192296
+      "score": -0.8164005987531379
     },
     "vix_analysis": {
-      "value": 14.024999618530273,
+      "value": 14.0600004196167,
       "classification": "Normal",
-      "trend": "falling"
+      "trend": "rising"
     },
-    "market_mood_score": 0.0033334063230816002,
+    "market_mood_score": -0.12656023950125517,
     "earnings_calendar": [],
-    "timestamp": "2026-10-16T20:53:47.154982+05:30"
+    "timestamp": "2026-10-17T14:17:24.838263+05:30"
   }
 }
