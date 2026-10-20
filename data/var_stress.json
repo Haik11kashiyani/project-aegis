@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.8232,
-    "var_rupees": 273.49,
-    "mean_daily_return": 0.002,
-    "daily_volatility": 1.1094
+    "var_pct": 1.8237,
+    "var_rupees": 273.56,
+    "mean_daily_return": 0.0016,
+    "daily_volatility": 1.1095
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.8339,
-    "var_rupees": 275.09,
-    "cvar_pct": 2.3005,
-    "cvar_rupees": 345.07,
-    "sim_mean": -0.0004,
-    "sim_std": 1.1132
+    "var_pct": 1.8344,
+    "var_rupees": 275.16,
+    "cvar_pct": 2.301,
+    "cvar_rupees": 345.14,
+    "sim_mean": -0.0008,
+    "sim_std": 1.1133
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.5794,
-    "var_rupees": 386.91,
-    "mean_daily_return": 0.002,
-    "daily_volatility": 1.1094
+    "var_pct": 2.5799,
+    "var_rupees": 386.98,
+    "mean_daily_return": 0.0016,
+    "daily_volatility": 1.1095
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.5722,
-    "var_rupees": 385.83,
-    "cvar_pct": 2.99,
-    "cvar_rupees": 448.49,
-    "sim_mean": -0.0004,
-    "sim_std": 1.1132
+    "var_pct": 2.5727,
+    "var_rupees": 385.91,
+    "cvar_pct": 2.9905,
+    "cvar_rupees": 448.57,
+    "sim_mean": -0.0008,
+    "sim_std": 1.1133
   },
   "stress_tests": [
     {
@@ -119,10 +119,10 @@
   "drawdowns": {
     "max_drawdown_pct": -20.9178,
     "max_drawdown_day": 245,
-    "current_drawdown_pct": -18.115,
+    "current_drawdown_pct": -18.2154,
     "drawdown_periods": 7,
     "longest_drawdown_days": 163,
-    "avg_drawdown_pct": -7.568
+    "avg_drawdown_pct": -7.5685
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-10-19 14:20:44 IST"
+  "timestamp": "2026-10-20 14:03:03 IST"
 }
