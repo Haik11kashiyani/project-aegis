@@ -13,7 +13,7 @@
       "learning_rate": 0.08,
       "subsample": 0.9
     },
-    "xgb_precision": 0.7377
+    "xgb_precision": 0.7099
   },
   {
     "symbol": "SBIN.NS",
@@ -45,7 +45,7 @@
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.5734
+    "xgb_precision": 0.5845
   },
   {
     "symbol": "HDFCBANK.NS",
@@ -102,7 +102,7 @@
       "max_depth": 8,
       "min_samples_split": 30
     },
-    "rf_precision": 0.5686,
+    "rf_precision": 0.5714,
     "xgb_params": {
       "n_estimators": 150,
       "max_depth": 4,
@@ -157,6 +157,6 @@
       "learning_rate": 0.03,
       "subsample": 0.7
     },
-    "xgb_precision": 0.5213
+    "xgb_precision": 0.5268
   }
 ]

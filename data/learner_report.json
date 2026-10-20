@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19 17:31",
+  "generated_at": "2026-10-20 15:41",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-10-19 17:28"
+    "analysis_date": "2026-10-20 15:39"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -62,29 +62,29 @@
       "lstm_accuracy": 0.5837
     },
     "ICICIBANK.NS": {
-      "rf_weight": 0.2533,
-      "xgb_weight": 0.2643,
-      "lstm_weight": 0.2455,
-      "intraday_weight": 0.2368,
+      "rf_weight": 0.2524,
+      "xgb_weight": 0.267,
+      "lstm_weight": 0.2446,
+      "intraday_weight": 0.2359,
       "rf_accuracy": 0.5349,
-      "xgb_accuracy": 0.5581,
+      "xgb_accuracy": 0.5659,
       "lstm_accuracy": 0.5184
     },
     "NTPC.NS": {
-      "rf_weight": 0.2561,
-      "xgb_weight": 0.2598,
-      "lstm_weight": 0.2464,
-      "intraday_weight": 0.2377,
+      "rf_weight": 0.2566,
+      "xgb_weight": 0.2584,
+      "lstm_weight": 0.2469,
+      "intraday_weight": 0.2381,
       "rf_accuracy": 0.5388,
-      "xgb_accuracy": 0.5465,
+      "xgb_accuracy": 0.5426,
       "lstm_accuracy": 0.5184
     },
     "POWERGRID.NS": {
-      "rf_weight": 0.242,
-      "xgb_weight": 0.2879,
-      "lstm_weight": 0.2336,
-      "intraday_weight": 0.2365,
-      "rf_accuracy": 0.5116,
+      "rf_weight": 0.2406,
+      "xgb_weight": 0.2884,
+      "lstm_weight": 0.234,
+      "intraday_weight": 0.2369,
+      "rf_accuracy": 0.5078,
       "xgb_accuracy": 0.6085,
       "lstm_accuracy": 0.4939
     },
@@ -118,11 +118,11 @@
   },
   "market_regimes": {
     "NIFTY50": "TRENDING_DOWN",
-    "TATASTEEL.NS": "RANGING",
+    "TATASTEEL.NS": "TRENDING_DOWN",
     "SBIN.NS": "RANGING",
     "RELIANCE.NS": "RANGING",
-    "HDFCBANK.NS": "RANGING",
-    "ICICIBANK.NS": "TRENDING_DOWN",
+    "HDFCBANK.NS": "TRENDING_UP",
+    "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
@@ -236,14 +236,14 @@
     {
       "symbol": "TCS.NS",
       "rf_brier_score": 0.3017,
-      "xgb_brier_score": 0.4257,
+      "xgb_brier_score": 0.426,
       "rf_calibration_error": 0.172,
-      "xgb_calibration_error": 0.3054,
+      "xgb_calibration_error": 0.323,
       "rf_reliable": true,
       "xgb_reliable": false,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.172,
-      "xgb_ece": 0.3054
+      "xgb_ece": 0.323
     }
   ],
   "tuned_params": [
@@ -261,7 +261,7 @@
         "learning_rate": 0.08,
         "subsample": 0.9
       },
-      "xgb_precision": 0.7377
+      "xgb_precision": 0.7099
     },
     {
       "symbol": "SBIN.NS",
@@ -293,7 +293,7 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.5734
+      "xgb_precision": 0.5845
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -350,7 +350,7 @@
         "max_depth": 8,
         "min_samples_split": 30
       },
-      "rf_precision": 0.5686,
+      "rf_precision": 0.5714,
       "xgb_params": {
         "n_estimators": 150,
         "max_depth": 4,
@@ -405,31 +405,30 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.5213
+      "xgb_precision": 0.5268
     }
   ],
   "voter_accuracy": {
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-10-19 17:31"
+    "analysis_date": "2026-10-20 15:41"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-10-19 17:31"
+    "analysis_date": "2026-10-20 15:41"
   },
   "youtube_mood": {
-    "overall_mood": 0.2,
+    "overall_mood": 0.25,
     "stock_mentions": {},
     "trending_topics": [
       "Why Lenskart rose 70% when the market fell? | CA Rachana Ranade",
       "\ud83d\udd25 This Dussehra, Burn the Fear of Trading! \ud83d\udcc8\u2728| CA Rachana Ranade | #shorts",
-      "\ud83d\udd25 This Dussehra, Burn the Fear of Investing! \ud83d\udcc8\u2728| CA Rachana Ranade | #shorts",
-      "Kohli Se Bhi Bada CRICKET Contract Kiska Hai? #shorts",
-      "Mere Team ki BEST EXPENSIVE Purchases Kaunsi Hain?! #shorts"
+      "Diwali Gift Box Ke Liye \u20b9100 EXTRA? Yeh Hisab Dekho #shorts",
+      "Kohli Se Bhi Bada CRICKET Contract Kiska Hai? #shorts"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -460,24 +459,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.5658356757353585,
-        "DowJones": 0.0056562883165646545,
-        "NASDAQ": 1.3038477042401222,
-        "Nikkei": 1.3943757983290288,
-        "HangSeng": 0.5157744900554078,
-        "BrentCrude": 0.16384517037661542,
-        "Gold": -0.5692351872200202,
-        "USDINR": 0.41279932975800987
+        "SP500": 0.3167431874882346,
+        "DowJones": 0.9572734713120892,
+        "NASDAQ": 0.054956114915253644,
+        "Nikkei": -0.6239483806092895,
+        "HangSeng": -1.3192710360114142,
+        "BrentCrude": -1.1958057065223069,
+        "Gold": -0.1394267645631367,
+        "USDINR": -0.06601377453155162
       },
-      "score": 0.27141235415955395
+      "score": 0.13114894659414372
     },
     "vix_analysis": {
-      "value": 14.772500038146973,
+      "value": 14.770000457763672,
       "classification": "Normal",
       "trend": "rising"
     },
-    "market_mood_score": 0.3085649416638216,
+    "market_mood_score": 0.2524595786376575,
     "earnings_calendar": [],
-    "timestamp": "2026-10-19T22:58:09.926479+05:30"
+    "timestamp": "2026-10-20T21:09:19.813687+05:30"
   }
 }
