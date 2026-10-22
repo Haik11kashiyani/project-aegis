@@ -6,52 +6,52 @@
   "macro_bias": "NEUTRAL",
   "instruments": {
     "gold": {
-      "signal": "NEUTRAL",
-      "z": 0.149,
-      "change_5d": 0.74,
-      "change_20d": -4.17,
-      "price": 4138.3
+      "signal": "DOWN",
+      "z": -0.756,
+      "change_5d": -1.52,
+      "change_20d": -4.45,
+      "price": 4106.8
     },
     "usdinr": {
-      "signal": "DOWN",
-      "z": -0.9,
-      "change_5d": -0.68,
-      "change_20d": -1.1,
-      "price": 94.64
+      "signal": "NEUTRAL",
+      "z": 0.436,
+      "change_5d": -0.34,
+      "change_20d": -0.96,
+      "price": 94.82
     },
     "crude": {
-      "signal": "STRONG_DOWN",
-      "z": -1.641,
-      "change_5d": 3.6,
-      "change_20d": 6.89,
-      "price": 98.51
+      "signal": "UP",
+      "z": 1.014,
+      "change_5d": 1.88,
+      "change_20d": 5.5,
+      "price": 99.81
     },
     "us10y": {
-      "signal": "DOWN",
-      "z": -0.54,
-      "change_5d": -1.92,
-      "change_20d": 3.0,
-      "price": 5.12
+      "signal": "NEUTRAL",
+      "z": 0.413,
+      "change_5d": -0.85,
+      "change_20d": 0.63,
+      "price": 5.15
     },
     "nifty": {
       "signal": "DOWN",
-      "z": -0.643,
-      "change_5d": -0.03,
-      "change_20d": -2.99,
-      "price": 22714.2
+      "z": -0.663,
+      "change_5d": 0.01,
+      "change_20d": -3.01,
+      "price": 22625.85
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.104,
-    "gold_vs_us10y": -0.324,
-    "gold_vs_nifty": 0.204,
-    "crude_vs_gold": -0.092,
-    "crude_vs_usdinr": 0.06,
-    "crude_vs_us10y": 0.286,
-    "crude_vs_nifty": -0.263,
-    "us10y_vs_usdinr": 0.062,
+    "gold_vs_usdinr": 0.099,
+    "gold_vs_us10y": -0.344,
+    "gold_vs_nifty": 0.195,
+    "crude_vs_gold": -0.082,
+    "crude_vs_usdinr": 0.08,
+    "crude_vs_us10y": 0.272,
+    "crude_vs_nifty": -0.24,
+    "us10y_vs_usdinr": 0.054,
     "nifty_vs_usdinr": -0.205,
-    "nifty_vs_us10y": -0.126
+    "nifty_vs_us10y": -0.137
   },
-  "timestamp": "2026-10-21T14:05:41.618913+05:30"
+  "timestamp": "2026-10-22T14:08:10.724835+05:30"
 }
