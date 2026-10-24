@@ -82,18 +82,18 @@
   {
     "symbol": "NTPC.NS",
     "rf_params": {
-      "n_estimators": 300,
-      "max_depth": 15,
-      "min_samples_split": 60
+      "n_estimators": 250,
+      "max_depth": 12,
+      "min_samples_split": 40
     },
-    "rf_precision": 0.2684,
+    "rf_precision": 0.27,
     "xgb_params": {
       "n_estimators": 200,
       "max_depth": 6,
       "learning_rate": 0.05,
       "subsample": 0.8
     },
-    "xgb_precision": 0.572
+    "xgb_precision": 0.566
   },
   {
     "symbol": "POWERGRID.NS",
@@ -102,7 +102,7 @@
       "max_depth": 8,
       "min_samples_split": 30
     },
-    "rf_precision": 0.4207,
+    "rf_precision": 0.4186,
     "xgb_params": {
       "n_estimators": 200,
       "max_depth": 6,
@@ -146,11 +146,11 @@
   {
     "symbol": "TCS.NS",
     "rf_params": {
-      "n_estimators": 300,
-      "max_depth": 15,
-      "min_samples_split": 60
+      "n_estimators": 250,
+      "max_depth": 12,
+      "min_samples_split": 40
     },
-    "rf_precision": 0.5864,
+    "rf_precision": 0.5369,
     "xgb_params": {
       "n_estimators": 150,
       "max_depth": 4,
