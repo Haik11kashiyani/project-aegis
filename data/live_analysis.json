@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-10-23 15:09:56 IST",
-  "scan_number": 57,
+  "timestamp": "2026-10-26 15:09:29 IST",
+  "scan_number": 40,
   "status": "ACTIVE",
   "day_pnl": 0.0,
   "day_pnl_pct": 0.0,
@@ -10,21 +10,21 @@
   "smart_exit": true,
   "smart_entry": true,
   "global_mood": {
-    "score": -0.6,
+    "score": -0.44999999999999996,
     "details": {
-      "india_vix": 16.94,
+      "india_vix": 17.36,
       "vix_signal": "NORMAL",
-      "sp500_change": -1.21,
-      "sp500_signal": "WEAK",
-      "crude_price": 109.71,
-      "crude_change": -3.06,
+      "sp500_change": -0.52,
+      "sp500_signal": "NEUTRAL",
+      "crude_price": 109.55,
+      "crude_change": -6.14,
       "crude_signal": "BEARISH",
-      "usdinr": 94.91,
-      "usdinr_change": 0.63,
+      "usdinr": 95.24,
+      "usdinr_change": 0.56,
       "inr_signal": "WEAKENING",
-      "composite_mood": -0.6
+      "composite_mood": -0.45
     },
-    "timestamp": 1792748261.681015
+    "timestamp": 1793006755.3024352
   },
   "neuro_voters": [
     {
@@ -61,335 +61,335 @@
   "broker_mode": "LIVE",
   "broker_name": "PaperBroker",
   "market_breadth": {
-    "timestamp": "2026-10-23 14:04:33",
+    "timestamp": "2026-10-26 14:24:48",
     "breadth": {
-      "advance_decline_ratio": 0.32,
-      "advancing": 7,
-      "declining": 22,
-      "pct_above_sma50": 27.6,
+      "advance_decline_ratio": 1.42,
+      "advancing": 17,
+      "declining": 12,
+      "pct_above_sma50": 34.5,
       "pct_above_sma200": 24.1,
-      "breadth_score": 28.4,
-      "signal": "WEAK",
+      "breadth_score": 74.8,
+      "signal": "HEALTHY",
       "stocks_analysed": 29,
       "detail": {
         "RELIANCE.NS": {
-          "price": 1184.5,
-          "change": 0.0,
+          "price": 1201.5,
+          "change": 0.97,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "TCS.NS": {
-          "price": 2530.7,
-          "change": 0.07,
+          "price": 2527.9,
+          "change": -0.08,
           "above_sma50": "True",
           "above_sma200": "True"
         },
         "HDFCBANK.NS": {
-          "price": 695.35,
-          "change": 0.19,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "INFY.NS": {
-          "price": 1163.7,
-          "change": 0.9,
-          "above_sma50": "True",
-          "above_sma200": "False"
-        },
-        "ICICIBANK.NS": {
-          "price": 1393.8,
-          "change": -0.34,
-          "above_sma50": "True",
-          "above_sma200": "True"
-        },
-        "HINDUNILVR.NS": {
-          "price": 1794.7,
-          "change": -1.84,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "SBIN.NS": {
-          "price": 958.0,
-          "change": -1.24,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "BHARTIARTL.NS": {
-          "price": 1883.3,
-          "change": -0.62,
-          "above_sma50": "True",
-          "above_sma200": "True"
-        },
-        "KOTAKBANK.NS": {
-          "price": 431.45,
-          "change": -1.27,
-          "above_sma50": "True",
-          "above_sma200": "True"
-        },
-        "ITC.NS": {
-          "price": 258.5,
-          "change": -0.15,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "LT.NS": {
-          "price": 3658.7,
-          "change": 0.56,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "AXISBANK.NS": {
-          "price": 1213.1,
-          "change": 0.09,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "BAJFINANCE.NS": {
-          "price": 925.05,
-          "change": -1.81,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "ASIANPAINT.NS": {
-          "price": 2276.4,
-          "change": -0.37,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "MARUTI.NS": {
-          "price": 11195.0,
-          "change": -0.04,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "TITAN.NS": {
-          "price": 4250.0,
-          "change": -2.3,
-          "above_sma50": "False",
-          "above_sma200": "False"
-        },
-        "SUNPHARMA.NS": {
-          "price": 1745.0,
+          "price": 687.7,
           "change": -0.74,
           "above_sma50": "False",
           "above_sma200": "False"
         },
+        "INFY.NS": {
+          "price": 1151.3,
+          "change": -0.22,
+          "above_sma50": "True",
+          "above_sma200": "False"
+        },
+        "ICICIBANK.NS": {
+          "price": 1396.9,
+          "change": 0.19,
+          "above_sma50": "True",
+          "above_sma200": "True"
+        },
+        "HINDUNILVR.NS": {
+          "price": 1807.8,
+          "change": -0.38,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "SBIN.NS": {
+          "price": 959.05,
+          "change": 0.05,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "BHARTIARTL.NS": {
+          "price": 1904.7,
+          "change": 0.67,
+          "above_sma50": "True",
+          "above_sma200": "True"
+        },
+        "KOTAKBANK.NS": {
+          "price": 440.35,
+          "change": 2.29,
+          "above_sma50": "True",
+          "above_sma200": "True"
+        },
+        "ITC.NS": {
+          "price": 259.7,
+          "change": 0.7,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "LT.NS": {
+          "price": 3662.2,
+          "change": 0.42,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "AXISBANK.NS": {
+          "price": 1221.5,
+          "change": 0.33,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "BAJFINANCE.NS": {
+          "price": 918.7,
+          "change": -1.1,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "ASIANPAINT.NS": {
+          "price": 2298.7,
+          "change": -0.36,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "MARUTI.NS": {
+          "price": 11271.0,
+          "change": 0.37,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "TITAN.NS": {
+          "price": 4304.4,
+          "change": 0.11,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
+        "SUNPHARMA.NS": {
+          "price": 1739.5,
+          "change": -0.49,
+          "above_sma50": "False",
+          "above_sma200": "False"
+        },
         "WIPRO.NS": {
-          "price": 190.12,
-          "change": -0.15,
+          "price": 189.22,
+          "change": -0.33,
           "above_sma50": "True",
           "above_sma200": "False"
         },
         "ULTRACEMCO.NS": {
-          "price": 10949.0,
-          "change": 0.92,
-          "above_sma50": "False",
+          "price": 11122.0,
+          "change": 0.65,
+          "above_sma50": "True",
           "above_sma200": "False"
         },
         "NTPC.NS": {
-          "price": 296.1,
-          "change": -2.15,
+          "price": 299.7,
+          "change": 0.57,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "POWERGRID.NS": {
-          "price": 244.9,
-          "change": -1.41,
+          "price": 246.3,
+          "change": -0.44,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "TATASTEEL.NS": {
-          "price": 166.87,
-          "change": -3.17,
+          "price": 168.47,
+          "change": 0.48,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "COALINDIA.NS": {
-          "price": 395.6,
-          "change": -1.73,
+          "price": 400.4,
+          "change": 0.74,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "ONGC.NS": {
-          "price": 224.99,
-          "change": -0.0,
+          "price": 227.57,
+          "change": 0.03,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "ADANIENT.NS": {
-          "price": 2483.1,
-          "change": -2.62,
+          "price": 2495.7,
+          "change": 0.75,
           "above_sma50": "False",
           "above_sma200": "False"
         },
         "ADANIPORTS.NS": {
-          "price": 1705.6,
-          "change": -2.54,
-          "above_sma50": "False",
+          "price": 1737.3,
+          "change": 2.03,
+          "above_sma50": "True",
           "above_sma200": "True"
         },
         "HCLTECH.NS": {
-          "price": 1425.6,
-          "change": 0.27,
+          "price": 1415.0,
+          "change": -0.51,
           "above_sma50": "True",
           "above_sma200": "True"
         },
         "TECHM.NS": {
-          "price": 1795.0,
-          "change": -1.05,
+          "price": 1778.8,
+          "change": -0.63,
           "above_sma50": "True",
           "above_sma200": "True"
         },
         "BAJAJFINSV.NS": {
-          "price": 1655.0,
-          "change": -2.07,
+          "price": 1654.8,
+          "change": -0.01,
           "above_sma50": "False",
           "above_sma200": "False"
         }
       }
     },
     "vix": {
-      "vix": 16.78,
+      "vix": 17.42,
       "signal": "NORMAL"
     },
-    "position_size_factor": 0.25,
-    "recommendation": "25% size \u2014 weak breadth or high fear"
+    "position_size_factor": 1.0,
+    "recommendation": "Full size \u2014 breadth healthy, VIX calm"
   },
   "sector_rotation": {
-    "timestamp": "2026-10-23 14:04:34",
+    "timestamp": "2026-10-26 14:24:50",
     "sectors": {
       "Banking": {
         "ticker": "^NSEBANK",
-        "price": 54315.35,
-        "ret_5d": -2.74,
-        "ret_10d": -1.7,
-        "ret_20d": -2.03,
-        "acceleration": -1.38,
-        "vol_trend": 40.5,
-        "momentum_score": -2.15,
-        "state": "ROTATING_OUT"
+        "price": 54273.4,
+        "ret_5d": -2.19,
+        "ret_10d": -1.17,
+        "ret_20d": -2.35,
+        "acceleration": 0.02,
+        "vol_trend": 24.9,
+        "momentum_score": -1.7,
+        "state": "WEAKENING"
       },
       "IT": {
         "ticker": "^CNXIT",
-        "price": 32133.4,
-        "ret_5d": 0.66,
-        "ret_10d": 12.45,
-        "ret_20d": 13.91,
-        "acceleration": 11.16,
-        "vol_trend": 32.7,
-        "momentum_score": 7.9,
+        "price": 32027.15,
+        "ret_5d": 1.62,
+        "ret_10d": 12.97,
+        "ret_20d": 13.73,
+        "acceleration": 12.3,
+        "vol_trend": 1.4,
+        "momentum_score": 8.52,
         "state": "ROTATING_IN"
       },
       "Metal": {
         "ticker": "^CNXMETAL",
-        "price": 11474.4,
-        "ret_5d": -5.43,
-        "ret_10d": -4.39,
-        "ret_20d": -12.02,
-        "acceleration": 3.6,
-        "vol_trend": -27.6,
-        "momentum_score": -5.53,
+        "price": 11644.3,
+        "ret_5d": -3.5,
+        "ret_10d": -2.57,
+        "ret_20d": -11.02,
+        "acceleration": 6.11,
+        "vol_trend": -26.3,
+        "momentum_score": -3.76,
         "state": "ROTATING_OUT"
       },
       "Energy": {
         "ticker": "^CNXENERGY",
-        "price": 34285.2,
-        "ret_5d": -5.27,
-        "ret_10d": -4.2,
-        "ret_20d": -8.23,
-        "acceleration": 0.02,
-        "vol_trend": -21.2,
-        "momentum_score": -5.01,
+        "price": 34854.75,
+        "ret_5d": -3.11,
+        "ret_10d": -2.8,
+        "ret_20d": -6.91,
+        "acceleration": 1.43,
+        "vol_trend": -8.9,
+        "momentum_score": -3.32,
         "state": "ROTATING_OUT"
       },
       "Infra": {
         "ticker": "^CNXINFRA",
-        "price": 8509.65,
-        "ret_5d": -2.47,
-        "ret_10d": -0.76,
-        "ret_20d": -4.87,
-        "acceleration": 3.39,
-        "vol_trend": -24.1,
-        "momentum_score": -1.85,
-        "state": "WEAKENING"
+        "price": 8620.2,
+        "ret_5d": -0.53,
+        "ret_10d": 1.42,
+        "ret_20d": -3.77,
+        "acceleration": 6.53,
+        "vol_trend": -19.0,
+        "momentum_score": 0.11,
+        "state": "NEUTRAL"
       },
       "Pharma": {
         "ticker": "^CNXPHARMA",
-        "price": 25196.0,
-        "ret_5d": -2.27,
-        "ret_10d": -2.95,
-        "ret_20d": -6.78,
-        "acceleration": 1.0,
-        "vol_trend": -34.2,
-        "momentum_score": -3.05,
-        "state": "ROTATING_OUT"
+        "price": 25713.4,
+        "ret_5d": 0.38,
+        "ret_10d": -1.4,
+        "ret_20d": -4.78,
+        "acceleration": 2.02,
+        "vol_trend": -28.8,
+        "momentum_score": -1.02,
+        "state": "WEAKENING"
       },
       "FMCG": {
         "ticker": "^CNXFMCG",
-        "price": 42481.95,
-        "ret_5d": -4.78,
-        "ret_10d": -5.31,
-        "ret_20d": -7.16,
-        "acceleration": -3.35,
-        "vol_trend": -44.3,
-        "momentum_score": -5.27,
+        "price": 42597.7,
+        "ret_5d": -3.13,
+        "ret_10d": -3.44,
+        "ret_20d": -7.28,
+        "acceleration": 0.54,
+        "vol_trend": -44.5,
+        "momentum_score": -3.69,
         "state": "ROTATING_OUT"
       },
       "Auto": {
         "ticker": "^CNXAUTO",
-        "price": 24709.05,
-        "ret_5d": -4.11,
-        "ret_10d": -0.61,
-        "ret_20d": -7.56,
-        "acceleration": 6.39,
-        "vol_trend": -45.1,
-        "momentum_score": -2.7,
+        "price": 24869.4,
+        "ret_5d": -2.82,
+        "ret_10d": -0.86,
+        "ret_20d": -7.78,
+        "acceleration": 6.13,
+        "vol_trend": -38.6,
+        "momentum_score": -2.33,
         "state": "ROTATING_OUT"
       },
       "Realty": {
         "ticker": "^CNXREALTY",
-        "price": 782.9,
-        "ret_5d": -5.21,
-        "ret_10d": -2.62,
-        "ret_20d": -9.11,
-        "acceleration": 4.05,
-        "vol_trend": -42.1,
-        "momentum_score": -4.29,
+        "price": 786.5,
+        "ret_5d": -3.62,
+        "ret_10d": -2.91,
+        "ret_20d": -9.53,
+        "acceleration": 3.91,
+        "vol_trend": -39.7,
+        "momentum_score": -3.84,
         "state": "ROTATING_OUT"
       },
       "PSE": {
         "ticker": "^CNXPSE",
-        "price": 8831.85,
-        "ret_5d": -4.49,
-        "ret_10d": -2.71,
-        "ret_20d": -7.57,
-        "acceleration": 2.29,
-        "vol_trend": -24.3,
-        "momentum_score": -3.9,
+        "price": 8956.95,
+        "ret_5d": -2.54,
+        "ret_10d": -1.56,
+        "ret_20d": -6.43,
+        "acceleration": 3.4,
+        "vol_trend": -29.3,
+        "momentum_score": -2.43,
         "state": "ROTATING_OUT"
       },
       "Nifty50": {
         "ticker": "^NSEI",
-        "price": 22558.85,
-        "ret_5d": -2.54,
-        "ret_10d": 0.17,
-        "ret_20d": -2.19,
-        "acceleration": 2.52,
-        "vol_trend": -24.7,
-        "momentum_score": -1.15,
-        "state": "WEAKENING"
+        "price": 22675.4,
+        "ret_5d": -0.93,
+        "ret_10d": 1.4,
+        "ret_20d": -2.01,
+        "acceleration": 4.75,
+        "vol_trend": -26.7,
+        "momentum_score": 0.12,
+        "state": "NEUTRAL"
       }
     },
     "recommendations": {
       "overweight": [
         "TCS.NS",
-        "INFY.NS"
+        "INFY.NS",
+        "POWERGRID.NS"
       ],
       "neutral": [
         "HDFCBANK.NS",
         "ICICIBANK.NS",
-        "SBIN.NS",
-        "POWERGRID.NS"
+        "SBIN.NS"
       ],
       "underweight": [
         "RELIANCE.NS",
@@ -400,47 +400,47 @@
       "sector_ranking": [
         [
           "IT",
-          7.9
+          8.52
         ],
         [
           "Nifty50",
-          -1.15
+          0.12
         ],
         [
           "Infra",
-          -1.85
-        ],
-        [
-          "Banking",
-          -2.15
-        ],
-        [
-          "Auto",
-          -2.7
+          0.11
         ],
         [
           "Pharma",
-          -3.05
+          -1.02
+        ],
+        [
+          "Banking",
+          -1.7
+        ],
+        [
+          "Auto",
+          -2.33
         ],
         [
           "PSE",
-          -3.9
-        ],
-        [
-          "Realty",
-          -4.29
+          -2.43
         ],
         [
           "Energy",
-          -5.01
+          -3.32
         ],
         [
           "FMCG",
-          -5.27
+          -3.69
         ],
         [
           "Metal",
-          -5.53
+          -3.76
+        ],
+        [
+          "Realty",
+          -3.84
         ]
       ],
       "stock_adjustments": {
@@ -449,13 +449,13 @@
         "SBIN.NS": 0.0,
         "TCS.NS": 0.15,
         "INFY.NS": 0.15,
-        "RELIANCE.NS": -0.15,
-        "TATASTEEL.NS": -0.15,
-        "NTPC.NS": -0.15,
-        "POWERGRID.NS": 0.0,
-        "COALINDIA.NS": -0.15
+        "RELIANCE.NS": -0.1,
+        "TATASTEEL.NS": -0.113,
+        "NTPC.NS": -0.1,
+        "POWERGRID.NS": 0.003,
+        "COALINDIA.NS": -0.113
       },
-      "avg_momentum": -2.45
+      "avg_momentum": -1.21
     },
     "stock_sector_map": {
       "HDFCBANK.NS": "Banking",
@@ -471,7 +471,7 @@
     }
   },
   "correlation": {
-    "timestamp": "2026-10-23 14:04:36",
+    "timestamp": "2026-10-26 14:24:51",
     "symbols": [
       "TATASTEEL.NS",
       "SBIN.NS",
@@ -488,132 +488,132 @@
       "matrix": {
         "TATASTEEL.NS": {
           "TATASTEEL.NS": 1.0,
-          "SBIN.NS": 0.111,
-          "RELIANCE.NS": 0.213,
-          "HDFCBANK.NS": 0.044,
-          "ICICIBANK.NS": 0.083,
-          "NTPC.NS": 0.473,
-          "POWERGRID.NS": 0.373,
-          "COALINDIA.NS": 0.248,
-          "INFY.NS": -0.021,
-          "TCS.NS": -0.027
+          "SBIN.NS": 0.106,
+          "RELIANCE.NS": 0.21,
+          "HDFCBANK.NS": 0.052,
+          "ICICIBANK.NS": 0.084,
+          "NTPC.NS": 0.459,
+          "POWERGRID.NS": 0.347,
+          "COALINDIA.NS": 0.236,
+          "INFY.NS": -0.005,
+          "TCS.NS": -0.03
         },
         "SBIN.NS": {
-          "TATASTEEL.NS": 0.111,
+          "TATASTEEL.NS": 0.106,
           "SBIN.NS": 1.0,
-          "RELIANCE.NS": 0.321,
-          "HDFCBANK.NS": 0.171,
+          "RELIANCE.NS": 0.316,
+          "HDFCBANK.NS": 0.174,
           "ICICIBANK.NS": 0.325,
-          "NTPC.NS": 0.193,
-          "POWERGRID.NS": 0.247,
-          "COALINDIA.NS": 0.127,
-          "INFY.NS": 0.008,
-          "TCS.NS": -0.078
+          "NTPC.NS": 0.186,
+          "POWERGRID.NS": 0.236,
+          "COALINDIA.NS": 0.122,
+          "INFY.NS": 0.015,
+          "TCS.NS": 0.155
         },
         "RELIANCE.NS": {
-          "TATASTEEL.NS": 0.213,
-          "SBIN.NS": 0.321,
+          "TATASTEEL.NS": 0.21,
+          "SBIN.NS": 0.316,
           "RELIANCE.NS": 1.0,
-          "HDFCBANK.NS": 0.266,
-          "ICICIBANK.NS": 0.362,
-          "NTPC.NS": 0.322,
-          "POWERGRID.NS": 0.262,
-          "COALINDIA.NS": 0.151,
-          "INFY.NS": 0.082,
-          "TCS.NS": -0.077
+          "HDFCBANK.NS": 0.256,
+          "ICICIBANK.NS": 0.36,
+          "NTPC.NS": 0.327,
+          "POWERGRID.NS": 0.26,
+          "COALINDIA.NS": 0.154,
+          "INFY.NS": 0.079,
+          "TCS.NS": 0.142
         },
         "HDFCBANK.NS": {
-          "TATASTEEL.NS": 0.044,
-          "SBIN.NS": 0.171,
-          "RELIANCE.NS": 0.266,
+          "TATASTEEL.NS": 0.052,
+          "SBIN.NS": 0.174,
+          "RELIANCE.NS": 0.256,
           "HDFCBANK.NS": 1.0,
           "ICICIBANK.NS": 0.085,
-          "NTPC.NS": -0.002,
-          "POWERGRID.NS": 0.262,
-          "COALINDIA.NS": -0.118,
-          "INFY.NS": 0.467,
-          "TCS.NS": -0.091
+          "NTPC.NS": 0.001,
+          "POWERGRID.NS": 0.269,
+          "COALINDIA.NS": -0.117,
+          "INFY.NS": 0.466,
+          "TCS.NS": 0.181
         },
         "ICICIBANK.NS": {
-          "TATASTEEL.NS": 0.083,
+          "TATASTEEL.NS": 0.084,
           "SBIN.NS": 0.325,
-          "RELIANCE.NS": 0.362,
+          "RELIANCE.NS": 0.36,
           "HDFCBANK.NS": 0.085,
           "ICICIBANK.NS": 1.0,
-          "NTPC.NS": 0.132,
-          "POWERGRID.NS": 0.146,
+          "NTPC.NS": 0.133,
+          "POWERGRID.NS": 0.143,
           "COALINDIA.NS": 0.053,
-          "INFY.NS": -0.019,
-          "TCS.NS": 0.064
+          "INFY.NS": -0.017,
+          "TCS.NS": 0.18
         },
         "NTPC.NS": {
-          "TATASTEEL.NS": 0.473,
-          "SBIN.NS": 0.193,
-          "RELIANCE.NS": 0.322,
-          "HDFCBANK.NS": -0.002,
-          "ICICIBANK.NS": 0.132,
+          "TATASTEEL.NS": 0.459,
+          "SBIN.NS": 0.186,
+          "RELIANCE.NS": 0.327,
+          "HDFCBANK.NS": 0.001,
+          "ICICIBANK.NS": 0.133,
           "NTPC.NS": 1.0,
-          "POWERGRID.NS": 0.43,
-          "COALINDIA.NS": 0.533,
-          "INFY.NS": -0.028,
-          "TCS.NS": -0.233
+          "POWERGRID.NS": 0.41,
+          "COALINDIA.NS": 0.527,
+          "INFY.NS": -0.016,
+          "TCS.NS": 0.103
         },
         "POWERGRID.NS": {
-          "TATASTEEL.NS": 0.373,
-          "SBIN.NS": 0.247,
-          "RELIANCE.NS": 0.262,
-          "HDFCBANK.NS": 0.262,
-          "ICICIBANK.NS": 0.146,
-          "NTPC.NS": 0.43,
+          "TATASTEEL.NS": 0.347,
+          "SBIN.NS": 0.236,
+          "RELIANCE.NS": 0.26,
+          "HDFCBANK.NS": 0.269,
+          "ICICIBANK.NS": 0.143,
+          "NTPC.NS": 0.41,
           "POWERGRID.NS": 1.0,
-          "COALINDIA.NS": 0.208,
-          "INFY.NS": 0.007,
-          "TCS.NS": -0.029
+          "COALINDIA.NS": 0.189,
+          "INFY.NS": 0.014,
+          "TCS.NS": 0.085
         },
         "COALINDIA.NS": {
-          "TATASTEEL.NS": 0.248,
-          "SBIN.NS": 0.127,
-          "RELIANCE.NS": 0.151,
-          "HDFCBANK.NS": -0.118,
+          "TATASTEEL.NS": 0.236,
+          "SBIN.NS": 0.122,
+          "RELIANCE.NS": 0.154,
+          "HDFCBANK.NS": -0.117,
           "ICICIBANK.NS": 0.053,
-          "NTPC.NS": 0.533,
-          "POWERGRID.NS": 0.208,
+          "NTPC.NS": 0.527,
+          "POWERGRID.NS": 0.189,
           "COALINDIA.NS": 1.0,
-          "INFY.NS": -0.179,
-          "TCS.NS": -0.084
+          "INFY.NS": -0.171,
+          "TCS.NS": 0.069
         },
         "INFY.NS": {
-          "TATASTEEL.NS": -0.021,
-          "SBIN.NS": 0.008,
-          "RELIANCE.NS": 0.082,
-          "HDFCBANK.NS": 0.467,
-          "ICICIBANK.NS": -0.019,
-          "NTPC.NS": -0.028,
-          "POWERGRID.NS": 0.007,
-          "COALINDIA.NS": -0.179,
+          "TATASTEEL.NS": -0.005,
+          "SBIN.NS": 0.015,
+          "RELIANCE.NS": 0.079,
+          "HDFCBANK.NS": 0.466,
+          "ICICIBANK.NS": -0.017,
+          "NTPC.NS": -0.016,
+          "POWERGRID.NS": 0.014,
+          "COALINDIA.NS": -0.171,
           "INFY.NS": 1.0,
-          "TCS.NS": 0.029
+          "TCS.NS": 0.702
         },
         "TCS.NS": {
-          "TATASTEEL.NS": -0.027,
-          "SBIN.NS": -0.078,
-          "RELIANCE.NS": -0.077,
-          "HDFCBANK.NS": -0.091,
-          "ICICIBANK.NS": 0.064,
-          "NTPC.NS": -0.233,
-          "POWERGRID.NS": -0.029,
-          "COALINDIA.NS": -0.084,
-          "INFY.NS": 0.029,
+          "TATASTEEL.NS": -0.03,
+          "SBIN.NS": 0.155,
+          "RELIANCE.NS": 0.142,
+          "HDFCBANK.NS": 0.181,
+          "ICICIBANK.NS": 0.18,
+          "NTPC.NS": 0.103,
+          "POWERGRID.NS": 0.085,
+          "COALINDIA.NS": 0.069,
+          "INFY.NS": 0.702,
           "TCS.NS": 1.0
         }
       },
       "high_pairs": [],
-      "avg_correlation": 0.173
+      "avg_correlation": 0.19
     },
     "concentration": {
-      "concentration_score": 17.3,
+      "concentration_score": 19.0,
       "rating": "WELL_DIVERSIFIED",
-      "avg_pairwise_correlation": 0.173,
+      "avg_pairwise_correlation": 0.19,
       "high_correlation_pairs": 0
     }
   },
@@ -624,143 +624,55 @@
   },
   "stocks": [
     {
-      "symbol": "SBIN.NS",
-      "name": "SBIN",
-      "price": 954.65,
-      "change_pct": -1.58,
-      "rf_conf": 0.5758,
-      "xgb_conf": 0.8463,
+      "symbol": "NTPC.NS",
+      "name": "NTPC",
+      "price": 299.35,
+      "change_pct": 0.45,
+      "rf_conf": 0.6995,
+      "xgb_conf": 0.9159,
       "lstm_conf": 0.5,
-      "intra_conf": 0.4797,
-      "avg_conf": 0.6005,
-      "votes": 1,
+      "intra_conf": 0.4764,
+      "avg_conf": 0.6479,
+      "votes": 2,
       "signal": "WAIT",
-      "reason": "HOLD: Score +0.257 (need >0.15) | 1/6 buy, 0/6 sell | Regime: SIDEWAYS",
+      "reason": "HOLD: Score -0.457 (need >0.15) | 2/6 buy, 1/6 sell | Regime: TRENDING_DOWN",
       "guardian": "N/A",
-      "guardian_reason": "HOLD: Score +0.257 (need >0.15) | 1/6 buy, 0/6 sell | Regime: SIDEWAYS",
-      "rsi": 42.84,
-      "atr": 18.19,
-      "macd": -9.543,
-      "sma_50": 1000.53,
-      "sma_200": 1031.74,
-      "sentiment": -0.063,
-      "volume_ratio": 0.95,
+      "guardian_reason": "HOLD: Score -0.457 (need >0.15) | 2/6 buy, 1/6 sell | Regime: TRENDING_DOWN",
+      "rsi": 29.14,
+      "atr": 6.67,
+      "macd": -6.8063,
+      "sma_50": 323.9,
+      "sma_200": 353.01,
+      "sentiment": 0.033,
+      "volume_ratio": 0.67,
       "stop_loss": 0.0,
       "target": 0.0,
       "filters": {},
       "neuro_decision": {
         "should_buy": false,
-        "score": 0.257,
-        "conviction": 0.08,
-        "buy_voters": 1,
-        "sell_voters": 0,
-        "hold_voters": 5,
-        "vetoed": false,
-        "veto_reasons": [],
-        "regime": "SIDEWAYS",
-        "reasoning": "HOLD: Score +0.257 (need >0.15) | 1/6 buy, 0/6 sell | Regime: SIDEWAYS",
-        "voters": [
-          {
-            "name": "Momentum Mike",
-            "vote": 0.3,
-            "conviction": 0.36,
-            "reasoning": "MACD bullish (diff=3.4050) | RSI in sweet spot (43) | Price < EMA20 \u2014 not trending up",
-            "veto": false,
-            "veto_reason": ""
-          },
-          {
-            "name": "Value Vinay",
-            "vote": 0.0,
-            "conviction": 0.0,
-            "reasoning": "",
-            "veto": false,
-            "veto_reason": ""
-          },
-          {
-            "name": "Risk Raj",
-            "vote": 0.0,
-            "conviction": 0.0,
-            "reasoning": "Normal volatility (ATR=1.9%) | Late session \u2014 reduced time for recovery",
-            "veto": false,
-            "veto_reason": ""
-          },
-          {
-            "name": "Sentiment Sanjay",
-            "vote": 0.1,
-            "conviction": 0.12,
-            "reasoning": "VIX calm (0.0)",
-            "veto": false,
-            "veto_reason": ""
-          },
-          {
-            "name": "Pattern Priya",
-            "vote": 0.0,
-            "conviction": 0.0,
-            "reasoning": "",
-            "veto": false,
-            "veto_reason": ""
-          },
-          {
-            "name": "Quant Qasim",
-            "vote": 0.0,
-            "conviction": 0.0,
-            "reasoning": "",
-            "veto": false,
-            "veto_reason": ""
-          }
-        ]
-      }
-    },
-    {
-      "symbol": "TATASTEEL.NS",
-      "name": "TATASTEEL",
-      "price": 167.0,
-      "change_pct": -3.09,
-      "rf_conf": 0.5406,
-      "xgb_conf": 0.6719,
-      "lstm_conf": 0.5,
-      "intra_conf": 0.4894,
-      "avg_conf": 0.5505,
-      "votes": 1,
-      "signal": "WAIT",
-      "reason": "HOLD: Score -0.289 (need >0.15) | 1/6 buy, 2/6 sell | Regime: TRENDING_DOWN",
-      "guardian": "N/A",
-      "guardian_reason": "HOLD: Score -0.289 (need >0.15) | 1/6 buy, 2/6 sell | Regime: TRENDING_DOWN",
-      "rsi": 30.09,
-      "atr": 4.68,
-      "macd": -3.6219,
-      "sma_50": 182.27,
-      "sma_200": 191.97,
-      "sentiment": -0.11,
-      "volume_ratio": 1.26,
-      "stop_loss": 0.0,
-      "target": 0.0,
-      "filters": {},
-      "neuro_decision": {
-        "should_buy": false,
-        "score": -0.289,
-        "conviction": 0.228,
-        "buy_voters": 1,
-        "sell_voters": 2,
+        "score": -0.457,
+        "conviction": 0.293,
+        "buy_voters": 2,
+        "sell_voters": 1,
         "hold_voters": 3,
         "vetoed": false,
         "veto_reasons": [],
         "regime": "TRENDING_DOWN",
-        "reasoning": "HOLD: Score -0.289 (need >0.15) | 1/6 buy, 2/6 sell | Regime: TRENDING_DOWN",
+        "reasoning": "HOLD: Score -0.457 (need >0.15) | 2/6 buy, 1/6 sell | Regime: TRENDING_DOWN",
         "voters": [
           {
             "name": "Momentum Mike",
-            "vote": -0.5,
-            "conviction": 0.6,
-            "reasoning": "MACD bearish | OK volume (1.3x) | Price < EMA20 \u2014 not trending up | Negative momentum (-4.8%)",
+            "vote": -0.75,
+            "conviction": 0.9,
+            "reasoning": "MACD bearish | RSI oversold (29) \u2014 falling knife | Price < EMA20 \u2014 not trending up | Negative momentum (-3.1%)",
             "veto": false,
             "veto_reason": ""
           },
           {
             "name": "Value Vinay",
-            "vote": 0.45,
-            "conviction": 0.49,
-            "reasoning": "Near BB lower (6% of band) \u2014 value zone | Selloff (-3.1%) may be overdone",
+            "vote": 0.3,
+            "conviction": 0.33,
+            "reasoning": "Near BB lower (6% of band) \u2014 value zone",
             "veto": false,
             "veto_reason": ""
           },
@@ -768,7 +680,7 @@
             "name": "Risk Raj",
             "vote": 0.0,
             "conviction": 0.0,
-            "reasoning": "Normal volatility (ATR=2.8%) | Late session \u2014 reduced time for recovery",
+            "reasoning": "Normal volatility (ATR=2.2%) | Late session \u2014 reduced time for recovery",
             "veto": false,
             "veto_reason": ""
           },
@@ -782,17 +694,17 @@
           },
           {
             "name": "Pattern Priya",
-            "vote": -0.25,
-            "conviction": 0.29,
-            "reasoning": "Lower highs and lows \u2014 downtrend | Volume favours sellers (18%) | Near support (13% of range)",
+            "vote": -0.1,
+            "conviction": 0.11,
+            "reasoning": "Lower highs and lows \u2014 downtrend | Near support (21% of range)",
             "veto": false,
             "veto_reason": ""
           },
           {
             "name": "Quant Qasim",
-            "vote": 0.0,
-            "conviction": 0.0,
-            "reasoning": "",
+            "vote": 0.25,
+            "conviction": 0.31,
+            "reasoning": "\u26a0 Overfit: Very high conf (91.59%) \u2014 dampened | 2/4 models bullish (adj_avg=60.91%)",
             "veto": false,
             "veto_reason": ""
           }
@@ -800,26 +712,114 @@
       }
     },
     {
-      "symbol": "COALINDIA.NS",
-      "name": "COALINDIA",
-      "price": 396.5,
-      "change_pct": -1.5,
-      "rf_conf": 0.5529,
-      "xgb_conf": 0.8708,
+      "symbol": "RELIANCE.NS",
+      "name": "RELIANCE",
+      "price": 1199.9,
+      "change_pct": 0.83,
+      "rf_conf": 0.6338,
+      "xgb_conf": 0.756,
       "lstm_conf": 0.5,
-      "intra_conf": 0.4833,
-      "avg_conf": 0.6017,
+      "intra_conf": 0.4711,
+      "avg_conf": 0.5902,
       "votes": 1,
+      "signal": "WAIT",
+      "reason": "HOLD: Score +0.183 (need >0.15) | 2/6 buy, 0/6 sell | Regime: SIDEWAYS",
+      "guardian": "N/A",
+      "guardian_reason": "HOLD: Score +0.183 (need >0.15) | 2/6 buy, 0/6 sell | Regime: SIDEWAYS",
+      "rsi": 47.18,
+      "atr": 26.28,
+      "macd": -13.254,
+      "sma_50": 1247.42,
+      "sma_200": 1333.51,
+      "sentiment": 0.034,
+      "volume_ratio": 0.48,
+      "stop_loss": 0.0,
+      "target": 0.0,
+      "filters": {},
+      "neuro_decision": {
+        "should_buy": false,
+        "score": 0.183,
+        "conviction": 0.122,
+        "buy_voters": 2,
+        "sell_voters": 0,
+        "hold_voters": 4,
+        "vetoed": false,
+        "veto_reasons": [],
+        "regime": "SIDEWAYS",
+        "reasoning": "HOLD: Score +0.183 (need >0.15) | 2/6 buy, 0/6 sell | Regime: SIDEWAYS",
+        "voters": [
+          {
+            "name": "Momentum Mike",
+            "vote": 0.1,
+            "conviction": 0.12,
+            "reasoning": "MACD bullish (diff=4.8452) | RSI in sweet spot (47) | Dead volume (0.5x) \u2014 no conviction | Price < EMA20 \u2014 not trending up",
+            "veto": false,
+            "veto_reason": ""
+          },
+          {
+            "name": "Value Vinay",
+            "vote": 0.0,
+            "conviction": 0.0,
+            "reasoning": "",
+            "veto": false,
+            "veto_reason": ""
+          },
+          {
+            "name": "Risk Raj",
+            "vote": 0.0,
+            "conviction": 0.0,
+            "reasoning": "Normal volatility (ATR=2.2%) | Late session \u2014 reduced time for recovery",
+            "veto": false,
+            "veto_reason": ""
+          },
+          {
+            "name": "Sentiment Sanjay",
+            "vote": 0.1,
+            "conviction": 0.12,
+            "reasoning": "VIX calm (0.0)",
+            "veto": false,
+            "veto_reason": ""
+          },
+          {
+            "name": "Pattern Priya",
+            "vote": 0.15,
+            "conviction": 0.17,
+            "reasoning": "Volume favours buyers (64%)",
+            "veto": false,
+            "veto_reason": ""
+          },
+          {
+            "name": "Quant Qasim",
+            "vote": 0.25,
+            "conviction": 0.31,
+            "reasoning": "2/4 models bullish (adj_avg=60.74%)",
+            "veto": false,
+            "veto_reason": ""
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "HDFCBANK.NS",
+      "name": "HDFCBANK",
+      "price": 687.5,
+      "change_pct": -0.77,
+      "rf_conf": 0.5123,
+      "xgb_conf": 0.4856,
+      "lstm_conf": 0.5,
+      "intra_conf": 0.5,
+      "avg_conf": 0.4995,
+      "votes": 0,
       "signal": "WAIT",
       "reason": "HOLD: Score -0.462 (need >0.15) | 1/6 buy, 2/6 sell | Regime: TRENDING_DOWN",
       "guardian": "N/A",
       "guardian_reason": "HOLD: Score -0.462 (need >0.15) | 1/6 buy, 2/6 sell | Regime: TRENDING_DOWN",
-      "rsi": 36.08,
-      "atr": 9.13,
-      "macd": -3.1434,
-      "sma_50": 411.95,
-      "sma_200": 424.59,
-      "sentiment": -0.11,
+      "rsi": 38.99,
+      "atr": 14.66,
+      "macd": -5.9368,
+      "sma_50": 715.29,
+      "sma_200": 787.64,
+      "sentiment": 0.034,
       "volume_ratio": 0.73,
       "stop_loss": 0.0,
       "target": 0.0,
@@ -840,7 +840,7 @@
             "name": "Momentum Mike",
             "vote": -0.6,
             "conviction": 0.72,
-            "reasoning": "MACD bearish | Price < EMA20 \u2014 not trending up | Negative momentum (-5.0%)",
+            "reasoning": "MACD bearish | Price < EMA20 \u2014 not trending up | Negative momentum (-3.4%)",
             "veto": false,
             "veto_reason": ""
           },
@@ -848,7 +848,7 @@
             "name": "Value Vinay",
             "vote": 0.3,
             "conviction": 0.33,
-            "reasoning": "Near BB lower (-6% of band) \u2014 value zone",
+            "reasoning": "Near BB lower (5% of band) \u2014 value zone",
             "veto": false,
             "veto_reason": ""
           },
@@ -856,7 +856,7 @@
             "name": "Risk Raj",
             "vote": 0.0,
             "conviction": 0.0,
-            "reasoning": "Normal volatility (ATR=2.3%) | Late session \u2014 reduced time for recovery",
+            "reasoning": "Normal volatility (ATR=2.1%) | Late session \u2014 reduced time for recovery",
             "veto": false,
             "veto_reason": ""
           },
@@ -872,7 +872,7 @@
             "name": "Pattern Priya",
             "vote": -0.25,
             "conviction": 0.29,
-            "reasoning": "Lower highs and lows \u2014 downtrend | Volume favours sellers (36%) | Near support (14% of range)",
+            "reasoning": "Lower highs and lows \u2014 downtrend | Volume favours sellers (31%) | Near support (6% of range)",
             "veto": false,
             "veto_reason": ""
           },
