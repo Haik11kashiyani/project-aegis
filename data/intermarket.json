@@ -6,52 +6,52 @@
   "macro_bias": "NEUTRAL",
   "instruments": {
     "gold": {
-      "signal": "UP",
-      "z": 0.752,
-      "change_5d": -3.14,
-      "change_20d": -3.34,
-      "price": 4029.3
+      "signal": "DOWN",
+      "z": -0.67,
+      "change_5d": -3.3,
+      "change_20d": -4.16,
+      "price": 4006.0
     },
     "usdinr": {
-      "signal": "STRONG_UP",
-      "z": 1.635,
-      "change_5d": 0.28,
-      "change_20d": -0.57,
-      "price": 95.24
+      "signal": "UP",
+      "z": 0.66,
+      "change_5d": 0.15,
+      "change_20d": -0.88,
+      "price": 95.14
     },
     "crude": {
-      "signal": "DOWN",
-      "z": -1.212,
-      "change_5d": -2.73,
-      "change_20d": 8.89,
-      "price": 100.83
+      "signal": "NEUTRAL",
+      "z": 0.11,
+      "change_5d": 0.72,
+      "change_20d": 14.7,
+      "price": 102.52
     },
     "us10y": {
-      "signal": "UP",
-      "z": 0.799,
-      "change_5d": -2.16,
-      "change_20d": -3.78,
+      "signal": "NEUTRAL",
+      "z": 0.133,
+      "change_5d": -2.92,
+      "change_20d": -4.85,
       "price": 4.99
     },
     "nifty": {
-      "signal": "UP",
-      "z": 0.511,
-      "change_5d": -2.03,
-      "change_20d": -1.67,
-      "price": 22677.3
+      "signal": "NEUTRAL",
+      "z": -0.275,
+      "change_5d": -0.93,
+      "change_20d": -2.01,
+      "price": 22676.35
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.1,
-    "gold_vs_us10y": -0.203,
-    "gold_vs_nifty": 0.238,
-    "crude_vs_gold": -0.14,
-    "crude_vs_usdinr": 0.068,
-    "crude_vs_us10y": 0.147,
-    "crude_vs_nifty": -0.18,
-    "us10y_vs_usdinr": 0.101,
-    "nifty_vs_usdinr": -0.184,
-    "nifty_vs_us10y": -0.046
+    "gold_vs_usdinr": 0.109,
+    "gold_vs_us10y": -0.182,
+    "gold_vs_nifty": 0.264,
+    "crude_vs_gold": -0.104,
+    "crude_vs_usdinr": 0.058,
+    "crude_vs_us10y": 0.095,
+    "crude_vs_nifty": -0.239,
+    "us10y_vs_usdinr": 0.098,
+    "nifty_vs_usdinr": -0.174,
+    "nifty_vs_us10y": -0.068
   },
-  "timestamp": "2026-10-26T14:24:59.708898+05:30"
+  "timestamp": "2026-10-27T14:30:33.311508+05:30"
 }
