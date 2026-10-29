@@ -1,63 +1,9 @@
 {
-  "timestamp": "2026-10-28T15:10:45.194495+05:30",
+  "timestamp": "2026-10-29T15:28:27.970487+05:30",
   "stocks": {
     "TATASTEEL.NS": {
       "symbol": "TATASTEEL.NS",
-      "timestamp": "2026-10-28T15:10:45.871712+05:30",
-      "headlines_found": 7,
-      "events": [],
-      "action": "ALLOW",
-      "severity": "NONE",
-      "block_reasons": [],
-      "boost_reasons": [],
-      "headlines": [
-        {
-          "title": "Tata Steel Analyst Review 2026: Is TATASTEEL Worth Buying? - Univest",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0SmlRNndNWWt0OGRwdGRvUDFSeEtrOXJMaG02WUhJdlh1MzRLNW52aFBVcW1SRU04U1hTekN2R3NEbmFBWnEzZGlPZEdObG03OXQ2RERIcVlDNzdsak5sS1RVUUduQQ?oc=5",
-          "time": "Sun, 17 May 2026 07:00:00 GMT"
-        },
-        {
-          "title": "Sensex, Nifty close flat while small, midcaps rally. What analysts are saying? - The Economic Times",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNOXlsMzNXU2Z0RG55UzZhOXFuMFlacXVTVVFTMkdvc2lLNE1XWVpxbWoxeXVDTGRDcTE0eWRmMUxTcGxZUkVQanFNMUJOemxfR0hEdmpTVHE4T0hNTUJSV2RIVE1mbGtLUFFJYmhESlJJeEtMUl95N0JXX2hwV3dZMlo4NVdkNmFFZVpzTlBQcU9ubEZod2pQSWVSc2MtdFY3VmJ2aUtYbUJvMXNGMzV2LUE4NWNiZUJGcmExdE5IbTdrbzNqdThwdUx6M3RvQXh0d2ZaLTVjNUxxUEZMUVU5U21fVGpKSmvSAewBQVVfeXFMUGxjNHlua0NBaEdiNm1uZVQtZmlwaHZXdFd3WHkxRGRZUjJVdFJSdml4Z2I4Um5TakVZSUszTWNFakpGX1RaUi1lVXpuQ085Wnh6dnBSMXFEa3A4WV9nY0FSel9hbHhYOF9tSU5zR0FUWGcwdlBpTUVETS1zZ0RULTZCZlhxdU5icTVtWldTcjQ4aVYyckZuaVhKLWpKSkRfOEdHeWttNlZGQ3hCRmotZkxWQy15c0lfbDZ3cUc2MkR1RkN5MUhxNEVkYmxIUF9CVmRRbUc3MDVhSXRsSTk5VHltLXUyeHludnRzR18?oc=5",
-          "time": "Tue, 27 Oct 2026 04:49:37 GMT"
-        },
-        {
-          "title": "Tata Steel Share Price - Live NSE: TATASTEEL Stock Price & Chart - Upstox",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1LRXJEU2pOS05Zc1RWQTRTNXNFT19YSXA3NG5Fek51VUNvMGpoNG9vNW9jem5MUTd5dEJITmJqLUtmcnhaZnRsbEVlTEt0YTdWM1IxbUFiMmZIVDUteE8zNmNpMTR6ai1L?oc=5",
-          "time": "Thu, 11 Nov 2021 05:44:58 GMT"
-        },
-        {
-          "title": "Tata Steel Q2 results rescheduled to November 7; here's what to expect - Zee Business",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcmNIMElmdTVmREpZa0VwVjdTaXBNS0o5ekozd1RmNWVvbEpPNG94VUwwOWRVSTRibWhrdnlCRWdZX0oxbmRmUHhFaVFQWGxLVUw3MUhBRkdOeFNRQUZNRWxIdm9QSjJUV0VWcmxmSWNPRXBlWTh4bGh2WXota2NxcThrY3MwWDZVOEVCaFhGOElmSWJVYjR0OU1XZzJndlZQZjJSUHBxakhPUFR3VHVKdHJjQWFBdw?oc=5",
-          "time": "Mon, 26 Oct 2026 06:42:38 GMT"
-        },
-        {
-          "title": "NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News & Updates, Quotes- Nseindia.com - NSE India",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE15aFBDQy1lOHpHNnVLU3dRM1lsWmNDMVRQNWJPcXBDSklxT1VIUnVxVDMwRHJsRTJtdmNLcEd3?oc=5",
-          "time": "Fri, 25 Jul 2014 05:11:21 GMT"
-        },
-        {
-          "title": "Tata Steel Share Price News: Price Action and Fundamentals - Univest",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE52VnFKWGtqZkYxS2FldUlFc2VNd0drN0hnR1I4QXNSWDdlZndERFdfMUotbk4xWWVWbjNNWGhPUmJVUjdIOTU4Q3dmRVM4cGk1RmFGalF6c1hNMWlNSkpmbTk2c3VnU1p4OWFfcDJhMmR0UUU1cHc?oc=5",
-          "time": "Wed, 07 Oct 2026 07:00:00 GMT"
-        },
-        {
-          "title": "TATASTEEL Share Price Today - Tata Steel Ltd. Stock Price Live NSE/BSE - Univest",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9TRk5QZHUxcTJQTFd0MFBrb1RycGxGWlVEcnRvWUJPR3RtR0xuWUJONUtLV1ByWmU4MmJGSVk4UVQ5RU5oTmNMS2JDNWQ5eHZrNmV0U01VZGhFajFFdXJycnh1NzdES3hFN3NzVDBSSDhJdVVDTlZZ?oc=5",
-          "time": "Tue, 16 Jan 2024 15:17:51 GMT"
-        }
-      ]
-    },
-    "SBIN.NS": {
-      "symbol": "SBIN.NS",
-      "timestamp": "2026-10-28T15:10:46.406423+05:30",
+      "timestamp": "2026-10-29T15:28:29.093888+05:30",
       "headlines_found": 15,
       "events": [],
       "action": "ALLOW",
@@ -66,10 +12,118 @@
       "boost_reasons": [],
       "headlines": [
         {
+          "title": "Stocks in news: Tata Steel, KPI Green Energy, NLC India, Poonawalla Fincorp and Cummins India - The Economic Times",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxONGR5SU1hSVNMY2YyekpQMkJxNmRxakJGMEsxYVNwYlVkYW9SU2xmY0Mwd0NtN3FZb05Va2R4eGtuX2tSSUFUX0RxeEhtdHltT0l6dERfaWo2WFBXTHpweUZpYVBIdnZCNDQ3eWZEeUtqRktBS1QyUkUyS1hzUXJkWDFfaWNjRExPWUg2S29FdTFQSGgzQmhPLUMzQ0UzQlZhT3haZEJiTGtpeFNURUhjck94dFpyT3RBWEFwSmhkU2t1b3VoZl9jYWNUWUJwQ1dWUHR0TW5HX1gzMXo3S3pZTDg1Ri1GeXF1VEJ6ZXdiWThWN0VETlHSAfsBQVVfeXFMT2dzb3RmT3UyeVk1c3g0aHZtbEJFbWhqLWlBMnBxc2I3bUl6QXQ1Qko3b3M0cE96bDhnY2cza0VqeVZySTlnaGNBRkJHX3NnX2RrUGh1bTlTU0tQaHlpc0VmWGktZjhIVF9pLWhteVNDSnNhMWgxLUZtQWE2ekl0UHptV0M2R1hmeWpEa0NWbjZ2UkVTU19OclF4QVMwM1hHX01QUTAtVm1XU09BWkd0SkY3S0VpeEhQcDRMZWpDcUtjdWVSeWNqcjZTaklPTjdyN3pCcldLUXcycFc3SjZzX1FVYVNteWliLXlOMU92NEdGU1doZ0o3MEVKVXM?oc=5",
+          "time": "Wed, 30 Sep 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel Share Price Today, August 24, 2026: Closes at \u20b9186.30 - The Eastern Herald",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPLXNoNFQwYTJTWHowNTJCSEZ2aWNUM2xiWFF0NVVDRGsxbzRzYm52OFQ0eTVab3hJRDFVcWtfSDRpcndBOGpGVXlHTTlpMHh1bXI5aU5vMEVGOGFBaDdHd1ZISXA2LVpSdzB4Q3luZGo5VnJ6VmFGdll2YVp4QnFENGhqRzNja2lP?oc=5",
+          "time": "Mon, 24 Aug 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel (NSEI:TATASTEEL) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdGwyVEI0QWZIdzlfc1RxU2pSeGNVWGt3ZXMwWmdmdWM1M0hwQ0dfb1Nyb0FBTUdjRFgwbkp4Z20tZUVHN205TTA1UHo2N1pndE16X0ZBSTdIRk1DQjlzd0tUUnZ1Y2tsQ1c0RVZ2MTY4MFlGM1c5b2gxbHVkTHFuUkY1Q1Rqc1U?oc=5",
+          "time": "Mon, 19 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Buzzing Stocks: Tata Steel slips after Q1 business update; NLC India gains on NALCO JV - Moneycontrol.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOWDBBVXlIcTZSOTJxSnBwZV9BLVhCMnRhQjJ6Q2E1dGRwdlNXZkJNeWNidERBNzBrdDdtaDhLZ011NU42MjF6ekFwN1pVOGF3aEhtWFBTVlNJUkphSWctNVZ6eDJXbUlURnNTVzBPLVI3Vjk4NWxPMDZYbHRBcG5TYnVSX3lqamhKekdsVDYyWkJnbVo2c0lLQjhWMy0wNmpLaDU2REphTFlOQjQ3TDQyeEQ2QXdONDhubVFBSzhMOHEteHprZWNULXU3NjNuRHVMUV9GaDh2bDVzcWg2eGhoSDlBRzdFd9IB6wFBVV95cUxNTDZSdFNkcWZKbHJESGNnTmZHSjI1RFNlRFB3REkzSVcwcjB0SFJhN1UtV1JuTzdHMF9iMmZ2UmpKWURETnFUV1pIRjRwcW41bGIzZ3NyMWdnb2FjZG5PZVZqZ3pLd1ZXaHBmYmI4QUVzd1U1RmczUU9MMjMyZUJVdVVlVmRXb2FsYU9GcW9GLXQtTGdLZ01tdG9uODNia1ptZktuRDBsYktEWHdGVkE4d3BYaFhLTmFiT2FQTzdrNlVGdWJ3d2p2enBNMXZuWGs3VTdSSTVuM2ozZnpYVzBJdVl2YzhnTzgtcEZv?oc=5",
+          "time": "Thu, 09 Jul 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel shares hit all-time high post Q3; brokerages raise target price - Business Standard",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTlFJNHZacW51V0ZXd2FnbWJaeDRCa2pVU0UzN29GVG5scU82RjZOOW1FSEc2WVBSZ0x2MUY5a2Q4SjF1ME5uTHIyWDItaUxET1Y0YUlpRjNkQ29BVzgyNlV4eXFGWmFSTVBOa0tQVFNWaHB2S09RZVBwZjhqRzNFS3I0blVrVW15RXdjd051dzQwMHdteENwUURadGlnd2k4b3Y2c3ZIbHhNNDQ1YVdyMWEwNGFHajF6MkdOS19wNXpUSjhrTmpVUk90eU50THpDcHM0dUNscDdzSXM00gHiAUFVX3lxTE16VlNlZmFNQnM1MDB4dXE3OVFncExUREh6YnUtOXpiNk5CMk9jcmVQY3I5X3dEdWJFT2tZVXV2M2c4QXRmanFUODB6QXN1cXByN0tZTFBJSjdfUGhHSVpPUzhuc25fY3VTeHV2eVNoWGRiOFJkdXlyZm5ybDdEWGxHZ1Fqb2MtaEZ5THBzMXRuRmZoX2JzNnZQN2JXMXV3TFFpZFB6TXBJUDNCVUNLeXpYX29GVk1oUWEtZG1heGpQY2FSRnJzdXRuVXBJa29UYWpLbmxJeG9McGpqb3JicWNDS0E?oc=5",
+          "time": "Mon, 09 Feb 2026 08:00:00 GMT"
+        },
+        {
+          "title": "Top stocks in news: Airtel, LIC, Tata Steel, HCL Tech, ICICI Bank, IRFC, Vedanta, NLC India - Business Today",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVzFBUkZXZVFtemU2UEU0V1ZWNXFERUdDbE5UUGt3UXQ5TUJWY0NFVTYtUk5wa1R1UndKazEtUzJFOG5WMlVSQTVXUlhDdVdSS0FfSlgwclpOVDYzMzBNWHNod1VzOEJRTTBSdW9xZHRvdF91U0xSNWhpVXdROFhLX2g1SnNTN2tvNW1Gb1FmVlFRVWgtM3JOVWI1UUwzRU1IeEpyVk1iMElWYVFzekxLaFBHS3ByY3VETXNiY2M5eHUwc0NiaHVPZzRSMEdIeEUzLUdKWUVZd2pPcGZlSTZNc19uQ09Ld9IB6wFBVV95cUxQT0pvZjFzQlhiaDlCREptV3I1aG55WFgyeUJmYUJBZG1KaURUQ0YtQ2Rvb0I2RGE4RmRYb1Y0VGREQms0bHFrR1I2Y3VCMXV2MGlFR2JxMkFoRWhnZ3BpZ2hDcmVzSmUybDduTTlzeHNfSUtmSm5MakRuNWJjcnE2YmRyX193cjljMHhWZ3pYcEFQaTg5QmRiLThiSjAxR0xxenM1ZklxMGN0N0ZNOWVqYmRKaERYSUxXdk9TUE9jLTlQeUdDZElBaDhMTkY2NHI0V3g5czdrQS16aXRWMU5xV3dnOEYyRTAwdjgw?oc=5",
+          "time": "Thu, 25 Jun 2026 07:00:00 GMT"
+        },
+        {
+          "title": "3 Fundamentally Strong Steel Stocks in India - Univest",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PV1J0bzR5cXEtamM0NWdwS1luaWZwZk1mR3hSN05OZVpreHpsblh6OEViTmVrOXFuMEt0aEN1aG9zZ0VMQ1RzTkVoR1VsMDBTS05leUdB?oc=5",
+          "time": "Thu, 20 Aug 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Stocks to Watch Today: SBI, TCS, Tata Steel, Iware Supplychain, NLC India, Graphite India, TVS Motor,... - Moneycontrol.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPME1qS2hSVVBhQk5YaUZldXVYTXhDUUMtRm9pVmUydjBldlVmenYxRGJpR2EycVMweEJ5ZmlaeTY1OUxISjhXWHRJNmxwN3BfX3JkUDJ3c0loTW5DOTd4Tm1oV3JJSnk4SzhyODctT2M0dG1oQktPd2dPT2huRHd2V01ROWFSNFZrUkI2MVdnQXNGVzdLUjlVUVdFakI3VUVxd0FOVWhmcWNSdl9XWnFTcnEzUnNvWjhmcmdVSHFVRTZFa3JUTXlPMHRUcU1LVE1tZWNTTHpDREFxbzgxbjBUTHg4QkI0ekRISHRadzcxcDdVaXU5T2tmeFRCTnEzakE0SDA5Z3JCWVBQLXJfcjViOG54Z1huZWpVNEw40gGgAkFVX3lxTE1wLVdFRkhzS2Yyd09VaGppTTk5NWstbGFxd0ExRFZ1YzcycWNnRnhfdnU4dFVBSUFIdE1WT0xwdmpZTkdNcXlXZll2RnljeU5Hcl9UUV9rM29FbVdtbHJpTmZaVkRQd0s5Ynd5aWFEM0JsUnJ2Qm5TOHJleXpBUjAyWmRqMk1FV0lzbDAwRFNPR29SMkdmSmd4QjJtc2NqakN6eHBGRDV6SHNfNjhHa2R2UF9IT3daQTVLUGtoc1pMeVRqeHl3dUVMM3hHUHg5Z2pwb0x1OFl0bDlVZU5TMEhISFdfdTBRMjZiZHFieWdHV1R4QXdPVFlYYWp6NUFnRVRhelRHeVZ6TnU5TDR1TXE4X2pHTUNjbU9kR2RhOFFsYw?oc=5",
+          "time": "Thu, 09 Jul 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel invests USD 340 million and gets INR 220 target for Tata Steel stock - ad-hoc-news.de",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNS1cyaUxFdWF4d0h6b29hMFBxSW9XVWZWS2J4Q0s3OXlYMFVUZHBiUllCQU9rcEhzX3VPRWpRalVoZGNjM0tMX0hqSVVzVlUwSVhHMmxialR4RXEyUTdjblFUcjlHS3RWMl9iRTd0ajhPUHpYVHc4YmQxMVd0R1dCWGkwRmI0WjVvNzU1WWx1UkVYVy10Wmt0X0Vfa19yQUx4ZjZqX1BQRlduOWxRMWFjYVRnSV9mNUZrYUdWbHlQQjBCV3QzWE4zRDk0cVFoaVI0YmV3TQ?oc=5",
+          "time": "Sun, 10 May 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Market Trading Guide: Buy Oil India, Tata Steel and two more stocks on Wednesday for up to 8% potential upside - The Economic Times",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOZWNHdkJDWHdFZU8yYUtZb1E4bFdseVRsZV9MSTQ3TEZGandnRzRaSE1iSjNCSkRZNzZtLUhlLUtySlpKNDl6dlZWMDZQWnQ3ekJjWVpxQVVqMnEzSF9rZGY3OE9sY2YxNkE4WE1xOEpUczdGcXJlNk8zV29FdGxhVGdUVHEzN21tNnZDU2ZPQkVKX1VYMU91NHVpU2pIOWRhVGYxRmp0dHpJZk5CRFYtVlVBZXg2OGp6dkFRN2NCeXJnZjJvUlNfbk5xSjBlRmVOR0gxdk1EVl9QN2Z3NXFySlF1MklkUEx4bHhFaFBJRXNmMTczcm9KcnAxVTdUa3hDXzRNQUFyNks2dTk2bGlhZVVzUzJwSFJ4QS04?oc=5",
+          "time": "Tue, 27 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "Top stocks in news: Tata Steel, BPCL, United Spirits, NTPC Green, Waaree, Natco, Welspun - Business Today",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOZ2FYOFdBcjQ0bW5BSXkxTGFZUEhXLVQ2Z3dMazF3aGF5SUd6N0M1c2RORDBaLUw0amV1U2d4Ym1zT3BFQ3BzQnpzN1p1Uk05cXEwS2NMWkQtTGRydFpsT195WXpJOTVqc2drRGVveUs3MV9xaWtZeWFwR21UdEZQbktoNEh6TFZwWl9yaHhDQzRiMzZvQjczZ1JjbHRLbDlhUkJWdVVmY2dVeGJlWHZZLWF5QXVIckZHX0NDUGpPa0ptcEZ4OV9LcE5LaHVOSnlJMldzd2xUamVCS2M2cEpPMEpTY9IB6AFBVV95cUxNOFBfekNyVHZYSFE4UkZxcFVRZklLeUJNUXlGVlJHNW9tUlZtWnIyWVBQN094OUwxZkZOREZIeTQ3YU1ENlVWVXdtRDZLUjRSOWNqZmE5cW9JS1c5RFpPR2VNSlFWTy03TVk5aUNIdmw1Ymh5UGZRVUNHVzlNMzEwOGRJNkRCVi1XV3h6N005VFFUaERzWlRoenQ4Z25CdU9UNDdPQ1B4eVhobGc4eWMyTGJQek1sU196S3JKLUtYeWJCR2FiRTJMUC1Md2tzeVpSTlVHU255UlkyLTQ0Nlo1U3o3ejNVOG5z?oc=5",
+          "time": "Wed, 25 Mar 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel Share Pros and Cons 2026: Global Steel Giant With UK Challenge - Univest",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JWHdTV2lXVWlzbTRWNFdQWnNyNWs2NGppZ2RGU3FBSExxa1BiMnhpWF9jVHhpSmlpM1RsbGR6dVZPeV9jMUVGQzZzMWk5dnh6bFNRQU4tRGJzRUpLbzJvRF9id2FWcE1lRHZNbA?oc=5",
+          "time": "Thu, 06 Aug 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel, JSW Steel, Jindal Steel in focus as rebar prices rally; Nomura retains 'Buy' - Moneycontrol.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOdjJWT3BMckdFWHJUaXgtbDBBWUFUd0lkV05OcWlNTHBBcXFmV2JIMWd1Nmc3RkpuTFVqTThFdWE2NGl4blN2VXFZWHFhTlA1V0l1SVdLSnFxOXhfN01VeGpGQXRsOU9VNUh0Tl83TG13NEpuWmNZcEdwWWYwSDF4YXBLalFEQWZud2ozRE9sM29TdW90WTFmQU1zNjJKci13ckhpM1BvUnBwRHEzcmZuMDU3NFVpUWZJNk52R3RaNC1qQTZjVmlQTzUwY29ncXl2R2RJTm96Zk5qX1pQbVg4cdIB5gFBVV95cUxQR2JwRDA4blZKOUxzaXZjTjBBbUNQckgydU5oM2xrMnVQeFh3YjRTZU51R2tKN1RFZzFfTUlNclprcVVXcC05VGJWZ04wRm4xd2JiQXRTNDJBcEc1c3lub2hxc0otQVk3S19xd0RsVmpOZUFSVFBLLWhTdDNsV0pCNVJqOWFNbGpDcUFxWVFvZjF5OUc0bG5QWWs1akRXQTBzajZXNkVpRFJWVV83WnY5NVBTb2Q3TU90c3BFQXUxVFRCVG5EMkZtTnBoZG9LZm81UnBZVEFGb3ZGT1k2anVqaTNhdngxdw?oc=5",
+          "time": "Mon, 28 Sep 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Stocks to Watch Today: Emcure, Aurobindo Pharma, HFCL, RBL Bank, Coal India, Tata Steel, ITC Hotels, Power... - Moneycontrol.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxOOTVZaW9oWVJkeHZpWWtyOEFnSmo0SG9Wc0tQRnoxQVNNdUNEVW9CU1dSMjR4SWRmN3NVTlBLLWZEMTJCcFljSHV3ZnA0cEVkVUYwcG95UlpSUEFNOWtKRXFyTzVZbFlEemNaY1JjVEF2b0lKcTNKMDlEOE4yemg2ZHloemJVZWZab3BtTWE5MHd0d09aVTZkUmdWNF9LRmIzOHlwNWwxOTJwT2h3QWptZWVYcVg1Y2pXWHVCZGZNUjI0cElWYU5lNDlKVzA5cEFPSTc4VFc0bTRvX2UzREl2NkIwMnNLU2dNbjBzMGlMemltLWR6TWE1VkxPWjRZOUdEajZOWmNIUFk1NTNzbnNhUDR6dDd4TGF3dmJtZXhDR2FsSFNBZnZlRGdGdUnSAbICQVVfeXFMTnhFSjc3SG4yRlRxenhNaHVMWmtDc3R2RE15elhmNW9DNFotNk9oS21YbjIzanNPcExxaldIcDBPVHRJUkpacy16b25rV1hsN0lRS2JaQTRTWkF3dTV4QXhPMF9OTDhvZlpaUUVvUnVKNDV2SDRteEcwdjdXNnAwTnUxRndMNXREQWVIUkhkeTNiUGJmbVd6YVFLSmVNRzRzakFNWm82VHNhdzc0eEFjdnJldFdFMjlIeE1WWWxOd2dYc3NZN1JQeGJzT3JrYV9YZkFGNG9RWWo5ajJNMlhJTWRDdk14dnRoSTR6SHlQYzFBN09JYVpHdU5LZ2YxZDBLSnRZZTZSMVJBVUVObWdKYWVVTlh5dUxHZTBCVndtUkdiTVlaUG0zeDNJS2c1Y0RZNWJn?oc=5",
+          "time": "Mon, 18 May 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Tata Steel Analyst Review 2026: Is TATASTEEL Worth Buying? - Univest",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA0SmlRNndNWWt0OGRwdGRvUDFSeEtrOXJMaG02WUhJdlh1MzRLNW52aFBVcW1SRU04U1hTekN2R3NEbmFBWnEzZGlPZEdObG03OXQ2RERIcVlDNzdsak5sS1RVUUduQQ?oc=5",
+          "time": "Sun, 17 May 2026 07:00:00 GMT"
+        }
+      ]
+    },
+    "SBIN.NS": {
+      "symbol": "SBIN.NS",
+      "timestamp": "2026-10-29T15:28:29.714470+05:30",
+      "headlines_found": 15,
+      "events": [],
+      "action": "ALLOW",
+      "severity": "NONE",
+      "block_reasons": [],
+      "boost_reasons": [],
+      "headlines": [
+        {
+          "title": "SBIN Share Price Today - State Bank of India on NSE/BSE - scanx.trade",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1aWHZ5LXcwV0pmVF9BUW1zdktZM3FabWptN3l2d0RpdXhfSm85ZGhJTWY1T0dOSnFCVjFFc05OcDNTOWo2YUpOR2tNZmdJYzRkQmVXaWNtWm53bUdvSTlVWA?oc=5",
+          "time": "Tue, 27 Oct 2026 04:35:02 GMT"
+        },
+        {
           "title": "NSE IPO countdown begins: SBI, IFCI, GIC Re, Bank of Baroda shares in focus after SEBI nod - Upstox",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOU2gwem1sb0thTVcwNVdkN0g3TEhCQ05LZHZLNjhBd1RoMEpPUjJ6a2VVU0YwbHREVHZOZmpUVUlBT2RnSDBOTDZJd0xoMEsyUTNCM2hyMnB3a0Jfd2VzaTF3UXozVEF6YTQ5LUlXR1kzOHBYX2NUM0lVcFBKamM4enUwc3VCUXZzSEI2aUdOalF0ektDZDZhVWhwSkdCdmxWLWJtMzJkSG05M3lNdlhYbFFWSEM3VlVWUkY2eWFkUTRoa3kyb3d0M1p1RGt4aU00UkVZb1RNc203UzZjWWc?oc=5",
-          "time": "Mon, 07 Sep 2026 07:00:00 GMT"
+          "time": "Sun, 06 Sep 2026 07:00:00 GMT"
         },
         {
           "title": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
@@ -96,7 +150,7 @@
           "time": "Mon, 24 Aug 2026 07:00:00 GMT"
         },
         {
-          "title": "State Bank of India (NSEI:SBIN) Stock Forecast & Analyst Predictions - Simply Wall Street",
+          "title": "State Bank of India (NSEI:SBIN) Stock Forecast & Analyst Predictions - Simply Wall St",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVlIweWZMdk02cnNfZmZlclRNVDRqV2tzdk56OEpyZWRsb29JQTc5eXFsRk9vc1FtRXpGT3R0cFVvSlZ0czNKRkNZZGJkcUhLZHZYLXRBTjQxcjhDdEhhQXhsSEU3cm1Xc2p4MHpvTUdEVHB2MVAtaHpUb1Y4VXBZbHh6TEU1Tk0?oc=5",
           "time": "Tue, 13 Oct 2026 07:00:00 GMT"
@@ -132,12 +186,6 @@
           "time": "Thu, 24 Sep 2026 07:00:00 GMT"
         },
         {
-          "title": "State Bank of India Shares Hits New High (NSE: SBIN) - AskTraders.com",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNR0FkYUhlb2JhMmR6enNyOUxhTXNkUFdJWGhkcHNqM0ZxMF9SN0ZsR25kbWw5OUlCUUNyODlfUUpwR1l1Y1JaY1BvT2liUlkwaXJZaHFHVmI2QnlrUkpfQXdaaUhnN283UnlrWGdfU2JHcWtsMXc0TDJ5Uk82Um40OGpqZWc1cl9MOXRqdmNybw?oc=5",
-          "time": "Thu, 16 Oct 2025 07:00:00 GMT"
-        },
-        {
           "title": "SBI Share Pros and Cons 2026: India's Largest PSU Bank Analysed - Univest",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTcFRQVmN0em1TSGV6RG4zTkRVcnFjODF2VnE0TXg5TXBMRGtoTzNUcVpOU05MbkdMbWJ2eUpPdDFmenBsa0hmWFgwQk1fSnR1Q2RFVWJCMkFMbmoyZVkxbmI0Q20wWjd4Y3FhbmJ3TkEwVXc?oc=5",
@@ -159,7 +207,7 @@
     },
     "RELIANCE.NS": {
       "symbol": "RELIANCE.NS",
-      "timestamp": "2026-10-28T15:10:47.652540+05:30",
+      "timestamp": "2026-10-29T15:28:30.365887+05:30",
       "headlines_found": 15,
       "events": [],
       "action": "ALLOW",
@@ -168,7 +216,13 @@
       "boost_reasons": [],
       "headlines": [
         {
-          "title": "Ambani\u2019s Jio becomes India\u2019s second-most valuable firm in $131.5 billion debut - Reuters",
+          "title": "NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News & Updates, Quotes- Nseindia.com - NSE",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE15aFBDQy1lOHpHNnVLU3dRM1lsWmNDMVRQNWJPcXBDSklxT1VIUnVxVDMwRHJsRTJtdmNLcEd3?oc=5",
+          "time": "Tue, 27 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "title": "Ambani\u2019s Jio reaches $137 billion valuation, becoming India\u2019s second-most valuable firm - Reuters",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMnBsQUVaem9YZkdBUHZ0aFRjRFVadWg5ektvU0ozc3VOWmhpXzRQcmJjY3BZaS0yRERZa1hTdjZxSjkwdFRlWWhuUnJIRk9HMUVjdzdibExtbnJIbnFUVzZKM1BhemljWDI3MTlTTEZHUmEzX1dkWC1RcHd6TjIxMVBxUDAzS1VUMjIzZkpIaHlLbHpJVGtpcUVLTERnWklieDJlVldNUkplUnJjNjFZVkMzYjRpaXpJQ3B3?oc=5",
           "time": "Wed, 28 Oct 2026 00:34:00 GMT"
@@ -180,40 +234,10 @@
           "time": "Wed, 28 Oct 2026 04:15:50 GMT"
         },
         {
-          "title": "Reliance Jio Platforms IPO allotment status check online by PAN number on NSE India, BSE websites: Direct link, steps - Livemint",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNSzRya3hIVER4dWdoQjVVLXNnNWh5eUJ0UnQyQWpRUG5ESEVVM0NqTmdpMk1RSnhkN3dRX3lhcXYzS0F5NTR4SGg1MWxjaGo1VzZmdGQ2ejFWQ1ZwVHZwV2lrUEc4dFViZmN2dVBTVFdkb3NBMWRXeWVUbDlXLW1rNGZ3LVp5dXpBM1RJdEo3SjZwU2FlbGwySDFLVXZDZnZHTndrVUoweVVOSUlYXy1EVXozZFFXM2pJaHRNYnhBNDF0WmZfS0FnUFhfWTZOUmc0czdSOE5zelR0N0k5a2tuMXphbjlPVnZ3dXJPMkhGOVZfZDI2eFZBdVl6bHNicW96RDVYTnhyNlVOUngxQTRRdWxR0gGXAkFVX3lxTE5YbnNENVJSNnhMWnVORFIyUjdxT3NBZ09IZHByMmZ5ZW5EaDhuN3Z6bmRlVTVfTWU0WTkzWHN5UERuLU1ydG5lazFNakI4ajdwc2NMZnRoWFVoRGZvQ3NJcU1JVllOalZJVGZXUXQzSmJHeUFXbnZuTnA2MlltbWkwam1zYW9BM1dINk9ET0oxVzJBVFg2YU15bHdHQ01RTXQxV1ZVd2lDTTVvOWNrVFdpSlM5OXRGWlBvbnJyUEtJSU52OS1nZFBuYVlLbkJnaExPc3hVTGZWMm9YS2M1SmRKcGZ5R0pPUHQzdXl1RGxaRFAycFhTOUk5bHYycnMtYXdhRHZmMjEtQXQwNUdrdEtQNFlsUnRIYw?oc=5",
-          "time": "Sat, 24 Oct 2026 05:35:46 GMT"
-        },
-        {
-          "title": "Jio shares make blockbuster debut at over 21% premium over IPO price; analysts see 'long-term wealth... - Moneycontrol.com",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPMFllNXBLU1pNUGtkbXV0TEozU21nNUlKZ25uVGhIZmFEUk1ZZmpnOVcwdjlPUEx1ZGNQa1NPSm5pTi00Z0JZellmVkhYRDFHYzc2Z3lGSXpqWlhmNGp4R0JZejFBTEc1bDlaVDNHa2dDY0hta2Fxd1BWN2pXNkQydjdfUW1vSDRBYmtrVDlmaWtuYlFna2xtd3paUVA0d1ZWMl9lVTRBZmtSUjFRX1pGRmtsc2JYX2tnMUlvaEE3aDc3UGtoLUs5WEtKTGwzN2tEa2o2MnhUUm9qXy1JVG5UY1VBODVkZTVrSHowWFVKWkx1NkVraUo2N05OajlIbW5DYnNlTmg1bGJ5R213NlpqZ20zSjJydEZ6dVFOeDBZNNIBpAJBVV95cUxNOTYzUXJHdGVTbEhwS1drQ3I1VEI4amVyUF9sOWhPSmMydHlva0MtNmNWS3ZmS2ZoQXNDQnhEVEFVLXNQYjhOV0FmQ1BJZ1NPeTNpZ3NQV0JGeEtYZl95THYwcXI3c2Z0SWQyd1BHdDVtRVdleWhXWEJTdmVCeGU1dHJISklWdUsxR00wWnZ6dEY5NFhVbXJFU05vbkRHN3pTZFNWUHV4OUNXNHlxdWUyVWJoaVpkV1hCNm5nRzE1R2tkYlZXS1kwMUQtVjZxU1BINHBxQXQ3NlNDc3lYb3FZMjhISGJfZW11cy1Od3cxS0tFVGR2d21fVFhSVmJja3lEY3NSYnJXRHpKWjYwYTlSWVhoQ3F4TEFhU19MZ21rWjNuX25J?oc=5",
-          "time": "Wed, 28 Oct 2026 04:19:33 GMT"
-        },
-        {
-          "title": "Jio Platforms IPO allotment status finalised! Did you get shares - check from direct Kfin tech, NSE website links - Livemint",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQM3RWb0pwSVlGQzlTR2RFVk1NdDRmR3dCS09ab0owaW9Jb044Z3J3Nm42bUhSWXJXVEZXQ3Ftb3ZONjFnRTdRejVuNW5yLXlxc19iTFV0YmZlclVWc3ZLZ1FlUFAzZ3dMUjZiYll4YUxRYmJmRndRWDQwVDRPQm9Pdy1MdlAxVE42TEo3Rk5EXzJRMzJtUVc3UzY1QW9oRTV6VU82bXpRZWYtbGFVZWowcHhkeXVRY0k3bjhrTjJ2M3Y3QzJMM3dsRm1yYjlHaElKckw2amlBTFZidzJHTGpuNWlzZTh1UDBoek9pWVVfOXIxWTFZNkVyd9IB_gFBVV95cUxQVTBleTk3RnBOTUVBNGNyVnhhTHpCRTJBY0VGbk1FQjBHT2NNdU9HNS1ZVTBFcGJ2RDlwZC1Jd1BKSzlqVXZZLWczMU5WbFdqUTg2UjFYX2o5al9HaEUyTHNHTERWRVBwenFDYkpjREF3X0xqOXY3X3liRmVmVmEzVUVRemZPNmFYdl9vUzJ0a2pURGh6VnZaTnhveS0xS0UwOEpIV2hpcjY0ZENoM2xtUFotcVNFamsxV09OT1pvZHM3WnNpMnJEYnNYaFkxQzAtcXVwbU9fT1lldkV2Q21za0FPemlXWjBvaHZDQ1hoQmRCTVQta1NTODJjOWliZw?oc=5",
-          "time": "Tue, 27 Oct 2026 01:01:12 GMT"
-        },
-        {
-          "title": "Jio Platforms Becomes 2nd Most Valuable Indian Firm by Market Cap After Strong Debut - HDFC Sky",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSTZSNkQ2RGtnaTk1Q01ZLTdiYWVtRU5SVmhLbE5UbTVaMzhsbTU2ZndZZFVfc3Y2cFNHYm5Qa1hiTkExVmJxb3NKUnRTaEdlWEtZSzVHWU1wb3NreHR3UnZmZEsyTWdQbHJ5Ni1SdVd0MTU3QlY1T3d0RzZUYUN2d1ZLeW9WT051ZU41cmkxVVNiaDZ2NEU0TGpVeTlmRTBhbUFob3dyN2FwRklqNkE?oc=5",
-          "time": "Wed, 28 Oct 2026 05:33:25 GMT"
-        },
-        {
-          "title": "Jio Platforms opens on BSE, NSE over 21% higher with IPO debut at \u20b91,357 | Business News - Hindustan Times",
-          "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxObm1KZjJaQy1LM2RRRWdEYTZaZWhSSUptcmxpUDhqNmlialVxZk05OUdQaDE1c0w3Zzh2QzJoRzRqQ3YyMklKaVFVRkNQTURFYmhtVkpwckU4ZV9LMFhhc3RQcXk4b3hkTDBxd0gwWlk0dy1HRm4wMnE4dFJTNW15aDhTeHdzUUVsSFlUeXRBcGI4YUpUSGZHMlhvZkg2YWxyckxDWjl2VEJsY1hUNHJxQ2pGaUdGNkNYSXpZSWYxRVY0TjFkRzZrd2VOYnN4WjNJaHZFYVVpRzh3NVZELVVyQWFLMG5iVFkyTWNKdEFVOFBkTjdIeUhRWUZB0gH_AUFVX3lxTE5MLTFnMHRMVy1sb0ZtWTBVVVlLamV0S0tiOWNpdktQRDk0dXpRd3pHeGdtZkJRdTFQOExIYnpCTE51UjBoS3pOVzdYOXBqNVlOSWdqb3htZ3BIVEtydU81ZVd4N3RRcDhzRDJPOXB1dmVvRGZWMFJtb0ZUMXdPSDZFOENOVFRfY1lzOTBLbHlzOThMUFdWREdrQmFoM0kxZWQ2OC1BMHFzRTVDMUNuWno5UDhadzJyaWp2UDhwTl9lT2NXZk94NGhiNmlUS3lLemtvU1hBSmpRQ1NKdzFiY3N4V09LdkVLY283OTd4OTVVTmpHWnZibG9nYk1Ta2o3cw?oc=5",
-          "time": "Wed, 28 Oct 2026 08:17:35 GMT"
-        },
-        {
-          "title": "Jio\u2019s Rise Was Shaped by a Billionaire Family Feud, an American Tech Titan and a Bureaucrat - Bloomberg.com",
+          "title": "Jio\u2019s Rise Was Shaped by a Billionaire Family Feud, an American Tech Titan and a Bureaucrat - Bloomberg",
           "source": "Google News",
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQai1zRVJSVEFucE1aSmFvMFhhaVZNVnhHemF4TDVvMGtMMnoxVHVJNTFNMThkZVl6cl8tdHZSVG02cU5IN05QRVRVczZpZ1NNaUZtei0wNk52eG5peUtFY0xTeUFsX0EwcWZlb3BxR0hyN0VTYkE3M281N2R5UlBlMmRaUGd6WFJ4TFY3M1VGa2FJRGR2djVicGFRZTJhY05nVE1WbWVzVXZTNURDZ0QzVzdlc20tRWktV18w?oc=5",
-          "time": "Wed, 28 Oct 2026 06:54:01 GMT"
+          "time": "Wed, 28 Oct 2026 06:53:00 GMT"
         },
         {
           "title": "Businesses and investors of Ambani's Jio as it debuts on Indian bourses - Reuters",
@@ -222,40 +246,64 @@
           "time": "Wed, 28 Oct 2026 05:02:00 GMT"
         },
         {
-          "title": "Jio IPO listing: How LIC, Reliance Power, NSE, LG, Hyundai, Paytm fared on debut day - Business Today",
+          "title": "Jio Platforms IPO In Photos: Ambani Family Shares Special Moments At NSE Listing Ceremony - Outlook India",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPMHZPdmpaUTFTemhPNENVb0gwOFgyMW1jYjNINWtucEgzQVYxd19yMUdEOU5DVk0xdTFQcERGUE9PNDlpUGtTdWozbmZ5NmpFblozVUI0TUpvMGdGaTA1dGV1QXd3NlJPRXd3dXpRc3FXaTdBTzJDNlNmVjBQRmVnQUdWU0xObE1hN3pSM3UxaVA1M19TLXZxbERuNlVCWWUxaldhT1JwLWVxVWhaRW5jVlpQbEhzMTg5VXJ4ZUpSb0pxNzRwNlkwTnRSVk8wQWpnU0JZa1RndnVWUjJ6Vk9Wa9IB5gFBVV95cUxOS1ZtRDd6YnctQWVxYnd3Vi1EclEzc3NzZlF6NlNGRk01NlR5NFJPNm1jX1c4amZfWUZTSVotZjdBb29xb25HTDU2eXFYTTR5RGtyUTNPU3BrVzNXTEJLUXFrbmFEZE8zaTVLUUwzZF9wYlZ2OGNEZDRwUzIyWm1lWnlGdTZIbkdPQ3JzYllVVnViRjd2NkFXWHRlOEtDdTc5UHRWSENucWpSSkVGZDB0ZjNrSmExX2MtcUc4UjFFTDZNeW04U1A3N3VwUkM5emJYR1RMeVphWTk4dHQ1WXM0cThfWThGQQ?oc=5",
-          "time": "Wed, 28 Oct 2026 02:57:16 GMT"
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTkJ5TnoxVnJPLTFkRDVtdlZCZ3B4NUpEQ0hBRENMcnU4blJzQXowSWhrUE1iZ0xCb2pqUngzR1cxYXdkdXpobTdoSWlXVEUzbGNBbFVJcW9MOWF3d0JYMnV3V1RBM3ZBb255RnNpdElnNHJRV0RCWURTdWRuWUwxSWlnTXd0X0ZyUWZDOG80cHJqbVZva3NhbVB6bmxhVVowWHhTS0RTZHpPZ2FyM3hTeDREM09zOFRRcVFjRWhQS3hQWnB40gHSAUFVX3lxTE9DbkVVMENDeW5JRElFRDBfanYxTzRfeXJOLTB0OVFtbF80SVdfRWgwcFBOTW9TWTh6S1daSFl4WThJUjB0ZmxsbWdBS3dSSUdUeU1LOEJBOExsc0FCSmhJcnVaOUh6RmlsWExseURBY2dobHRXSzJVa29hdFprZnU2aDUtVFhLVzhQNHAzcE9PTk9fMFlwY1BONkh6UTZ3Y1dVTkEzczFaX1MtZmpsRHc1Ny1uTGFYeGtxLTdPTW1FREJEMnZJaHNKVkoxV243UEdMdw?oc=5",
+          "time": "Wed, 28 Oct 2026 09:22:40 GMT"
         },
         {
-          "title": "Mega Jio Platforms IPO stock exchange debut on October 28: Details & key milestones - Team-BHP",
+          "title": "Jio shares make blockbuster debut at over 21% premium over IPO price; analysts see 'long-term wealth... - Moneycontrol.com",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTWtwTE1FZEpJM09rZWQ5ZzRmU3hUOW9idFZFZmhSS016NXIyZmV0eGdvbXF2cHdHWTZvU1FkMUtEUnp1SUcyNmRYRkg1Q1BrV2ZzOExqMUhkMUczTXo5QVowOXNRc01MQzB2WFFQZXJqNkNqaXFRdEZtekZ2SkRScTktQ0pnalNoSVVITGg1TGRMYnV4bVZWR1ZpMnRtc1ctWm1RQVhzR3oyLWtYZFRnMFpMUjBtM1g5N1Y4MzZ3TnhvdjNyTVUyOXIwUWhqWF9I?oc=5",
-          "time": "Wed, 28 Oct 2026 01:22:42 GMT"
+          "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPMFllNXBLU1pNUGtkbXV0TEozU21nNUlKZ25uVGhIZmFEUk1ZZmpnOVcwdjlPUEx1ZGNQa1NPSm5pTi00Z0JZellmVkhYRDFHYzc2Z3lGSXpqWlhmNGp4R0JZejFBTEc1bDlaVDNHa2dDY0hta2Fxd1BWN2pXNkQydjdfUW1vSDRBYmtrVDlmaWtuYlFna2xtd3paUVA0d1ZWMl9lVTRBZmtSUjFRX1pGRmtsc2JYX2tnMUlvaEE3aDc3UGtoLUs5WEtKTGwzN2tEa2o2MnhUUm9qXy1JVG5UY1VBODVkZTVrSHowWFVKWkx1NkVraUo2N05OajlIbW5DYnNlTmg1bGJ5R213NlpqZ20zSjJydEZ6dVFOeDBZNNIBpAJBVV95cUxNOTYzUXJHdGVTbEhwS1drQ3I1VEI4amVyUF9sOWhPSmMydHlva0MtNmNWS3ZmS2ZoQXNDQnhEVEFVLXNQYjhOV0FmQ1BJZ1NPeTNpZ3NQV0JGeEtYZl95THYwcXI3c2Z0SWQyd1BHdDVtRVdleWhXWEJTdmVCeGU1dHJISklWdUsxR00wWnZ6dEY5NFhVbXJFU05vbkRHN3pTZFNWUHV4OUNXNHlxdWUyVWJoaVpkV1hCNm5nRzE1R2tkYlZXS1kwMUQtVjZxU1BINHBxQXQ3NlNDc3lYb3FZMjhISGJfZW11cy1Od3cxS0tFVGR2d21fVFhSVmJja3lEY3NSYnJXRHpKWjYwYTlSWVhoQ3F4TEFhU19MZ21rWjNuX25J?oc=5",
+          "time": "Wed, 28 Oct 2026 04:19:33 GMT"
         },
         {
-          "title": "Jio Platforms IPO Allotment Finalised: Steps to check status online via PAN on KFin Tech, NSE, BSE; demat credit and listing date - Upstox",
+          "title": "Meta- and Google-backed Jio Platforms\u2019 shares soar over 21% on trading debut after record IPO - CNBC",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQOGFCblNlZS1wRWtFOU1ySC1lZEFncV9FOV85MVlTRGo1cm9iaVItLUlmTks1a3FWMmdETGpiR3ExeGVlMERqaUdnWjBMQzJ3STZocWNGWlRIc3ZmdU05c2dFMzlhcGMtWVFZcWlwcWpvZHU0NmFjRUZqVVZXUHZPUEFfR28xZ0ZDZUJDTVNKOGtheDNfel9Dc01yQmVENEV5R1FHQjA3NEM1eVJRSVJaZDR3emFfT2xKVVhoSm5SbGpOeThMempmVVdzMzFoQ09xVFlFTkF5c3VvM2xZZ2lnblN5elRJN2tvSzNJVnNDdl92MzlrNkR3dG1WN09rdm9EYzBuUGNfRVE?oc=5",
-          "time": "Mon, 26 Oct 2026 01:33:46 GMT"
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9XZTZrLU5EVk95TWVhM1pNbHREcC1CUHR6dzJvY0FRREVPYzVFVndLSVF1Wng1TFdhVV96YkkzcEFMS01UZHctVXhPa2oxZ2hsdU1nR0hGT2RHYjVqVVpkeFhONkRsN2wweGQw0gFwQVVfeXFMTUZ1Qk4teUJ6dGxsT1BzNjdaa291aERheHRWYUFlX2FqOUJmV0xGSVZsR3I0VmJiclZ6Qlg5dEVnMnhnSzQyMGZ3bkJfeXFQSTk2TkhCMmQ0UHhNb1J3dWkzRXRiWEI5LWYwYW1fWGw3Yg?oc=5",
+          "time": "Wed, 28 Oct 2026 04:34:32 GMT"
         },
         {
-          "title": "Reliance Communications Upper Circuit Streak: Day 2 Price and Data - Univest",
+          "title": "Grand Debut For Jio Platforms: Shares Up Nearly 23 Pc; Becomes 2nd Most Valuable Indian Firm By Mcap - ETV Bharat",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1WUldwYk10UlI5aEVDZDF4ZW51Wm5Xc3hBajR0d0lKa1YxdkpEZzlUOHpfZ3AxZ21oNTlWLWRfMFBxRWNSMG5nLVY1OG5EdFloMXZlQjBJSUVGY3NueGFlMjJZZ3NvT2N0bm5FckRjSHZzQ2FrMHBaYVNB?oc=5",
-          "time": "Wed, 28 Oct 2026 04:50:00 GMT"
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOT09ZM1Zla1hLeGlJb3RVRUNuOEt6WUpyX1o1RlgzU01fdjAxUkFRQ2xSTDRxMGJobEJHa2xKYjhKQ0dPRUhkaGVpS3JaTmJUSDRFU3kwNWk3MEJPMjRlYTJ5cllHR2JwX1l4YVkzN1ZLdzhfaW13VUR1X3dVd0prSlNoQVNHZHdIRUV1bmpSbDd5T0J5aUFRU3Rhbi1aWHNTRXZJYUpvUUc1ZUhwX1kxSkVHcUFmaDFaajJLYWQzSURZNll1SmhUdnc1S0J1NlppODZ0NXd2MNIB3AFBVV95cUxNNWQ0RHFRRUlaRXJEei1hVFJHcVA3OEp5Y09tNGV4YnFsbk9lY1VQSjJ1OVdLMHdvVXpGLUpwWF9wck94a0p2alh6dGV4R0FEXzB3WmNJQUJHRWw0aE50WmVRbnFWU0puWTBrVWhqWVVWdmY5Q181NndjUlpxX0g0dlNqTmFQSG1RcktocU95UVVuR3RmTDlPblBMMlFVRTRFU2QtN2lkX3RSZFNqRTJsTkJyQUlnQlBJRDU2eUxCZ3ZoOE9HUlJxdTZSdE5BcTVuVWdvNi1qaEJLOVBV?oc=5",
+          "time": "Wed, 28 Oct 2026 04:44:40 GMT"
         },
         {
-          "title": "NSE - National Stock Exchange of India Ltd: Live Share/Stock Market News & Updates, Quotes- Nseindia.com - NSE India",
+          "title": "On debut, Jio 2nd most valuable company, behind only parent Reliance Industries - The Times of India",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE15aFBDQy1lOHpHNnVLU3dRM1lsWmNDMVRQNWJPcXBDSklxT1VIUnVxVDMwRHJsRTJtdmNLcEd3?oc=5",
-          "time": "Fri, 25 Jul 2014 05:11:21 GMT"
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPR2I1RG1EYTBWY2gyalo0bmlyNWRMZ2ZVc21kRTJNZ1d4YTNIRGRERWk1dENpejBRR3JKN2NCRUN1ei04SldGTmVZZFhveFdhQUt3NVA2WG95Y2YtTTdGd3lDdGRaRlRyWl9ZcXdHc1R4THUtOHdOWU9MLVIzZzJ4d2VDZWt6NUVFMzcweXVrOU1tQ01KbnByNVVLX0hfSFdKbTZWc0FleVFYVFR6d002anQ5d1ZNZ01NejBFWkNjZ1VDdTRTSnNRYnM3MVUzaDZseWJ4NW5xWGdhSVBmU1M0WEl2RkdQLWNCbXFOZGdERUJVNkFtZnfSAfsBQVVfeXFMTWxRampZcDYxVVhmdEZLclNMd0QwNlg0MEFVX0lKRDczd2QwUXZocFNUMnBXQlBNTXFnVFhMM1VEZlpBOWl0NnRpaHFsN1BZeFVoNzVzQV9ORmFxR3NsX0dTTjFzTDRxNFJxWkNDXzJzTUpyN09CZVJINENaWTRpdTAyZnN3aXNZbTB4d2FQYTlNSGhLQ1pwc1Z0R2lQblF1U3lDckJKWk01T0dyckdXWG9icHNtNV9WX2ZlVTJSbjZ3eWlxTUN5Rm0yX1NJSmRIZEVFeXg0b0RSaGEtaHQ3TjdFOU1jczhaem56Z0h3WDhfc0xnYURIWkFTaXM?oc=5",
+          "time": "Wed, 28 Oct 2026 23:10:00 GMT"
         },
         {
-          "title": "Jio Share Price: Mukesh Ambani's Jio Platforms debuts at over 21% premium on NSE, BSE; becomes India's 2nd most valuable company - ET Now",
+          "title": "Ambani Sheds Tears as India\u2019s Richest Family Hails Jio Debut Pop - Bloomberg",
           "source": "Google News",
-          "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQUmR6WXdYV3dmQjVnWWtWWUIxTFRtaTB0RTVOblBkemhTWmNEaWJ0c2ROT1ZCN19jVW9DdzBBQWJaOS1WRXJEMlNycndOeXNfaXJsMEk4VzdlRTZPbExyVjRLZDE4bXZtVDZkaUNNTkhNWUZwRTl2TWVCNXFKbEFPWVhYTkpGSVRnOENDUjJaX213OFlDQ1FLc21WTVZaNF9GTlU2d2wyNjhLVXdsSC04YWExSEU2UlFIbndLQWdGclU5WUpFRHlXRkF2ZDFMSmxsRV9HMW5MOHhWeEJxUlJOd0RVN0lvbFpicjBIcHpyYnNsTFgtLWtKdlYyLUhuYmFkb2hhTdIBigJBVV95cUxPV2RGV2I1TlAwclltUVVIMXlNWWhhaS1HUGFfNi1XUGljeDR3a3dYdlYwS1o0Y2dMejdLZFZoaDRWUm9ObDZZcUZlRURfRVI0QlFza3pkWjNkNXBER1kzeTNLenZoZk0xWXJxSzFLWUZRV3dLTmlQYWUyQXB1ZHZiRG0tdHo5cjRTbjl6WjlqVzVIQ1NrNXd4cjhhM0tyMFVSb0xhVVdIVlpZRjdqd3pHZ1dkWTREaWppc2ZSY2tSTmdmZVdrdTgwakR1bnFVaXdwRnY1NS1iMGR2cll5dHI0eTZVdUZRQ3M2LWF3N1dMQ0hCQU1ORDZNUGVTa2JfM2FDWXlTazV6YUprQQ?oc=5",
-          "time": "Wed, 28 Oct 2026 04:21:54 GMT"
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdHlHV1NDWEUzdEgzeHZOMVNKdFV5anpCQkY0ZS1DNUt4N1UtNTVPT2xkaUFjaUhNWVR1N0hFSEpVM0tWRFN1RVltVEdJZ01HbTFDVTRXamNfTmNKSDU4Ml82NTZMSDZxd2xzQThKU0JNRFZTbDlWcmF5cWJGa0xsUU10R19vcGlpbmQ1cGpZMFlvMWNWVnJrZVloZTRLRE9aYkp5Rm05OG8xRl81YnhCN3Q0MmFVdw?oc=5",
+          "time": "Wed, 28 Oct 2026 05:42:00 GMT"
+        },
+        {
+          "title": "Jio marks historic NSE debut after breaking India's IPO records in just 95 minutes - The Times of India",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxObE0tZzI0U2ZRTmNtSFA4TVlBandnbXVKbmVPTDhOT2hseWtUb0pCYzVBWlB0dDJ3Z05WZlZnUkxObVI0aEFydWd6R0VqUndVYjlZeGVCWHVDQllha1BCd3k0eDN6X0tFcXE4U3VZdWdIQzNsMjgtSHVrMWdNRk1jTmJ4VUVHTkVMcS1mc2ZFZll2ZUNVek1JUUk5Y19acGFqNzY3ZmZCaTNudjBtZ1VXa3VWRUszVUI2TldDa0VGNFl6eGFTVUNlMHJoX3hrWXNUY3lrX2lkZTdtUFNmN01xUUFVRVNDV2vSAewBQVVfeXFMUEwxOHJmN045LTZad3RqT2luQ0h3d3lPdkQzb1JvdVE1ZDRGQnFDaTFFRUk1Vk9CVURvamszbHVhSU9qem9Dcmo5RGoxUWI2YWl3bjA2OGpIWEY0cHlMUGFsWVM4dm96MzY3dWZ5V0xHUUx3aTF3NWlGRkVsTzNEdHJqcURJbjF6RW1GWGZnWVdvZXc4LTFlY3Q4dnlhZHJRdVlzWXV1RGFrbU9KeDBOUWZsbTBrMjhRWElyRWpZaldxUUF6NXNiNXJkbHN0ZjBoRl9RTkdkSXlrOTl2YnJ1eHhJeGw4S0l6a1FzVnM?oc=5",
+          "time": "Wed, 28 Oct 2026 07:48:00 GMT"
+        },
+        {
+          "title": "Jio Platforms shares surge on debut; here's a list of key milestones set by company - Moneycontrol.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPN3pSWnBlUEZZalQ4bmdGZkhuOFQ0VjB0c2pldnU5NzNEZlVkTTdIM3NWT0dXcVJxZVpFUkVGMHI0RGVjaDFuVFFkSUtkWldIREZzQlY5SHB6bF9xTWRwSlh6c2RHMlFXczYxVEZtOW9VYUJDenY2dWlteFJhQ0JueldaRmF2TnRsT1lfeEZ0N2Ewb0ttdUQwLWxvLWJpTE1sbjBXclNHeFF0djJhd1Bhb3VqbmQtNmV2OF9zaWtQM2lNTzdKY3pjMnl1NmQyN1BOQzU3ZXoxQWVYNVNrSGZZN9IB5gFBVV95cUxONmd6TWQ2dk1UMTFNb2lsSU1sNzBpQnlGSmRTNU1YZldaZHFteXRkQmExTUFreF8wZXowRU9pUlRPXy1WaUdaQW1zOC02MG1oWGY1RHg2QnhzT1VzZXFUdGhQa1dValQtRWJwSnpHOTQyYVNLbFdONm1fRGozSVdtemxZbGw2VWQzdGFyLXBZVHVkelFoWURrQjdxSlkxVjBtYVlqN2VaT1NkdzBHVGRwM0pLcXhjUzc3TnRCSmtrVDFsOUo0Q0xuTDNHaHZBVzNiTmsycHZFQW1JVEYzSGpwWlRiSU42QQ?oc=5",
+          "time": "Wed, 28 Oct 2026 09:21:21 GMT"
+        },
+        {
+          "title": "Reliance Group overtakes Tata\u2019s by market valuation thanks to blockbuster debut of Jio Platforms - Telangana Today",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNMWhFamhzUHhLWW5jZzRnX0h5bGl4N2hTMFlQb0pXUnUyU19iWDJHYVBIZ2FFQmN4QXhBZmtZamktSmFmb0daUXNkS05xa1U3OFM1Y1VqRlhEOGU2RHhQcU9lcDR6dEo3NHNnNGJpOENxTVV5dDFnazR0TGNSZ1FKaGlpMWxDLUhSbklQbjlxV0NfSFZ2ejUwblFFYzhHRVRiTFVrMUcwNEE4X1g5RDdDRmo1aWJIY01iTnBWVmlB?oc=5",
+          "time": "Wed, 28 Oct 2026 17:58:52 GMT"
+        },
+        {
+          "title": "Jio Platforms Set for Stock-Market Debut Today After \u20b930,213-Crore IPO - www.nationpathindia.com",
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPei1HUVdnNVZjTzJmakhqLW16X0NCbXpOa1FqRWI4TWRtWE1tZktRUWJxcEJhVUFsem5FUmRoSU4wdXI0bG1Ic05kdWJPM1Y5Z3pxQWpwZXphdmsxS2xQM2tybXg5cDNnX0h4M2JLbllyMS1VaEg5MTY1TmZtR2laTU0yQU1nVlJnQ1Y1WUZtV0dtdUJNN0oyRzZFTm9Ca0dqNzVraHFIWEY?oc=5",
+          "time": "Wed, 28 Oct 2026 03:00:17 GMT"
         }
       ]
     }

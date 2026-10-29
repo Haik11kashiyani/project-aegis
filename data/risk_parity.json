@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-28T15:10:45.194050+05:30",
+  "timestamp": "2026-10-29T15:28:27.970032+05:30",
   "symbols": [
     "TATASTEEL.NS",
     "SBIN.NS",
@@ -17,16 +17,16 @@
     "RELIANCE.NS": 5000.0
   },
   "volatilities": {
-    "TATASTEEL.NS": 0.2113,
-    "SBIN.NS": 0.1928,
-    "RELIANCE.NS": 0.2171
+    "TATASTEEL.NS": 0.2094,
+    "SBIN.NS": 0.191,
+    "RELIANCE.NS": 0.2168
   },
   "risk_contributions": {
-    "TATASTEEL.NS": 0.3401,
-    "SBIN.NS": 0.3104,
-    "RELIANCE.NS": 0.3495
+    "TATASTEEL.NS": 0.3393,
+    "SBIN.NS": 0.3094,
+    "RELIANCE.NS": 0.3513
   },
-  "parity_score": 95.41,
-  "total_portfolio_vol": 0.2071,
+  "parity_score": 95.21,
+  "total_portfolio_vol": 0.2057,
   "summary": "Risk Parity: 3 stocks. Parity score: 95/100. Highest weight: TATASTEEL (33.3%). Lowest weight: RELIANCE (33.3%)."
 }

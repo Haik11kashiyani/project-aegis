@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.8438,
-    "var_rupees": 276.57,
-    "mean_daily_return": -0.0216,
-    "daily_volatility": 1.1076
+    "var_pct": 1.8418,
+    "var_rupees": 276.27,
+    "mean_daily_return": -0.019,
+    "daily_volatility": 1.1079
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.8545,
-    "var_rupees": 278.17,
-    "cvar_pct": 2.3203,
-    "cvar_rupees": 348.04,
-    "sim_mean": -0.024,
-    "sim_std": 1.1114
+    "var_pct": 1.8525,
+    "var_rupees": 277.87,
+    "cvar_pct": 2.3184,
+    "cvar_rupees": 347.76,
+    "sim_mean": -0.0214,
+    "sim_std": 1.1117
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.5987,
-    "var_rupees": 389.81,
-    "mean_daily_return": -0.0216,
-    "daily_volatility": 1.1076
+    "var_pct": 2.5969,
+    "var_rupees": 389.54,
+    "mean_daily_return": -0.019,
+    "daily_volatility": 1.1079
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.5915,
-    "var_rupees": 388.73,
-    "cvar_pct": 3.0086,
-    "cvar_rupees": 451.29,
-    "sim_mean": -0.024,
-    "sim_std": 1.1114
+    "var_pct": 2.5898,
+    "var_rupees": 388.46,
+    "cvar_pct": 3.0069,
+    "cvar_rupees": 451.04,
+    "sim_mean": -0.0214,
+    "sim_std": 1.1117
   },
   "stress_tests": [
     {
@@ -117,12 +117,12 @@
     }
   ],
   "drawdowns": {
-    "max_drawdown_pct": -21.0478,
-    "max_drawdown_day": 250,
-    "current_drawdown_pct": -21.0478,
-    "drawdown_periods": 7,
-    "longest_drawdown_days": 169,
-    "avg_drawdown_pct": -7.8811
+    "max_drawdown_pct": -20.9684,
+    "max_drawdown_day": 249,
+    "current_drawdown_pct": -20.3812,
+    "drawdown_periods": 6,
+    "longest_drawdown_days": 170,
+    "avg_drawdown_pct": -7.9673
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-10-28 15:10:47 IST"
+  "timestamp": "2026-10-29 15:28:30 IST"
 }

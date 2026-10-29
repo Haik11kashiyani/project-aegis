@@ -1,57 +1,57 @@
 {
-  "exposure_multiplier": 1.0,
+  "exposure_multiplier": 1.05,
   "reasons": [
-    "Macro conditions neutral \u2014 no adjustment"
+    "Nifty strong + crude cooling"
   ],
-  "macro_bias": "NEUTRAL",
+  "macro_bias": "RISK_ON",
   "instruments": {
     "gold": {
       "signal": "NEUTRAL",
-      "z": -0.1,
-      "change_5d": -2.04,
-      "change_20d": -2.9,
-      "price": 4065.4
+      "z": -0.189,
+      "change_5d": -0.57,
+      "change_20d": -3.92,
+      "price": 4037.4
     },
     "usdinr": {
       "signal": "NEUTRAL",
-      "z": 0.163,
-      "change_5d": 0.52,
-      "change_20d": -0.88,
-      "price": 95.21
+      "z": 0.314,
+      "change_5d": 0.99,
+      "change_20d": -0.71,
+      "price": 95.25
     },
     "crude": {
-      "signal": "UP",
-      "z": 0.664,
-      "change_5d": 5.03,
-      "change_20d": 12.85,
-      "price": 102.04
+      "signal": "DOWN",
+      "z": -0.73,
+      "change_5d": 2.18,
+      "change_20d": 9.44,
+      "price": 101.64
     },
     "us10y": {
-      "signal": "NEUTRAL",
-      "z": 0.35,
-      "change_5d": -2.42,
-      "change_20d": -4.99,
-      "price": 4.99
+      "signal": "UP",
+      "z": 1.166,
+      "change_5d": -1.96,
+      "change_20d": -4.69,
+      "price": 5.05
     },
     "nifty": {
-      "signal": "NEUTRAL",
-      "z": -0.12,
-      "change_5d": -0.47,
-      "change_20d": -0.34,
-      "price": 22703.75
+      "signal": "UP",
+      "z": 1.176,
+      "change_5d": 1.12,
+      "change_20d": 0.99,
+      "price": 22940.75
     }
   },
   "correlations": {
     "gold_vs_usdinr": 0.148,
-    "gold_vs_us10y": -0.176,
-    "gold_vs_nifty": 0.272,
-    "crude_vs_gold": -0.096,
+    "gold_vs_us10y": -0.182,
+    "gold_vs_nifty": 0.273,
+    "crude_vs_gold": -0.102,
     "crude_vs_usdinr": 0.045,
     "crude_vs_us10y": 0.091,
-    "crude_vs_nifty": -0.239,
+    "crude_vs_nifty": -0.245,
     "us10y_vs_usdinr": 0.095,
-    "nifty_vs_usdinr": -0.171,
-    "nifty_vs_us10y": -0.066
+    "nifty_vs_usdinr": -0.17,
+    "nifty_vs_us10y": -0.073
   },
-  "timestamp": "2026-10-28T15:10:54.288676+05:30"
+  "timestamp": "2026-10-29T15:28:36.748570+05:30"
 }
