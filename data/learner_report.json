@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30 17:04",
+  "generated_at": "2026-10-31 10:36",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-10-30 17:02"
+    "analysis_date": "2026-10-31 10:33"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -117,17 +117,17 @@
     }
   },
   "market_regimes": {
-    "NIFTY50": "TRENDING_DOWN",
+    "NIFTY50": "RANGING",
     "TATASTEEL.NS": "TRENDING_DOWN",
     "SBIN.NS": "RANGING",
-    "RELIANCE.NS": "RANGING",
+    "RELIANCE.NS": "TRENDING_DOWN",
     "HDFCBANK.NS": "RANGING",
     "ICICIBANK.NS": "RANGING",
     "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
     "INFY.NS": "RANGING",
-    "TCS.NS": "RANGING"
+    "TCS.NS": "TRENDING_UP"
   },
   "calibrations": [
     {
@@ -198,26 +198,25 @@
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2714,
-      "xgb_brier_score": 0.3165,
-      "rf_calibration_error": 0.1167,
-      "xgb_calibration_error": 0.2692,
+      "rf_brier_score": 0.2712,
+      "xgb_brier_score": 0.3031,
+      "rf_calibration_error": 0.1148,
+      "xgb_calibration_error": 0.2147,
       "rf_reliable": true,
       "xgb_reliable": true,
-      "xgb_weight_penalty": 0.5,
-      "rf_ece": 0.1167,
-      "xgb_ece": 0.2692
+      "rf_ece": 0.1148,
+      "xgb_ece": 0.2147
     },
     {
       "symbol": "COALINDIA.NS",
       "rf_brier_score": 0.2709,
-      "xgb_brier_score": 0.3453,
+      "xgb_brier_score": 0.3419,
       "rf_calibration_error": 0.11,
-      "xgb_calibration_error": 0.3252,
+      "xgb_calibration_error": 0.2371,
       "rf_reliable": true,
-      "xgb_reliable": false,
+      "xgb_reliable": true,
       "rf_ece": 0.11,
-      "xgb_ece": 0.3252
+      "xgb_ece": 0.2371
     },
     {
       "symbol": "INFY.NS",
@@ -234,14 +233,14 @@
     {
       "symbol": "TCS.NS",
       "rf_brier_score": 0.293,
-      "xgb_brier_score": 0.4194,
+      "xgb_brier_score": 0.4182,
       "rf_calibration_error": 0.1605,
-      "xgb_calibration_error": 0.2846,
+      "xgb_calibration_error": 0.3404,
       "rf_reliable": true,
-      "xgb_reliable": true,
+      "xgb_reliable": false,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.1605,
-      "xgb_ece": 0.2846
+      "xgb_ece": 0.3404
     }
   ],
   "tuned_params": [
@@ -286,12 +285,12 @@
       },
       "rf_precision": 0.525,
       "xgb_params": {
-        "n_estimators": 150,
-        "max_depth": 4,
-        "learning_rate": 0.03,
-        "subsample": 0.7
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.02,
+        "subsample": 0.75
       },
-      "xgb_precision": 0.5538
+      "xgb_precision": 0.548
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -323,7 +322,7 @@
         "learning_rate": 0.03,
         "subsample": 0.7
       },
-      "xgb_precision": 0.6597
+      "xgb_precision": 0.6671
     },
     {
       "symbol": "NTPC.NS",
@@ -334,12 +333,12 @@
       },
       "rf_precision": 0.8687,
       "xgb_params": {
-        "n_estimators": 200,
-        "max_depth": 6,
-        "learning_rate": 0.05,
-        "subsample": 0.8
+        "n_estimators": 150,
+        "max_depth": 4,
+        "learning_rate": 0.03,
+        "subsample": 0.7
       },
-      "xgb_precision": 0.5601
+      "xgb_precision": 0.5552
     },
     {
       "symbol": "POWERGRID.NS",
@@ -410,24 +409,24 @@
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-10-30 17:04"
+    "analysis_date": "2026-10-31 10:36"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-10-30 17:04"
+    "analysis_date": "2026-10-31 10:36"
   },
   "youtube_mood": {
-    "overall_mood": -0.3,
+    "overall_mood": -0.1,
     "stock_mentions": {},
     "trending_topics": [
       "Why is Maruti Suzuki Down 35%? Q2 Results & Analysis | CA Rachana Ranade",
       "$500 Billion Wiped Out from Google's Parent Company! What Went Wrong? \ud83d\udcc9 | CA Rachana Ranade|#shorts",
       "Invest....(but where?). Everything is falling: Gold, Nifty, AI Stocks",
-      "India Mein Sabse Zyada PHONES Kaun Bechta Hai? #shorts",
-      "Samay Ki Ticket Sales Se Ambani Ke Paas Zameen Aa Jayegi? #shorts"
+      "Petrol, Hybrid Ya EV: Kam Chalate Ho Toh Kaunsi SASTI? #shorts",
+      "India Mein Sabse Zyada PHONES Kaun Bechta Hai? #shorts"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -473,24 +472,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": -1.8224492910444954,
-        "DowJones": -0.9492828008398698,
-        "NASDAQ": -2.9460689331810794,
-        "Nikkei": 1.102785178331683,
-        "HangSeng": -0.5896544249917945,
-        "BrentCrude": -0.9749261350667183,
-        "Gold": -3.083291355323875,
-        "USDINR": -0.28306074859968106
+        "SP500": -1.8175287778868343,
+        "DowJones": -1.0932786156699836,
+        "NASDAQ": -2.855561117502253,
+        "Nikkei": -2.1178017720722457,
+        "HangSeng": 1.462496817265483,
+        "BrentCrude": 2.4025088807602244,
+        "Gold": -3.286699489251066,
+        "USDINR": -0.21271162216565911
       },
-      "score": -0.3176159571926117
+      "score": -0.9600013542674855
     },
     "vix_analysis": {
-      "value": 15.302499771118164,
+      "value": 15.300000190734863,
       "classification": "Normal",
       "trend": "rising"
     },
-    "market_mood_score": -0.1270463828770447,
+    "market_mood_score": -0.3840005417069942,
     "earnings_calendar": [],
-    "timestamp": "2026-10-30T22:31:59.059418+05:30"
+    "timestamp": "2026-10-31T16:03:36.301073+05:30"
   }
 }
