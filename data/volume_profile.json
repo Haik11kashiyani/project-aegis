@@ -2,25 +2,25 @@
   "stocks": {
     "TATASTEEL.NS": {
       "symbol": "TATASTEEL.NS",
-      "current_price": 176.5,
+      "current_price": 179.92999267578125,
       "vwap": {
-        "vwap": 181.99,
-        "upper_1sd": 188.23,
-        "lower_1sd": 175.74,
-        "upper_2sd": 194.48,
-        "lower_2sd": 169.5,
-        "std": 6.25
+        "vwap": 181.89,
+        "upper_1sd": 188.12,
+        "lower_1sd": 175.67,
+        "upper_2sd": 194.34,
+        "lower_2sd": 169.45,
+        "std": 6.22
       },
       "volume_profile": {
         "poc": 183.47,
         "value_area_high": 188.11,
         "value_area_low": 171.86,
-        "total_volume": 1505514931.0,
+        "total_volume": 1516309513.0,
         "histogram": [
           {
             "price": 167.99,
             "volume": 45945997.0,
-            "pct": 3.05,
+            "pct": 3.03,
             "is_poc": false,
             "in_value_area": false
           },
@@ -34,7 +34,7 @@
           {
             "price": 169.54,
             "volume": 49248167.0,
-            "pct": 3.27,
+            "pct": 3.25,
             "is_poc": false,
             "in_value_area": false
           },
@@ -48,55 +48,55 @@
           {
             "price": 171.08,
             "volume": 27060892.0,
-            "pct": 1.8,
+            "pct": 1.78,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 171.86,
             "volume": 74463880.0,
-            "pct": 4.95,
+            "pct": 4.91,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 172.63,
             "volume": 21577704.0,
-            "pct": 1.43,
+            "pct": 1.42,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 173.41,
             "volume": 13053584.0,
-            "pct": 0.87,
+            "pct": 0.86,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 174.18,
             "volume": 32989268.0,
-            "pct": 2.19,
+            "pct": 2.18,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 174.95,
             "volume": 63468683.0,
-            "pct": 4.22,
+            "pct": 4.19,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 175.73,
             "volume": 36727618.0,
-            "pct": 2.44,
+            "pct": 2.42,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 176.5,
-            "volume": 17823158.0,
+            "volume": 17823743.0,
             "pct": 1.18,
             "is_poc": false,
             "in_value_area": false
@@ -104,14 +104,14 @@
           {
             "price": 177.28,
             "volume": 77568837.0,
-            "pct": 5.15,
+            "pct": 5.12,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 178.05,
             "volume": 37670288.0,
-            "pct": 2.5,
+            "pct": 2.48,
             "is_poc": false,
             "in_value_area": false
           },
@@ -124,8 +124,8 @@
           },
           {
             "price": 179.6,
-            "volume": 0.0,
-            "pct": 0.0,
+            "volume": 20718018.0,
+            "pct": 1.37,
             "is_poc": false,
             "in_value_area": false
           },
@@ -153,56 +153,56 @@
           {
             "price": 182.69,
             "volume": 135133384.0,
-            "pct": 8.98,
+            "pct": 8.91,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 183.47,
             "volume": 228949242.0,
-            "pct": 15.21,
+            "pct": 15.1,
             "is_poc": true,
             "in_value_area": true
           },
           {
             "price": 184.24,
             "volume": 37465933.0,
-            "pct": 2.49,
+            "pct": 2.47,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 185.02,
             "volume": 82381332.0,
-            "pct": 5.47,
+            "pct": 5.43,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 185.79,
             "volume": 191540726.0,
-            "pct": 12.72,
+            "pct": 12.63,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 186.56,
-            "volume": 63899734.0,
-            "pct": 4.24,
+            "volume": 53975713.0,
+            "pct": 3.56,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 187.34,
             "volume": 112923800.0,
-            "pct": 7.5,
+            "pct": 7.45,
             "is_poc": false,
             "in_value_area": true
           },
           {
             "price": 188.11,
             "volume": 82486276.0,
-            "pct": 5.48,
+            "pct": 5.44,
             "is_poc": false,
             "in_value_area": true
           },
@@ -216,14 +216,14 @@
           {
             "price": 189.66,
             "volume": 33338101.0,
-            "pct": 2.21,
+            "pct": 2.2,
             "is_poc": false,
             "in_value_area": false
           },
           {
             "price": 190.43,
             "volume": 39798327.0,
-            "pct": 2.64,
+            "pct": 2.62,
             "is_poc": false,
             "in_value_area": false
           }
@@ -231,487 +231,243 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 761300853.0,
-        "total_sell_volume": 744214078.0,
-        "delta": 17086774.0,
+        "total_buy_volume": 779318663.0,
+        "total_sell_volume": 736990850.0,
+        "delta": 42327814.0,
         "pressure": "BUY",
-        "strength_pct": 1.13,
-        "recent_delta_5bar": 26115949.0,
+        "strength_pct": 2.79,
+        "recent_delta_5bar": 49234851.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": false,
-      "vwap_distance_pct": -3.02,
+      "vwap_distance_pct": -1.08,
       "in_value_area": "True",
-      "timestamp": "2026-11-03 16:21:40 IST"
+      "timestamp": "2026-11-04 16:24:52 IST"
     },
     "SBIN.NS": {
       "symbol": "SBIN.NS",
-      "current_price": 970.25,
+      "current_price": 979.0,
       "vwap": {
-        "vwap": 1002.4,
-        "upper_1sd": 1049.98,
-        "lower_1sd": 954.81,
-        "upper_2sd": 1097.56,
-        "lower_2sd": 907.23,
-        "std": 47.58
+        "vwap": 996.53,
+        "upper_1sd": 1038.97,
+        "lower_1sd": 954.09,
+        "upper_2sd": 1081.41,
+        "lower_2sd": 911.65,
+        "std": 42.44
       },
       "volume_profile": {
-        "poc": 958.34,
-        "value_area_high": 1094.58,
-        "value_area_low": 942.62,
-        "total_volume": 560195037.0,
+        "poc": 956.68,
+        "value_area_high": 1075.85,
+        "value_area_low": 951.92,
+        "total_volume": 545668742.0,
         "histogram": [
           {
-            "price": 942.62,
-            "volume": 27834619.0,
-            "pct": 4.97,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 947.86,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 953.1,
-            "volume": 31295826.0,
-            "pct": 5.59,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 958.34,
-            "volume": 73586923.0,
-            "pct": 13.14,
-            "is_poc": true,
-            "in_value_area": true
-          },
-          {
-            "price": 963.58,
-            "volume": 62234028.0,
-            "pct": 11.11,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 968.82,
-            "volume": 51591561.0,
-            "pct": 9.21,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 974.06,
-            "volume": 15083265.0,
-            "pct": 2.69,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 979.3,
-            "volume": 17483769.0,
-            "pct": 3.12,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 984.54,
-            "volume": 24680191.0,
-            "pct": 4.41,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 989.78,
-            "volume": 13132204.0,
-            "pct": 2.34,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 995.02,
-            "volume": 17060619.0,
-            "pct": 3.05,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1000.26,
-            "volume": 7091386.0,
-            "pct": 1.27,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1005.5,
-            "volume": 22808800.0,
-            "pct": 4.07,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1010.74,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1015.98,
-            "volume": 20568244.0,
-            "pct": 3.67,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1021.22,
-            "volume": 7371804.0,
-            "pct": 1.32,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1026.46,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1031.7,
-            "volume": 7605132.0,
-            "pct": 1.36,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1036.94,
-            "volume": 13656909.0,
-            "pct": 2.44,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1042.18,
-            "volume": 20831944.0,
-            "pct": 3.72,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1047.42,
-            "volume": 25158719.0,
-            "pct": 4.49,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1052.66,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1057.9,
-            "volume": 12178205.0,
-            "pct": 2.17,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1063.14,
-            "volume": 15730414.0,
-            "pct": 2.81,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1068.38,
-            "volume": 16623448.0,
-            "pct": 2.97,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1073.62,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1078.86,
-            "volume": 27176405.0,
-            "pct": 4.85,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1084.1,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1089.34,
-            "volume": 0.0,
-            "pct": 0.0,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1094.58,
-            "volume": 29410622.0,
-            "pct": 5.25,
-            "is_poc": false,
-            "in_value_area": true
-          }
-        ],
-        "bins": 30
-      },
-      "volume_delta": {
-        "total_buy_volume": 263654839.0,
-        "total_sell_volume": 296540198.0,
-        "delta": -32885360.0,
-        "pressure": "SELL",
-        "strength_pct": 5.87,
-        "recent_delta_5bar": 2705742.0,
-        "recent_pressure": "BUY"
-      },
-      "above_vwap": false,
-      "vwap_distance_pct": -3.21,
-      "in_value_area": "True",
-      "timestamp": "2026-11-03 16:21:40 IST"
-    },
-    "RELIANCE.NS": {
-      "symbol": "RELIANCE.NS",
-      "current_price": 1307.9000244140625,
-      "vwap": {
-        "vwap": 1244.3,
-        "upper_1sd": 1297.53,
-        "lower_1sd": 1191.07,
-        "upper_2sd": 1350.77,
-        "lower_2sd": 1137.84,
-        "std": 53.23
-      },
-      "volume_profile": {
-        "poc": 1296.49,
-        "value_area_high": 1314.17,
-        "value_area_low": 1160.95,
-        "total_volume": 859531310.0,
-        "histogram": [
-          {
-            "price": 1160.95,
-            "volume": 33204930.0,
-            "pct": 3.86,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1166.84,
-            "volume": 63452977.0,
-            "pct": 7.38,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1172.73,
-            "volume": 23024903.0,
-            "pct": 2.68,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1178.63,
-            "volume": 38156909.0,
-            "pct": 4.44,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1184.52,
-            "volume": 45588738.0,
-            "pct": 5.3,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1190.41,
-            "volume": 14905641.0,
-            "pct": 1.73,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1196.31,
-            "volume": 26670136.0,
+            "price": 942.38,
+            "volume": 16906848.0,
             "pct": 3.1,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1202.2,
-            "volume": 23063069.0,
-            "pct": 2.68,
+            "price": 947.15,
+            "volume": 10927771.0,
+            "pct": 2.0,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1208.09,
-            "volume": 46713837.0,
-            "pct": 5.43,
+            "price": 951.92,
+            "volume": 19913461.0,
+            "pct": 3.65,
             "is_poc": false,
             "in_value_area": true
           },
           {
-            "price": 1213.99,
-            "volume": 41459346.0,
-            "pct": 4.82,
+            "price": 956.68,
+            "volume": 69681510.0,
+            "pct": 12.77,
+            "is_poc": true,
+            "in_value_area": true
+          },
+          {
+            "price": 961.45,
+            "volume": 50740308.0,
+            "pct": 9.3,
             "is_poc": false,
             "in_value_area": true
           },
           {
-            "price": 1219.88,
-            "volume": 13923795.0,
-            "pct": 1.62,
+            "price": 966.22,
+            "volume": 36785613.0,
+            "pct": 6.74,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 970.98,
+            "volume": 56676374.0,
+            "pct": 10.39,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 975.75,
+            "volume": 28603336.0,
+            "pct": 5.24,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 980.52,
+            "volume": 3759097.0,
+            "pct": 0.69,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1225.77,
-            "volume": 28261450.0,
-            "pct": 3.29,
+            "price": 985.28,
+            "volume": 24680191.0,
+            "pct": 4.52,
             "is_poc": false,
             "in_value_area": true
           },
           {
-            "price": 1231.67,
-            "volume": 13754376.0,
-            "pct": 1.6,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1237.56,
-            "volume": 20708373.0,
+            "price": 990.05,
+            "volume": 13132204.0,
             "pct": 2.41,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1243.45,
-            "volume": 26112161.0,
-            "pct": 3.04,
+            "price": 994.82,
+            "volume": 17060619.0,
+            "pct": 3.13,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1249.35,
+            "price": 999.58,
+            "volume": 7091386.0,
+            "pct": 1.3,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1004.35,
+            "volume": 17304769.0,
+            "pct": 3.17,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1009.12,
+            "volume": 5504031.0,
+            "pct": 1.01,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1013.88,
+            "volume": 6724566.0,
+            "pct": 1.23,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1018.65,
+            "volume": 21215482.0,
+            "pct": 3.89,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1023.42,
             "volume": 0.0,
             "pct": 0.0,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1255.24,
-            "volume": 8777736.0,
-            "pct": 1.02,
-            "is_poc": false,
-            "in_value_area": false
-          },
-          {
-            "price": 1261.13,
+            "price": 1028.18,
             "volume": 0.0,
             "pct": 0.0,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1267.03,
+            "price": 1032.95,
+            "volume": 7605132.0,
+            "pct": 1.39,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1037.72,
+            "volume": 13656909.0,
+            "pct": 2.5,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1042.48,
+            "volume": 20831944.0,
+            "pct": 3.82,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1047.25,
+            "volume": 25158719.0,
+            "pct": 4.61,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1052.02,
             "volume": 0.0,
             "pct": 0.0,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1272.92,
-            "volume": 56320035.0,
-            "pct": 6.55,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1278.81,
-            "volume": 11271497.0,
-            "pct": 1.31,
+            "price": 1056.78,
+            "volume": 12178205.0,
+            "pct": 2.23,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1284.71,
-            "volume": 6830228.0,
-            "pct": 0.79,
+            "price": 1061.55,
+            "volume": 15730414.0,
+            "pct": 2.88,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1290.6,
-            "volume": 15544002.0,
-            "pct": 1.81,
+            "price": 1066.32,
+            "volume": 16623448.0,
+            "pct": 3.05,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1296.49,
-            "volume": 97842575.0,
-            "pct": 11.38,
-            "is_poc": true,
-            "in_value_area": true
-          },
-          {
-            "price": 1302.39,
-            "volume": 82920792.0,
-            "pct": 9.65,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1308.28,
-            "volume": 45352171.0,
-            "pct": 5.28,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1314.17,
-            "volume": 39724757.0,
-            "pct": 4.62,
-            "is_poc": false,
-            "in_value_area": true
-          },
-          {
-            "price": 1320.07,
-            "volume": 18160226.0,
-            "pct": 2.11,
+            "price": 1071.08,
+            "volume": 0.0,
+            "pct": 0.0,
             "is_poc": false,
             "in_value_area": false
           },
           {
-            "price": 1325.96,
-            "volume": 7901012.0,
-            "pct": 0.92,
+            "price": 1075.85,
+            "volume": 17673922.0,
+            "pct": 3.24,
             "is_poc": false,
-            "in_value_area": false
+            "in_value_area": true
           },
           {
-            "price": 1331.85,
-            "volume": 9885638.0,
-            "pct": 1.15,
+            "price": 1080.62,
+            "volume": 9502483.0,
+            "pct": 1.74,
             "is_poc": false,
             "in_value_area": false
           }
@@ -719,22 +475,266 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 446585150.0,
-        "total_sell_volume": 412946160.0,
-        "delta": 33638989.0,
+        "total_buy_volume": 258762450.0,
+        "total_sell_volume": 286906292.0,
+        "delta": -28143842.0,
+        "pressure": "SELL",
+        "strength_pct": 5.16,
+        "recent_delta_5bar": -3165492.0,
+        "recent_pressure": "SELL"
+      },
+      "above_vwap": false,
+      "vwap_distance_pct": -1.76,
+      "in_value_area": "True",
+      "timestamp": "2026-11-04 16:24:52 IST"
+    },
+    "RELIANCE.NS": {
+      "symbol": "RELIANCE.NS",
+      "current_price": 1311.0,
+      "vwap": {
+        "vwap": 1244.77,
+        "upper_1sd": 1297.8,
+        "lower_1sd": 1191.74,
+        "upper_2sd": 1350.84,
+        "lower_2sd": 1138.71,
+        "std": 53.03
+      },
+      "volume_profile": {
+        "poc": 1303.35,
+        "value_area_high": 1309.05,
+        "value_area_low": 1160.85,
+        "total_volume": 869091386.0,
+        "histogram": [
+          {
+            "price": 1160.85,
+            "volume": 33204930.0,
+            "pct": 3.82,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1166.55,
+            "volume": 63452977.0,
+            "pct": 7.3,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1172.25,
+            "volume": 23024903.0,
+            "pct": 2.65,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1177.95,
+            "volume": 13965493.0,
+            "pct": 1.61,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1183.65,
+            "volume": 69780154.0,
+            "pct": 8.03,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1189.35,
+            "volume": 14905641.0,
+            "pct": 1.72,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1195.05,
+            "volume": 26670136.0,
+            "pct": 3.07,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1200.75,
+            "volume": 23063069.0,
+            "pct": 2.65,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1206.45,
+            "volume": 29488554.0,
+            "pct": 3.39,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1212.15,
+            "volume": 40681502.0,
+            "pct": 4.68,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1217.85,
+            "volume": 31926922.0,
+            "pct": 3.67,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1223.55,
+            "volume": 28261450.0,
+            "pct": 3.25,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1229.25,
+            "volume": 0.0,
+            "pct": 0.0,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1234.95,
+            "volume": 34462749.0,
+            "pct": 3.97,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1240.65,
+            "volume": 7752895.0,
+            "pct": 0.89,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1246.35,
+            "volume": 18359266.0,
+            "pct": 2.11,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1252.05,
+            "volume": 8777736.0,
+            "pct": 1.01,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1257.75,
+            "volume": 0.0,
+            "pct": 0.0,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1263.45,
+            "volume": 0.0,
+            "pct": 0.0,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1269.15,
+            "volume": 9296079.0,
+            "pct": 1.07,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1274.85,
+            "volume": 47023956.0,
+            "pct": 5.41,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1280.55,
+            "volume": 18101725.0,
+            "pct": 2.08,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1286.25,
+            "volume": 0.0,
+            "pct": 0.0,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1291.95,
+            "volume": 15544002.0,
+            "pct": 1.79,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1297.65,
+            "volume": 97842575.0,
+            "pct": 11.26,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1303.35,
+            "volume": 109855871.0,
+            "pct": 12.64,
+            "is_poc": true,
+            "in_value_area": true
+          },
+          {
+            "price": 1309.05,
+            "volume": 54375462.0,
+            "pct": 6.26,
+            "is_poc": false,
+            "in_value_area": true
+          },
+          {
+            "price": 1314.75,
+            "volume": 23212101.0,
+            "pct": 2.67,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1320.45,
+            "volume": 18160226.0,
+            "pct": 2.09,
+            "is_poc": false,
+            "in_value_area": false
+          },
+          {
+            "price": 1326.15,
+            "volume": 7901012.0,
+            "pct": 0.91,
+            "is_poc": false,
+            "in_value_area": false
+          }
+        ],
+        "bins": 30
+      },
+      "volume_delta": {
+        "total_buy_volume": 450503524.0,
+        "total_sell_volume": 418587862.0,
+        "delta": 31915661.0,
         "pressure": "BUY",
-        "strength_pct": 3.91,
-        "recent_delta_5bar": 109544638.0,
+        "strength_pct": 3.67,
+        "recent_delta_5bar": 135980606.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
-      "vwap_distance_pct": 5.11,
-      "in_value_area": "True",
-      "timestamp": "2026-11-03 16:21:40 IST"
+      "vwap_distance_pct": 5.32,
+      "in_value_area": "False",
+      "timestamp": "2026-11-04 16:24:52 IST"
     }
   },
   "market_pressure": "BUY",
   "buy_pressure_count": 2,
   "sell_pressure_count": 1,
-  "timestamp": "2026-11-03 16:21:40 IST"
+  "timestamp": "2026-11-04 16:24:52 IST"
 }
