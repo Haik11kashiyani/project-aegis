@@ -9,22 +9,27 @@
       "avg_score": -0.0667,
       "details": [
         {
-          "text": "Muhurat Trading Picks: Tata Steel, Coal India to BEL - HDFC Sec recommends these 10 stocks to buy on Diwali | Full list - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Tata Steel shares rise 5%, attempt recovery from 52-week low; price targets and more - Business Today",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Market wrap: RIL, Tata Steel, Infosys, ICICI Bank top gainers and losers on Nifty and Sensex on Monday - The Economic Times",
-          "label": "negative",
-          "score": 1.0
+          "text": "Muhurat Trading Picks: Tata Steel, Coal India to BEL - HDFC Sec recommends these 10 stocks to buy on Diwali | Full list - Livemint",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks in news: Tata Steel, KPI Green Energy, NLC India, Poonawalla Fincorp and Cummins India - The Economic Times",
+          "label": "neutral",
+          "score": 0.5
         },
         {
           "text": "Stocks to Watch Today: SBI, TCS, Tata Steel, Iware Supplychain, NLC India, Graphite India, TVS Motor,... - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to watch, May 18: Tata Steel Vi, Coal India, HFCL, Bajaj Electricals, SAIL, IOC - Upstox",
           "label": "neutral",
           "score": 0.5
         },
@@ -39,17 +44,12 @@
           "score": 1.0
         },
         {
-          "text": "Stocks in news: Tata Steel, KPI Green Energy, NLC India, Poonawalla Fincorp and Cummins India - The Economic Times",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Metal stocks to buy ahead of Q2 results: Nuvama picks Coal India, Tata Steel; Jindal Steel an underperformer |Here\u2019s why - Livemint",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Buzzing Stocks: Tata Steel slips after Q1 business update; NLC India gains on NALCO JV - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Vinay Rajani of HDFC Sec suggests Tata Steel, Linde India shares to buy - Livemint",
           "label": "neutral",
           "score": 0.5
         },
@@ -69,8 +69,8 @@
           "score": 0.5
         },
         {
-          "text": "John Cockerill India shares rally over 4% after Tata Steel contract win - Upstox",
-          "label": "positive",
+          "text": "Stocks to Watch Today: Emcure, Aurobindo Pharma, HFCL, RBL Bank, Coal India, Tata Steel, ITC Hotels, Power... - Moneycontrol.com",
+          "label": "negative",
           "score": 1.0
         },
         {
@@ -79,9 +79,9 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel Share Price Today 4 Nov 2026: Live NSE/BSE Rates, Technical Analysis and Expert Forecasts - Livemint",
-          "label": "neutral",
-          "score": 0.5
+          "text": "John Cockerill India shares rally over 4% after Tata Steel contract win - Upstox",
+          "label": "positive",
+          "score": 1.0
         }
       ],
       "method": "keyword",
@@ -91,11 +91,16 @@
     "SBIN.NS": {
       "overall": "negative",
       "positive": 1,
-      "negative": 5,
-      "neutral": 9,
+      "negative": 6,
+      "neutral": 8,
       "total": 15,
-      "avg_score": -0.2667,
+      "avg_score": -0.3333,
       "details": [
+        {
+          "text": "State Bank of India (SBIN.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "label": "negative",
+          "score": 1.0
+        },
         {
           "text": "SBI Share Price - Live NSE: SBIN Stock Price & Chart - Upstox",
           "label": "neutral",
@@ -103,16 +108,6 @@
         },
         {
           "text": "SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off... - Moneycontrol.com",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "SBI shares: Strong NII, improving margins drive analysts' optimism after Q2 - Business Standard",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "SBI shares: HSBC, UBS, Jefferies, Macquarie, Citi target prices post Q2 results - Business Today",
           "label": "neutral",
           "score": 0.5
         },
@@ -132,6 +127,21 @@
           "score": 1.0
         },
         {
+          "text": "SBI shares: HSBC, UBS, Jefferies, Macquarie, Citi target prices post Q2 results - Business Today",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Where Could SBI Share Price Potentially be in the Next 5 Years? - Equitymaster",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBI Q2 results: Net profit likely to grow in double digits on higher NII and strong loan growth; NIM, NPAs in focus - Upstox",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
           "text": "State Bank of India (NSEI:SBIN) Stock Forecast & Analyst Predictions - Simply Wall St",
           "label": "negative",
           "score": 1.0
@@ -142,19 +152,9 @@
           "score": 0.5
         },
         {
-          "text": "Stocks to watch: ITC, Lupin, NBCC, SBI, Dr Reddy's, Bosch, Ola Electric - Business Standard",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
-        },
-        {
-          "text": "SBI Q2 results: Net profit likely to grow in double digits on higher NII and strong loan growth; NIM, NPAs in focus - Upstox",
-          "label": "positive",
-          "score": 1.0
         },
         {
           "text": "State Bank of India (NSEI:SBIN) Stock Price - Simply Wall St",
@@ -167,7 +167,7 @@
           "score": 1.0
         },
         {
-          "text": "State Bank of India (SBIN.NS) stock price, news, quote and history - Yahoo Finance Singapore",
+          "text": "State Bank Of India Share Price Today | SBI Live NSE/BSE - Value Research",
           "label": "negative",
           "score": 1.0
         }
@@ -177,25 +177,30 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "negative",
+      "overall": "neutral",
       "positive": 1,
-      "negative": 2,
-      "neutral": 12,
+      "negative": 1,
+      "neutral": 13,
       "total": 15,
-      "avg_score": -0.0667,
+      "avg_score": 0.0,
       "details": [
+        {
+          "text": "Reliance Industries Limited (RELIANCE.NS) stock price, news, quote and history - Yahoo Finance UK",
+          "label": "neutral",
+          "score": 0.5
+        },
         {
           "text": "Reliance earnings, lower oil prices power India's Sensex to near two-month high - Reuters",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance\u2019s $19 Billion Rally Keeps India Stock Bulls in the Game - Bloomberg.com",
+          "text": "Reliance\u2019s $19 Billion Rally Keeps India Stock Bulls in the Game - Bloomberg",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance shares surge almost 12%, see best single-day gain in over 6 years: What's driving the rally - The Times of India",
+          "text": "US Midterm Election results impact on oil and IT shares: Reliance, Indian Oil, TCS, Infosys - 10 stocks from experts - Livemint",
           "label": "neutral",
           "score": 0.5
         },
@@ -205,12 +210,17 @@
           "score": 0.5
         },
         {
-          "text": "India's Reliance posts best day in over six years as oil business, Jio Platforms lift outlook - Reuters",
+          "text": "Powered by Reliance Industries' surge, sensex rallies 1.2k points - The Times of India",
           "label": "neutral",
           "score": 0.5
         },
         {
           "text": "RIL shares skyrocket 11.6% to \u20b91,300: Q2 earnings fire up the market heavyweight; m-cap tops \u20b917.59 lakh crore - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "India's Reliance posts best day in over six years as oil business, Jio Platforms lift outlook - Reuters",
           "label": "neutral",
           "score": 0.5
         },
@@ -225,17 +235,7 @@
           "score": 0.5
         },
         {
-          "text": "Reliance Industries shares flying! Massive Monday jump for RIL stock - 6% surge strong Q2 results | Book profit or wait? - Livemint",
-          "label": "positive",
-          "score": 1.0
-        },
-        {
           "text": "Stock Markets Today: Sensex. Nifty Surge on Reliance Boost - Rediff",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance Industries Shares Fall 2% After Jio Platforms Listing; Q2 Results on October 30 - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
@@ -245,17 +245,17 @@
           "score": 0.5
         },
         {
-          "text": "Billionaire Ambani cries tears of joy as Jio Platforms becomes the second most valued Indian firm - CNBC",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "Powered by Reliance Industries' surge, sensex rallies 1.2k points - The Times of India",
+          "text": "Indian markets surge over 1.6% as Reliance rally lifts sentiment amid mixed Asian trends - The New Indian Express",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Indian markets surge over 1.6% as Reliance rally lifts sentiment amid mixed Asian trends - The New Indian Express",
+          "text": "Reliance Industries shares flying! Massive Monday jump for RIL stock - 6% surge strong Q2 results | Book profit or wait? - Livemint",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Stock market today: Will Sensex, Nifty open higher or lower? RIL stock in focus - India Today",
           "label": "neutral",
           "score": 0.5
         }
@@ -273,5 +273,5 @@
   "neutral": 33,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-11-04 16:24:52 IST"
+  "timestamp": "2026-11-05 16:21:50 IST"
 }
