@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06 18:01",
+  "generated_at": "2026-11-07 11:23",
   "model_health": "HEALTHY",
   "trading_allowed": true,
   "unhealthy_reasons": [],
@@ -14,7 +14,7 @@
     "best_stocks": [],
     "worst_stocks": [],
     "optimal_confidence": 0.65,
-    "analysis_date": "2026-11-06 17:57"
+    "analysis_date": "2026-11-07 11:18"
   },
   "risk_params": {
     "recommended_atr_stop": 1.5,
@@ -35,21 +35,21 @@
       "lstm_accuracy": 0.5143
     },
     "SBIN.NS": {
-      "rf_weight": 0.2392,
-      "xgb_weight": 0.2412,
-      "lstm_weight": 0.2655,
-      "intraday_weight": 0.2541,
+      "rf_weight": 0.2448,
+      "xgb_weight": 0.2468,
+      "lstm_weight": 0.2483,
+      "intraday_weight": 0.26,
       "rf_accuracy": 0.4708,
       "xgb_accuracy": 0.4747,
-      "lstm_accuracy": 0.5224
+      "lstm_accuracy": 0.4776
     },
     "RELIANCE.NS": {
-      "rf_weight": 0.2567,
-      "xgb_weight": 0.2473,
-      "lstm_weight": 0.2534,
-      "intraday_weight": 0.2426,
+      "rf_weight": 0.2572,
+      "xgb_weight": 0.2459,
+      "lstm_weight": 0.2539,
+      "intraday_weight": 0.243,
       "rf_accuracy": 0.5292,
-      "xgb_accuracy": 0.5097,
+      "xgb_accuracy": 0.5058,
       "lstm_accuracy": 0.5224
     },
     "HDFCBANK.NS": {
@@ -80,12 +80,12 @@
       "lstm_accuracy": 0.5061
     },
     "POWERGRID.NS": {
-      "rf_weight": 0.2522,
-      "xgb_weight": 0.2746,
+      "rf_weight": 0.254,
+      "xgb_weight": 0.2727,
       "lstm_weight": 0.2332,
       "intraday_weight": 0.24,
-      "rf_accuracy": 0.5253,
-      "xgb_accuracy": 0.572,
+      "rf_accuracy": 0.5292,
+      "xgb_accuracy": 0.5681,
       "lstm_accuracy": 0.4857
     },
     "COALINDIA.NS": {
@@ -117,13 +117,13 @@
     }
   },
   "market_regimes": {
-    "NIFTY50": "RANGING",
+    "NIFTY50": "TRENDING_DOWN",
     "TATASTEEL.NS": "TRENDING_DOWN",
-    "SBIN.NS": "TRENDING_UP",
-    "RELIANCE.NS": "RANGING",
-    "HDFCBANK.NS": "RANGING",
+    "SBIN.NS": "RANGING",
+    "RELIANCE.NS": "HIGH_VOLATILE",
+    "HDFCBANK.NS": "TRENDING_UP",
     "ICICIBANK.NS": "RANGING",
-    "NTPC.NS": "RANGING",
+    "NTPC.NS": "TRENDING_UP",
     "POWERGRID.NS": "RANGING",
     "COALINDIA.NS": "RANGING",
     "INFY.NS": "RANGING",
@@ -201,13 +201,13 @@
     },
     {
       "symbol": "POWERGRID.NS",
-      "rf_brier_score": 0.2702,
+      "rf_brier_score": 0.2701,
       "xgb_brier_score": 0.3217,
-      "rf_calibration_error": 0.1086,
+      "rf_calibration_error": 0.1084,
       "xgb_calibration_error": 0.3334,
       "rf_reliable": true,
       "xgb_reliable": false,
-      "rf_ece": 0.1086,
+      "rf_ece": 0.1084,
       "xgb_ece": 0.3334
     },
     {
@@ -224,14 +224,14 @@
     {
       "symbol": "INFY.NS",
       "rf_brier_score": 0.2654,
-      "xgb_brier_score": 0.2924,
+      "xgb_brier_score": 0.2946,
       "rf_calibration_error": 0.2134,
-      "xgb_calibration_error": 0.2382,
+      "xgb_calibration_error": 0.2434,
       "rf_reliable": true,
       "xgb_reliable": true,
       "xgb_weight_penalty": 0.5,
       "rf_ece": 0.2134,
-      "xgb_ece": 0.2382
+      "xgb_ece": 0.2434
     },
     {
       "symbol": "TCS.NS",
@@ -288,12 +288,12 @@
       },
       "rf_precision": 0.5244,
       "xgb_params": {
-        "n_estimators": 300,
-        "max_depth": 7,
-        "learning_rate": 0.02,
-        "subsample": 0.75
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.05,
+        "subsample": 0.8
       },
-      "xgb_precision": 0.5628
+      "xgb_precision": 0.5581
     },
     {
       "symbol": "HDFCBANK.NS",
@@ -412,24 +412,24 @@
     "voter_stats": {},
     "recommended_weights": {},
     "total_decisions_analysed": 0,
-    "analysis_date": "2026-11-06 18:01"
+    "analysis_date": "2026-11-07 11:22"
   },
   "confidence_decay": {
     "decay_applied": false,
     "voter_states": {},
     "retrain_flags": [],
     "weight_changes": {},
-    "analysis_date": "2026-11-06 18:01"
+    "analysis_date": "2026-11-07 11:22"
   },
   "youtube_mood": {
-    "overall_mood": 0.14285714285714285,
+    "overall_mood": 0.125,
     "stock_mentions": {},
     "trending_topics": [
+      "Muhurat Trading | Samvat 2083 | CA Rachana Ranade",
       "Which Sectors Could Win in the Next 12 Months? | CA Rachana Ranade",
       "Why Is Nifty Rising? 3 Reasons Behind the Rally! \ud83d\udcc8 | CA Rachana Ranade | #shorts",
       "\ud83e\ude94\u2728 Celebrate This Diwali with BIGGER Savings! \u2728\ud83e\ude94 | CA Rachana Ranade | #shorts #diwali",
-      "Why are Indian Markets Rallying After US Elections? | CA Rachana Ranade",
-      "Great time for Indian Markets? (after Trump's loss) | Akshat Shrivastava"
+      "Why are Indian Markets Rallying After US Elections? | CA Rachana Ranade"
     ],
     "channel_consensus": "mixed",
     "contrarian_signal": false
@@ -475,24 +475,24 @@
     },
     "global_cues": {
       "metrics": {
-        "SP500": 0.4986574428540894,
-        "DowJones": -0.13752944202849712,
-        "NASDAQ": 1.0795724732675305,
-        "Nikkei": -1.7860668232844263,
-        "HangSeng": 3.668473290620623,
-        "BrentCrude": -0.8749624604141235,
-        "Gold": -1.1498735584812203,
-        "USDINR": -0.6564084581908302
+        "SP500": 0.3145326640212812,
+        "DowJones": -0.4606250705558639,
+        "NASDAQ": 1.087516707793543,
+        "Nikkei": -5.964725374397014,
+        "HangSeng": -1.2708042987214767,
+        "BrentCrude": 0.03052068269147401,
+        "Gold": -0.9383760217880152,
+        "USDINR": -0.5810958913624895
       },
-      "score": 0.5948367548432166
+      "score": -0.5177694613171763
     },
     "vix_analysis": {
-      "value": 17.46500015258789,
+      "value": 17.469999313354492,
       "classification": "Normal",
       "trend": "rising"
     },
-    "market_mood_score": 0.23793470193728666,
+    "market_mood_score": -0.2071077845268705,
     "earnings_calendar": [],
-    "timestamp": "2026-11-06T23:27:08.039189+05:30"
+    "timestamp": "2026-11-07T16:48:42.741535+05:30"
   }
 }

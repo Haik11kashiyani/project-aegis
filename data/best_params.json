@@ -40,12 +40,12 @@
     },
     "rf_precision": 0.5244,
     "xgb_params": {
-      "n_estimators": 300,
-      "max_depth": 7,
-      "learning_rate": 0.02,
-      "subsample": 0.75
+      "n_estimators": 200,
+      "max_depth": 6,
+      "learning_rate": 0.05,
+      "subsample": 0.8
     },
-    "xgb_precision": 0.5628
+    "xgb_precision": 0.5581
   },
   {
     "symbol": "HDFCBANK.NS",

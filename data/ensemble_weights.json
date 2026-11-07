@@ -9,21 +9,21 @@
     "lstm_accuracy": 0.5143
   },
   "SBIN.NS": {
-    "rf_weight": 0.2392,
-    "xgb_weight": 0.2412,
-    "lstm_weight": 0.2655,
-    "intraday_weight": 0.2541,
+    "rf_weight": 0.2448,
+    "xgb_weight": 0.2468,
+    "lstm_weight": 0.2483,
+    "intraday_weight": 0.26,
     "rf_accuracy": 0.4708,
     "xgb_accuracy": 0.4747,
-    "lstm_accuracy": 0.5224
+    "lstm_accuracy": 0.4776
   },
   "RELIANCE.NS": {
-    "rf_weight": 0.2567,
-    "xgb_weight": 0.2473,
-    "lstm_weight": 0.2534,
-    "intraday_weight": 0.2426,
+    "rf_weight": 0.2572,
+    "xgb_weight": 0.2459,
+    "lstm_weight": 0.2539,
+    "intraday_weight": 0.243,
     "rf_accuracy": 0.5292,
-    "xgb_accuracy": 0.5097,
+    "xgb_accuracy": 0.5058,
     "lstm_accuracy": 0.5224
   },
   "HDFCBANK.NS": {
@@ -54,12 +54,12 @@
     "lstm_accuracy": 0.5061
   },
   "POWERGRID.NS": {
-    "rf_weight": 0.2522,
-    "xgb_weight": 0.2746,
+    "rf_weight": 0.254,
+    "xgb_weight": 0.2727,
     "lstm_weight": 0.2332,
     "intraday_weight": 0.24,
-    "rf_accuracy": 0.5253,
-    "xgb_accuracy": 0.572,
+    "rf_accuracy": 0.5292,
+    "xgb_accuracy": 0.5681,
     "lstm_accuracy": 0.4857
   },
   "COALINDIA.NS": {
