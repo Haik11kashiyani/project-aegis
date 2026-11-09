@@ -1,6 +1,12 @@
 [
   {
-    "time": "2026-11-09 16:59:37",
+    "time": "2026-11-10 03:01:17",
+    "action": "WARNING",
+    "message": "Model health is DEGRADED \u2014 reducing position sizes",
+    "severity": "HIGH"
+  },
+  {
+    "time": "2026-11-10 03:01:17",
     "action": "STARTUP",
     "message": "Active. Weekly P&L: Rs.0.00, Monthly P&L: Rs.0.00",
     "severity": "INFO"
