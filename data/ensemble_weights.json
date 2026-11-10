@@ -18,12 +18,12 @@
     "lstm_accuracy": 0.4776
   },
   "RELIANCE.NS": {
-    "rf_weight": 0.2566,
-    "xgb_weight": 0.2548,
-    "lstm_weight": 0.2497,
-    "intraday_weight": 0.239,
+    "rf_weight": 0.262,
+    "xgb_weight": 0.2392,
+    "lstm_weight": 0.2549,
+    "intraday_weight": 0.2439,
     "rf_accuracy": 0.537,
-    "xgb_accuracy": 0.5331,
+    "xgb_accuracy": 0.4903,
     "lstm_accuracy": 0.5224
   },
   "HDFCBANK.NS": {
@@ -36,12 +36,12 @@
     "lstm_accuracy": 0.5796
   },
   "ICICIBANK.NS": {
-    "rf_weight": 0.2492,
-    "xgb_weight": 0.2678,
-    "lstm_weight": 0.2439,
-    "intraday_weight": 0.239,
+    "rf_weight": 0.2497,
+    "xgb_weight": 0.2665,
+    "lstm_weight": 0.2443,
+    "intraday_weight": 0.2395,
     "rf_accuracy": 0.5214,
-    "xgb_accuracy": 0.5603,
+    "xgb_accuracy": 0.5564,
     "lstm_accuracy": 0.5102
   },
   "NTPC.NS": {
