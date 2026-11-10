@@ -15,7 +15,7 @@
         "poc": 183.47,
         "value_area_high": 188.11,
         "value_area_low": 171.86,
-        "total_volume": 1538392418.0,
+        "total_volume": 1538416405.0,
         "histogram": [
           {
             "price": 167.99,
@@ -166,7 +166,7 @@
           },
           {
             "price": 184.24,
-            "volume": 87347442.0,
+            "volume": 87371429.0,
             "pct": 5.68,
             "is_poc": false,
             "in_value_area": true
@@ -174,7 +174,7 @@
           {
             "price": 185.02,
             "volume": 82381332.0,
-            "pct": 5.36,
+            "pct": 5.35,
             "is_poc": false,
             "in_value_area": true
           },
@@ -231,18 +231,18 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 790158019.0,
-        "total_sell_volume": 748234399.0,
-        "delta": 41923619.0,
+        "total_buy_volume": 790159285.0,
+        "total_sell_volume": 748257120.0,
+        "delta": 41902165.0,
         "pressure": "BUY",
-        "strength_pct": 2.73,
-        "recent_delta_5bar": 14390600.0,
+        "strength_pct": 2.72,
+        "recent_delta_5bar": 14369146.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
       "vwap_distance_pct": 1.71,
       "in_value_area": "True",
-      "timestamp": "2026-11-09 17:00:02 IST"
+      "timestamp": "2026-11-10 16:39:18 IST"
     },
     "SBIN.NS": {
       "symbol": "SBIN.NS",
@@ -252,14 +252,14 @@
         "upper_1sd": 1028.4,
         "lower_1sd": 956.76,
         "upper_2sd": 1064.23,
-        "lower_2sd": 920.93,
+        "lower_2sd": 920.94,
         "std": 35.82
       },
       "volume_profile": {
         "poc": 956.68,
         "value_area_high": 1047.25,
         "value_area_low": 956.68,
-        "total_volume": 567054710.0,
+        "total_volume": 567057918.0,
         "histogram": [
           {
             "price": 942.38,
@@ -403,7 +403,7 @@
           },
           {
             "price": 1037.72,
-            "volume": 37719598.0,
+            "volume": 37722806.0,
             "pct": 6.65,
             "is_poc": false,
             "in_value_area": true
@@ -475,18 +475,18 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 293058575.0,
-        "total_sell_volume": 273996135.0,
-        "delta": 19062440.0,
+        "total_buy_volume": 293060978.0,
+        "total_sell_volume": 273996940.0,
+        "delta": 19064038.0,
         "pressure": "BUY",
         "strength_pct": 3.36,
-        "recent_delta_5bar": 28681683.0,
+        "recent_delta_5bar": 28683281.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
       "vwap_distance_pct": 4.98,
       "in_value_area": "True",
-      "timestamp": "2026-11-09 17:00:02 IST"
+      "timestamp": "2026-11-10 16:39:18 IST"
     },
     "RELIANCE.NS": {
       "symbol": "RELIANCE.NS",
@@ -503,7 +503,7 @@
         "poc": 1304.99,
         "value_area_high": 1316.08,
         "value_area_low": 1160.77,
-        "total_volume": 905016199.0,
+        "total_volume": 905019587.0,
         "histogram": [
           {
             "price": 1160.77,
@@ -710,7 +710,7 @@
           },
           {
             "price": 1321.63,
-            "volume": 19730765.0,
+            "volume": 19734153.0,
             "pct": 2.18,
             "is_poc": false,
             "in_value_area": false
@@ -719,22 +719,22 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 478418452.0,
-        "total_sell_volume": 426597747.0,
-        "delta": 51820706.0,
+        "total_buy_volume": 478421045.0,
+        "total_sell_volume": 426598542.0,
+        "delta": 51822503.0,
         "pressure": "BUY",
         "strength_pct": 5.73,
-        "recent_delta_5bar": 79846151.0,
+        "recent_delta_5bar": 79847948.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
       "vwap_distance_pct": 6.18,
       "in_value_area": "False",
-      "timestamp": "2026-11-09 17:00:02 IST"
+      "timestamp": "2026-11-10 16:39:18 IST"
     }
   },
   "market_pressure": "BUY",
   "buy_pressure_count": 3,
   "sell_pressure_count": 0,
-  "timestamp": "2026-11-09 17:00:02 IST"
+  "timestamp": "2026-11-10 16:39:18 IST"
 }

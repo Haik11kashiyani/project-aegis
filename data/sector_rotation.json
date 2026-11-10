@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09 16:59:53",
+  "timestamp": "2026-11-10 16:39:10",
   "sectors": {
     "Banking": {
       "ticker": "^NSEBANK",
@@ -8,18 +8,18 @@
       "ret_10d": 10.68,
       "ret_20d": 8.78,
       "acceleration": 12.4,
-      "vol_trend": -1.1,
+      "vol_trend": 20.5,
       "momentum_score": 9.23,
       "state": "ROTATING_IN"
     },
     "IT": {
       "ticker": "^CNXIT",
-      "price": 32468.9,
+      "price": 32468.95,
       "ret_5d": -0.25,
       "ret_10d": 0.87,
       "ret_20d": 14.53,
       "acceleration": -12.68,
-      "vol_trend": -59.4,
+      "vol_trend": -50.0,
       "momentum_score": 1.8,
       "state": "STRONG"
     },
@@ -30,7 +30,7 @@
       "ret_10d": 7.27,
       "ret_20d": 5.97,
       "acceleration": 8.48,
-      "vol_trend": -0.5,
+      "vol_trend": 28.8,
       "momentum_score": 5.93,
       "state": "ROTATING_IN"
     },
@@ -41,7 +41,7 @@
       "ret_10d": 5.4,
       "ret_20d": 3.65,
       "acceleration": 7.06,
-      "vol_trend": -4.5,
+      "vol_trend": 14.1,
       "momentum_score": 4.02,
       "state": "ROTATING_IN"
     },
@@ -52,7 +52,7 @@
       "ret_10d": 8.44,
       "ret_20d": 11.33,
       "acceleration": 5.77,
-      "vol_trend": 20.0,
+      "vol_trend": 42.2,
       "momentum_score": 6.4,
       "state": "ROTATING_IN"
     },
@@ -63,7 +63,7 @@
       "ret_10d": 10.01,
       "ret_20d": 10.8,
       "acceleration": 9.29,
-      "vol_trend": 55.1,
+      "vol_trend": 104.5,
       "momentum_score": 8.56,
       "state": "ROTATING_IN"
     },
@@ -74,7 +74,7 @@
       "ret_10d": 8.22,
       "ret_20d": 5.77,
       "acceleration": 10.47,
-      "vol_trend": 40.1,
+      "vol_trend": 62.3,
       "momentum_score": 5.62,
       "state": "ROTATING_IN"
     },
@@ -85,7 +85,7 @@
       "ret_10d": 10.2,
       "ret_20d": 11.33,
       "acceleration": 9.18,
-      "vol_trend": 107.2,
+      "vol_trend": 138.3,
       "momentum_score": 8.88,
       "state": "ROTATING_IN"
     },
@@ -96,7 +96,7 @@
       "ret_10d": 11.51,
       "ret_20d": 10.82,
       "acceleration": 12.13,
-      "vol_trend": 24.3,
+      "vol_trend": 43.3,
       "momentum_score": 9.51,
       "state": "ROTATING_IN"
     },
@@ -107,7 +107,7 @@
       "ret_10d": 5.84,
       "ret_20d": 5.26,
       "acceleration": 6.39,
-      "vol_trend": 16.7,
+      "vol_trend": 44.4,
       "momentum_score": 4.64,
       "state": "ROTATING_IN"
     },
@@ -118,7 +118,7 @@
       "ret_10d": 10.09,
       "ret_20d": 11.99,
       "acceleration": 8.36,
-      "vol_trend": 9.7,
+      "vol_trend": 34.1,
       "momentum_score": 8.33,
       "state": "ROTATING_IN"
     }
