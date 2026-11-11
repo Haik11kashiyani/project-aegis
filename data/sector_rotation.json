@@ -1,125 +1,125 @@
 {
-  "timestamp": "2026-11-10 16:39:10",
+  "timestamp": "2026-11-11 16:24:55",
   "sectors": {
     "Banking": {
       "ticker": "^NSEBANK",
-      "price": 59741.25,
-      "ret_5d": 7.56,
-      "ret_10d": 10.68,
-      "ret_20d": 8.78,
-      "acceleration": 12.4,
-      "vol_trend": 20.5,
-      "momentum_score": 9.23,
+      "price": 60792.4,
+      "ret_5d": 8.73,
+      "ret_10d": 12.02,
+      "ret_20d": 9.57,
+      "acceleration": 14.21,
+      "vol_trend": -3.6,
+      "momentum_score": 10.43,
       "state": "ROTATING_IN"
     },
     "IT": {
       "ticker": "^CNXIT",
-      "price": 32468.95,
-      "ret_5d": -0.25,
-      "ret_10d": 0.87,
-      "ret_20d": 14.53,
-      "acceleration": -12.68,
-      "vol_trend": -50.0,
-      "momentum_score": 1.8,
+      "price": 32295.6,
+      "ret_5d": 0.73,
+      "ret_10d": 2.35,
+      "ret_20d": 8.27,
+      "acceleration": -3.42,
+      "vol_trend": -59.8,
+      "momentum_score": 2.31,
       "state": "STRONG"
     },
     "Metal": {
       "ticker": "^CNXMETAL",
-      "price": 12664.65,
-      "ret_5d": 4.27,
-      "ret_10d": 7.27,
-      "ret_20d": 5.97,
-      "acceleration": 8.48,
-      "vol_trend": 28.8,
-      "momentum_score": 5.93,
+      "price": 12786.15,
+      "ret_5d": 2.4,
+      "ret_10d": 8.64,
+      "ret_20d": 5.77,
+      "acceleration": 11.28,
+      "vol_trend": 7.0,
+      "momentum_score": 5.84,
       "state": "ROTATING_IN"
     },
     "Energy": {
       "ticker": "^CNXENERGY",
-      "price": 37164.95,
-      "ret_5d": 2.41,
-      "ret_10d": 5.4,
-      "ret_20d": 3.65,
-      "acceleration": 7.06,
-      "vol_trend": 14.1,
-      "momentum_score": 4.02,
+      "price": 37548.05,
+      "ret_5d": 1.27,
+      "ret_10d": 7.44,
+      "ret_20d": 4.37,
+      "acceleration": 10.31,
+      "vol_trend": -10.3,
+      "momentum_score": 4.64,
       "state": "ROTATING_IN"
     },
     "Infra": {
       "ticker": "^CNXINFRA",
-      "price": 9462.9,
-      "ret_5d": 2.57,
-      "ret_10d": 8.44,
+      "price": 9550.5,
+      "ret_5d": 2.5,
+      "ret_10d": 9.9,
       "ret_20d": 11.33,
-      "acceleration": 5.77,
-      "vol_trend": 42.2,
-      "momentum_score": 6.4,
+      "acceleration": 8.6,
+      "vol_trend": 14.8,
+      "momentum_score": 7.1,
       "state": "ROTATING_IN"
     },
     "Pharma": {
       "ticker": "^CNXPHARMA",
-      "price": 28896.1,
-      "ret_5d": 6.16,
-      "ret_10d": 10.01,
-      "ret_20d": 10.8,
-      "acceleration": 9.29,
-      "vol_trend": 104.5,
-      "momentum_score": 8.56,
+      "price": 28776.45,
+      "ret_5d": 5.28,
+      "ret_10d": 8.42,
+      "ret_20d": 10.36,
+      "acceleration": 6.63,
+      "vol_trend": 60.4,
+      "momentum_score": 7.37,
       "state": "ROTATING_IN"
     },
     "FMCG": {
       "ticker": "^CNXFMCG",
-      "price": 46660.65,
-      "ret_5d": 2.37,
-      "ret_10d": 8.22,
-      "ret_20d": 5.77,
-      "acceleration": 10.47,
-      "vol_trend": 62.3,
-      "momentum_score": 5.62,
+      "price": 47188.55,
+      "ret_5d": 2.0,
+      "ret_10d": 10.05,
+      "ret_20d": 5.49,
+      "acceleration": 14.19,
+      "vol_trend": 13.5,
+      "momentum_score": 6.33,
       "state": "ROTATING_IN"
     },
     "Auto": {
       "ticker": "^CNXAUTO",
-      "price": 27925.9,
-      "ret_5d": 6.58,
-      "ret_10d": 10.2,
-      "ret_20d": 11.33,
-      "acceleration": 9.18,
-      "vol_trend": 138.3,
-      "momentum_score": 8.88,
+      "price": 28523.3,
+      "ret_5d": 7.62,
+      "ret_10d": 10.95,
+      "ret_20d": 12.33,
+      "acceleration": 9.71,
+      "vol_trend": 97.8,
+      "momentum_score": 9.77,
       "state": "ROTATING_IN"
     },
     "Realty": {
       "ticker": "^CNXREALTY",
-      "price": 897.7,
-      "ret_5d": 6.69,
-      "ret_10d": 11.51,
-      "ret_20d": 10.82,
-      "acceleration": 12.13,
-      "vol_trend": 43.3,
-      "momentum_score": 9.51,
+      "price": 893.95,
+      "ret_5d": 3.3,
+      "ret_10d": 12.04,
+      "ret_20d": 7.71,
+      "acceleration": 15.91,
+      "vol_trend": 16.3,
+      "momentum_score": 8.07,
       "state": "ROTATING_IN"
     },
     "PSE": {
       "ticker": "^CNXPSE",
-      "price": 9577.25,
-      "ret_5d": 2.98,
-      "ret_10d": 5.84,
-      "ret_20d": 5.26,
-      "acceleration": 6.39,
-      "vol_trend": 44.4,
-      "momentum_score": 4.64,
+      "price": 9657.3,
+      "ret_5d": 1.81,
+      "ret_10d": 7.38,
+      "ret_20d": 5.01,
+      "acceleration": 9.59,
+      "vol_trend": 18.0,
+      "momentum_score": 4.9,
       "state": "ROTATING_IN"
     },
     "Nifty50": {
       "ticker": "^NSEI",
-      "price": 25044.65,
-      "ret_5d": 5.18,
-      "ret_10d": 10.09,
-      "ret_20d": 11.99,
-      "acceleration": 8.36,
-      "vol_trend": 34.1,
-      "momentum_score": 8.33,
+      "price": 25255.05,
+      "ret_5d": 5.4,
+      "ret_10d": 11.26,
+      "ret_20d": 11.15,
+      "acceleration": 11.36,
+      "vol_trend": 5.1,
+      "momentum_score": 8.91,
       "state": "ROTATING_IN"
     }
   },
@@ -130,75 +130,75 @@
       "SBIN.NS"
     ],
     "neutral": [
-      "TATASTEEL.NS",
-      "POWERGRID.NS",
-      "COALINDIA.NS"
+      "POWERGRID.NS"
     ],
     "underweight": [
       "TCS.NS",
       "INFY.NS",
       "RELIANCE.NS",
-      "NTPC.NS"
+      "TATASTEEL.NS",
+      "NTPC.NS",
+      "COALINDIA.NS"
     ],
     "sector_ranking": [
       [
-        "Realty",
-        9.51
-      ],
-      [
         "Banking",
-        9.23
+        10.43
       ],
       [
         "Auto",
-        8.88
-      ],
-      [
-        "Pharma",
-        8.56
+        9.77
       ],
       [
         "Nifty50",
-        8.33
+        8.91
+      ],
+      [
+        "Realty",
+        8.07
+      ],
+      [
+        "Pharma",
+        7.37
       ],
       [
         "Infra",
-        6.4
-      ],
-      [
-        "Metal",
-        5.93
+        7.1
       ],
       [
         "FMCG",
-        5.62
+        6.33
+      ],
+      [
+        "Metal",
+        5.84
       ],
       [
         "PSE",
-        4.64
+        4.9
       ],
       [
         "Energy",
-        4.02
+        4.64
       ],
       [
         "IT",
-        1.8
+        2.31
       ]
     ],
     "stock_adjustments": {
       "HDFCBANK.NS": 0.15,
       "ICICIBANK.NS": 0.15,
       "SBIN.NS": 0.15,
-      "TCS.NS": 0.054,
-      "INFY.NS": 0.054,
-      "RELIANCE.NS": 0.121,
-      "TATASTEEL.NS": 0.0,
-      "NTPC.NS": 0.121,
+      "TCS.NS": 0.069,
+      "INFY.NS": 0.069,
+      "RELIANCE.NS": 0.139,
+      "TATASTEEL.NS": 0.175,
+      "NTPC.NS": 0.139,
       "POWERGRID.NS": 0.0,
-      "COALINDIA.NS": 0.0
+      "COALINDIA.NS": 0.175
     },
-    "avg_momentum": 6.63
+    "avg_momentum": 6.88
   },
   "stock_sector_map": {
     "HDFCBANK.NS": "Banking",
