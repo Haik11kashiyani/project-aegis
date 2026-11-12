@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.9305,
-    "var_rupees": 289.58,
-    "mean_daily_return": 0.0135,
-    "daily_volatility": 1.1816
+    "var_pct": 1.9299,
+    "var_rupees": 289.48,
+    "mean_daily_return": 0.0152,
+    "daily_volatility": 1.1822
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.9419,
-    "var_rupees": 291.29,
-    "cvar_pct": 2.4388,
-    "cvar_rupees": 365.82,
-    "sim_mean": 0.011,
-    "sim_std": 1.1857
+    "var_pct": 1.9413,
+    "var_rupees": 291.19,
+    "cvar_pct": 2.4384,
+    "cvar_rupees": 365.77,
+    "sim_mean": 0.0126,
+    "sim_std": 1.1863
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.7359,
-    "var_rupees": 410.38,
-    "mean_daily_return": 0.0135,
-    "daily_volatility": 1.1816
+    "var_pct": 2.7357,
+    "var_rupees": 410.35,
+    "mean_daily_return": 0.0152,
+    "daily_volatility": 1.1822
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.7282,
-    "var_rupees": 409.24,
-    "cvar_pct": 3.1731,
+    "var_pct": 2.728,
+    "var_rupees": 409.2,
+    "cvar_pct": 3.1732,
     "cvar_rupees": 475.97,
-    "sim_mean": 0.011,
-    "sim_std": 1.1857
+    "sim_mean": 0.0126,
+    "sim_std": 1.1863
   },
   "stress_tests": [
     {
@@ -118,11 +118,11 @@
   ],
   "drawdowns": {
     "max_drawdown_pct": -20.9684,
-    "max_drawdown_day": 241,
-    "current_drawdown_pct": -9.0408,
+    "max_drawdown_day": 240,
+    "current_drawdown_pct": -8.3744,
     "drawdown_periods": 6,
-    "longest_drawdown_days": 178,
-    "avg_drawdown_pct": -8.4645
+    "longest_drawdown_days": 179,
+    "avg_drawdown_pct": -8.4641
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-11-11 16:24:58 IST"
+  "timestamp": "2026-11-12 16:34:40 IST"
 }
