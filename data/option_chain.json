@@ -2,43 +2,43 @@
   "chains": {
     "TATASTEEL.NS": {
       "symbol": "TATASTEEL",
-      "spot": 188.0,
+      "spot": 186.67999267578125,
       "source": "BLACK_SCHOLES",
       "atm_put": {
         "source": "BLACK_SCHOLES",
         "strike": 200,
-        "premium": 12.71,
+        "premium": 13.7,
         "iv": 0.25,
-        "delta": -0.8095,
-        "gamma": 0.0223,
-        "theta": -0.0968,
-        "vega": 0.162,
+        "delta": -0.8358,
+        "gamma": 0.020754,
+        "theta": -0.0921,
+        "vega": 0.1486,
         "lot_size": 850,
-        "total_cost": 10803.5
+        "total_cost": 11645.0
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-11-12 16:34:43 IST"
+      "timestamp": "2026-11-13 16:28:37 IST"
     },
     "SBIN.NS": {
       "symbol": "SBIN",
-      "spot": 1086.5,
+      "spot": 1080.0,
       "source": "BLACK_SCHOLES",
       "atm_put": {
         "source": "BLACK_SCHOLES",
         "strike": 1050,
-        "premium": 15.66,
+        "premium": 18.31,
         "iv": 0.25,
-        "delta": -0.2414,
-        "gamma": 0.004312,
-        "theta": -0.4853,
-        "vega": 1.0459,
+        "delta": -0.2704,
+        "gamma": 0.00454,
+        "theta": -0.5087,
+        "vega": 1.0882,
         "lot_size": 750,
-        "total_cost": 11745.0
+        "total_cost": 13732.499999999998
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-11-12 16:34:44 IST"
+      "timestamp": "2026-11-13 16:28:38 IST"
     },
     "RELIANCE.NS": {
       "symbol": "RELIANCE",
@@ -58,11 +58,11 @@
       },
       "pcr": 1.0,
       "sentiment": "NEUTRAL",
-      "timestamp": "2026-11-12 16:34:44 IST"
+      "timestamp": "2026-11-13 16:28:38 IST"
     }
   },
   "nse_live": 0,
   "bs_fallback": 3,
   "total": 3,
-  "timestamp": "2026-11-12 16:34:44 IST"
+  "timestamp": "2026-11-13 16:28:38 IST"
 }
