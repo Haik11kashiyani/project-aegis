@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.934,
-    "var_rupees": 290.1,
-    "mean_daily_return": 0.0143,
-    "daily_volatility": 1.1842
+    "var_pct": 1.9335,
+    "var_rupees": 290.03,
+    "mean_daily_return": 0.0149,
+    "daily_volatility": 1.1843
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.9454,
-    "var_rupees": 291.81,
-    "cvar_pct": 2.4434,
-    "cvar_rupees": 366.51,
-    "sim_mean": 0.0118,
+    "var_pct": 1.945,
+    "var_rupees": 291.74,
+    "cvar_pct": 2.443,
+    "cvar_rupees": 366.45,
+    "sim_mean": 0.0124,
     "sim_std": 1.1883
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.7411,
-    "var_rupees": 411.17,
-    "mean_daily_return": 0.0143,
-    "daily_volatility": 1.1842
+    "var_pct": 2.7407,
+    "var_rupees": 411.11,
+    "mean_daily_return": 0.0149,
+    "daily_volatility": 1.1843
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,11 +52,11 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.7335,
-    "var_rupees": 410.02,
-    "cvar_pct": 3.1793,
-    "cvar_rupees": 476.9,
-    "sim_mean": 0.0118,
+    "var_pct": 2.7331,
+    "var_rupees": 409.96,
+    "cvar_pct": 3.179,
+    "cvar_rupees": 476.85,
+    "sim_mean": 0.0124,
     "sim_std": 1.1883
   },
   "stress_tests": [
@@ -118,11 +118,11 @@
   ],
   "drawdowns": {
     "max_drawdown_pct": -20.9684,
-    "max_drawdown_day": 237,
-    "current_drawdown_pct": -8.2036,
+    "max_drawdown_day": 236,
+    "current_drawdown_pct": -7.9792,
     "drawdown_periods": 6,
-    "longest_drawdown_days": 182,
-    "avg_drawdown_pct": -8.4674
+    "longest_drawdown_days": 183,
+    "avg_drawdown_pct": -8.5316
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-11-17 17:20:58 IST"
+  "timestamp": "2026-11-18 17:07:21 IST"
 }
