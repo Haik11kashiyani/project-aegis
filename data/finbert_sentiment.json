@@ -1,23 +1,100 @@
 {
   "stocks": {
     "TATASTEEL.NS": {
-      "overall": "neutral",
+      "overall": "negative",
       "positive": 0,
-      "negative": 0,
-      "neutral": 0,
-      "avg_score": 0.0,
-      "details": [],
+      "negative": 2,
+      "neutral": 13,
+      "total": 15,
+      "avg_score": -0.1333,
+      "details": [
+        {
+          "text": "JSW Steel, Tata Steel shares in focus as EU imposes 9.5% duty on Indian steel - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel eyes 50 MT capacity, to direct 75% capex to India: TV Narendran - Business Standard",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel shares gain 2% as brokerages see stronger India earnings, flag risks in Europe - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to watch, Nov 17: BSE, Tata Steel, JSW Steel, Urban Co, Adani Green, Happy Forgings, Adani Enterprises - Upstox",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Tata Steel Q1FY27 EBITDA rises 25% to \u20b99,370 crore on India strength - scanx.trade",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, L&T, JSW Steel: Why these stocks fell up to 8% today - India Today",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to Watch Today: SBI, TCS, Tata Steel, Iware Supplychain, NLC India, Graphite India, TVS Motor,... - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to Watch today: HDFC Bank, Coal India, Tata Steel, Sobha, BoB, Nykaa - Business Standard",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "Top 3 Steel Stocks in India 2026: JSW Steel, Tata Steel, SAIL - Univest",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Buzzing Stocks: Tata Steel slips after Q1 business update; NLC India gains on NALCO JV - Moneycontrol.com",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Stocks to watch, May 18: Tata Steel Vi, Coal India, HFCL, Bajaj Electricals, SAIL, IOC - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, SAIL, JSW Steel, JSPL shares gain up to 5% as China plans steel production cuts - Fortune India",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel BSL Ltd Merged Stock Price: Tata Steel BSL Share Price Today - India Infoline",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel shares inch up on solid outlook for India operations - BusinessLine",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, JSW Steel and other metal stocks jump up to 5% as Government imposes import tariff on steel products - Upstox",
+          "label": "neutral",
+          "score": 0.5
+        }
+      ],
       "method": "keyword",
       "symbol": "TATASTEEL.NS",
-      "headline_count": 0
+      "headline_count": 15
     },
     "SBIN.NS": {
       "overall": "negative",
       "positive": 0,
-      "negative": 9,
-      "neutral": 6,
+      "negative": 11,
+      "neutral": 4,
       "total": 15,
-      "avg_score": -0.6,
+      "avg_score": -0.7333,
       "details": [
         {
           "text": "State Bank of India (SBIN.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
@@ -40,9 +117,9 @@
           "score": 1.0
         },
         {
-          "text": "Is SBI stock a good buy after today's 7% decline? Here's a stop-loss for short-term traders - Moneycontrol.com",
-          "label": "neutral",
-          "score": 0.5
+          "text": "SBI shares soar! State Bank of India stock jumps nearly 7% today \u2014 Should you buy or sell? - The Times of India",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "State Bank of India (NSEI:SBIN) Stock Price - Simply Wall St",
@@ -75,22 +152,22 @@
           "score": 0.5
         },
         {
+          "text": "State Bank of India rises 2.38% in Wednesday's session - Global Banking & Finance Review",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
           "text": "State Bank of India Stock (SBIN) - Quote NSE India S.E. - marketscreener.com",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Banking stocks power market rally: NIFTY Bank jumps over 800 points to record high; PNB, SBI lead - Upstox",
+          "text": "PSU Bank index nears record high; SBI, PNB, BoI rally up 27% in November - Business Standard",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Top Gainers & Losers Today, November 18, 2026 at 3:30 PM IST - HDFC Sky",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "State Bank of India (NSEI:SBIN) Stock Valuation, Peer Comparison & Price Targets - Simply Wall St",
+          "text": "Banking stocks power market rally: NIFTY Bank jumps over 800 points to record high; PNB, SBI lead - Upstox",
           "label": "negative",
           "score": 1.0
         }
@@ -100,25 +177,25 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "negative",
+      "overall": "neutral",
       "positive": 0,
-      "negative": 2,
-      "neutral": 13,
+      "negative": 0,
+      "neutral": 15,
       "total": 15,
-      "avg_score": -0.1333,
+      "avg_score": 0.0,
       "details": [
-        {
-          "text": "Reliance Industries Limited (RELIANCE.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "label": "neutral",
-          "score": 0.5
-        },
         {
           "text": "Reliance Industries Limited (RELIANCE.NS) stock price, news, quote and history - Yahoo Finance UK",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "RELIANCE Share Price \u2014 NSE:RELIANCE - TradingView",
+          "text": "Reliance Industries Limited (RELIANCE.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance Industries Share Price - Live NSE: RELIANCE Stock Price & Chart - Upstox",
           "label": "neutral",
           "score": 0.5
         },
@@ -128,17 +205,22 @@
           "score": 0.5
         },
         {
-          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Reliance Industries Shares Fall 2% After Jio Platforms Listing; Q2 Results on October 30 - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "AstraZeneca shares rise 2% on signing LoI with Reliance unit Strand Life Sciences - Upstox",
+          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "India's Reliance posts best day in over six years as oil business, Jio Platforms lift outlook - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Top stock picks: Analysts recommend buying Vijaya Diagnostic, Inox India, GAIL, Phoenix Mills, Reliance - CNBC TV18",
           "label": "neutral",
           "score": 0.5
         },
@@ -148,14 +230,9 @@
           "score": 0.5
         },
         {
-          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
+          "text": "AstraZeneca shares rise 2% on signing LoI with Reliance unit Strand Life Sciences - Upstox",
           "label": "neutral",
           "score": 0.5
-        },
-        {
-          "text": "Top stock picks: Analysts recommend Honasa Consumer, Welspun Corp, ICICI Bank, Reliance, CDSL, Indian Hotels - CNBC TV18",
-          "label": "negative",
-          "score": 1.0
         },
         {
           "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
@@ -173,14 +250,14 @@
           "score": 0.5
         },
         {
-          "text": "Reliance share price jumps nearly 3% as Jio files papers for India\u2019s biggest-ever IPO - Upstox",
+          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Indian shares up on value buying in HDFC Bank, Reliance - Reuters",
-          "label": "negative",
-          "score": 1.0
+          "text": "Reliance Share Price Holds Firm Despite Q1 Profit Fall as Jio Growth and IPO Plans Drive Optimism - India Infoline",
+          "label": "neutral",
+          "score": 0.5
         }
       ],
       "method": "keyword",
@@ -188,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.3667,
+  "market_sentiment": -0.2889,
   "market_label": "BEARISH",
-  "total_headlines": 30,
+  "total_headlines": 45,
   "positive": 0,
-  "negative": 11,
-  "neutral": 19,
+  "negative": 13,
+  "neutral": 32,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-11-18 17:07:23 IST"
+  "timestamp": "2026-11-19 17:06:45 IST"
 }
