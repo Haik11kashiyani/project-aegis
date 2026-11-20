@@ -1,57 +1,57 @@
 {
-  "exposure_multiplier": 1.0,
+  "exposure_multiplier": 1.1,
   "reasons": [
-    "Macro conditions neutral \u2014 no adjustment"
+    "Favourable macro: Gold down, INR strengthening, Nifty up"
   ],
-  "macro_bias": "NEUTRAL",
+  "macro_bias": "RISK_ON",
   "instruments": {
     "gold": {
-      "signal": "NEUTRAL",
-      "z": 0.081,
-      "change_5d": -4.05,
-      "change_20d": -8.19,
-      "price": 3727.8
+      "signal": "DOWN",
+      "z": -1.299,
+      "change_5d": -7.68,
+      "change_20d": -10.48,
+      "price": 3587.9
     },
     "usdinr": {
-      "signal": "NEUTRAL",
-      "z": -0.467,
-      "change_5d": -0.44,
-      "change_20d": -1.08,
-      "price": 93.29
+      "signal": "STRONG_DOWN",
+      "z": -2.926,
+      "change_5d": -1.43,
+      "change_20d": -2.13,
+      "price": 92.69
     },
     "crude": {
       "signal": "NEUTRAL",
-      "z": -0.094,
-      "change_5d": -7.19,
-      "change_20d": -17.2,
-      "price": 82.36
+      "z": -0.089,
+      "change_5d": -7.15,
+      "change_20d": -20.37,
+      "price": 82.23
     },
     "us10y": {
-      "signal": "DOWN",
-      "z": -0.52,
-      "change_5d": 1.36,
-      "change_20d": -1.55,
-      "price": 5.07
+      "signal": "NEUTRAL",
+      "z": -0.144,
+      "change_5d": -1.0,
+      "change_20d": 2.0,
+      "price": 5.05
     },
     "nifty": {
       "signal": "UP",
-      "z": 0.725,
-      "change_5d": 0.85,
-      "change_20d": 11.85,
-      "price": 25514.3
+      "z": 0.636,
+      "change_5d": 2.61,
+      "change_20d": 13.72,
+      "price": 25800.6
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.091,
-    "gold_vs_us10y": -0.231,
-    "gold_vs_nifty": 0.269,
-    "crude_vs_gold": -0.332,
-    "crude_vs_usdinr": 0.078,
-    "crude_vs_us10y": 0.122,
-    "crude_vs_nifty": -0.247,
-    "us10y_vs_usdinr": 0.235,
-    "nifty_vs_usdinr": -0.266,
-    "nifty_vs_us10y": -0.165
+    "gold_vs_usdinr": 0.1,
+    "gold_vs_us10y": -0.202,
+    "gold_vs_nifty": 0.264,
+    "crude_vs_gold": -0.343,
+    "crude_vs_usdinr": 0.079,
+    "crude_vs_us10y": 0.124,
+    "crude_vs_nifty": -0.245,
+    "us10y_vs_usdinr": 0.232,
+    "nifty_vs_usdinr": -0.263,
+    "nifty_vs_us10y": -0.176
   },
-  "timestamp": "2026-11-19T17:06:50.809677+05:30"
+  "timestamp": "2026-11-20T17:02:26.390129+05:30"
 }

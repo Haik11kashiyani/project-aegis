@@ -3,11 +3,16 @@
     "TATASTEEL.NS": {
       "overall": "negative",
       "positive": 0,
-      "negative": 2,
-      "neutral": 13,
+      "negative": 1,
+      "neutral": 14,
       "total": 15,
-      "avg_score": -0.1333,
+      "avg_score": -0.0667,
       "details": [
+        {
+          "text": "JSW Steel, Tata Steel Shares in Focus as EU Imposes 9.5% Duty on Indian Steel Exports From November 17 - Kotak Neo",
+          "label": "neutral",
+          "score": 0.5
+        },
         {
           "text": "JSW Steel, Tata Steel shares in focus as EU imposes 9.5% duty on Indian steel - Upstox",
           "label": "neutral",
@@ -22,11 +27,6 @@
           "text": "Tata Steel shares gain 2% as brokerages see stronger India earnings, flag risks in Europe - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
-        },
-        {
-          "text": "Stocks to watch, Nov 17: BSE, Tata Steel, JSW Steel, Urban Co, Adani Green, Happy Forgings, Adani Enterprises - Upstox",
-          "label": "negative",
-          "score": 1.0
         },
         {
           "text": "Tata Steel Q1FY27 EBITDA rises 25% to \u20b99,370 crore on India strength - scanx.trade",
@@ -59,7 +59,12 @@
           "score": 0.5
         },
         {
-          "text": "Stocks to watch, May 18: Tata Steel Vi, Coal India, HFCL, Bajaj Electricals, SAIL, IOC - Upstox",
+          "text": "Tata Steel shares slide nearly 2% as EU anti-dumping duty and bearish technicals weigh - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Tata Steel, JSW Steel and other metal stocks jump up to 5% as Government imposes import tariff on steel products - Upstox",
           "label": "neutral",
           "score": 0.5
         },
@@ -69,17 +74,12 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel BSL Ltd Merged Stock Price: Tata Steel BSL Share Price Today - India Infoline",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Tata Steel shares inch up on solid outlook for India operations - BusinessLine",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Tata Steel, JSW Steel and other metal stocks jump up to 5% as Government imposes import tariff on steel products - Upstox",
+          "text": "Tata Steel Q2 Update: India Business Hits Record Volumes, Output At 6.21 MT - Kotak Neo",
           "label": "neutral",
           "score": 0.5
         }
@@ -91,83 +91,83 @@
     "SBIN.NS": {
       "overall": "negative",
       "positive": 0,
-      "negative": 11,
-      "neutral": 4,
+      "negative": 5,
+      "neutral": 10,
       "total": 15,
-      "avg_score": -0.7333,
+      "avg_score": -0.3333,
       "details": [
-        {
-          "text": "State Bank of India (SBIN.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-          "label": "negative",
-          "score": 1.0
-        },
         {
           "text": "SBI trades firm in down market, stock up 16% in Nov; brokerages stay upbeat - Business Standard",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBIN Outlook for the Week - Equitypandit",
+          "text": "SBI net rises 14% to 23k crore, shares slip 1.8% - The Times of India",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "State Bank of India (NSEI:SBIN) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "text": "State Bank Of India Share Price Today: price rise explained - Univest",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "SBI shares soar! State Bank of India stock jumps nearly 7% today \u2014 Should you buy or sell? - The Times of India",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank of India (NSEI:SBIN) Stock Price - Simply Wall St",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank of India Share Price - Live NSE/BSE Updates - ICICI Direct",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "SBI Share Price Today - State Bank of India Stock Price Live NSE/BSE - HDFC Sky",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank Of India Share Price Today | SBI Live NSE/BSE - Value Research",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "SBIN Stock Price and Chart \u2014 NSE:SBIN - TradingView",
+          "text": "SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off... - Moneycontrol.com",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBI Share Price - Live NSE: SBIN Stock Price & Chart - Upstox",
+          "text": "SBI Funds Management Ltd. Share Price Today - SBI Funds Management Ltd. Stock Price Live NSE/BSE - CNBC TV18",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "State Bank of India rises 2.38% in Wednesday's session - Global Banking & Finance Review",
+          "text": "Is SBI stock a good buy after today's 7% decline? Here's a stop-loss for short-term traders - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Where Could SBI Share Price Potentially be in the Next 5 Years? - Equitymaster",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "State Bank of India Stock (SBIN) - Quote NSE India S.E. - marketscreener.com",
+          "text": "NSE IPO effect: SBI, NIACL, GIC Re, Bank of Baroda, IFCI in focus as SEBI clears NSE's \u20b930,000 crore IPO - Kotak Neo",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "PSU Bank index nears record high; SBI, PNB, BoI rally up 27% in November - Business Standard",
+          "text": "SBI Q2 FY27 Results Tuesday: Can the Bank Beat a Record Rs 21,121 Crore Profit? - NiftyTrader",
           "label": "negative",
           "score": 1.0
         },
         {
-          "text": "Banking stocks power market rally: NIFTY Bank jumps over 800 points to record high; PNB, SBI lead - Upstox",
+          "text": "SBI to Dilute 1% Stake in NSE IPO; Home Loans Near \u20b910 Lakh Cr - HDFC Sky",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBI Q2 preview: NII to rise 11-13%; margin to hold on lower FCNR(B) flows - Business Standard",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Why SBI shares fell sharply after Q2 - CNBC TV18",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "PSU Banks in focus; SBI, BOI, PNB, Indian Bank, Canara, UBI gain up to 3% - Business Standard",
           "label": "negative",
           "score": 1.0
         }
@@ -177,18 +177,13 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "neutral",
+      "overall": "negative",
       "positive": 0,
-      "negative": 0,
-      "neutral": 15,
+      "negative": 1,
+      "neutral": 14,
       "total": 15,
-      "avg_score": 0.0,
+      "avg_score": -0.0667,
       "details": [
-        {
-          "text": "Reliance Industries Limited (RELIANCE.NS) stock price, news, quote and history - Yahoo Finance UK",
-          "label": "neutral",
-          "score": 0.5
-        },
         {
           "text": "Reliance Industries Limited (RELIANCE.NS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
           "label": "neutral",
@@ -201,6 +196,11 @@
         },
         {
           "text": "India's Reliance plans to invest about $1.6 billion to build new biogas plants - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "AstraZeneca Pharma India Signs Healthcare LoI With Reliance's Strand Life Sciences - Kotak Neo",
           "label": "neutral",
           "score": 0.5
         },
@@ -220,9 +220,9 @@
           "score": 0.5
         },
         {
-          "text": "Top stock picks: Analysts recommend buying Vijaya Diagnostic, Inox India, GAIL, Phoenix Mills, Reliance - CNBC TV18",
-          "label": "neutral",
-          "score": 0.5
+          "text": "Top stock picks: Analysts recommend Honasa Consumer, Welspun Corp, ICICI Bank, Reliance, CDSL, Indian Hotels - CNBC TV18",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "Why Reliance Stock Fell Sharply \u2014 And What It Signals For The Market - Samco",
@@ -240,7 +240,7 @@
           "score": 0.5
         },
         {
-          "text": "RELIANCE INDUSTRIES LIMITED (RIGD) Equity Price and Quote - London Stock Exchange",
+          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
           "label": "neutral",
           "score": 0.5
         },
@@ -250,12 +250,12 @@
           "score": 0.5
         },
         {
-          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
+          "text": "Reliance Share Price Holds Firm Despite Q1 Profit Fall as Jio Growth and IPO Plans Drive Optimism - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Reliance Share Price Holds Firm Despite Q1 Profit Fall as Jio Growth and IPO Plans Drive Optimism - India Infoline",
+          "text": "Reliance share price jumps nearly 3% as Jio files papers for India\u2019s biggest-ever IPO - Upstox",
           "label": "neutral",
           "score": 0.5
         }
@@ -265,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.2889,
-  "market_label": "BEARISH",
+  "market_sentiment": -0.1556,
+  "market_label": "NEUTRAL",
   "total_headlines": 45,
   "positive": 0,
-  "negative": 13,
-  "neutral": 32,
+  "negative": 7,
+  "neutral": 38,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-11-19 17:06:45 IST"
+  "timestamp": "2026-11-20 17:02:19 IST"
 }

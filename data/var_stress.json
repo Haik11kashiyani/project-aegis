@@ -2,9 +2,9 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 1.9301,
-    "var_rupees": 289.52,
-    "mean_daily_return": 0.0219,
+    "var_pct": 1.9319,
+    "var_rupees": 289.79,
+    "mean_daily_return": 0.0202,
     "daily_volatility": 1.1865
   },
   "historical_var_95": {
@@ -22,19 +22,19 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 1.9416,
-    "var_rupees": 291.24,
-    "cvar_pct": 2.4405,
-    "cvar_rupees": 366.08,
-    "sim_mean": 0.0194,
-    "sim_std": 1.1905
+    "var_pct": 1.9434,
+    "var_rupees": 291.51,
+    "cvar_pct": 2.4423,
+    "cvar_rupees": 366.35,
+    "sim_mean": 0.0176,
+    "sim_std": 1.1906
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.7388,
-    "var_rupees": 410.82,
-    "mean_daily_return": 0.0219,
+    "var_pct": 2.7406,
+    "var_rupees": 411.1,
+    "mean_daily_return": 0.0202,
     "daily_volatility": 1.1865
   },
   "historical_var_99": {
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.7311,
-    "var_rupees": 409.67,
-    "cvar_pct": 3.1779,
-    "cvar_rupees": 476.68,
-    "sim_mean": 0.0194,
-    "sim_std": 1.1905
+    "var_pct": 2.733,
+    "var_rupees": 409.94,
+    "cvar_pct": 3.1797,
+    "cvar_rupees": 476.96,
+    "sim_mean": 0.0176,
+    "sim_std": 1.1906
   },
   "stress_tests": [
     {
@@ -118,11 +118,11 @@
   ],
   "drawdowns": {
     "max_drawdown_pct": -20.9684,
-    "max_drawdown_day": 235,
-    "current_drawdown_pct": -6.7112,
+    "max_drawdown_day": 234,
+    "current_drawdown_pct": -6.9407,
     "drawdown_periods": 6,
-    "longest_drawdown_days": 184,
-    "avg_drawdown_pct": -8.5239
+    "longest_drawdown_days": 185,
+    "avg_drawdown_pct": -8.553
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-11-19 17:06:43 IST"
+  "timestamp": "2026-11-20 17:02:17 IST"
 }
