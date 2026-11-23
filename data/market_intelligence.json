@@ -39,23 +39,23 @@
   },
   "global_cues": {
     "metrics": {
-      "SP500": -3.6990834302978346,
-      "DowJones": -1.9343938230770092,
-      "NASDAQ": -5.282709601959734,
+      "SP500": 4.728818180899615,
+      "DowJones": 3.0073952701814646,
+      "NASDAQ": 6.50740854407813,
       "Nikkei": -5.059470808960976,
       "HangSeng": -1.886111298514593,
-      "BrentCrude": 0.641439787299323,
-      "Gold": -4.615387265126849,
-      "USDINR": -0.6699180151846993
+      "BrentCrude": -6.31954034072248,
+      "Gold": 3.3851056296799005,
+      "USDINR": -0.4233845874042656
     },
-    "score": -1.0
+    "score": 1.0
   },
   "vix_analysis": {
     "value": 17.31999969482422,
     "classification": "Normal",
     "trend": "rising"
   },
-  "market_mood_score": -0.4,
+  "market_mood_score": 0.4,
   "earnings_calendar": [],
-  "timestamp": "2026-11-21T18:27:09.445894+05:30"
+  "timestamp": "2026-11-24T04:04:03.715142+05:30"
 }
