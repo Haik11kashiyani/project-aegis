@@ -8,18 +8,18 @@
         "upper_1sd": 187.48,
         "lower_1sd": 172.41,
         "upper_2sd": 195.02,
-        "lower_2sd": 164.88,
+        "lower_2sd": 164.87,
         "std": 7.54
       },
       "volume_profile": {
         "poc": 187.57,
         "value_area_high": 187.57,
         "value_area_low": 163.46,
-        "total_volume": 1700041400.0,
+        "total_volume": 1700125372.0,
         "histogram": [
           {
             "price": 163.46,
-            "volume": 168759941.0,
+            "volume": 168843913.0,
             "pct": 9.93,
             "is_poc": false,
             "in_value_area": true
@@ -231,18 +231,18 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 798624830.0,
-        "total_sell_volume": 901416570.0,
-        "delta": -102791739.0,
+        "total_buy_volume": 798640615.0,
+        "total_sell_volume": 901484757.0,
+        "delta": -102844143.0,
         "pressure": "SELL",
         "strength_pct": 6.05,
-        "recent_delta_5bar": -78203759.0,
+        "recent_delta_5bar": -78256163.0,
         "recent_pressure": "SELL"
       },
       "above_vwap": false,
       "vwap_distance_pct": -9.42,
       "in_value_area": "False",
-      "timestamp": "2026-11-23 17:59:56 IST"
+      "timestamp": "2026-11-24 19:09:59 IST"
     },
     "SBIN.NS": {
       "symbol": "SBIN.NS",
@@ -259,7 +259,7 @@
         "poc": 958.76,
         "value_area_high": 1131.33,
         "value_area_low": 951.25,
-        "total_volume": 694835906.0,
+        "total_volume": 694839056.0,
         "histogram": [
           {
             "price": 943.75,
@@ -431,7 +431,7 @@
           },
           {
             "price": 1123.83,
-            "volume": 14921593.0,
+            "volume": 14924743.0,
             "pct": 2.15,
             "is_poc": false,
             "in_value_area": false
@@ -475,18 +475,18 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 378644815.0,
-        "total_sell_volume": 316191091.0,
-        "delta": 62453723.0,
+        "total_buy_volume": 378645093.0,
+        "total_sell_volume": 316193963.0,
+        "delta": 62451130.0,
         "pressure": "BUY",
         "strength_pct": 8.99,
-        "recent_delta_5bar": 38125381.0,
+        "recent_delta_5bar": 38122788.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
       "vwap_distance_pct": 11.05,
       "in_value_area": "False",
-      "timestamp": "2026-11-23 17:59:56 IST"
+      "timestamp": "2026-11-24 19:09:59 IST"
     },
     "RELIANCE.NS": {
       "symbol": "RELIANCE.NS",
@@ -503,7 +503,7 @@
         "poc": 1293.36,
         "value_area_high": 1337.26,
         "value_area_low": 1161.66,
-        "total_volume": 958647334.0,
+        "total_volume": 958650901.0,
         "histogram": [
           {
             "price": 1161.66,
@@ -682,7 +682,7 @@
           },
           {
             "price": 1344.58,
-            "volume": 15388955.0,
+            "volume": 15392522.0,
             "pct": 1.61,
             "is_poc": false,
             "in_value_area": false
@@ -719,22 +719,22 @@
         "bins": 30
       },
       "volume_delta": {
-        "total_buy_volume": 504313331.0,
-        "total_sell_volume": 454334003.0,
-        "delta": 49979327.0,
+        "total_buy_volume": 504313670.0,
+        "total_sell_volume": 454337231.0,
+        "delta": 49976439.0,
         "pressure": "BUY",
         "strength_pct": 5.21,
-        "recent_delta_5bar": 10263741.0,
+        "recent_delta_5bar": 10260852.0,
         "recent_pressure": "BUY"
       },
       "above_vwap": true,
       "vwap_distance_pct": 7.52,
       "in_value_area": "False",
-      "timestamp": "2026-11-23 17:59:56 IST"
+      "timestamp": "2026-11-24 19:09:59 IST"
     }
   },
   "market_pressure": "BUY",
   "buy_pressure_count": 2,
   "sell_pressure_count": 1,
-  "timestamp": "2026-11-23 17:59:56 IST"
+  "timestamp": "2026-11-24 19:09:59 IST"
 }

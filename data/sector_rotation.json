@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-23 17:59:51",
+  "timestamp": "2026-11-24 19:09:53",
   "sectors": {
     "Banking": {
       "ticker": "^NSEBANK",
@@ -8,7 +8,7 @@
       "ret_10d": 4.76,
       "ret_20d": 15.12,
       "acceleration": -5.13,
-      "vol_trend": -15.5,
+      "vol_trend": 7.7,
       "momentum_score": 4.14,
       "state": "STRONG"
     },
@@ -19,7 +19,7 @@
       "ret_10d": -1.9,
       "ret_20d": -1.31,
       "acceleration": -2.51,
-      "vol_trend": -38.2,
+      "vol_trend": -18.4,
       "momentum_score": -0.84,
       "state": "WEAKENING"
     },
@@ -30,7 +30,7 @@
       "ret_10d": -6.68,
       "ret_20d": 0.75,
       "acceleration": -14.63,
-      "vol_trend": -12.4,
+      "vol_trend": 46.7,
       "momentum_score": -5.59,
       "state": "ROTATING_OUT"
     },
@@ -41,7 +41,7 @@
       "ret_10d": -1.37,
       "ret_20d": 4.66,
       "acceleration": -7.49,
-      "vol_trend": -50.9,
+      "vol_trend": -38.0,
       "momentum_score": -0.79,
       "state": "WEAKENING"
     },
@@ -52,7 +52,7 @@
       "ret_10d": 0.71,
       "ret_20d": 10.03,
       "acceleration": -8.54,
-      "vol_trend": -43.6,
+      "vol_trend": -29.7,
       "momentum_score": 1.22,
       "state": "STRONG"
     },
@@ -63,7 +63,7 @@
       "ret_10d": -2.1,
       "ret_20d": 9.76,
       "acceleration": -14.21,
-      "vol_trend": -65.8,
+      "vol_trend": -58.8,
       "momentum_score": 0.09,
       "state": "NEUTRAL"
     },
@@ -74,7 +74,7 @@
       "ret_10d": 3.54,
       "ret_20d": 12.88,
       "acceleration": -5.48,
-      "vol_trend": -43.5,
+      "vol_trend": -26.1,
       "momentum_score": 3.68,
       "state": "STRONG"
     },
@@ -85,7 +85,7 @@
       "ret_10d": 2.02,
       "ret_20d": 14.1,
       "acceleration": -9.81,
-      "vol_trend": -10.5,
+      "vol_trend": 4.9,
       "momentum_score": 3.48,
       "state": "STRONG"
     },
@@ -96,7 +96,7 @@
       "ret_10d": 4.92,
       "ret_20d": 19.27,
       "acceleration": -8.76,
-      "vol_trend": -36.3,
+      "vol_trend": -17.2,
       "momentum_score": 5.12,
       "state": "STRONG"
     },
@@ -107,7 +107,7 @@
       "ret_10d": -2.48,
       "ret_20d": 3.95,
       "acceleration": -9.07,
-      "vol_trend": -32.4,
+      "vol_trend": -14.2,
       "momentum_score": -1.28,
       "state": "WEAKENING"
     },
@@ -118,7 +118,7 @@
       "ret_10d": 1.22,
       "ret_20d": 11.41,
       "acceleration": -8.85,
-      "vol_trend": -28.1,
+      "vol_trend": -1.5,
       "momentum_score": 1.7,
       "state": "STRONG"
     }
