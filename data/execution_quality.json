@@ -1,8 +1,8 @@
 {
   "trades_analysed": 6,
   "avg_timing_score": 0.0,
-  "avg_slippage_bps": 925.66,
-  "total_slippage_cost": 1233.08,
+  "avg_slippage_bps": 840.62,
+  "total_slippage_cost": 1104.04,
   "overall_grade": "D",
   "grade_distribution": {
     "A": 0,
@@ -21,11 +21,11 @@
       "entry_price": 2617.199951171875,
       "entry_time": "11:01",
       "day_low": 2317.3,
-      "day_high": 2501.0,
-      "vwap_estimate": 2423.47,
+      "day_high": 2527.6,
+      "vwap_estimate": 2445.15,
       "timing_score": 0,
-      "slippage_bps": 799.41,
-      "slippage_rupees": 209.22,
+      "slippage_bps": 703.65,
+      "slippage_rupees": 184.16,
       "grade": "F"
     },
     {
@@ -33,11 +33,11 @@
       "entry_price": 2614.60009765625,
       "entry_time": "11:07",
       "day_low": 2317.3,
-      "day_high": 2501.0,
-      "vwap_estimate": 2423.47,
+      "day_high": 2527.6,
+      "vwap_estimate": 2445.15,
       "timing_score": 0,
-      "slippage_bps": 788.68,
-      "slippage_rupees": 206.21,
+      "slippage_bps": 693.01,
+      "slippage_rupees": 181.2,
       "grade": "F"
     },
     {
@@ -45,11 +45,11 @@
       "entry_price": 2612.89990234375,
       "entry_time": "11:10",
       "day_low": 2317.3,
-      "day_high": 2501.0,
-      "vwap_estimate": 2423.47,
+      "day_high": 2527.6,
+      "vwap_estimate": 2445.15,
       "timing_score": 0,
-      "slippage_bps": 781.66,
-      "slippage_rupees": 204.24,
+      "slippage_bps": 686.06,
+      "slippage_rupees": 179.26,
       "grade": "F"
     },
     {
@@ -57,11 +57,11 @@
       "entry_price": 2611.699951171875,
       "entry_time": "11:12",
       "day_low": 2317.3,
-      "day_high": 2501.0,
-      "vwap_estimate": 2423.47,
+      "day_high": 2527.6,
+      "vwap_estimate": 2445.15,
       "timing_score": 0,
-      "slippage_bps": 776.71,
-      "slippage_rupees": 202.85,
+      "slippage_bps": 681.15,
+      "slippage_rupees": 177.9,
       "grade": "F"
     },
     {
@@ -69,11 +69,11 @@
       "entry_price": 2607.699951171875,
       "entry_time": "11:17",
       "day_low": 2317.3,
-      "day_high": 2501.0,
-      "vwap_estimate": 2423.47,
+      "day_high": 2527.6,
+      "vwap_estimate": 2445.15,
       "timing_score": 0,
-      "slippage_bps": 760.21,
-      "slippage_rupees": 198.24,
+      "slippage_bps": 664.79,
+      "slippage_rupees": 173.36,
       "grade": "F"
     },
     {
@@ -81,13 +81,13 @@
       "entry_price": 1288.9000244140625,
       "entry_time": "11:22",
       "day_low": 1072.6,
-      "day_high": 1145.0,
-      "vwap_estimate": 1106.61,
+      "day_high": 1151.5,
+      "vwap_estimate": 1109.68,
       "timing_score": 0,
-      "slippage_bps": 1647.3,
-      "slippage_rupees": 212.32,
+      "slippage_bps": 1615.05,
+      "slippage_rupees": 208.16,
       "grade": "F"
     }
   ],
-  "timestamp": "2026-11-24 19:10:06 IST"
+  "timestamp": "2026-11-25 18:21:15 IST"
 }
