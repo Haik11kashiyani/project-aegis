@@ -2,11 +2,11 @@
   "stocks": {
     "TATASTEEL.NS": {
       "overall": "positive",
-      "positive": 2,
+      "positive": 3,
       "negative": 1,
-      "neutral": 12,
+      "neutral": 11,
       "total": 15,
-      "avg_score": 0.0667,
+      "avg_score": 0.1333,
       "details": [
         {
           "text": "Investors give a thumbs down to Tata Steel-APL Apollo $1.67 billion deal, plunging shares - CNBC",
@@ -14,7 +14,7 @@
           "score": 1.0
         },
         {
-          "text": "Stocks to Watch Today: Tata Steel, Welspun Living, Ashoka Buildcon and More on 23 November 2026 - Kotak Neo",
+          "text": "Tata Steel shares touch 52-week low; APL Apollo Tubes slides another 20% - Fortune India",
           "label": "neutral",
           "score": 0.5
         },
@@ -44,17 +44,12 @@
           "score": 0.5
         },
         {
-          "text": "Stocks to watch, May 18: Tata Steel Vi, Coal India, HFCL, Bajaj Electricals, SAIL, IOC - Upstox",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
           "text": "Top 3 Steel Stocks in India 2026: JSW Steel, Tata Steel, SAIL - Univest",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "India's Tata Steel to take control of APL Apollo in deal worth up to $3.47 billion - Reuters",
+          "text": "India Shareholder Backlash Puts APL Apollo, Tata Steel Deal on Back Foot - Bloomberg",
           "label": "positive",
           "score": 1.0
         },
@@ -64,7 +59,12 @@
           "score": 0.5
         },
         {
-          "text": "Linde India Stock Jumps 6%, Hits Record High on Tata Steel Agreement - Equitypandit",
+          "text": "Tata Steel Q2 Update: India Business Hits Record Volumes, Output At 6.21 MT - Kotak Neo",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Why Tata Steel Share Price is Falling - Equitymaster",
           "label": "neutral",
           "score": 0.5
         },
@@ -74,12 +74,12 @@
           "score": 0.5
         },
         {
-          "text": "Tata Steel Ltd Stock Price: Tata Steel Share Price Today - India Infoline",
-          "label": "neutral",
-          "score": 0.5
+          "text": "Tata Steel\u2019s APL Apollo deal: Why investors are worried about the Rs 28,000-crore bet - The Indian Express",
+          "label": "positive",
+          "score": 1.0
         },
         {
-          "text": "Hindalco, NALCO, Tata Steel: What lies ahead for Indian metals and mining stocks? - Upstox",
+          "text": "Tata Steel shares inch up on solid outlook for India operations - BusinessLine",
           "label": "neutral",
           "score": 0.5
         }
@@ -91,30 +91,30 @@
     "SBIN.NS": {
       "overall": "negative",
       "positive": 0,
-      "negative": 5,
-      "neutral": 10,
+      "negative": 9,
+      "neutral": 6,
       "total": 15,
-      "avg_score": -0.3333,
+      "avg_score": -0.6,
       "details": [
         {
-          "text": "State Bank Of India Share Price: Price Fall and Valuation - Univest",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank Of India (NSEI:SBIN) Stock Could Be 32% Overvalued On Return Concerns - Simply Wall St",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "SBI trades firm in down market, stock up 16% in Nov; brokerages stay upbeat - Business Standard",
+          "text": "SBI Share Price - Live NSE: SBIN Stock Price & Chart - Upstox",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBI net rises 14% to 23k crore, shares slip 1.8% - The Times of India",
+          "text": "SBIN Share Price Today - State Bank of India on NSE/BSE - scanx.trade",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBIN Outlook for the Week - Equitypandit",
           "label": "neutral",
           "score": 0.5
+        },
+        {
+          "text": "State Bank of India (NSEI:SBIN) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "label": "negative",
+          "score": 1.0
         },
         {
           "text": "SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off... - Moneycontrol.com",
@@ -122,54 +122,54 @@
           "score": 0.5
         },
         {
-          "text": "Is SBI stock a good buy after today's 7% decline? Here's a stop-loss for short-term traders - TradingView",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "SBI Q2 FY27 Results Tuesday: Can the Bank Beat a Record Rs 21,121 Crore Profit? - NiftyTrader",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "State Bank of India shares soar nearly 4% following Q1 results; check net profit, NII and key highlights - Upstox",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
-          "text": "NSE IPO effect: SBI, NIACL, GIC Re, Bank of Baroda, IFCI in focus as SEBI clears NSE's \u20b930,000 crore IPO - Kotak Neo",
-          "label": "negative",
-          "score": 1.0
-        },
-        {
           "text": "Where Could SBI Share Price Potentially be in the Next 5 Years? - Equitymaster",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Why SBI shares fell sharply after Q2 - CNBC TV18",
+          "text": "State Bank of India (NSEI:SBIN) Stock Price - Simply Wall St",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "State Bank of India Share Price - Live NSE/BSE Updates - ICICI Direct",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "State Bank of India (SBIN.NS) stock price, news, quote and history - Yahoo Finance UK",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBI Share Price Today - State Bank of India Stock Price Live NSE/BSE - HDFC Sky",
+          "label": "negative",
+          "score": 1.0
+        },
+        {
+          "text": "SBIN Stock Price and Chart \u2014 NSE:SBIN - TradingView",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBI Q2 preview: NII to rise 11-13%; margin to hold on lower FCNR(B) flows - Business Standard",
+          "text": "Stocks to watch, Nov 3: Lupin, ITC, Marico, NBCC, SBI, NSE, VMS TMT, Samvardhana Motherson, PTC India - Upstox",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "SBIN Forecast \u2014 Price Target \u2014 Prediction for 2027 - TradingView",
-          "label": "neutral",
-          "score": 0.5
+          "text": "State Bank of India Stock Price: St Bk of India Share Price Today - India Infoline",
+          "label": "negative",
+          "score": 1.0
         },
         {
-          "text": "SBI stock rating: Jefferies bullish, eyes loan repricing for NIM stability; check target price, upside - Moneycontrol.com",
-          "label": "neutral",
-          "score": 0.5
+          "text": "State Bank of India Stock (SBIN) - Quote NSE India S.E. - marketscreener.com",
+          "label": "negative",
+          "score": 1.0
         },
         {
-          "text": "SBI shares decline nearly 3%; Jefferies, Morgan Stanlay and other analysts decode Q1 earnings - Upstox",
-          "label": "neutral",
-          "score": 0.5
+          "text": "State Bank of India - Equitypandit",
+          "label": "negative",
+          "score": 1.0
         }
       ],
       "method": "keyword",
@@ -177,13 +177,18 @@
       "headline_count": 15
     },
     "RELIANCE.NS": {
-      "overall": "positive",
-      "positive": 2,
+      "overall": "neutral",
+      "positive": 1,
       "negative": 1,
-      "neutral": 12,
+      "neutral": 13,
       "total": 15,
-      "avg_score": 0.0667,
+      "avg_score": 0.0,
       "details": [
+        {
+          "text": "Reliance enters India's growing digital astrology market with JioAstro - Business Standard",
+          "label": "neutral",
+          "score": 0.5
+        },
         {
           "text": "Reliance earnings, lower oil prices power India's Sensex to near two-month high - Reuters",
           "label": "neutral",
@@ -193,11 +198,6 @@
           "text": "Reliance shares surge almost 12%, see best single-day gain in over 6 years: What's driving the rally - The Times of India",
           "label": "neutral",
           "score": 0.5
-        },
-        {
-          "text": "RIL's Q2 FY27 Performance: Delivering strong operational excellence across businesses. Highest ever Gross Revenue hits 3,62,268 Crore, up 27.8% Y-o-Y, with record quarterly EBITDA at \u20b962,409 Crore (EB",
-          "label": "positive",
-          "score": 1.0
         },
         {
           "text": "Reliance\u2019s $19 Billion Rally Keeps India Stock Bulls in the Game - Bloomberg.com",
@@ -215,12 +215,12 @@
           "score": 0.5
         },
         {
-          "text": "Reliance Industries Q2 Profit Beats Estimates by Nearly 20%; Shares Surge as Much as 6.2% in Early Trading - BigGo Finance",
-          "label": "positive",
-          "score": 1.0
+          "text": "IPO: Reliance Jio announces what may be India's biggest-ever share sale - BBC",
+          "label": "neutral",
+          "score": 0.5
         },
         {
-          "text": "India's Reliance posts best day in over six years as oil business, Jio Platforms lift outlook - Reuters",
+          "text": "Reliance Industries Share Price Rallies 3%: What's Driving the Stock Higher? - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
@@ -230,32 +230,32 @@
           "score": 1.0
         },
         {
+          "text": "India's Reliance posts best day in over six years as oil business, Jio Platforms lift outlook - Reuters",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
+          "text": "Reliance Industries Q2 Profit Beats Estimates by Nearly 20%; Shares Surge as Much as 6.2% in Early Trading - BigGo Finance",
+          "label": "positive",
+          "score": 1.0
+        },
+        {
+          "text": "Billionaire Mukesh Ambani launches India\u2019s biggest-ever IPO - The Guardian",
+          "label": "neutral",
+          "score": 0.5
+        },
+        {
           "text": "Reliance Industries Shares Fall 2% After Jio Platforms Listing; Q2 Results on October 30 - India Infoline",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Can Reliance Industries disrupt India\u2019s biscuit market like cola? Britannia CEO weighs in; stocks in focus - Upstox",
+          "text": "Powered by Reliance Industries' surge, sensex rallies 1.2k points - The Times of India",
           "label": "neutral",
           "score": 0.5
         },
         {
-          "text": "Sensex jumps 765 points during early trade on sharp rally in Reliance shares, decline in oil prices - The New Indian Express",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Why Is Reliance Industries Share Price Falling? - Univest",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Reliance, metal stocks power Sensex, Nifty rally; IT stocks decline - Fortune India",
-          "label": "neutral",
-          "score": 0.5
-        },
-        {
-          "text": "Five Stocks in Focus: Reliance, Jio, BEL, NTPC Green, IOC - HDFC Sky",
+          "text": "Indian shares fall as IT, Reliance drag; losses deepen in closing auction - Reuters",
           "label": "neutral",
           "score": 0.5
         }
@@ -265,13 +265,13 @@
       "headline_count": 15
     }
   },
-  "market_sentiment": -0.0667,
+  "market_sentiment": -0.1556,
   "market_label": "NEUTRAL",
   "total_headlines": 45,
   "positive": 4,
-  "negative": 7,
-  "neutral": 34,
+  "negative": 11,
+  "neutral": 30,
   "finbert_available": false,
   "method": "keyword",
-  "timestamp": "2026-11-25 18:21:09 IST"
+  "timestamp": "2026-11-26 17:55:00 IST"
 }
