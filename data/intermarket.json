@@ -1,30 +1,31 @@
 {
-  "exposure_multiplier": 1.0,
+  "exposure_multiplier": 0.7,
   "reasons": [
-    "Macro conditions neutral \u2014 no adjustment"
+    "Gold surging (z=+2.4) + Nifty weak \u2192 risk-off",
+    "USD/INR rising (z=+3.4) \u2192 FII outflow pressure"
   ],
-  "macro_bias": "NEUTRAL",
+  "macro_bias": "RISK_OFF",
   "instruments": {
     "gold": {
-      "signal": "UP",
-      "z": 1.079,
-      "change_5d": -2.45,
-      "change_20d": -10.82,
-      "price": 3595.2
+      "signal": "STRONG_UP",
+      "z": 2.402,
+      "change_5d": 0.4,
+      "change_20d": -8.22,
+      "price": 3700.2
     },
     "usdinr": {
-      "signal": "DOWN",
-      "z": -0.604,
-      "change_5d": -0.99,
-      "change_20d": -2.8,
-      "price": 92.54
+      "signal": "STRONG_UP",
+      "z": 3.36,
+      "change_5d": -0.34,
+      "change_20d": -2.28,
+      "price": 92.98
     },
     "crude": {
       "signal": "UP",
-      "z": 0.559,
-      "change_5d": 1.38,
-      "change_20d": -17.29,
-      "price": 84.36
+      "z": 0.893,
+      "change_5d": 2.5,
+      "change_20d": -16.38,
+      "price": 85.29
     },
     "us10y": {
       "signal": "DOWN",
@@ -34,24 +35,24 @@
       "price": 4.85
     },
     "nifty": {
-      "signal": "NEUTRAL",
-      "z": -0.374,
-      "change_5d": 2.6,
-      "change_20d": 13.78,
-      "price": 25884.5
+      "signal": "STRONG_DOWN",
+      "z": -1.707,
+      "change_5d": 0.36,
+      "change_20d": 12.81,
+      "price": 25607.2
     }
   },
   "correlations": {
-    "gold_vs_usdinr": 0.06,
-    "gold_vs_us10y": 0.019,
+    "gold_vs_usdinr": 0.062,
+    "gold_vs_us10y": 0.025,
     "gold_vs_nifty": 0.069,
-    "crude_vs_gold": -0.375,
+    "crude_vs_gold": -0.376,
     "crude_vs_usdinr": 0.157,
-    "crude_vs_us10y": 0.056,
+    "crude_vs_us10y": 0.055,
     "crude_vs_nifty": -0.125,
-    "us10y_vs_usdinr": 0.234,
+    "us10y_vs_usdinr": 0.233,
     "nifty_vs_usdinr": -0.211,
     "nifty_vs_us10y": -0.233
   },
-  "timestamp": "2026-11-26T17:55:06.925312+05:30"
+  "timestamp": "2026-11-27T17:42:15.764180+05:30"
 }

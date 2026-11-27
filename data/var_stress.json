@@ -2,10 +2,10 @@
   "parametric_var_95": {
     "method": "Parametric",
     "confidence": 0.95,
-    "var_pct": 2.0062,
-    "var_rupees": 300.93,
-    "mean_daily_return": 0.0062,
-    "daily_volatility": 1.2232
+    "var_pct": 2.011,
+    "var_rupees": 301.65,
+    "mean_daily_return": 0.0019,
+    "daily_volatility": 1.2235
   },
   "historical_var_95": {
     "method": "Historical",
@@ -22,20 +22,20 @@
     "confidence": 0.95,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.018,
-    "var_rupees": 302.7,
-    "cvar_pct": 2.5324,
-    "cvar_rupees": 379.86,
-    "sim_mean": 0.0036,
-    "sim_std": 1.2274
+    "var_pct": 2.0228,
+    "var_rupees": 303.42,
+    "cvar_pct": 2.5373,
+    "cvar_rupees": 380.6,
+    "sim_mean": -0.0008,
+    "sim_std": 1.2276
   },
   "parametric_var_99": {
     "method": "Parametric",
     "confidence": 0.99,
-    "var_pct": 2.8399,
-    "var_rupees": 425.98,
-    "mean_daily_return": 0.0062,
-    "daily_volatility": 1.2232
+    "var_pct": 2.8449,
+    "var_rupees": 426.73,
+    "mean_daily_return": 0.0019,
+    "daily_volatility": 1.2235
   },
   "historical_var_99": {
     "method": "Historical",
@@ -52,12 +52,12 @@
     "confidence": 0.99,
     "simulations": 10000,
     "horizon_days": 1,
-    "var_pct": 2.832,
-    "var_rupees": 424.8,
-    "cvar_pct": 3.2925,
-    "cvar_rupees": 493.88,
-    "sim_mean": 0.0036,
-    "sim_std": 1.2274
+    "var_pct": 2.837,
+    "var_rupees": 425.55,
+    "cvar_pct": 3.2976,
+    "cvar_rupees": 494.65,
+    "sim_mean": -0.0008,
+    "sim_std": 1.2276
   },
   "stress_tests": [
     {
@@ -118,11 +118,11 @@
   ],
   "drawdowns": {
     "max_drawdown_pct": -20.9684,
-    "max_drawdown_day": 231,
-    "current_drawdown_pct": -10.1395,
-    "drawdown_periods": 5,
-    "longest_drawdown_days": 188,
-    "avg_drawdown_pct": -8.6196
+    "max_drawdown_day": 230,
+    "current_drawdown_pct": -10.7604,
+    "drawdown_periods": 6,
+    "longest_drawdown_days": 189,
+    "avg_drawdown_pct": -8.6839
   },
   "risk_score": 100,
   "risk_level": "HIGH",
@@ -133,5 +133,5 @@
     "RELIANCE.NS"
   ],
   "observations": 251,
-  "timestamp": "2026-11-26 17:54:58 IST"
+  "timestamp": "2026-11-27 17:42:08 IST"
 }

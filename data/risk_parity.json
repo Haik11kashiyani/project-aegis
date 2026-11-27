@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-26T17:54:57.314493+05:30",
+  "timestamp": "2026-11-27T17:42:06.665981+05:30",
   "symbols": [
     "TATASTEEL.NS",
     "SBIN.NS",
@@ -7,26 +7,26 @@
   ],
   "capital": 15000.0,
   "weights": {
-    "TATASTEEL.NS": 0.3259,
-    "SBIN.NS": 0.3374,
-    "RELIANCE.NS": 0.3367
+    "TATASTEEL.NS": 0.3265,
+    "SBIN.NS": 0.337,
+    "RELIANCE.NS": 0.3365
   },
   "allocations": {
-    "TATASTEEL.NS": 4889.16,
-    "SBIN.NS": 5060.86,
-    "RELIANCE.NS": 5049.98
+    "TATASTEEL.NS": 4897.79,
+    "SBIN.NS": 5054.38,
+    "RELIANCE.NS": 5047.83
   },
   "volatilities": {
-    "TATASTEEL.NS": 0.318,
-    "SBIN.NS": 0.2243,
-    "RELIANCE.NS": 0.3079
+    "TATASTEEL.NS": 0.3181,
+    "SBIN.NS": 0.2257,
+    "RELIANCE.NS": 0.3087
   },
   "risk_contributions": {
-    "TATASTEEL.NS": 0.3663,
-    "SBIN.NS": 0.2675,
-    "RELIANCE.NS": 0.3663
+    "TATASTEEL.NS": 0.366,
+    "SBIN.NS": 0.268,
+    "RELIANCE.NS": 0.366
   },
-  "parity_score": 86.82,
-  "total_portfolio_vol": 0.283,
-  "summary": "Risk Parity: 3 stocks. Parity score: 87/100. Highest weight: SBIN (33.7%). Lowest weight: TATASTEEL (32.6%)."
+  "parity_score": 86.93,
+  "total_portfolio_vol": 0.2838,
+  "summary": "Risk Parity: 3 stocks. Parity score: 87/100. Highest weight: SBIN (33.7%). Lowest weight: TATASTEEL (32.7%)."
 }
